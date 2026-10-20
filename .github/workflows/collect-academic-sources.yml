@@ -66,20 +66,26 @@ jobs:
           samples=[]
           for collection,requests in ids.items():
               raw=get('https://raw.githubusercontent.com/'+repo+'/'+rev+'/data/xml/'+collection+'.xml')
+              (out/(collection+'.xml')).write_bytes(raw)
               root=ET.fromstring(raw)
               for volume,paper_id,role in requests:
                   paper=root.find('./volume[@id="'+volume+'"]'+'/paper[@id="'+paper_id+'"]')
-                  if paper is None: raise ValueError('Missing paper '+collection+'/'+volume+'/'+paper_id)
+                  identifier=collection+'-'+volume+'.'+paper_id if '.' in collection else collection+'-'+volume+paper_id.zfill(2)
+                  record={'id':identifier,'role':role,'collection':collection,'volume':volume,'paper_id':paper_id,'revision':rev,'source_sha256':hashlib.sha256(raw).hexdigest(),'license':'CC-BY-4.0','url':'https://aclanthology.org/'+identifier+'/'}
+                  if paper is None:
+                      record['error']='Missing paper';samples.append(record);continue
+                  record['title']=''.join(paper.find('title').itertext())
+                  record['authors']=[(''.join(a.find('first').itertext())+' '+''.join(a.find('last').itertext())) for a in paper.findall('author')]
                   elem=paper.find('abstract')
                   text=''.join(elem.itertext()).strip() if elem is not None else ''
-                  if not text: raise ValueError('Missing abstract')
-                  identifier=(collection+'-'+volume+paper_id.zfill(2)) if '-' not in collection and '.' not in collection else collection+'-'+volume+'.'+paper_id
-                  if collection in ('N19','D19','D16'): identifier=collection+'-'+volume+paper_id
-                  samples.append({'id':identifier,'role':role,'title':''.join(paper.find('title').itertext()),'authors':[(''.join(a.find('first').itertext())+' '+''.join(a.find('last').itertext())) for a in paper.findall('author')], 'text':text,'text_sha256':hashlib.sha256(text.encode()).hexdigest(),'license':'CC-BY-4.0','url':'https://aclanthology.org/'+identifier+'/','collection':collection,'volume':volume,'paper_id':paper_id,'revision':rev,'source_sha256':hashlib.sha256(raw).hexdigest()})
+                  record.update(text=text,text_sha256=hashlib.sha256(text.encode()).hexdigest())
+                  if not text: record['error']='Missing abstract'
+                  samples.append(record)
           (out/'acl-samples.json').write_text(json.dumps({'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'selection':'Three named published NLP abstracts for a field-style profile; three different named abstracts for editing. Selected before edits.','samples':samples},ensure_ascii=False,indent=2))
-          print(json.dumps({'sources':len(manifest),'source_errors':[s for s in manifest if 'error' in s],'academic_samples':len(samples)},ensure_ascii=False))
+          print(json.dumps({'sources':len(manifest),'source_errors':[s for s in manifest if 'error' in s],'academic_samples':len(samples),'sample_errors':[s for s in samples if 'error' in s]},ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
         with:
           name: clearweave-academic-research
           path: research/
