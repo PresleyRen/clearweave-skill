@@ -27,3 +27,14 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Validate skill and source inventory
         run: python3 tools/validate_repo.py
+      - name: Archive tracked source
+        if: matrix.python-version == '3.13' && github.event_name == 'push'
+        run: git archive --format=zip --output=clearweave-source.zip HEAD
+      - name: Retain verified source archive
+        if: matrix.python-version == '3.13' && github.event_name == 'push'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: clearweave-source-${{ github.sha }}
+          path: clearweave-source.zip
+          if-no-files-found: error
+          retention-days: 14
