@@ -1,0 +1,87 @@
+name: Collect academic writing sources
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/collect-academic-sources.yml]
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch public reference text without executing it
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import datetime, hashlib, json, os, pathlib, urllib.request, xml.etree.ElementTree as ET
+          out=pathlib.Path('research'); out.mkdir()
+          def get(url):
+              headers={'User-Agent':'ClearWeave-reference-audit'}
+              if url.startswith('https://api.github.com/'):
+                  headers['Authorization']='Bearer '+os.environ['GH_TOKEN']
+              with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=45) as r:
+                  return r.read()
+          def api(path): return json.loads(get('https://api.github.com/repos/'+path))
+          sources=[
+            ('S02','Kiterlin/anti-defensive-writing','skill/anti-defensive-writing/SKILL.md'),
+            ('S03','Simon-Chng/anti-defensive-writing','SKILL.md'),
+            ('S04','Adkid-Zephyr/anti-defensive-writing-Skill','skills/anti-defensive-writing-en/SKILL.md'),
+            ('S33','mronkko/claude-academic-research','skills/academic-style/SKILL.md'),
+            ('S34','HD0NG/claude-skills','skills/academic-writing/SKILL.md'),
+            ('S35','YoakeLee/academic-paper-writing-skill',None),
+            ('S36','Jingyang-Zhu/personal-academic-writing-skill','SKILL.md'),
+            ('S37','shannhk/writing-style-extractor','SKILL.md'),
+            ('S38','snowmays/style-alchemy','SKILL.md'),
+            ('S39','YuanZHAO321/Scientific-Writing','SKILL.md'),
+            ('S40','KalarisLabs/research-agent-skills','skills/ml-paper-writing/SKILL.md')]
+          manifest=[]
+          for sid,repo,entry in sources:
+              record={'id':sid,'repo':repo,'files':[]}
+              try:
+                  info=api(repo); sha=api(repo+'/commits/'+info['default_branch'])['sha']
+                  record.update(revision=sha,license=(info.get('license') or {}).get('spdx_id','unknown'))
+                  tree=api(repo+'/git/trees/'+sha+'?recursive=1')['tree']
+                  names=[x['path'] for x in tree if x['type']=='blob']
+                  if entry is None:
+                      entries=[n for n in names if n.endswith('SKILL.md') and 'academic-paper-writing' in n]
+                      entry=sorted(entries or [n for n in names if n.endswith('SKILL.md')],key=len)[0]
+                  prefix=str(pathlib.PurePosixPath(entry).parent)
+                  prefix='' if prefix=='.' else prefix+'/'
+                  extra=[n for n in names if n.startswith(prefix) and n.endswith(('.md','.yaml')) and any(k in n.lower() for k in ('style-grammar','sentence','word-level','author_style','style-profile','analysis-framework','writing-principles','writing-style'))]
+                  paths=list(dict.fromkeys([entry]+extra))[:10]
+                  paths += [n for n in names if '/' not in n and n.upper().startswith(('LICENSE','NOTICE'))][:2]
+                  for name in paths:
+                      data=get('https://raw.githubusercontent.com/'+repo+'/'+sha+'/'+name)
+                      if len(data)>150000: continue
+                      local=out/sid/name; local.parent.mkdir(parents=True,exist_ok=True);local.write_bytes(data)
+                      record['files'].append({'path':name,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)})
+              except Exception as exc: record['error']=type(exc).__name__+': '+str(exc)
+              manifest.append(record)
+          (out/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
+          repo='acl-org/acl-anthology'; rev=api(repo+'/commits/master')['sha']
+          ids={'N19': [('1','423','profile')], '2020.acl':[('demos','14','profile')], '2020.emnlp':[('main','550','profile')], 'D19':[('1','410','edit')], 'W19':[('50','34','edit')], 'D16':[('1','264','edit')]}
+          samples=[]
+          for collection,requests in ids.items():
+              raw=get('https://raw.githubusercontent.com/'+repo+'/'+rev+'/data/xml/'+collection+'.xml')
+              root=ET.fromstring(raw)
+              for volume,paper_id,role in requests:
+                  paper=root.find('./volume[@id="'+volume+'"]'+'/paper[@id="'+paper_id+'"]')
+                  if paper is None: raise ValueError('Missing paper '+collection+'/'+volume+'/'+paper_id)
+                  elem=paper.find('abstract')
+                  text=''.join(elem.itertext()).strip() if elem is not None else ''
+                  if not text: raise ValueError('Missing abstract')
+                  identifier=(collection+'-'+volume+paper_id.zfill(2)) if '-' not in collection and '.' not in collection else collection+'-'+volume+'.'+paper_id
+                  if collection in ('N19','D19','D16'): identifier=collection+'-'+volume+paper_id
+                  samples.append({'id':identifier,'role':role,'title':''.join(paper.find('title').itertext()),'authors':[(''.join(a.find('first').itertext())+' '+''.join(a.find('last').itertext())) for a in paper.findall('author')], 'text':text,'text_sha256':hashlib.sha256(text.encode()).hexdigest(),'license':'CC-BY-4.0','url':'https://aclanthology.org/'+identifier+'/','collection':collection,'volume':volume,'paper_id':paper_id,'revision':rev,'source_sha256':hashlib.sha256(raw).hexdigest()})
+          (out/'acl-samples.json').write_text(json.dumps({'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'selection':'Three named published NLP abstracts for a field-style profile; three different named abstracts for editing. Selected before edits.','samples':samples},ensure_ascii=False,indent=2))
+          print(json.dumps({'sources':len(manifest),'source_errors':[s for s in manifest if 'error' in s],'academic_samples':len(samples)},ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: clearweave-academic-research
+          path: research/
+          retention-days: 1
+          if-no-files-found: error
