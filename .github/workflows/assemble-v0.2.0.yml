@@ -1,0 +1,107 @@
+name: Assemble verified ClearWeave v0.2.0 candidate
+
+on:
+  push:
+    branches: [stage/clearweave-v0.2.0]
+
+permissions:
+  contents: read
+
+jobs:
+  assemble:
+    if: github.repository == 'PresleyRen/clearweave-skill' && github.ref == 'refs/heads/stage/clearweave-v0.2.0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Read staged transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify and save transport outside the checkout
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, os, pathlib
+          root = pathlib.Path('.release-candidate')
+          chunks = []
+          for i in range(17):
+              if i < 2:
+                  chunks.append((root / f'part{i:02}').read_bytes())
+              else:
+                  chunks.append(base64.b64decode((root / f'part{i:02}.b64').read_bytes(), validate=True))
+          data = b''.join(chunks)
+          assert len(data) == 96692, 'Transport size mismatch'
+          assert hashlib.sha256(data).hexdigest() == 'bfecf4d83f554ac8ab21eba386442f0ea92b7499f4d753539e8cf264c9987019', 'Transport checksum mismatch'
+          (pathlib.Path(os.environ['RUNNER_TEMP']) / 'clearweave-payload.xz').write_bytes(data)
+          print('Transport verified: 96692 bytes')
+          PY
+      - name: Restore the clean, expected main base
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 081bf79d92817303e59a4af062fa4bc5c408806f
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - name: Apply only hash-verified UTF-8 source files
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, lzma, os, pathlib, subprocess
+          base = '081bf79d928173e59a4af062fa4bc5c408806f'
+          base = '081bf79d92817303e59a4af062fa4bc5c408806f'
+          assert subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip() == base
+          temp = pathlib.Path(os.environ['RUNNER_TEMP'])
+          data = (temp / 'clearweave-payload.xz').read_bytes()
+          assert hashlib.sha256(data).hexdigest() == 'bfecf4d83f554ac8ab21eba386442f0ea92b7499f4d753539e8cf264c9987019'
+          raw = lzma.decompress(data, memlimit=256*1024*1024)
+          assert len(raw) == 534638
+          envelope = json.loads(raw)
+          assert envelope['schema_version'] == 1 and envelope['base_commit'] == base and envelope['version'] == '0.2.0'
+          files = envelope['files']
+          assert len(files) == 34
+          names, pending = set(), []
+          for item in files:
+              name = item['path']
+              path = pathlib.PurePosixPath(name)
+              assert str(path) == name and not path.is_absolute() and '..' not in path.parts
+              assert path.parts[0] in {'CHANGELOG.md','README.md','README.zh-CN.md','VERSION','docs','evals','skills','tests','tools'}
+              assert name not in names
+              names.add(name)
+              target = pathlib.Path(name)
+              assert not target.is_symlink() and not any(p.is_symlink() for p in target.parents)
+              before = item['before_sha256']
+              if before is None:
+                  assert not target.exists(), f'New path already exists: {name}'
+              else:
+                  assert target.is_file() and hashlib.sha256(target.read_bytes()).hexdigest() == before, f'Base differs: {name}'
+              content = item['content'].encode('utf-8')
+              assert hashlib.sha256(content).hexdigest() == item['sha256'], f'Content differs: {name}'
+              pending.append((target, content))
+          for target, content in pending:
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(content)
+          (temp / 'clearweave-paths').write_bytes(b'\0'.join(n.encode() for n in sorted(names)) + b'\0')
+          print('Applied 34 verified source files; no workflow or transport files included')
+          PY
+      - name: Run all deterministic tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate capability coverage and generated documentation
+        run: python3 tools/validate_repo.py
+      - name: Commit and publish a clean candidate branch only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --pathspec-from-file="$RUNNER_TEMP/clearweave-paths" --pathspec-file-nul
+          git diff --cached --check
+          git commit -m 'feat: ClearWeave v0.2.0 traceable bilingual editing and conflict regression suite'
+          gh auth setup-git
+          branch="build/clearweave-v0.2.0-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git push origin "HEAD:refs/heads/${branch}"
+          printf 'Candidate branch: %s\nCandidate commit: %s\n' "$branch" "$(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
