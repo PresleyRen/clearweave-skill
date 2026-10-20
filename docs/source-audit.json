@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "reviewed_on": "2026-10-20",
-  "scope": "32 previously inventoried public skill implementations: 28 direct and 4 auxiliary. Static source review, not a census of all skills or a test of 32 upstream implementations. Sources were read on mutable main branches, not pinned commits.",
+  "scope": "Original 32-source inventory plus 13 scholarly/style references (S33–S45).",
   "implementation": "Original instructions, examples, and Python code. Upstream files are not vendored or runtime dependencies.",
   "sources": [
     {
@@ -46,7 +46,10 @@
       ],
       "target_modules": [
         "skills/clearweave/references/academic.md"
-      ]
+      ],
+      "revision": "f516147d017a3fe43ae99192cb89d8261b0c8679",
+      "pinned_url": "https://github.com/Kiterlin/anti-defensive-writing/blob/f516147d017a3fe43ae99192cb89d8261b0c8679/skill/anti-defensive-writing/SKILL.md",
+      "refreshed_on": "2026-10-20"
     },
     {
       "id": "S03",
@@ -68,7 +71,10 @@
       ],
       "target_modules": [
         "skills/clearweave/references/academic.md"
-      ]
+      ],
+      "revision": "fd9a7f7eeda66cf180531e1e6d97cbfe4224f5eb",
+      "pinned_url": "https://github.com/Simon-Chng/anti-defensive-writing/blob/fd9a7f7eeda66cf180531e1e6d97cbfe4224f5eb/SKILL.md",
+      "refreshed_on": "2026-10-20"
     },
     {
       "id": "S04",
@@ -90,7 +96,10 @@
       ],
       "target_modules": [
         "skills/clearweave/references/academic.md"
-      ]
+      ],
+      "revision": "82d31402caa0db1790026824399044538483171b",
+      "pinned_url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/82d31402caa0db1790026824399044538483171b/skills/anti-defensive-writing-en/SKILL.md",
+      "refreshed_on": "2026-10-20"
     },
     {
       "id": "S05",
@@ -981,6 +990,314 @@
       ],
       "target_modules": [
         "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S33",
+      "repo": "mronkko/claude-academic-research",
+      "skill_path": "skills/academic-style/SKILL.md",
+      "url": "https://github.com/mronkko/claude-academic-research/blob/main/skills/academic-style/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "4579a86de137beb40ac2b31a143577115d721532",
+      "pinned_url": "https://github.com/mronkko/claude-academic-research/blob/4579a86de137beb40ac2b31a143577115d721532/skills/academic-style/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Choose tense by the rhetorical function of a sentence, and keep technical terminology consistent.",
+        "Organize related work as a synthesis and calibrate uncertainty to the evidence."
+      ],
+      "rejected_or_modified": [
+        "Replace the blanket prohibition on predicts with a distinction between predictive modeling and causal inference.",
+        "Use the project citation convention; do not require APA, a configured MCP, or a particular revision command."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md",
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S34",
+      "repo": "HD0NG/claude-skills",
+      "skill_path": "skills/academic-writing/SKILL.md",
+      "url": "https://github.com/HD0NG/claude-skills/blob/main/skills/academic-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "b5b99ff2383a6c050856c9e68646e8c43567bdb9",
+      "pinned_url": "https://github.com/HD0NG/claude-skills/blob/b5b99ff2383a6c050856c9e68646e8c43567bdb9/skills/academic-writing/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "GPL-3.0",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Distinguish contribution statements, procedures, results and interpretation when choosing voice.",
+        "Represent a reusable voice profile with domain and manuscript-section scope."
+      ],
+      "rejected_or_modified": [
+        "Do not copy the GPL prose or the original author’s LiDAR vocabulary; implement original, domain-neutral guidance.",
+        "Reject mandatory we, passive-voice defaults, sentence quotas, universal abstract citation bans and automatic numerical invention."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md",
+        "skills/clearweave/references/anti-defensive.md",
+        "skills/clearweave/references/author-voice.md"
+      ]
+    },
+    {
+      "id": "S35",
+      "repo": "YoakeLee/academic-paper-writing-skill",
+      "skill_path": "academic-paper-writing/SKILL.md",
+      "url": "https://github.com/YoakeLee/academic-paper-writing-skill/blob/main/academic-paper-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "ce4f3d8bc51ca88c7b68a770b17ba863ba456e4e",
+      "pinned_url": "https://github.com/YoakeLee/academic-paper-writing-skill/blob/ce4f3d8bc51ca88c7b68a770b17ba863ba456e4e/academic-paper-writing/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT for repository-original wording; educational framework attributed separately",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Check grammatical heads, agreement, dangling modifiers, articles and related word forms.",
+        "Use reverse outlines and a paragraph’s controlling purpose when restructuring is requested."
+      ],
+      "rejected_or_modified": [
+        "Replace the universal which hunt with meaning-aware restrictive-clause and spelling-convention decisions.",
+        "Do not impose third-person voice, a fixed paper length, or a generic list of abstract types on every manuscript."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md"
+      ]
+    },
+    {
+      "id": "S36",
+      "repo": "Jingyang-Zhu/personal-academic-writing-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/Jingyang-Zhu/personal-academic-writing-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "114a4d3cab819a3505378b9a45f35d429e7fb114",
+      "pinned_url": "https://github.com/Jingyang-Zhu/personal-academic-writing-skill/blob/114a4d3cab819a3505378b9a45f35d429e7fb114/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Extract stable argument and exposition habits from actual technical papers, with sample provenance and duplicate-work handling.",
+        "Link a stated challenge to a method component and its supporting evidence."
+      ],
+      "rejected_or_modified": [
+        "Use a multi-author field or house profile unless a personal corpus is actually supplied.",
+        "Do not copy old claims, numbers or distinctive phrasing; do not force every abstract to contain theory or an identical rhetorical sequence."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/anti-defensive.md",
+        "skills/clearweave/references/author-voice.md"
+      ]
+    },
+    {
+      "id": "S37",
+      "repo": "shannhk/writing-style-extractor",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/shannhk/writing-style-extractor/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "a6b3ba0138cab32efc937b6f4491f49a23f750cc",
+      "pinned_url": "https://github.com/shannhk/writing-style-extractor/blob/a6b3ba0138cab32efc937b6f4491f49a23f750cc/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "unknown",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Separate surface measurements, syntax, structure and a practical style profile.",
+        "Support a style observation with actual samples rather than a generic adjective."
+      ],
+      "rejected_or_modified": [
+        "Treat the unlicensed entry as a concept reference; reproduce neither its instructions nor its examples.",
+        "Reject inferred subconscious mechanisms, author-identity claims, uniqueness percentages and indistinguishable-imitation promises."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/author-voice.md"
+      ]
+    },
+    {
+      "id": "S38",
+      "repo": "snowmays/style-alchemy",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/snowmays/style-alchemy/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "b17cfa6e23433ac0e44ca6d899ac9922aaa0b240",
+      "pinned_url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Normalize and group samples by genre, then create a machine-readable profile with evidence.",
+        "Keep thematic content preferences separate from writing style, and compare relevant profiles dimension by dimension."
+      ],
+      "rejected_or_modified": [
+        "Replace rigid sample-count and word-list quotas with explicit observations and sample counts.",
+        "Do not auto-install a new global skill, copy source sentences into output, or manufacture matching percentages."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/author-voice.md"
+      ]
+    },
+    {
+      "id": "S39",
+      "repo": "YuanZHAO321/Scientific-Writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/YuanZHAO321/Scientific-Writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "44b95b225866b463b8148dc612638b27bf60ec90",
+      "pinned_url": "https://github.com/YuanZHAO321/Scientific-Writing/blob/44b95b225866b463b8148dc612638b27bf60ec90/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Revise document organization, paragraph relations and sentences in that order when structural editing is authorized.",
+        "Use familiar-to-new information flow and distinguish grammatical corrections from matters of taste."
+      ],
+      "rejected_or_modified": [
+        "Drop a fixed compression percentage and automatic positive-form rewrites that erase negation.",
+        "Do not represent a referenced book or uninspected subfiles as reproduced or validated; use original operational guidance."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md",
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S40",
+      "repo": "KalarisLabs/research-agent-skills",
+      "skill_path": "skills/ml-paper-writing/SKILL.md",
+      "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/ml-paper-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "1390e3aec9155c494fb5232891c23e9f5eedd566",
+      "pinned_url": "https://github.com/KalarisLabs/research-agent-skills/blob/1390e3aec9155c494fb5232891c23e9f5eedd566/skills/ml-paper-writing/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "MIT with third-party notices",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Draft from supplied repository evidence and connect a contribution to questions, comparisons and findings.",
+        "Keep narrative, experiments, and source-supported citations consistent."
+      ],
+      "rejected_or_modified": [
+        "Do not inherit the asserted universal citation-error rate or require Exa/MCP installation.",
+        "Keep missing evidence questions outside publication-ready prose; do not inject fabricated citation placeholders into a finished manuscript."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md",
+        "skills/clearweave/references/anti-defensive.md",
+        "skills/clearweave/references/scholarly-tools.md"
+      ]
+    },
+    {
+      "id": "S41",
+      "repo": "Allan9719/scientific-writer-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/Allan9719/scientific-writer-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "bce0a8f5b2a6ed0abd8ea897e37757fe9ab7b629",
+      "pinned_url": "https://github.com/Allan9719/scientific-writer-skill/blob/bce0a8f5b2a6ed0abd8ea897e37757fe9ab7b629/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "not inspected",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Choose a sentence’s communicative purpose before its grammatical form; separate drafting, editing, diagnosis and teaching.",
+        "Review modifiers, referents, technical terms and quantitative statements together."
+      ],
+      "rejected_or_modified": [
+        "Replace fixed sentence/paragraph lengths and mandatory happy words with task-appropriate clarity.",
+        "Do not attach a checklist to every clean draft or require a confirmation at every outline stage."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-grammar.md",
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S42",
+      "repo": "jzOcb/writing-style-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/jzOcb/writing-style-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "d94826e1cd48f5403b82a5a909efdfab96221259",
+      "pinned_url": "https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/SKILL.md",
+      "evidence_basis": "Read the entry and relevant style/grammar sections. Entry-only inspection for S37/S39/S40/S41/S42; referenced books and unlisted subfiles were not reproduced or behavior-tested.",
+      "license_observed": "README states MIT; license file not inspected",
+      "relationship": "Scholarly extension reference; conceptual synthesis in original ClearWeave wording. Related scientific-writing methods can share ancestry.",
+      "adopted": [
+        "Use draft/final edit pairs to collect candidate writing preferences.",
+        "Version preferences with supporting examples and retain a reversible review record."
+      ],
+      "rejected_or_modified": [
+        "Keep proposals scoped and pending until approved rather than automatically changing global instructions.",
+        "Do not treat new facts or grammar fixes as stylistic preferences, or promise a monthly improvement curve."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/anti-defensive.md",
+        "skills/clearweave/references/author-voice.md"
+      ]
+    },
+    {
+      "id": "S43",
+      "repo": "OvOYu/anti-defensive-writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/OvOYu/anti-defensive-writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "bdab0d2aeb082798ad71cac3ab24a616d2d82894",
+      "pinned_url": "https://github.com/OvOYu/anti-defensive-writing/blob/bdab0d2aeb082798ad71cac3ab24a616d2d82894/SKILL.md",
+      "evidence_basis": "Full entry inspected via GitHub connector; unlisted references not reproduced or executed.",
+      "license_observed": "Entry declares MIT; repository license file not inspected",
+      "relationship": "Complementary anti-defensive concept reference; original ClearWeave implementation.",
+      "adopted": [
+        "Separate audit, local polishing, restructuring and drafting; retain scope beside the claim it qualifies.",
+        "When quoting the revised manuscript in a response letter, use the actual final passage rather than a separately rewritten quotation."
+      ],
+      "rejected_or_modified": [
+        "Do not silently substitute a different scientific claim during a style-only edit; identify evidence corrections separately.",
+        "Reference only the inspected entry; do not imply its linked restructure and example modules were executed."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S44",
+      "repo": "Worigin0314/academic-defensive-writing-auditor",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/Worigin0314/academic-defensive-writing-auditor/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "89f26b8a7f8149e6458f657010d354587d42cfe9",
+      "pinned_url": "https://github.com/Worigin0314/academic-defensive-writing-auditor/blob/89f26b8a7f8149e6458f657010d354587d42cfe9/SKILL.md",
+      "evidence_basis": "Full entry inspected via GitHub connector; unlisted references not reproduced or executed.",
+      "license_observed": "Entry declares MIT; repository license file not inspected",
+      "relationship": "Complementary anti-defensive concept reference; original ClearWeave implementation.",
+      "adopted": [
+        "Distinguish empty defensive wording, necessary qualification, mixed wording and clean prose before proposing an edit.",
+        "Replace fairness self-praise with actual controls, and keep explanations of adverse results tied to supplied diagnostics."
+      ],
+      "rejected_or_modified": [
+        "Reject a one-caveat-per-claim quota and automatic relocation to Limitations: a claim may need several independent conditions.",
+        "Do not manufacture reviewer reactions, a paper-level 0–10 defense score, or a minimum number of removals."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S45",
+      "repo": "Mseymur/HCI-Academic-Writing",
+      "skill_path": "skills/hci-academic-writing/SKILL.md",
+      "url": "https://github.com/Mseymur/HCI-Academic-Writing/blob/main/skills/hci-academic-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "revision": "bd5d19c641dbc224b3e653b1e22b2b259e63be28",
+      "pinned_url": "https://github.com/Mseymur/HCI-Academic-Writing/blob/bd5d19c641dbc224b3e653b1e22b2b259e63be28/skills/hci-academic-writing/SKILL.md",
+      "evidence_basis": "Full entry inspected via GitHub connector; unlisted references not reproduced or executed.",
+      "license_observed": "LICENSE file located; contents not inspected",
+      "relationship": "Complementary anti-defensive concept reference; original ClearWeave implementation.",
+      "adopted": [
+        "Separate register problems from contribution framing; describe the specific technical or empirical advance rather than relying on a flattering label.",
+        "Distinguish proposed outcomes from delivered findings, and synthesize related work around the actual research question."
+      ],
+      "rejected_or_modified": [
+        "Do not generalize HCI framing into a rule that systems or combinations can never be research contributions.",
+        "Reject exactly-once limitations, universal contribution ordering, and deletion of material adverse evidence to simplify the storyline."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/anti-defensive.md"
       ]
     }
   ]

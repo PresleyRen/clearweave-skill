@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "skill_version": "0.3.0",
+  "selection": "Three named NLP abstracts for a field profile; three named abstracts for editing, including SQuAD recovered from its reviewed PDF page 1 after XML absence. Three additional W19 abstracts chosen after searching for real framing/hedge examples. Two complete Chinese HC3 answers reused from the earlier evaluation. Convenience/development application set, not a held-out benchmark.",
+  "profile_scope": "Multi-author NLP-abstract field profile; not a personal-author profile.",
+  "generation": "Current conversational assistant reads ClearWeave 0.3.0, applies it once with a targeted self-review. No independent model API or human judge. Scripts perform checks and measurements, not generation.",
+  "task_en": "Copyedit this published abstract using ClearWeave. Preserve facts, author positions, numerical estimates, uncertainty, citation strings and technical terms. Correct evident grammar and redundant framing; allow no change when appropriate. Use the three-reference NLP field profile only as descriptive context, never copy its facts. Return clean prose and separate brief edit notes.",
+  "task_zh": "按 ClearWeave 润色这条历史中文回答，保留原文立场、事实、数字、条件和不确定性，压缩重复表述。只做编辑，不替它回答问题或更新知识。",
+  "known_exposure": "Sentence-BERT inspected before narrow grammar rules were written. HC3 records used in v0.2.0. Host pretraining exposure unknown.",
+  "inference_metadata": {
+    "model_family": "current ChatGPT conversational assistant",
+    "independent_inference_api": false,
+    "seed": null,
+    "temperature": null,
+    "generation_method": "assistant-authored revisions under loaded skill instructions"
+  },
+  "runtime_files": {
+    "skills/clearweave/LICENSE.txt": "de646bc804197ae8325c15e68680f728f857468432c3a75f98d2053e1d33817a",
+    "skills/clearweave/SKILL.md": "065cd4074fa8c70ebb912cd85b0771b67efb622e470c36e183a385f242288eba",
+    "skills/clearweave/agents/openai.yaml": "d978cb87d458009f51e8f8e69bca49e559f59c73eaf6ce1ea79834ba1fbdd145",
+    "skills/clearweave/assets/capabilities.json": "daa4ef27b8d12c63a632a2a9ed91fd8f2d54b87bb46b03293641e32e63016f38",
+    "skills/clearweave/prompts/scholarly.md": "de73ab4b8cf391d5ae3f48de4496e2bfb91769120253f25f982f4fd50bbe3033",
+    "skills/clearweave/references/academic-grammar.md": "d358f1e5069ae4a0b2a9c321ba9aa0836a2806af673a24f535972a3f3faa122c",
+    "skills/clearweave/references/academic.md": "f7aca29befa080029ab74b48aef41c2ee5f5cf4432184c4f1cdbb66532c59cf5",
+    "skills/clearweave/references/anti-defensive.md": "931585585fc531c335a60af35bc78d18b793dcec9b4f2e221d222259ac4c2d3c",
+    "skills/clearweave/references/author-voice.md": "0d7a38f07396335d0f827e10c420f86f72b22c9bea5ede39a37af23bfedc2e2a",
+    "skills/clearweave/references/chinese.md": "eeb7ce2e54cbe28b5db4350719b2093c4849f6f966c9bf5e1115ed1105dba5fa",
+    "skills/clearweave/references/conflicts.md": "6b0083e9d0069532d6ca27f8ff3e8967696bd5b06346432ab04aee473141a1bb",
+    "skills/clearweave/references/english.md": "e771c2d977592a31567eea6293c81e67fc3ecde68b17a69b14575d9da6bbcfaa",
+    "skills/clearweave/references/maintenance.md": "6282294772ed1d6ebd89aa94a5be4d187d47d89c8c67b2f4bb292b1828e12478",
+    "skills/clearweave/references/preservation.md": "32ecc66d87291a1d236c6c8909a4f839c50f4d653797ae96735e41cbf31361b1",
+    "skills/clearweave/references/scholarly-tools.md": "52827ac3460502ac66453c931d13a48ea5ceb013f157328a9d6a4b59a19cb1f3",
+    "skills/clearweave/references/tooling.md": "930fa1ca4b870b4bcd892560ba0dc1caebd2568c1c6b5568a923e63f306a0e03",
+    "skills/clearweave/references/workflows.md": "869f3392c7d30bade663bca0dab634041f85d8c43d1705ebb961efd9b6f2b1f9",
+    "skills/clearweave/scripts/clearweave_check.py": "ed6725f01c374da47972303650ba369199961b893aa49bce491d5158030df20d",
+    "skills/clearweave/scripts/clearweave_risk.py": "5bc89d51cb0079cc03a3e2c4b70ceab3b489828272e2181f62bb7a79fe74f5e3",
+    "skills/clearweave/scripts/clearweave_scholar.py": "007f42e19aea95bede85c0a9be2538dad682e9a9de71584f3ea7374f43b6ddb9",
+    "skills/clearweave/scripts/clearweave_trace.py": "f638593d7b2922907be0ffadcea4a0a5564c182e4bff7898fd4d72ba0a8532dc"
+  },
+  "snapshot_stage": "Final runtime fingerprint after the recorded targeted self-review; no further rules tuned to these outputs.",
+  "source_recovery": "D16-1264 XML has no abstract; same-paper PDF excerpt in the main-branch data-integrity update was visually checked on page 1 and retained as an unchanged control. The absence and recovery are recorded; no replacement paper was selected."
+}

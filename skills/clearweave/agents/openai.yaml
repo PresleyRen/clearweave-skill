@@ -1,4 +1,4 @@
 interface:
-  display_name: "ClearWeave"
-  short_description: "Natural English and Chinese, with meaning preserved"
-  default_prompt: "Use $clearweave to edit this text naturally while preserving its facts, intent, and voice."
+  display_name: "ClearWeave · Scholarly"
+  short_description: "Bilingual prose, academic grammar and author voice"
+  default_prompt: "Use $clearweave to edit this text, refine its academic grammar and remove defensive framing while preserving meaning and the supplied author voice."

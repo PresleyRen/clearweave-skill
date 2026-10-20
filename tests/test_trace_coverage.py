@@ -41,11 +41,11 @@ class TraceTests(unittest.TestCase):
 class CoverageTests(unittest.TestCase):
     def test_complete_current_inventory(self):
         report=coverage.validate();self.assertEqual(report['structural_errors'],[])
-        self.assertEqual((report['sources'],report['audited_statements'],report['capabilities'],report['conflicts'],report['authored_cases']),(32,194,36,26,52))
+        self.assertEqual((report['sources'],report['audited_statements'],report['capabilities'],report['conflicts'],report['authored_cases']),(45,246,48,34,68))
     def mutate(self,path,change):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)/'repo'
-            shutil.copytree(ROOT,root,ignore=shutil.ignore_patterns('.git','__pycache__','*.pyc'))
+            shutil.copytree(ROOT,root,ignore=shutil.ignore_patterns('.git','__pycache__','*.pyc','.preflight','research','.venv','dist'))
             p=root/path;data=json.loads(p.read_text());change(data);p.write_text(json.dumps(data))
             return coverage.validate(root)['structural_errors']
     def test_missing_feature_detected(self):

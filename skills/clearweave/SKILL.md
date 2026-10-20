@@ -1,6 +1,6 @@
 ---
 name: clearweave
-description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style writing while preserving meaning, evidence, and the author's voice. Use for 去AI味、去机器味、润色、自然化、改掉翻译腔, humanizing, de-slopping, style diagnosis, or plain-language editing of academic, technical, business, news, and personal writing. Also supports explicitly requested translation, drafting from supplied notes, and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
+description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style writing while preserving meaning, evidence, and the author's voice. Use for 去AI味、去机器味、润色、自然化、改掉翻译腔, humanizing, de-slopping, style diagnosis, anti-defensive writing, academic grammar, author-voice profiles, or plain-language editing of academic, technical, business, news, and personal writing. Also supports explicitly requested translation, drafting from supplied notes, and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
 ---
 
 # ClearWeave
@@ -28,6 +28,14 @@ Infer the following from the request and text. Do not make a routine edit wait f
 The language of the request is not automatically the language of the deliverable. A Chinese request to polish an English abstract normally requires an English abstract. Preserve Simplified/Traditional Chinese and US/UK spelling unless a change is requested.
 
 Read [preservation.md](references/preservation.md) before an edit or translation. Then load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
+
+## Scholarly extension routing
+
+For defensive framing, contribution narrative, or clean manuscript/README delivery, read [anti-defensive.md](references/anti-defensive.md).
+For academic grammar, tense, agreement, modifiers, and section-function choices, read [academic-grammar.md](references/academic-grammar.md).
+For 真人论文风格、作者文风、样稿模仿 or learning approved revision preferences, read [author-voice.md](references/author-voice.md).
+For academic scanning and profile commands, read [scholarly-tools.md](references/scholarly-tools.md).
+Use only relevant modules. Keep review notes outside the finished text. Preserve the core rules when applying a style profile.
 
 ## 2. Protect meaning before changing style
 
@@ -87,6 +95,7 @@ Do not target sentence-length distributions, synonym diversity, a count of rheto
 | Translate / 翻译 | Natural target-language prose carrying the same claims, uncertainty, attribution, and register. Keep code, citation keys, and names unless a valid requested convention changes them. |
 | Draft from notes / 按材料起草 | Compose only from supplied material. Use explicit assumptions only when authorized; identify missing information separately. An invented scene is allowed only when clearly requested as fiction or illustration. |
 | Match voice / 按我的风格 | Apply relevant samples within the same factual and genre constraints. If no sample exists, work with the draft's observable voice; do not pretend to know the author. |
+| Explain / 学术写作教学 | Explain the requested grammar or rhetorical choice using the supplied passage, a correction and a short original practice example. Keep grammatical correction distinct from author preference. |
 | Critique / 审稿式检查 | Report supported weaknesses, their consequence, and a concrete repair or question. Distinguish demonstrated errors from unresolved questions. Do not invent findings, demand a rejection quota, or claim external peer review. |
 
 The Python helper only lints surface patterns and compares selected literal spans. All rewriting, translation, voice adaptation, and substantive review are performed by the host model, not the script.

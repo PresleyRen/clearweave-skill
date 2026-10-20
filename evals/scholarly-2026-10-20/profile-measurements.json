@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "operation": "corpus_profile",
+  "kind": "field",
+  "label": "NLP-abstracts",
+  "language": "en",
+  "sample_count": 3,
+  "samples": [
+    {
+      "id": "N19-1423",
+      "work_id": "N19-1423",
+      "text_sha256": "8515c69051004bff08a38002d4a32232af3cda9f1eafe105b89987a630293519",
+      "metrics": {
+        "characters": 1065,
+        "token_units": 138,
+        "sentences_approx": 5,
+        "paragraphs": 1,
+        "mean_sentence_units": 28,
+        "median_sentence_units": 28,
+        "first_person_per_100_units": 0.725,
+        "semicolons": 0,
+        "dashes": 0
+      }
+    },
+    {
+      "id": "2020.acl-demos.14",
+      "work_id": "2020.acl-demos.14",
+      "text_sha256": "5c18e267c53e6d0206c45bfe75cb5afae9e764cf4e33caa4fc587fb70fe8a9af",
+      "metrics": {
+        "characters": 995,
+        "token_units": 123,
+        "sentences_approx": 5,
+        "paragraphs": 1,
+        "mean_sentence_units": 24.6,
+        "median_sentence_units": 31,
+        "first_person_per_100_units": 1.626,
+        "semicolons": 0,
+        "dashes": 0
+      }
+    },
+    {
+      "id": "2020.emnlp-main.550",
+      "work_id": "2020.emnlp-main.550",
+      "text_sha256": "d61e15d93df6b855cfd044803f25c08ce59198f172eb83b80cca34f486edcd5e",
+      "metrics": {
+        "characters": 705,
+        "token_units": 104,
+        "sentences_approx": 3,
+        "paragraphs": 1,
+        "mean_sentence_units": 34.667,
+        "median_sentence_units": 32,
+        "first_person_per_100_units": 2.885,
+        "semicolons": 0,
+        "dashes": 0
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "id": "D19-1410",
+      "reason": "different_role"
+    },
+    {
+      "id": "W19-5034",
+      "reason": "different_role"
+    },
+    {
+      "id": "D16-1264",
+      "reason": "different_role"
+    },
+    {
+      "id": "W19-5028",
+      "reason": "different_role"
+    },
+    {
+      "id": "W19-4703",
+      "reason": "different_role"
+    },
+    {
+      "id": "W19-4731",
+      "reason": "different_role"
+    },
+    {
+      "id": "HC3-ZH-CHATGPT-02188",
+      "reason": "different_role"
+    },
+    {
+      "id": "HC3-ZH-CHATGPT-02605",
+      "reason": "different_role"
+    }
+  ],
+  "means": {
+    "characters": 921.667,
+    "token_units": 121.667,
+    "sentences_approx": 4.333,
+    "paragraphs": 1,
+    "mean_sentence_units": 29.089,
+    "median_sentence_units": 30.333,
+    "first_person_per_100_units": 1.745,
+    "semicolons": 0,
+    "dashes": 0
+  },
+  "measurement": "Approximate editable-prose units; English words and Chinese characters. Descriptive, not targets.",
+  "traits": [],
+  "approval": "observed_metrics"
+}

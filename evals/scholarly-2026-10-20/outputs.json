@@ -1,0 +1,122 @@
+[
+  {
+    "id": "D19-1410",
+    "action": "edit",
+    "input_sha256": "0c1c8ed261f75c76beed4bda3912d293019349c6808e27aafbade2829bfd0065",
+    "revision": "BERT (Devlin et al., 2018) and RoBERTa (Liu et al., 2019) have set a new state of the art on sentence-pair regression tasks such as semantic textual similarity (STS). However, both sentences must be fed into the network, creating substantial computational overhead: finding the most similar pair in a collection of 10,000 sentences requires about 50 million inference computations (~65 hours) with BERT. This architecture makes BERT unsuitable for semantic similarity search and unsupervised tasks such as clustering. We present Sentence-BERT (SBERT), a modification of the pretrained BERT network that uses siamese and triplet network structures to derive semantically meaningful sentence embeddings that can be compared using cosine-similarity. This reduces the time required to find the most similar pair from 65 hours with BERT / RoBERTa to about 5 seconds with SBERT, while maintaining BERT's accuracy. We evaluate SBERT and SRoBERTa on common STS and transfer learning tasks, where it outperforms other state-of-the-art sentence embedding methods.",
+    "revision_sha256": "025c8182a4f9bdaf1f1ed92f55082ba04382a6fcec44f587154b966065ef9bcb",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Corrected coordinated-subject have and relative-clause uses; changed sentence embeddings methods to sentence embedding methods.",
+      "Retained citations, 10,000, 50 million, ~65 hours, 65 hours, about 5 seconds, comparison and accuracy claim.",
+      "Removed publication-level framing and clarified the input requirement.",
+      "Residual ambiguity: the final it could be read as SBERT or the evaluated pair. Retained rather than silently broaden the comparative claim; author/full-paper context needed."
+    ],
+    "profile_used": "NLP-abstracts"
+  },
+  {
+    "id": "W19-5034",
+    "action": "keep",
+    "input_sha256": "185882a88d3fc0cf551d736b251086b4a1c6c2017e3bc14ba3fb791314d49098",
+    "revision": "Despite recent advances in natural language processing, many statistical models for processing text perform extremely poorly under domain shift. Processing biomedical and clinical text is a critically important application area of natural language processing, for which there are few robust, practical, publicly available models. This paper describes scispaCy, a new Python library and models for practical biomedical/scientific text processing, which heavily leverages the spaCy library. We detail the performance of two packages of models released in scispaCy and demonstrate their robustness on several tasks and datasets. Models and code are available at https://allenai.github.io/scispacy/.",
+    "revision_sha256": "185882a88d3fc0cf551d736b251086b4a1c6c2017e3bc14ba3fb791314d49098",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Kept the source unchanged as a control. Despite introduces a real contrast; robust is an on-topic model property.",
+      "Importance/performance adjectives state the authors’ assessment; a style-only edit did not invent measurements to replace them."
+    ],
+    "profile_used": "NLP-abstracts"
+  },
+  {
+    "id": "D16-1264",
+    "action": "keep",
+    "input_sha256": "9131f94b38e68f82ab04ab6cc4194959aa276ab9f8743d4a265f2ca4902c6892",
+    "revision": "We present the Stanford Question Answering Dataset (SQuAD), a new reading comprehension dataset consisting of 100,000+ questions posed by crowdworkers on a set of Wikipedia articles, where the answer to each question is a segment of text from the corresponding reading passage. We analyze the dataset to understand the types of reasoning required to answer the questions, leaning heavily on dependency and constituency trees. We build a strong logistic regression model, which achieves an F1 score of 51.0%, a significant improvement over a simple baseline (20%). However, human performance (86.8%) is much higher, indicating that the dataset presents a good challenge problem for future research. The dataset is freely available at https://stanford-qa.com.",
+    "revision_sha256": "9131f94b38e68f82ab04ab6cc4194959aa276ab9f8743d4a265f2ca4902c6892",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same conversational assistant; source page inspected, no independent reviewer",
+    "notes": [
+      "Recovered from the reviewed same-paper PDF page 1 after merging upstream data-integrity repair; checked against the rendered original.",
+      "Keep the abstract unchanged in this minimal-edit control. However links the model score to the higher human score and carries a genuine contrast; numbers, reported interpretation and scope remain."
+    ],
+    "profile_used": null
+  },
+  {
+    "id": "W19-5028",
+    "action": "edit",
+    "input_sha256": "b528ad46419c4ab5f516340c980257fc7ec1cbbf43975737b918b07738af99a3",
+    "revision": "The text of clinical notes can be a valuable source of patient information and clinical assessments. Historically, the primary approach for exploiting clinical notes has been information extraction: linking spans of text to concepts in a detailed domain ontology. However, recent work has demonstrated the potential of supervised machine learning to extract document-level codes directly from the raw text of clinical notes. We propose to bridge the gap between the two approaches with two novel syntheses: (1) treating extracted concepts as features, which are used to supplement or replace the text of the note; (2) treating extracted concepts as labels, which are used to learn a better representation of the text. The resulting concepts do not yield performance gains on the document-level clinical coding task. We explore possible explanations and future research directions.",
+    "revision_sha256": "03abfd72d39336ce1ea79bf5dc2551fa18dd352f6c664a4623b105587d00373f",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Removed the attitude marker Unfortunately, and left the negative finding unchanged.",
+      "Retained the two distinct syntheses, the contrast with prior work, and the exploratory explanations. This is computational NLP research text, not clinical advice."
+    ],
+    "profile_used": "NLP-abstracts"
+  },
+  {
+    "id": "W19-4703",
+    "action": "edit",
+    "input_sha256": "25ab2b11c737161492c7ed24d44697e7c36bea34cfcd036aae96019376ef40d4",
+    "revision": "Word2Vec models are used to study the semantic chain shift FOOD>MEAT>FLESH in the history of English, c. 1425-1925. This development began before 1500 and may be continuing to this day. The semantic changes likely proceeded as a push chain.",
+    "revision_sha256": "c1709c4e48e4ae688b217857b9a121aa0b34a7e07060b82fec2432f109509c9c",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Reduced a stacked possibility expression to may; retained likely, before 1500, and c. 1425-1925.",
+      "To this day is part of the historical 2019 text; it was not updated to the current year."
+    ],
+    "profile_used": "NLP-abstracts"
+  },
+  {
+    "id": "W19-4731",
+    "action": "edit",
+    "input_sha256": "d0ce3f98c9869849600ee88572154159879dfe725b0bc19777cd74eb99fb5c0f",
+    "revision": "In this study, we propose to examine how Circular Economy (CE) has evolved by analysing semantic changes in the language of academic discussions. The meaning and central theme of CE have remained the same; however, we hypothesise that it has undergone semantic change through the addition of layers to the concept. We have shown that semantic change in language reflects shifts in scientific ideas, which in turn help explain a concept's evolution. Our analysis of CE demonstrated that changes over time in the language of academic discussions indicate how the concept evolved and expanded.",
+    "revision_sha256": "15c72c3c118b9ff09b79923cd84f4c236e71bcdd9207270517bc31109cbe6a5b",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Removed empty framing, corrected compound-subject have, and shortened nominalized wording.",
+      "Kept propose, hypothesise, have shown and demonstrated as different source speech acts; retained the proposed semantic-layer explanation.",
+      "The coexistence of stable meaning and semantic change is an author argument, not independently fact-checked here."
+    ],
+    "profile_used": "NLP-abstracts"
+  },
+  {
+    "id": "HC3-ZH-CHATGPT-02188",
+    "action": "edit",
+    "input_sha256": "fb4bec8ebf40dfbdc442ae86c7df07b982311c53317e05f3dcd8695e116319a8",
+    "revision": "我是计算机程序，无法观看视频、阅读文字或使用社交媒体，因此不了解莫言在诺贝尔文学奖颁奖仪式上的演讲在国内社交网络引起的反响，也无法作出评价。我只能提供莫言的一般信息。\n\n莫言（1955年2月17日出生）是中国著名作家，2012年获得诺贝尔文学奖。他的作品涉及历史、文化、政治等领域，已被译成多种语言，深受读者喜爱，在中国及世界范围内享有盛誉。",
+    "revision_sha256": "eccc66c1870913b1bfe642af450141ed6f2730b0a6797922f2c214272785429f",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Compressed repeated inability statements while retaining the original speaker identity and capabilities claim.",
+      "Retained full birth date, award year, thematic list, translations, reader popularity and reputation claim.",
+      "Historical dataset answer, not a statement of the present assistant’s capabilities and not updated biographical verification."
+    ],
+    "profile_used": null
+  },
+  {
+    "id": "HC3-ZH-CHATGPT-02605",
+    "action": "edit",
+    "input_sha256": "ab90ea5b0cd6ea1e5c75b91c4a2cc3f37b9d45f59ef3012889af2bdd78140fed",
+    "revision": "人们喜欢查看前任，或现任伴侣的前任的社交网络，可能是出于好奇，也可能是比较关心对方。有时，人们想知道对方发布了什么，或近况如何，也可能有心理上的需求，比如想知道自己是否已被前任取代，或是否还有机会复合。\n\n但看到前任的信息不一定是好事。在某些情况下，这可能让人不安或心烦，尤其是看到让自己不满意的内容时。因此，最好保持一定距离，不要让自己的情绪完全依赖社交网络上的信息。",
+    "revision_sha256": "23c6f56910f6c86f4931b4c95c2a649abb0934a4324a7762c45140b70e3de3cc",
+    "generation": "current conversational assistant applying ClearWeave 0.3.0",
+    "reviewer": "same assistant / self-review",
+    "notes": [
+      "Shortened repeated relationship labels and transitions.",
+      "Retained possibility, frequency, some circumstances, comparative concern, examples, negative assessment and recommendation.",
+      "Self-review found no new personal experience or opinion; underlying psychological assertions were not verified.",
+      "Targeted self-review restored 喜欢 and made the source disjunction explicit. Initial and final revisions are retained; this was not detected by literal comparison."
+    ],
+    "profile_used": null,
+    "initial_revision": "人们查看前任，或现任伴侣的前任的社交网络，可能是出于好奇，也可能是比较关心对方。有时，人们想知道对方发布了什么、近况如何，也可能有心理上的需求，比如想知道自己是否已被前任取代，或是否还有机会复合。\n\n但看到前任的信息不一定是好事。在某些情况下，这可能让人不安或心烦，尤其是看到让自己不满意的内容时。因此，最好保持一定距离，不要让自己的情绪完全依赖社交网络上的信息。",
+    "initial_revision_sha256": "09c8f9d2ba22a5a76c647552988ac15619f26b7b4aa956701a61e54690fb45cf"
+  }
+]

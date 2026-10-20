@@ -1,6 +1,6 @@
-# 32-source synthesis / 32 项来源与取舍
+# Source synthesis / 45 项来源与取舍
 
-Reviewed: 2026-10-20. The count is 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
+Reviewed: 2026-10-20. The original count was 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
 
 This table is a compact index. The [machine-readable audit](source-audit.json) records inspection scope, license observations, relationships, adopted ideas, rejected rules, and implementation paths. Main-branch URLs are mutable; this release does not claim commit-pinned upstream reproduction.
 
@@ -46,3 +46,37 @@ All runtime instructions, scripts, and teaching examples were written for ClearW
 Read [NOTICE](../NOTICE.md) for licensing scope and attribution, including Lorena A. Barba’s CC BY 4.0 sciwrite. An observed MIT label is not a complete rights audit. Unknown licenses remain marked unknown. The repository license does not relicense upstream projects.
 
 Additional method source, not counted among the 32: Paul Goldsmith-Pinkham, [Writing & Thinking with AI Assistance](https://paulgp.substack.com/p/writing-and-thinking-with-ai-assistance).
+
+
+## Scholarly extension · S33–S42
+
+- [S33 · mronkko/claude-academic-research](https://github.com/mronkko/claude-academic-research/blob/4579a86de137beb40ac2b31a143577115d721532/skills/academic-style/SKILL.md): Choose tense by the rhetorical function of a sentence, and keep technical terminology consistent. Organize related work as a synthesis and calibrate uncertainty to the evidence.
+- [S34 · HD0NG/claude-skills](https://github.com/HD0NG/claude-skills/blob/b5b99ff2383a6c050856c9e68646e8c43567bdb9/skills/academic-writing/SKILL.md): Distinguish contribution statements, procedures, results and interpretation when choosing voice. Represent a reusable voice profile with domain and manuscript-section scope.
+- [S35 · YoakeLee/academic-paper-writing-skill](https://github.com/YoakeLee/academic-paper-writing-skill/blob/ce4f3d8bc51ca88c7b68a770b17ba863ba456e4e/academic-paper-writing/SKILL.md): Check grammatical heads, agreement, dangling modifiers, articles and related word forms. Use reverse outlines and a paragraph’s controlling purpose when restructuring is requested.
+- [S36 · Jingyang-Zhu/personal-academic-writing-skill](https://github.com/Jingyang-Zhu/personal-academic-writing-skill/blob/114a4d3cab819a3505378b9a45f35d429e7fb114/SKILL.md): Extract stable argument and exposition habits from actual technical papers, with sample provenance and duplicate-work handling. Link a stated challenge to a method component and its supporting evidence.
+- [S37 · shannhk/writing-style-extractor](https://github.com/shannhk/writing-style-extractor/blob/a6b3ba0138cab32efc937b6f4491f49a23f750cc/SKILL.md): Separate surface measurements, syntax, structure and a practical style profile. Support a style observation with actual samples rather than a generic adjective.
+- [S38 · snowmays/style-alchemy](https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/SKILL.md): Normalize and group samples by genre, then create a machine-readable profile with evidence. Keep thematic content preferences separate from writing style, and compare relevant profiles dimension by dimension.
+- [S39 · YuanZHAO321/Scientific-Writing](https://github.com/YuanZHAO321/Scientific-Writing/blob/44b95b225866b463b8148dc612638b27bf60ec90/SKILL.md): Revise document organization, paragraph relations and sentences in that order when structural editing is authorized. Use familiar-to-new information flow and distinguish grammatical corrections from matters of taste.
+- [S40 · KalarisLabs/research-agent-skills](https://github.com/KalarisLabs/research-agent-skills/blob/1390e3aec9155c494fb5232891c23e9f5eedd566/skills/ml-paper-writing/SKILL.md): Draft from supplied repository evidence and connect a contribution to questions, comparisons and findings. Keep narrative, experiments, and source-supported citations consistent.
+- [S41 · Allan9719/scientific-writer-skill](https://github.com/Allan9719/scientific-writer-skill/blob/bce0a8f5b2a6ed0abd8ea897e37757fe9ab7b629/SKILL.md): Choose a sentence’s communicative purpose before its grammatical form; separate drafting, editing, diagnosis and teaching. Review modifiers, referents, technical terms and quantitative statements together.
+- [S42 · jzOcb/writing-style-skill](https://github.com/jzOcb/writing-style-skill/blob/d94826e1cd48f5403b82a5a909efdfab96221259/SKILL.md): Use draft/final edit pairs to collect candidate writing preferences. Version preferences with supporting examples and retain a reversible review record.
+
+See [scholarly integration](scholarly-integration.md) for the module map, source decisions and examples.
+
+## S43 · [OvOYu/anti-defensive-writing](https://github.com/OvOYu/anti-defensive-writing/blob/bdab0d2aeb082798ad71cac3ab24a616d2d82894/SKILL.md)
+
+采用：Separate audit, local polishing, restructuring and drafting; retain scope beside the claim it qualifies. When quoting the revised manuscript in a response letter, use the actual final passage rather than a separately rewritten quotation.
+
+调整：Do not silently substitute a different scientific claim during a style-only edit; identify evidence corrections separately. Reference only the inspected entry; do not imply its linked restructure and example modules were executed.
+
+## S44 · [Worigin0314/academic-defensive-writing-auditor](https://github.com/Worigin0314/academic-defensive-writing-auditor/blob/89f26b8a7f8149e6458f657010d354587d42cfe9/SKILL.md)
+
+采用：Distinguish empty defensive wording, necessary qualification, mixed wording and clean prose before proposing an edit. Replace fairness self-praise with actual controls, and keep explanations of adverse results tied to supplied diagnostics.
+
+调整：Reject a one-caveat-per-claim quota and automatic relocation to Limitations: a claim may need several independent conditions. Do not manufacture reviewer reactions, a paper-level 0–10 defense score, or a minimum number of removals.
+
+## S45 · [Mseymur/HCI-Academic-Writing](https://github.com/Mseymur/HCI-Academic-Writing/blob/bd5d19c641dbc224b3e653b1e22b2b259e63be28/skills/hci-academic-writing/SKILL.md)
+
+采用：Separate register problems from contribution framing; describe the specific technical or empirical advance rather than relying on a flattering label. Distinguish proposed outcomes from delivered findings, and synthesize related work around the actual research question.
+
+调整：Do not generalize HCI framing into a rule that systems or combinations can never be research contributions. Reject exactly-once limitations, universal contribution ordering, and deletion of material adverse evidence to simplify the storyline.

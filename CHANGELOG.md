@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0 — 2026-10-20
+
+- Integrated 13 additional academic/voice sources; registry now covers 45 sources and 48 capability families.
+- Added dedicated anti-defensive, academic-grammar, sample-based voice and scholarly-tool modules.
+- Added read-only academic scanning, profile measurement/comparison, and scoped draft/final preference proposals.
+- Added published-paper/Chinese HC3 applications, separate field-profile samples, provenance hashes and replay tools.
+- Expanded conflict cases to 34 families / 68 bilingual fixtures; added helper and data-integrity tests.
+- Refreshed English and Chinese READMEs with the complete function map, source routes and examples.
+
+- Integrated the main-branch academic-source repair and recovered SQuAD as a no-edit control. Archived the exact historical HC3 runtime for version-correct replay. Release validation now re-fetches pinned public sources before publishing.
+
 ## 0.2.0 — 2026-10-20
 
 Added the capability/source/conflict crosswalk, bilingual authored conflict fixtures, revision-risk and trace helpers, generated documentation, explicit extension workflows, and transparent same-session application records. Expanded limited Traditional Chinese phrase matching. Fixed the May/date cue collision. Preserved historical v0.1 outputs without claiming they validate the new release.

@@ -1,0 +1,284 @@
+{
+  "reviewed_on": "2026-10-20",
+  "collection_run": 39395351921,
+  "sources": [
+    {
+      "id": "S02",
+      "repo": "Kiterlin/anti-defensive-writing",
+      "files": [
+        {
+          "path": "skill/anti-defensive-writing/SKILL.md",
+          "sha256": "287e3d05aeabf6409fa53b74a124ee0d897338009be2c04d3e38c352ca74a3c1",
+          "bytes": 22797
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "cc3d842a912f0ed1fc80ae8d2ca7ab6cff37756422069424bf2edec554219fc9",
+          "bytes": 1065
+        }
+      ],
+      "revision": "f516147d017a3fe43ae99192cb89d8261b0c8679",
+      "license": "MIT"
+    },
+    {
+      "id": "S03",
+      "repo": "Simon-Chng/anti-defensive-writing",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "72bf28d6c16e422f0f0b06853920984c89379c113cf0c3dcb48323e6cdd744c2",
+          "bytes": 10247
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "9583bc22dedd25ef33068e6b77be7c90e8dd2464df49873ba8e4d2cc5d4fa596",
+          "bytes": 1070
+        }
+      ],
+      "revision": "fd9a7f7eeda66cf180531e1e6d97cbfe4224f5eb",
+      "license": "MIT"
+    },
+    {
+      "id": "S04",
+      "repo": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "files": [
+        {
+          "path": "skills/anti-defensive-writing-en/SKILL.md",
+          "sha256": "49705a92677d06b1be9f78be5be4f966b1d30c4ed72a3b97c86a973d06683b9b",
+          "bytes": 6419
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "fdf440e5214588d9edcdc1ec315cddbd8525fe509242c24989a8472d283325f4",
+          "bytes": 1069
+        }
+      ],
+      "revision": "82d31402caa0db1790026824399044538483171b",
+      "license": "MIT"
+    },
+    {
+      "id": "S33",
+      "repo": "mronkko/claude-academic-research",
+      "files": [
+        {
+          "path": "skills/academic-style/SKILL.md",
+          "sha256": "aa8f516d27026c5ec912e9567dd8fa87b2d47a744237e5800bea38a7b26ea9e8",
+          "bytes": 5139
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "4c2c0186a8d51025210faec8366a61875e50c75b90a6d2d3139840ca79fae8da",
+          "bytes": 1071
+        }
+      ],
+      "revision": "4579a86de137beb40ac2b31a143577115d721532",
+      "license": "MIT"
+    },
+    {
+      "id": "S34",
+      "repo": "HD0NG/claude-skills",
+      "files": [
+        {
+          "path": "skills/academic-writing/SKILL.md",
+          "sha256": "65f4d52bf785c3edca11e7bab635b41a103bc6a2104e1cf2ad11adf4fa68508b",
+          "bytes": 10340
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "bytes": 35149
+        }
+      ],
+      "revision": "b5b99ff2383a6c050856c9e68646e8c43567bdb9",
+      "license": "GPL-3.0"
+    },
+    {
+      "id": "S35",
+      "repo": "YoakeLee/academic-paper-writing-skill",
+      "files": [
+        {
+          "path": "academic-paper-writing/SKILL.md",
+          "sha256": "7dc01f67ef1cd1348c3c6cd341ae5f017400963f7f0d638cc0aa62d0fdd30d23",
+          "bytes": 16542
+        },
+        {
+          "path": "academic-paper-writing/references/style-grammar-citation.md",
+          "sha256": "365b53485d4aa72acc399a60468252fa0538fc82aba5635d6ddd1abc54d62bcb",
+          "bytes": 7815
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "69f33c23f88b3da52689d95d6cb30cf3b198f2bb27fcff316deacaa70359d368",
+          "bytes": 1373
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "6d1c857a1e0849155c22f7fa68c95107c613b5b0eb641eeff57681102260ac2f",
+          "bytes": 1867
+        }
+      ],
+      "revision": "ce4f3d8bc51ca88c7b68a770b17ba863ba456e4e",
+      "license": "MIT for repository-original wording; educational framework attributed separately"
+    },
+    {
+      "id": "S36",
+      "repo": "Jingyang-Zhu/personal-academic-writing-skill",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "181d5cb0a0c720090ed73d5f5854f804fd54fdf84b2d0177c4b940e473fa249e",
+          "bytes": 16993
+        },
+        {
+          "path": "style/author_style.yaml",
+          "sha256": "7016d4017c9af40ab8d8e691f40ed8a21dc1fa5a3897702ac050ed79589834cb",
+          "bytes": 3660
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "72380798af61d6131287b0dd3c8dc5345535df641002fece3a02d7ef109c5f8e",
+          "bytes": 1069
+        }
+      ],
+      "revision": "114a4d3cab819a3505378b9a45f35d429e7fb114",
+      "license": "MIT"
+    },
+    {
+      "id": "S37",
+      "repo": "shannhk/writing-style-extractor",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "07e912c1c7cce8cd1429bf72a62db2439a645bc6ddc4c289642c8a3a65ee3718",
+          "bytes": 4588
+        }
+      ],
+      "revision": "a6b3ba0138cab32efc937b6f4491f49a23f750cc",
+      "license": "unknown"
+    },
+    {
+      "id": "S38",
+      "repo": "snowmays/style-alchemy",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "82a6eee830c193305b5b7184924681e298a4988276870ccc5b1f1b85922e9f74",
+          "bytes": 13165
+        },
+        {
+          "path": "references/analysis-framework.md",
+          "sha256": "286ec7e78e76e25b8783e7d82715ed06d8710665f8d5d9d7d98f6cc8e40c4ca8",
+          "bytes": 21520
+        },
+        {
+          "path": "references/style-profile-schema.md",
+          "sha256": "97e032909b9ffe511e5ecf39930577a00a94bf3777723981347578aed751c278",
+          "bytes": 10402
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "457c14a8f81c0fc8901cc8920acdf0e152bddbb2aca65fc8d33976ed90ee54ea",
+          "bytes": 1065
+        }
+      ],
+      "revision": "b17cfa6e23433ac0e44ca6d899ac9922aaa0b240",
+      "license": "MIT"
+    },
+    {
+      "id": "S39",
+      "repo": "YuanZHAO321/Scientific-Writing",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "6cbdca4579d5a8adcaedac1d3efc91bb795576c2980ed5e43cffec465ef04214",
+          "bytes": 8711
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "0e378f335bd46e401caf3179bda6fc8bea9ed9e5c874f2d078620471f5205058",
+          "bytes": 1066
+        }
+      ],
+      "revision": "44b95b225866b463b8148dc612638b27bf60ec90",
+      "license": "MIT"
+    },
+    {
+      "id": "S40",
+      "repo": "KalarisLabs/research-agent-skills",
+      "files": [
+        {
+          "path": "skills/ml-paper-writing/SKILL.md",
+          "sha256": "dc9ee2c036860fb8699ef4c7558a9f12f14e42f91214dbc25c4b483aeb979857",
+          "bytes": 19887
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "0e5b3b9a6a640ba83663fb88313c30e991d5a28dfddef5bf1eebe59e7cbec12d",
+          "bytes": 1216
+        }
+      ],
+      "revision": "1390e3aec9155c494fb5232891c23e9f5eedd566",
+      "license": "MIT with third-party notices"
+    },
+    {
+      "id": "S41",
+      "repo": "Allan9719/scientific-writer-skill",
+      "revision": "bce0a8f5b2a6ed0abd8ea897e37757fe9ab7b629",
+      "license": "not inspected",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "e095d855751c195f2f90bfa9819c68e47b621ab9"
+        }
+      ]
+    },
+    {
+      "id": "S42",
+      "repo": "jzOcb/writing-style-skill",
+      "revision": "d94826e1cd48f5403b82a5a909efdfab96221259",
+      "license": "README states MIT; license file not inspected",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "fa3ab6fb461b4d934beb68d58ced90ce20c04caa"
+        }
+      ]
+    }
+  ],
+  "scope": "Fetched-file metadata plus pinned connector entries; only explicitly discussed entry sections were used in the synthesis.",
+  "additional_connector_reads": [
+    {
+      "id": "S43",
+      "repo": "OvOYu/anti-defensive-writing",
+      "revision": "bdab0d2aeb082798ad71cac3ab24a616d2d82894",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "d32d77ad28df813086b07415e5fbe703a72a0108"
+        }
+      ]
+    },
+    {
+      "id": "S44",
+      "repo": "Worigin0314/academic-defensive-writing-auditor",
+      "revision": "89f26b8a7f8149e6458f657010d354587d42cfe9",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "git_blob_sha": "9524add54ce122e6ca6ad11d8825b543920ef4cc"
+        }
+      ]
+    },
+    {
+      "id": "S45",
+      "repo": "Mseymur/HCI-Academic-Writing",
+      "revision": "bd5d19c641dbc224b3e653b1e22b2b259e63be28",
+      "files": [
+        {
+          "path": "skills/hci-academic-writing/SKILL.md",
+          "git_blob_sha": "75877f13f006d394bb185632ec165047e8ad39fb"
+        }
+      ]
+    }
+  ]
+}

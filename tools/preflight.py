@@ -56,6 +56,7 @@ def main(argv=None) -> int:
         ('real-acl-records', [python, 'tools/collect_academic_sources.py', '--replay-fixtures']),
         ('full-source-replay', collection),
         ('hc3-recorded-edits', hc3),
+        ('scholarly-current-edits', [python, 'tools/evaluate_scholarly.py'] + (['--download'] if args.download else [])),
     ]
     results = []
     for name, command in commands:

@@ -1,206 +1,150 @@
 # ClearWeave · 清织
 
-**中英文去 AI 味与写作编辑 Skill，让文字自然、清楚，保留原意和作者风格。**
+**中英文去 AI 味、反防御写作与学术文风编辑，一套流程完成表达、语法和原意核对。**
 
-[English](README.md) · [Skill 入口](skills/clearweave/SKILL.md) · [能力与规则索引](docs/capabilities.md) · [真实语料示例](docs/evaluation-hc3.md)
+[English](README.md) · [Skill 入口](skills/clearweave/SKILL.md) · [功能与规则索引](docs/capabilities.md) · [真实论文示例](docs/scholarly-examples.md)
 
-ClearWeave 用于论文、技术文档、README、工作邮件和日常文章。它处理空泛套话、机械段落、重复解释和翻译腔，也帮助整理论证、统一术语、匹配文风。一个 Skill 支持英文、中文和中英混排，可根据任务分别设置正文与修改说明的语言。
+ClearWeave 用于英文论文、中文文章、技术文档、README 和工作邮件。它清理套话与重复，直接呈现研究贡献，修正学术语法，并从指定样稿中提取可复用的文风。正文语言、说明语言、文体和修改幅度可以分别设置。
 
 ## 能做什么
 
-| 能力 | 具体用途 |
-| --- | --- |
-| **去套话与重复** | 清理空泛开场、反复总结、机械对照和过度解释，让段落更快进入主题。 |
-| **中文自然化** | 调整翻译腔、过长定语和抽象黑话，把主体、动作、对象与结果写清楚；按读者需要选择简繁与地区用语。 |
-| **英文润色** | 改善名词化、冗长句法和指代，调整句子衔接，保持英美拼写一致。 |
-| **论文与学术写作** | 聚焦研究问题、方法和贡献，去掉多余的自谦、道歉与预设辩解；使论断强度与证据相符。 |
-| **原意保全** | 逐项核对数字、单位、比较对象、否定、条件、适用范围、因果、归因和完成状态。 |
-| **术语与引用保护** | 保持专业术语、模块名和变量名一致，保留引语、引用标记、公式、代码及指定内容。 |
-| **结构整理与压缩** | 根据段落作用调整顺序，合并重复信息，围绕核心问题组织材料。 |
-| **作者文风匹配** | 从用户提供的样稿中提炼正式程度、句式、节奏与表达习惯，用于后续编辑。 |
-| **翻译与材料起草** | 将已有内容转为自然的目标语言表达，或根据笔记、提纲和材料组织成文。 |
-| **审稿与回复** | 定位论证缺口、证据不足和前后矛盾，给出具体修改建议，并组织逐条审稿回复。 |
-| **长文与多文件编辑** | 维护跨章节术语和论断台账；在支持文件编辑的宿主中，按指定路径处理文稿并输出逐文件结果。 |
-| **检查与扩展定位** | 用 Python 工具定位表达候选、比较受保护内容、提示改写风险，并追溯到规则和测试。 |
-
-## 快速开始
-
-在支持 Agent Skills 的工具中加载 `skills/clearweave/`。项目安装脚本需要 Python 3.10+，使用 Python 标准库。
-
-```bash
-git clone https://github.com/PresleyRen/clearweave-skill.git
-cd clearweave-skill
-python3 tools/install_skill.py --project /absolute/path/to/your-project
-```
-
-安装位置为 `<project>/.agents/skills/clearweave`。升级已有安装时，先备份个人修改，再替换技能目录。
-
-### 英文论文润色
-
-```text
-$clearweave
-润色下面的英文论文段落，正文保留英文，修改说明用中文。
-重点改善套话、冗长句法和防御性表达。
-保留术语、数值、引用、研究条件和证据强度。
-
-[原文]
-```
-
-### 中文去 AI 味
-
-```text
-$clearweave
-编辑下面这段中文，去掉套话、重复解释和翻译腔。
-保持原有正式程度、事实和立场，只输出修改后的正文。
-
-[原文]
-```
-
-### 文档或 README 编辑
-
-```text
-$clearweave
-重写 README，面向第一次接触项目的读者。
-重点说明功能、使用场景、安装和调用方法。
-正文直接介绍产品；评测细节通过链接引用。
-保留能力图和扩展入口。
-```
-
-## 选择任务与输出
-
-在请求中说明任务即可，也可以指定修改强度、读者和交付形式。
-
-| 任务 | 示例要求 | 输出 |
+| 模块 | 具体功能 | 常见交付 |
 | --- | --- | --- |
-| 润色 | 保持结构，做最小必要修改 | 修改后的正文 |
-| 结构重写 | 围绕核心问题重排段落，压缩重复内容 | 重组后的文章 |
-| 只诊断 | 标出问题，解释影响并给修改建议 | 带位置的审校意见 |
-| 翻译 | 翻译成自然的学术英文，保留术语与引用 | 目标语言正文 |
-| 按材料起草 | 根据以下笔记写项目说明 | 由材料组织的初稿 |
-| 匹配文风 | 参照这些样稿的语气与句式 | 文风一致的修订稿 |
-| 审稿与回复 | 检查论证、实验呈现和证据，整理逐条回复 | 问题清单、修改建议或回复稿 |
-| 文件编辑 | 只修改指定文件，附修改摘要 | 更新后的文件与摘要 |
+| **双语去 AI 味** | 调整空泛开场、机械段落、反复总结、过度解释、中文翻译腔和英文名词化。 | 自然清楚的修订稿 |
+| **反防御写作** | 区分空道歉、预设辩解、重复保留词与必要条件；把贡献、证据和比较条件直接写清楚。 | 聚焦研究内容的摘要、引言与结论 |
+| **论文语法** | 按句子功能选择时态；检查主谓一致、冠词、单复数、指代、修饰关系、平行结构和信息顺序。 | 语法修订与逐项说明 |
+| **论证与章节组织** | 围绕问题、方法、证据和贡献安排段落，综合相关工作，区分研究计划与已完成结果。 | 反向提纲、章节草稿、结构修改 |
+| **真实样稿文风** | 从指定论文或个人样稿提取句式、语气、结构与术语习惯；按语言、领域和章节组织档案。 | 作者、团队或领域文风档案 |
+| **定稿偏好学习** | 比较初稿与认可的定稿，记录改动及适用范围，整理待确认的文风偏好。 | 带来源的偏好提案 |
+| **原意与术语核对** | 核对数字、单位、否定、条件、证据强度、比较对象、工作状态，以及引语、公式和代码。 | 修改前后差异与待复核位置 |
+| **审稿与回复** | 定位论证缺口、证据不足和前后矛盾；组织逐条回复并核对引用的修订正文。 | 审稿意见、回复信、净稿 |
+| **翻译、起草与压缩** | 按材料写作，转换语言和地区用语，合并重复信息。 | 目标语言正文 |
+| **长文、多文件与维护** | 维护术语和论断台账，处理指定文件，按能力编号定位规则、来源、冲突和测试。 | 逐文件结果与扩展入口 |
 
-正文、编辑意见与核查记录分别交付。写给读者的内容保持完整连贯，修改理由放在说明中。
-
-## 编辑流程
+## 完整功能图
 
 ```text
-原稿 / 指定文件 / 笔记材料 + 用户要求
-                    │
-                    ▼
-确定任务：语言、文体、读者、修改范围和输出形式
-                    │
-                    ▼
-整理要保留的信息
-论断 · 数值 · 条件 · 术语 · 引用 · 作者立场
-                    │
-                    ▼
-选择对应规则
- ┌──────────────────┼────────────────────┐
-英文表达          中文表达          学术写作
- └──────────────────┼────────────────────┘
-                    ▼
-逐层编辑
-论证与段落 → 句子 → 词语 → 标点
-                    │
-                    ▼
-对照复核
-信息是否完整 · 关系是否准确 · 文风是否一致
-                    │
-                    ▼
-交付正文 / 审校意见 / 修改后的文件
+原稿 / 论文 / 笔记 / 指定样稿 + 本次要求
+                       │
+                       ▼
+任务入口：润色 · 诊断 · 重写 · 翻译 · 起草 · 文风匹配 · 审稿
+                       │
+        语言 / 文体 / 章节 / 修改强度 / 输出形式
+                       │
+                       ▼
+信息与术语台账：事实 · 数值 · 条件 · 引用 · 研究状态
+                       │
+        ┌──────────────┼──────────────┬────────────────┐
+        ▼              ▼              ▼                ▼
+双语自然表达      反防御与贡献      论文语法         样稿与作者文风
+english.md       anti-defensive    academic-grammar  author-voice
+chinese.md       academic.md       时态 / 一致性      样稿 → 画像
+结构 / 句式      主张 → 证据       修饰 / 指代        初稿 → 定稿偏好
+        └──────────────┴──────────────┴────────────────┘
+                       │
+                       ▼
+复核：lint 表达定位 · compare 字面差异 · risk 变化线索
+      scholar 学术扫描与文风测量 · 编辑者语义核对
+                       │
+                       ▼
+交付：正文 / 修改说明 / 诊断 / 回复信 / 文风档案
+
+扩展：问题 → CW 能力 → CF 冲突 → 规则文件 → 正反例测试 → 真实文本复测
 ```
 
-编辑以具体问题为依据：有用的长句、技术术语重复和方法被动句可以保留；空洞的自我评价与重复铺垫则直接清理。论文中的研究条件和不利结果随相关论断保留，让读者准确理解结果。
-
-## 看一个编辑示例
-
-**中文原稿**
-
-> 值得注意的是，本次更新增加了导出功能。该功能可以帮助用户将报告导出为 CSV 文件。
-
-**修改后**
-
-> 本次更新支持将报告导出为 CSV 文件。
-
-**英文原稿**
-
-> It is worth noting that the update introduces an export feature. This feature allows users to export reports as CSV files.
-
-**修改后**
-
-> The update lets users export reports as CSV files.
-
-更多中英文原文、修订稿与逐条检查见 [HC3 真实语料示例](docs/evaluation-hc3.md) 和 [应用记录](evals/v0.2.0/applications.json)。
-
-## 本地检查工具
-
-写作由宿主模型执行；配套的只读 Python 工具提供表达定位、字面差异和风险线索，辅助逐句复核。在仓库根目录运行：
+## 安装与调用
 
 ```bash
-# 定位中英文表达候选
-python3 skills/clearweave/scripts/clearweave_check.py lint draft.md --language both --format json
-
-# 比较数字、引用、代码等受保护内容
-python3 skills/clearweave/scripts/clearweave_check.py compare original.md revised.md --format json
-
-# 提示否定、情态、完成状态和数值顺序等变化
-python3 skills/clearweave/scripts/clearweave_risk.py original.md revised.md --format json
+git clone --branch v0.3.0 https://github.com/PresleyRen/clearweave-skill.git
+cd clearweave-skill
+python3 tools/install_skill.py --project /你的项目绝对路径
 ```
 
-完整参数与结果解释见[检查工具说明](skills/clearweave/references/tooling.md)。
-
-## 模块与扩展
+安装位置为项目的 `.agents/skills/clearweave`。更新已有安装时，先备份自定义内容，再替换对应目录。Python 工具使用 Python 3.10+ 标准库。
 
 ```text
-skills/clearweave/
-├── SKILL.md                    任务入口与编辑流程
-├── references/
-│   ├── preservation.md         原意、数字、逻辑关系与引用
-│   ├── english.md              英文表达
-│   ├── chinese.md              中文表达与地区用语
-│   ├── academic.md             论文、证据、审稿与回复
-│   ├── workflows.md            文风、长文、文件与交付
-│   ├── conflicts.md            规则冲突的取舍
-│   ├── tooling.md              检查工具用法
-│   └── maintenance.md          新规则与回归测试
-├── scripts/                    表达检查、风险提示与能力定位
-└── assets/capabilities.json     能力编号、规则位置与测试关联
+$clearweave
+润色这段英文论文：去套话与防御性表达，检查主谓一致、时态、冠词和修饰关系。
+正文保留英文，说明用中文；保持数值、引用、术语和证据强度。
+[原文]
 ```
 
-### 从问题找到该修改的模块
+```text
+$clearweave
+根据我提供的论文样稿提取文风，按领域、章节、句式、术语和论证顺序整理。
+用这个档案编辑下面的摘要。只输出英文正文。
+[样稿与待编辑摘要]
+```
 
-| 需要改进的地方 | 对应入口 |
+```text
+$clearweave
+给这段中文去 AI 味，保留正式程度，压缩重复解释，只给修改后的正文。
+[原文]
+```
+
+更多可直接复制的用法见[学术提示词](skills/clearweave/prompts/scholarly.md)。
+
+## 真实文本效果
+
+本轮使用已发表论文摘要检查语法、反防御编辑与术语保留，用另外三篇 NLP 摘要建立领域文风档案，并加入两条中文 HC3 历史回答。
+
+| 样本 | 处理效果 |
 | --- | --- |
-| 数字、否定、条件或语气强度 | `preservation.md`，CW03–08 |
-| 英文句法、段落推进与节奏 | `english.md`，CW10–11、CW14 |
-| 中文翻译腔、简繁与地区用语 | `chinese.md`，CW02、CW12 |
-| 论文表达、证据与审稿 | `academic.md`，CW13、CW17–20、CW35 |
-| 文风、长文连续性与文件交付 | `workflows.md`，CW15、CW22、CW24–27、CW33、CW36 |
-| 检查器与维护索引 | `scripts/`、`maintenance.md`，CW28–32、CW34 |
+| Sentence-BERT 摘要 | 修正并列主语和关系从句的一致性，精简表达，保留实验数量、时间和引用。 |
+| Clinical Concept Extraction 摘要 | 去掉结果前的情绪性引导语，完整保留没有性能收益的研究发现。 |
+| Semantic Chain Shifts 摘要 | 合并重复的可能性表达，同时保留 `may`、`likely` 与时间范围。 |
+| scispaCy 摘要 | 保留必要的转折、专业词和原有结构。 |
+| 中文 HC3 回答 | 压缩重复称谓和说明，保留立场、日期、条件与不确定表达。 |
+
+查看[完整原文与修订稿](docs/scholarly-examples.md)、[测试记录](docs/evaluation-scholarly.md)和[已有 HC3 样例](docs/evaluation-hc3.md)。
+
+## 本地检查与文风工具
+
+模型完成编辑、翻译、论证审查和文风应用；以下 Python 工具提供位置、差异、测量和维护索引。
 
 ```bash
-# 按问题描述、能力编号或冲突编号定位
-python3 skills/clearweave/scripts/clearweave_trace.py --query "否定被删掉"
-python3 skills/clearweave/scripts/clearweave_trace.py --id CW06
-python3 skills/clearweave/scripts/clearweave_trace.py --id CF17
+# 表达、字面差异与变化线索
+python3 skills/clearweave/scripts/clearweave_check.py lint draft.md --language both --format json
+python3 skills/clearweave/scripts/clearweave_check.py compare original.md revised.md --format json
+python3 skills/clearweave/scripts/clearweave_risk.py original.md revised.md --format json
 
-# 查看某个来源的融合记录
-python3 tools/coverage.py --source S01
+# 学术语法与反防御扫描
+python3 skills/clearweave/scripts/clearweave_scholar.py scan draft.md --language both
+
+# 从样稿生成画像、比较正文、整理定稿偏好
+python3 skills/clearweave/scripts/clearweave_scholar.py profile samples.json --kind author --label my-papers > profile.json
+python3 skills/clearweave/scripts/clearweave_scholar.py compare-profile profile.json draft.md
+python3 skills/clearweave/scripts/clearweave_scholar.py learn original.md final.md --scope English-abstract
 ```
 
-例如，遇到“may 被改成确定结论”，可从 **CW06 → preservation.md / academic.md → CF01 / CF15** 找到规则和用例。保存原稿与问题版本，补充正确改法和失真反例，再调整对应规则。
+样稿格式、输出字段和各工具用法见[学术工具说明](skills/clearweave/references/scholarly-tools.md)。
 
-```text
-问题样例 → 能力编号 → 规则文件 → 冲突用例
-        → 修改规则 → 运行回归 → 更新能力索引
+## 快速定位与扩展
+
+| 要改进的地方 | 入口 | 编号 |
+| --- | --- | --- |
+| 套话、翻译腔、句式 | `english.md`、`chinese.md` | CW10–14 |
+| 防御表达、贡献叙事、正文与意见分离 | `anti-defensive.md` | CW37–38、CW46 |
+| 时态、主谓一致、修饰与语义作用域 | `academic-grammar.md` | CW39–42 |
+| 真人论文文风、样稿画像、定稿偏好 | `author-voice.md` | CW43–45 |
+| 事实、条件、数字、引用 | `preservation.md` | CW03–09 |
+| 语法扫描与画像程序 | `clearweave_scholar.py` | CW44–45、CW47 |
+| 来源、测试和故障定位 | `maintenance.md`、`scholarly-tools.md` | CW31–32、CW48 |
+
+```bash
+python3 skills/clearweave/scripts/clearweave_trace.py --query "主谓一致"
+python3 skills/clearweave/scripts/clearweave_trace.py --id CW37
+python3 tools/coverage.py --source S44
+python3 tools/evaluate_scholarly.py
+python3 -m unittest discover -s tests -v
+python3 tools/validate_repo.py
+python3 tools/render_catalog.py --write
 ```
+
+新增规则时，保存一个问题样本和一个合理的相似表达，定位模块、补充测试，再更新能力索引。详见[整合与扩展说明](docs/scholarly-integration.md)。
 
 <details>
-<summary>查看全部 36 项能力与规则入口</summary>
-
-索引中的 `host` 表示模型执行，`script` 表示 Python 工具，`literal` 表示字面比较，`candidate` 表示风险线索，`workflow` 表示工作流程，`package` 表示技能包结构。
+<summary>展开全部 48 项能力及规则位置</summary>
 
 <!-- capabilities:start -->
 | 能力编号与名称 | 执行方式 | 规则位置 |
@@ -241,31 +185,28 @@ python3 tools/coverage.py --source S01
 | **CW34** 可移植技能与可选工具 | `package` | [references/maintenance.md](skills/clearweave/references/maintenance.md#cw34) |
 | **CW35** 明确授权的证据核查 | `host` | [references/academic.md](skills/clearweave/references/academic.md#cw35) |
 | **CW36** 净稿与编辑意见分离 | `host` | [references/workflows.md](skills/clearweave/references/workflows.md#cw36) |
+| **CW37** 反防御表达分类与编辑 | `host` | [references/anti-defensive.md](skills/clearweave/references/anti-defensive.md#cw37) |
+| **CW38** 贡献叙事与章节功能 | `host` | [references/anti-defensive.md](skills/clearweave/references/anti-defensive.md#cw38) |
+| **CW39** 按句子功能选择时态 | `host` | [references/academic-grammar.md](skills/clearweave/references/academic-grammar.md#cw39) |
+| **CW40** 学术语法与主谓一致 | `host+candidate` | [references/academic-grammar.md](skills/clearweave/references/academic-grammar.md#cw40) |
+| **CW41** 信息顺序与修饰关系 | `host` | [references/academic-grammar.md](skills/clearweave/references/academic-grammar.md#cw41) |
+| **CW42** 论断强度与语法作用域 | `host` | [references/academic-grammar.md](skills/clearweave/references/academic-grammar.md#cw42) |
+| **CW43** 基于真实样稿的学术文风 | `host` | [references/author-voice.md](skills/clearweave/references/author-voice.md#cw43) |
+| **CW44** 文风画像测量与对比 | `script+host` | [references/author-voice.md](skills/clearweave/references/author-voice.md#cw44) |
+| **CW45** 从定稿修订提取偏好 | `script+host` | [references/author-voice.md](skills/clearweave/references/author-voice.md#cw45) |
+| **CW46** 正文与审稿意见分离 | `host` | [references/anti-defensive.md](skills/clearweave/references/anti-defensive.md#cw46) |
+| **CW47** 学术语法与反防御扫描 | `script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw47) |
+| **CW48** 真实论文分角色测试 | `workflow+script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw48) |
 <!-- capabilities:end -->
 
 </details>
 
-### 验证与同步文档
+## 来源与测试
 
-```bash
-python3 -m unittest discover -s tests -v
-python3 tools/validate_repo.py
-python3 tools/coverage.py --format json
-python3 tools/render_catalog.py --write
-```
+整合记录覆盖 **45 个来源、246 条采用与调整决定、48 项能力、34 类冲突及 68 个中英文冲突场景**。本轮新增 13 个学术与文风来源，并复查原有反防御模块。
 
-能力注册表关联来源、规则位置和测试场景；生成器同步中英文 README 的能力索引及[能力图册](docs/capabilities.md)。维护步骤见[扩展指南](skills/clearweave/references/maintenance.md)。
-
-## 方法来源与测试记录
-
-ClearWeave 参考了 32 项写作技能，将双语润色、清晰表达、学术反防御写作、作者文风和保真检查整理为共用流程。各来源的采用内容与取舍记录见[来源说明](docs/sources.md)和[逐项映射](docs/feature-map.json)。
-
-| 记录 | 内容 |
-| --- | --- |
-| [程序回归与安装验证](docs/evaluation-v0.2.0.md) | 179 项测试，覆盖检查器、命令行、安装、能力定位和用例约束。 |
-| [双语规则冲突用例](evals/conflict-cases.json) | 26 类冲突、52 个中英文场景，记录正确处理与失真反例。 |
-| [HC3 真实语料应用](docs/evaluation-hc3.md) | 公开语料的抽样方式、原文、改写、修订过程和逐条检查结果。 |
+[来源与取舍](docs/sources.md) · [完整能力索引](docs/capabilities.md) · [整合说明](docs/scholarly-integration.md) · [真实论文测试](docs/evaluation-scholarly.md) · [原始测试数据](evals/scholarly-2026-10-20/)
 
 ## 许可
 
-原创代码与指令采用 [MIT](LICENSE) 许可。来源归属及相关许可说明见 [NOTICE](NOTICE.md)。
+项目原创代码与指令使用 [MIT](LICENSE)。方法来源及署名见 [NOTICE](NOTICE.md)。真实样本文本按其来源许可提供，ACL 论文样例为 CC BY 4.0，HC3 样例为 CC BY-SA 4.0。

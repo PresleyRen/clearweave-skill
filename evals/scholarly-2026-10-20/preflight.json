@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "finished_at": "2026-10-20T10:17:50.450558+00:00",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "source_tree_unchanged_during_tests": true,
+  "checks": [
+    {
+      "check": "unit",
+      "returncode": 0,
+      "log": "unit.log"
+    },
+    {
+      "check": "package",
+      "returncode": 0,
+      "log": "package.log"
+    },
+    {
+      "check": "real-acl-records",
+      "returncode": 0,
+      "log": "real-acl-records.log"
+    },
+    {
+      "check": "full-source-replay",
+      "returncode": 0,
+      "log": "full-source-replay.log"
+    },
+    {
+      "check": "hc3-recorded-edits",
+      "returncode": 0,
+      "log": "hc3-recorded-edits.log"
+    },
+    {
+      "check": "scholarly-current-edits",
+      "returncode": 0,
+      "log": "scholarly-current-edits.log"
+    }
+  ],
+  "data_mode": "verified-offline-source-replay",
+  "logs_available": "Full local log stored in unittest.log; fresh public-source checks run in release CI."
+}

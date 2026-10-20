@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.2.0",
-  "scope": "36 bounded capabilities, based on the 32-entry source audit. References are inspiration, not endorsements or replicated upstream performance.",
+  "version": "0.3.0",
+  "scope": "42 inventoried implementations; stable core CW01–CW36 plus scholarly extension CW37–CW48.",
   "capabilities": [
     {
       "id": "CW01",
@@ -943,6 +943,288 @@
       ],
       "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
       "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW37",
+      "name_en": "Function-based anti-defensive editing",
+      "name_zh": "反防御表达分类与编辑",
+      "module": "references/anti-defensive.md",
+      "anchor": "cw37",
+      "kind": "host",
+      "keywords": "defensive apology hedge 防御 自谦 免责声明 心虚",
+      "sources": [
+        "S02",
+        "S03",
+        "S04",
+        "S43",
+        "S44",
+        "S45"
+      ],
+      "cases": [
+        "CF27-EN",
+        "CF27-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW38",
+      "name_en": "Contribution and section-function planning",
+      "name_zh": "贡献叙事与章节功能",
+      "module": "references/anti-defensive.md",
+      "anchor": "cw38",
+      "kind": "host",
+      "keywords": "contribution narrative section abstract 贡献 摘要 结构",
+      "sources": [
+        "S03",
+        "S04",
+        "S29",
+        "S33",
+        "S34",
+        "S36",
+        "S39",
+        "S40",
+        "S41",
+        "S43",
+        "S44",
+        "S45"
+      ],
+      "cases": [
+        "CF32-EN",
+        "CF32-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW39",
+      "name_en": "Function-sensitive tense and aspect",
+      "name_zh": "按句子功能选择时态",
+      "module": "references/academic-grammar.md",
+      "anchor": "cw39",
+      "kind": "host",
+      "keywords": "tense aspect methods past present 时态 完成状态",
+      "sources": [
+        "S29",
+        "S33",
+        "S34",
+        "S41"
+      ],
+      "cases": [
+        "CF29-EN",
+        "CF29-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW40",
+      "name_en": "Academic grammar and agreement",
+      "name_zh": "学术语法与主谓一致",
+      "module": "references/academic-grammar.md",
+      "anchor": "cw40",
+      "kind": "host+candidate",
+      "keywords": "grammar agreement article countability 主谓一致 冠词 语法",
+      "sources": [
+        "S29",
+        "S35",
+        "S41"
+      ],
+      "cases": [
+        "CF28-EN",
+        "CF28-ZH",
+        "CF33-EN",
+        "CF33-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW41",
+      "name_en": "Information flow and modifier scope",
+      "name_zh": "信息顺序与修饰关系",
+      "module": "references/academic-grammar.md",
+      "anchor": "cw41",
+      "kind": "host",
+      "keywords": "modifier pronoun parallelism information flow 修饰 指代 衔接",
+      "sources": [
+        "S29",
+        "S35",
+        "S39",
+        "S41"
+      ],
+      "cases": [
+        "CF31-EN",
+        "CF31-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW42",
+      "name_en": "Meaning-sensitive grammar",
+      "name_zh": "论断强度与语法作用域",
+      "module": "references/academic-grammar.md",
+      "anchor": "cw42",
+      "kind": "host",
+      "keywords": "only significance prediction causation 程度 仅 显著 预测",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S33",
+        "S35",
+        "S40",
+        "S41",
+        "S45"
+      ],
+      "cases": [
+        "CF27-EN",
+        "CF27-ZH",
+        "CF29-EN",
+        "CF29-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW43",
+      "name_en": "Sample-grounded academic voice",
+      "name_zh": "基于真实样稿的学术文风",
+      "module": "references/author-voice.md",
+      "anchor": "cw43",
+      "kind": "host",
+      "keywords": "author style field profile 真人论文 作者 文风 模拟",
+      "sources": [
+        "S11",
+        "S20",
+        "S34",
+        "S36",
+        "S37",
+        "S38",
+        "S42"
+      ],
+      "cases": [
+        "CF30-EN",
+        "CF30-ZH",
+        "CF33-EN",
+        "CF33-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW44",
+      "name_en": "Corpus profile measurements",
+      "name_zh": "文风画像测量与对比",
+      "module": "references/author-voice.md",
+      "anchor": "cw44",
+      "kind": "script+host",
+      "keywords": "profile metrics compare measurement 画像 测量 风格",
+      "sources": [
+        "S11",
+        "S36",
+        "S37",
+        "S38"
+      ],
+      "cases": [
+        "CF31-EN",
+        "CF31-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW45",
+      "name_en": "Approved-revision preference learning",
+      "name_zh": "从定稿修订提取偏好",
+      "module": "references/author-voice.md",
+      "anchor": "cw45",
+      "kind": "script+host",
+      "keywords": "learn approved revision diff preference 定稿 学习 偏好",
+      "sources": [
+        "S13",
+        "S38",
+        "S42"
+      ],
+      "cases": [
+        "CF34-EN",
+        "CF34-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW46",
+      "name_en": "Manuscript and editorial lanes",
+      "name_zh": "正文与审稿意见分离",
+      "module": "references/anti-defensive.md",
+      "anchor": "cw46",
+      "kind": "host",
+      "keywords": "readme clean manuscript review lanes 防御 自审 正文 分离",
+      "sources": [
+        "S02",
+        "S03",
+        "S39",
+        "S42",
+        "S43",
+        "S45"
+      ],
+      "cases": [
+        "CF27-EN",
+        "CF27-ZH",
+        "CF32-EN",
+        "CF32-ZH",
+        "CF34-EN",
+        "CF34-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW47",
+      "name_en": "Located scholarly candidates",
+      "name_zh": "学术语法与反防御扫描",
+      "module": "references/scholarly-tools.md",
+      "anchor": "cw47",
+      "kind": "script",
+      "keywords": "academic scan candidate grammar defensive 主谓 句法 扫描",
+      "sources": [
+        "S02",
+        "S03",
+        "S33",
+        "S35",
+        "S41",
+        "S44"
+      ],
+      "cases": [
+        "CF27-EN",
+        "CF27-ZH",
+        "CF28-EN",
+        "CF28-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW48",
+      "name_en": "Provenance-separated scholarly evaluation",
+      "name_zh": "真实论文分角色测试",
+      "module": "references/scholarly-tools.md",
+      "anchor": "cw48",
+      "kind": "workflow+script",
+      "keywords": "evaluation published paper provenance data 真实论文 测试",
+      "sources": [
+        "S31",
+        "S36",
+        "S40"
+      ],
+      "cases": [
+        "CF30-EN",
+        "CF30-ZH"
+      ],
+      "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
+      "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
     }
   ],
   "conflicts": [
@@ -1313,7 +1595,113 @@
         "CF26-EN",
         "CF26-ZH"
       ]
+    },
+    {
+      "id": "CF27",
+      "name_en": "Empty defense vs substantive limitation",
+      "name_zh": "空辩解与有效限定",
+      "capabilities": [
+        "CW37",
+        "CW42",
+        "CW46",
+        "CW47"
+      ],
+      "cases": [
+        "CF27-EN",
+        "CF27-ZH"
+      ]
+    },
+    {
+      "id": "CF28",
+      "name_en": "Grammar repair vs exact quotations",
+      "name_zh": "语法修改与逐字引文",
+      "capabilities": [
+        "CW40",
+        "CW47"
+      ],
+      "cases": [
+        "CF28-EN",
+        "CF28-ZH"
+      ]
+    },
+    {
+      "id": "CF29",
+      "name_en": "Section tense vs functional time",
+      "name_zh": "章节时态与真实时间",
+      "capabilities": [
+        "CW39",
+        "CW42"
+      ],
+      "cases": [
+        "CF29-EN",
+        "CF29-ZH"
+      ]
+    },
+    {
+      "id": "CF30",
+      "name_en": "Voice transfer vs fact transfer",
+      "name_zh": "迁移文风与迁移事实",
+      "capabilities": [
+        "CW43",
+        "CW48"
+      ],
+      "cases": [
+        "CF30-EN",
+        "CF30-ZH"
+      ]
+    },
+    {
+      "id": "CF31",
+      "name_en": "Descriptive profiles vs forced rhythm",
+      "name_zh": "描述性画像与强制节奏",
+      "capabilities": [
+        "CW41",
+        "CW44"
+      ],
+      "cases": [
+        "CF31-EN",
+        "CF31-ZH"
+      ]
+    },
+    {
+      "id": "CF32",
+      "name_en": "Section template vs available evidence",
+      "name_zh": "章节模板与已有证据",
+      "capabilities": [
+        "CW38",
+        "CW46"
+      ],
+      "cases": [
+        "CF32-EN",
+        "CF32-ZH"
+      ]
+    },
+    {
+      "id": "CF33",
+      "name_en": "Imitation vs author grammar mistakes",
+      "name_zh": "文风模仿与原作者语法错误",
+      "capabilities": [
+        "CW40",
+        "CW43"
+      ],
+      "cases": [
+        "CF33-EN",
+        "CF33-ZH"
+      ]
+    },
+    {
+      "id": "CF34",
+      "name_en": "Local preferences vs global rewrites",
+      "name_zh": "局部偏好与全局改写",
+      "capabilities": [
+        "CW45",
+        "CW46"
+      ],
+      "cases": [
+        "CF34-EN",
+        "CF34-ZH"
+      ]
     }
   ],
-  "source_inventory_count": 32
+  "source_inventory_count": 45
 }

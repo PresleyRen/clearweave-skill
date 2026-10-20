@@ -2643,6 +2643,794 @@
       ],
       "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
       "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S33-A01",
+      "source": "S33",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "18752837c1e05ea86d0df64e9914034a9148b1aeae8b30fa483be7e52f83dae4",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW39",
+        "CW42",
+        "CW38"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S33-A02",
+      "source": "S33",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "914009610646bd1dac87969c52d088f1e5525a8c1b8a17afb294c654b4b2e5db",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW39",
+        "CW42",
+        "CW38"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S33-D01",
+      "source": "S33",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "21f38793a8c253ce21f235dd4ddba58f77b02a280038e02abff7b15d928bcce0",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW39",
+        "CW42",
+        "CW38"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S33-D02",
+      "source": "S33",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "8457f30d65f86d8484fe1ace829e31b83d245d18aab49654e2ff8efb7f0c8f7e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW39",
+        "CW42",
+        "CW38"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S34-A01",
+      "source": "S34",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "73d5d5962f4012272ad915e19ac12b6e0b24c07f610e4c5411bd3946ccaf3f6c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW43"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S34-A02",
+      "source": "S34",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "4a932dffd974d5f57d698955d9981e7d87493af3a582a64d19ea383c9dd02748",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW43"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S34-D01",
+      "source": "S34",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "366f70be8c1de658de38e9ad3cd45a945aae01e1a18428cc023b41b2b1ca50a2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW43"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S34-D02",
+      "source": "S34",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "57464bd89d4f7f3e38f822b2b3d36bfd4fdaf956123bd19e312728f6fd811ec1",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW43"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S35-A01",
+      "source": "S35",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "0c862ddd33c5cffffb3ea52887e07f14493e2a83000d15c1f8ca60b4e899d687",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S35-A02",
+      "source": "S35",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "54b4ce89412330bc2f39e4e1cddca81e548ceb79263392d7eebd3050593d45d0",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S35-D01",
+      "source": "S35",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "0a040b8806db4a4434acf758db39c89ce6cd587e347be1ad5fee9b4c06a9729e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S35-D02",
+      "source": "S35",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "43bd23eb1e4abc65a018d544ecb3d80b5597eb33a13d5d09564dcaaceb15ef83",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S36-A01",
+      "source": "S36",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "e51566f1ed20a5e554af63deefe0d4ed1ba971009b08d54ee8c49f4240f36007",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S36-A02",
+      "source": "S36",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "a3ee05bcc1f2137ae00e800986ad20e00f78c933ffbc2f51840efdc0550cd640",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S36-D01",
+      "source": "S36",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "23875352f6f3fc14a85a60ec45f46665b80a0293a055196fd3c7ee0cea123c21",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S36-D02",
+      "source": "S36",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "985e5108c750f651302ecd4f1fd47c2e68edd738a2929c478795fdbf2b33e5fa",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S37-A01",
+      "source": "S37",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "35883a554b6e180cbba6b357b69047933a6a5e3292fc5dabba3cc7819a4021ac",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S37-A02",
+      "source": "S37",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "ef7beab9e19b0bc7cdc9c3f71b23376ba080159d04d60259c7a65958eadc6de7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S37-D01",
+      "source": "S37",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "e93b286ff65f8189b66291fde5b327a6063cfaf3c3c2e3b056ebac537eb3cf25",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S37-D02",
+      "source": "S37",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "adb1f4a4830e31f587723782bd719b0f7a6619aaaf6367bed124e7cfe04f05c2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW44"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S38-A01",
+      "source": "S38",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "ec58082e0ce51d8a5b4b5c524f33999fc87175fbac1f037644c86e7cb2187f24",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW44",
+        "CW45"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S38-A02",
+      "source": "S38",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "c8c0dea1c8171314111e0cc4ffb9eb13416e11016e7079aaced17e2031da8c99",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW44",
+        "CW45"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S38-D01",
+      "source": "S38",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "1ed76114692d68c2d9209d1316362f0dd9692572c12ee8bbe27d476197f3a936",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW44",
+        "CW45"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S38-D02",
+      "source": "S38",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "5a9547dd63d98a346d75afb8134a62670ee09154316a5f77fc46ebfbe6903754",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW44",
+        "CW45"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S39-A01",
+      "source": "S39",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "62d8b0c3d73b1ffb3f22984e0d68f83af0497f86003356061a7c03140b124ba1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW41",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S39-A02",
+      "source": "S39",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "a59ae6159264fa05dbf8c5280f137c34afb66455e04050ce0c257523a2d1e0fa",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW41",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S39-D01",
+      "source": "S39",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "d45a914f70a80980135e6d0d607bd89a08d6c9fab02e8baa08929da0a831939b",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW41",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S39-D02",
+      "source": "S39",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "4f2dac4c0b97191274a3480f7c81de5257fdc28e65cba19032aded74f646bee0",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW41",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S40-A01",
+      "source": "S40",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "d9f41238e713df116ee7f9e9ed98521c6fe8b4c84a15ebe476961d3e22a3b346",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW42",
+        "CW48"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S40-A02",
+      "source": "S40",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "ef47ccee418b3720bacf88858bfedfb703579d81c087e5d76ad5be44c5212ee7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW42",
+        "CW48"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S40-D01",
+      "source": "S40",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "1607a99dae60358eda31dbf4a4738ef4c930e282552139349f36aeb41e89e476",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW42",
+        "CW48"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S40-D02",
+      "source": "S40",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "2445b770f991523a025ec82c9af9d580630e83a4c65f14be7868907d08862a84",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW42",
+        "CW48"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S41-A01",
+      "source": "S41",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "a067d0e58e5cbd203e6576580c6244005e733bb78e7efcc05d478d62011d595b",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S41-A02",
+      "source": "S41",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "d4b658c8d656da8c266462889592a6e47623456cc5f6fe793ea0ec15a854ea75",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S41-D01",
+      "source": "S41",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a0f2c96cbc599c1fd03a7514ce29bb1e3189dbf3b0f9fc06c6661f2ea78efaca",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S41-D02",
+      "source": "S41",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "12c2cc57fe16f56589eb61c9abcc4c14c3f7259df8047c6f840bc1c467234012",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW38",
+        "CW39",
+        "CW40",
+        "CW41",
+        "CW42"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S42-A01",
+      "source": "S42",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "301aa1db5101aa43ecb859a92ac7948043652001b25dd8d1fb01574333169cf6",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW45",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S42-A02",
+      "source": "S42",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "0a0973d37621bfe67d9e79406235a448c9f59eb26be1fdfd7f1f48bf7b8d4931",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW43",
+        "CW45",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S42-D01",
+      "source": "S42",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "f4cfb00cd70d87e5da33f5f194a42b0f34e473bd9c47ea18af8f32a323c787b4",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW45",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S42-D02",
+      "source": "S42",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "d2b85115fb8e311e2f944886b8820814bdcaf13e3964890d0c4f285b1acc27a2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW43",
+        "CW45",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Source-to-rule mapping; actual application evidence is recorded separately."
+    },
+    {
+      "id": "S43-A01",
+      "source": "S43",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "92971c1d2ce834556a23d8cfff04a7af59a42646dcf4bdf6a2c8223c9247c776",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S43-A02",
+      "source": "S43",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "1fd545d75efdb146e4b54192fc6407d27d84324d075c98b3170024d5f5467f3f",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S43-D01",
+      "source": "S43",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "bf593a06bc84322c2208971deb6561823f144d47687cb8f881c039e4d4cc479c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S43-D02",
+      "source": "S43",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "54213ed68c2de84d7feaf9d73fdc20ce2848f2b9b3d895ecad6194e732a9e5fa",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S44-A01",
+      "source": "S44",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "8af8b26d1d090de39336540ef565400bbad0dc2174ce81a69fd385652a7bb03d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW47"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S44-A02",
+      "source": "S44",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "57facfb2593c3e74b74603b3fe62677a04891d31b9033b5f8570cf41e817c441",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW47"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S44-D01",
+      "source": "S44",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "35deb9a78f29ae19424f7bcb9525f536fa8c2c6d3608d46f7bf97708858be396",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW47"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S44-D02",
+      "source": "S44",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "42aa85325e6282a482ab4146e7781de11b50694276d58e0f86a4d82ef23fc66c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW47"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S45-A01",
+      "source": "S45",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "c8f088b390224aba0e0c35058d67a6ecb45154abf062eb79a75e929255f56cba",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW42",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S45-A02",
+      "source": "S45",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "cbddb8c8664304625338a33d7d69b7c32e1873e4ce1e795dbf3aeef2b95d8e51",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW42",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S45-D01",
+      "source": "S45",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a6b8c10e20d34702a9e50a93f96d8957443edc38c68e394789c8729cd5eade87",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW42",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S45-D02",
+      "source": "S45",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "f19916b8281b981af73025d2255d6b49449c6067308c29c0b58796b8b8930fd6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW37",
+        "CW38",
+        "CW42",
+        "CW46"
+      ],
+      "mapping_basis": "explicit scholarly-extension design decision",
+      "evidence_scope": "Rule mapping; evaluation is recorded separately."
     }
   ]
 }

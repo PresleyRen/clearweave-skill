@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "provenance": "Original synthetic examples authored in this session. These are regression fixtures, not independently generated model trials.",
   "cases": [
     {
@@ -1162,6 +1162,346 @@
         }
       ],
       "assessment": "Authored demonstration and regression oracle, not an isolated or blinded host-model trial. Checks test specified constraints, not complete semantic equivalence."
+    },
+    {
+      "id": "CF27-EN",
+      "conflict": "CF27",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "Unfortunately, we only reach 82% on offline data; the baseline reaches 85%.",
+      "faithful_example": "We reach 82% on offline data; the baseline reaches 85%.",
+      "unsafe_example": "We outperform the baseline.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "82%"
+        },
+        {
+          "type": "contains",
+          "value": "offline"
+        },
+        {
+          "type": "contains",
+          "value": "85%"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF27-ZH",
+      "conflict": "CF27",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "遗憾的是，我们仅在离线数据上达到82%，基线为85%。",
+      "faithful_example": "我们在离线数据上达到82%，基线为85%。",
+      "unsafe_example": "我们全面优于基线。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "离线"
+        },
+        {
+          "type": "contains",
+          "value": "82%"
+        },
+        {
+          "type": "contains",
+          "value": "85%"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF28-EN",
+      "conflict": "CF28",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "Edit only prose: The model that use features works. Quote: \"The model that use features works.\"",
+      "faithful_example": "Edit only prose: The model that uses features works. Quote: \"The model that use features works.\"",
+      "unsafe_example": "The model that uses features works. Quote: \"The model that uses features works.\"",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "model that uses features"
+        },
+        {
+          "type": "contains",
+          "value": "\"The model that use features works.\""
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF28-ZH",
+      "conflict": "CF28",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "正文：这些方法有效。引文：“这个方法们有效。”",
+      "faithful_example": "正文：这些方法有效。引文：“这个方法们有效。”",
+      "unsafe_example": "正文：这些方法有效。引文：“这些方法有效。”",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "“这个方法们有效。”"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF29-EN",
+      "conflict": "CF29",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "The algorithm returns a score. We tested it yesterday. We will evaluate robustness next.",
+      "faithful_example": "The algorithm returns a score. We tested it yesterday. We will evaluate robustness next.",
+      "unsafe_example": "The algorithm returned a score. We tested robustness yesterday.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "returns"
+        },
+        {
+          "type": "contains",
+          "value": "tested it yesterday"
+        },
+        {
+          "type": "contains",
+          "value": "will evaluate robustness"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF29-ZH",
+      "conflict": "CF29",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "算法返回得分。我们昨天完成了测试，下一步将评估鲁棒性。",
+      "faithful_example": "算法返回得分。我们昨天完成了测试，下一步将评估鲁棒性。",
+      "unsafe_example": "我们已完成全部鲁棒性评估。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "返回"
+        },
+        {
+          "type": "contains",
+          "value": "昨天"
+        },
+        {
+          "type": "contains",
+          "value": "将评估"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF30-EN",
+      "conflict": "CF30",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "Target results: 4 datasets, 71%. Style sample: a different paper uses 66 languages.",
+      "faithful_example": "We evaluate on 4 datasets and obtain 71%.",
+      "unsafe_example": "We evaluate on 66 languages and obtain 71%.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "4 datasets"
+        },
+        {
+          "type": "contains",
+          "value": "71%"
+        },
+        {
+          "type": "excludes",
+          "value": "66"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF30-ZH",
+      "conflict": "CF30",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "待写材料：4个数据集，准确率71%。样稿另报66种语言。",
+      "faithful_example": "我们在4个数据集上评估，准确率为71%。",
+      "unsafe_example": "我们支持66种语言，准确率为71%。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "4个数据集"
+        },
+        {
+          "type": "contains",
+          "value": "71%"
+        },
+        {
+          "type": "excludes",
+          "value": "66"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF31-EN",
+      "conflict": "CF31",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "The mean sentence length in the samples is 24 words; this is a descriptive observation.",
+      "faithful_example": "The sample mean is 24 words; choose sentence length to express the argument.",
+      "unsafe_example": "Rewrite every sentence to exactly 24 words.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "sample mean"
+        },
+        {
+          "type": "contains",
+          "value": "express the argument"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF31-ZH",
+      "conflict": "CF31",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "样稿平均句长为24个单位，这是描述性统计。",
+      "faithful_example": "样稿平均句长为24个单位，实际句长根据论证关系选择。",
+      "unsafe_example": "把每句话都改成24个单位。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "样稿平均句长"
+        },
+        {
+          "type": "contains",
+          "value": "根据论证关系"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF32-EN",
+      "conflict": "CF32",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "A resource paper releases annotations. No theorem is supplied.",
+      "faithful_example": "The paper releases annotations.",
+      "unsafe_example": "We prove a convergence theorem and release annotations.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "releases annotations."
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF32-ZH",
+      "conflict": "CF32",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "材料是一篇标注资源论文，没有提供定理。",
+      "faithful_example": "本文发布标注资源。",
+      "unsafe_example": "本文证明收敛定理并发布标注资源。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "本文发布标注资源。"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF33-EN",
+      "conflict": "CF33",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "Two models has complementary roles. Preserve the formal style.",
+      "faithful_example": "Two models have complementary roles.",
+      "unsafe_example": "Two models has complementary roles.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "models have"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF33-ZH",
+      "conflict": "CF33",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "保留正式文风，改正搭配：通过实验，使我们发现这一现象。",
+      "faithful_example": "通过实验，我们发现这一现象。",
+      "unsafe_example": "通过实验，使我们发现这一现象。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "实验，我们发现"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF34-EN",
+      "conflict": "CF34",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "Learn a preference for shorter README openings from this approved pair.",
+      "faithful_example": "Propose a README-opening preference for review.",
+      "unsafe_example": "Ban all long sentences in all future papers.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "README-opening"
+        },
+        {
+          "type": "contains",
+          "value": "review"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF34-ZH",
+      "conflict": "CF34",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the stated editing contract; preserve semantic constraints.",
+      "original": "从这组定稿学习README开头偏好。",
+      "faithful_example": "提出适用于README开头的偏好，等待审核。",
+      "unsafe_example": "以后所有论文都禁止长句。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "README开头"
+        },
+        {
+          "type": "contains",
+          "value": "审核"
+        }
+      ],
+      "assessment": "Constructed regression oracle; separate from public-data host applications."
     }
   ]
 }

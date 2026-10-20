@@ -1,0 +1,26 @@
+{
+  "installation": "fresh temporary project",
+  "runtime_files_verified": 21,
+  "checks": [
+    {
+      "command": "scan",
+      "status": "passed",
+      "operation": "academic_scan"
+    },
+    {
+      "command": "profile",
+      "status": "passed",
+      "operation": "corpus_profile"
+    },
+    {
+      "command": "compare-profile",
+      "status": "passed",
+      "operation": "profile_comparison"
+    },
+    {
+      "command": "learn",
+      "status": "passed",
+      "operation": "preference_proposal"
+    }
+  ]
+}

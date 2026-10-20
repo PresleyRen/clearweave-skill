@@ -16,7 +16,9 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / 'evals' / 'hc3-2026-10-20'
-sys.path.insert(0, str(ROOT / 'skills' / 'clearweave' / 'scripts'))
+# Historical evaluations retain the exact instruction and helper snapshot.
+RUNTIME = EVAL / 'runtime-v0.2.0'
+sys.path.insert(0, str(RUNTIME / 'skills' / 'clearweave' / 'scripts'))
 import clearweave_check as checker
 import clearweave_risk as risk
 
@@ -67,7 +69,7 @@ def evaluate(manifest: dict, specs: list[dict], edits: list[dict], samples: list
             raise ValueError('Case coverage differs')
         maps.append(mapped)
     outputs, originals = maps
-    skill_matches = {name: digest((ROOT / name).read_bytes()) == sha for name, sha in manifest['skill_hashes'].items()}
+    skill_matches = {name: digest((RUNTIME / name).read_bytes()) == sha for name, sha in manifest['skill_hashes'].items()}
     if not all(skill_matches.values()):
         raise ValueError('Runtime skill differs from the evaluated snapshot')
     records = []

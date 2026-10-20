@@ -1,0 +1,644 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.3.0",
+  "runtime_files_verified": 21,
+  "profile_samples": 3,
+  "editing_records": 8,
+  "actions": {
+    "edit": 6,
+    "keep": 2
+  },
+  "academic_candidates_before": 5,
+  "academic_candidates_after": 0,
+  "edited_with_literal_differences": 0,
+  "edited_with_risk_candidates": 4,
+  "evaluation_kind": "recorded same-assistant applications / deterministic replay",
+  "records": [
+    {
+      "id": "D19-1410",
+      "action": "edit",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 1120,
+      "characters_after": 1053,
+      "words_before": 166,
+      "words_after": 156,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "0c1c8ed261f75c76beed4bda3912d293019349c6808e27aafbade2829bfd0065",
+        "findings": [
+          {
+            "rule": "GR01",
+            "language": "en",
+            "start": 0,
+            "end": 61,
+            "line": 1,
+            "column": 1,
+            "span": "BERT (Devlin et al., 2018) and RoBERTa (Liu et al., 2019) has",
+            "question": "Check agreement with a coordinated subject; a single named unit can be an exception.",
+            "status": "review_candidate"
+          },
+          {
+            "rule": "GR02",
+            "language": "en",
+            "start": 647,
+            "end": 663,
+            "line": 1,
+            "column": 648,
+            "span": "network that use",
+            "question": "Identify the relative-clause antecedent; a singular head normally takes a singular verb.",
+            "status": "review_candidate"
+          }
+        ],
+        "counts": {
+          "GR01": 1,
+          "GR02": 1
+        }
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "025c8182a4f9bdaf1f1ed92f55082ba04382a6fcec44f587154b966065ef9bcb",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 7,
+        "revision_span_count": 7,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 2,
+        "findings": [
+          {
+            "risk_id": "R03",
+            "capability": "CW06",
+            "category": "obligation",
+            "original": [],
+            "revision": [
+              {
+                "cue": "must",
+                "line": 1,
+                "column": 192,
+                "context": "xtual similarity (STS). However, both sentences must be fed into the network, creating substantial c"
+              },
+              {
+                "cue": "required",
+                "line": 1,
+                "column": 770,
+                "context": " using cosine-similarity. This reduces the time required to find the most similar pair from 65 hours wit"
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          },
+          {
+            "risk_id": "R04",
+            "capability": "CW07",
+            "category": "causal_strength",
+            "original": [
+              {
+                "cue": "causes",
+                "line": 1,
+                "column": 249,
+                "context": " both sentences are fed into the network, which causes a massive computational overhead: Finding the m"
+              }
+            ],
+            "revision": [],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "W19-5034",
+      "action": "keep",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 695,
+      "characters_after": 695,
+      "words_before": 93,
+      "words_after": 93,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "185882a88d3fc0cf551d736b251086b4a1c6c2017e3bc14ba3fb791314d49098",
+        "findings": [],
+        "counts": {}
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "185882a88d3fc0cf551d736b251086b4a1c6c2017e3bc14ba3fb791314d49098",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 1,
+        "revision_span_count": 1,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "D16-1264",
+      "action": "keep",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 757,
+      "characters_after": 757,
+      "words_before": 112,
+      "words_after": 112,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "9131f94b38e68f82ab04ab6cc4194959aa276ab9f8743d4a265f2ca4902c6892",
+        "findings": [],
+        "counts": {}
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "9131f94b38e68f82ab04ab6cc4194959aa276ab9f8743d4a265f2ca4902c6892",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 5,
+        "revision_span_count": 5,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "W19-5028",
+      "action": "edit",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 895,
+      "characters_after": 880,
+      "words_before": 134,
+      "words_after": 133,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "b528ad46419c4ab5f516340c980257fc7ec1cbbf43975737b918b07738af99a3",
+        "findings": [
+          {
+            "rule": "AD02",
+            "language": "en",
+            "start": 718,
+            "end": 731,
+            "line": 1,
+            "column": 719,
+            "span": "Unfortunately",
+            "question": "State the result directly; retain the baseline and any substantive negative finding.",
+            "status": "review_candidate"
+          }
+        ],
+        "counts": {
+          "AD02": 1
+        }
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "03abfd72d39336ce1ea79bf5dc2551fa18dd352f6c664a4623b105587d00373f",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 2,
+        "revision_span_count": 2,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "W19-4703",
+      "action": "edit",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 284,
+      "characters_after": 240,
+      "words_before": 46,
+      "words_after": 39,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "25ab2b11c737161492c7ed24d44697e7c36bea34cfcd036aae96019376ef40d4",
+        "findings": [
+          {
+            "rule": "AD01",
+            "language": "en",
+            "start": 190,
+            "end": 202,
+            "line": 1,
+            "column": 191,
+            "span": "may possibly",
+            "question": "Inspect stacked uncertainty; retain the uncertainty actually carried by the claim.",
+            "status": "review_candidate"
+          }
+        ],
+        "counts": {
+          "AD01": 1
+        }
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "c1709c4e48e4ae688b217857b9a121aa0b34a7e07060b82fec2432f109509c9c",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 3,
+        "revision_span_count": 3,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 1,
+        "findings": [
+          {
+            "risk_id": "R02",
+            "capability": "CW06",
+            "category": "uncertainty",
+            "original": [
+              {
+                "cue": "may",
+                "line": 1,
+                "column": 191,
+                "context": "out over a long time, starting before 1500, and may possibly be continuing to this day. The semanti"
+              },
+              {
+                "cue": "possibly",
+                "line": 1,
+                "column": 195,
+                "context": "over a long time, starting before 1500, and may possibly be continuing to this day. The semantic changes"
+              }
+            ],
+            "revision": [
+              {
+                "cue": "may",
+                "line": 1,
+                "column": 156,
+                "context": "25-1925. This development began before 1500 and may be continuing to this day. The semantic changes"
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "W19-4731",
+      "action": "edit",
+      "source_type": "published_paper",
+      "language": "en",
+      "characters_before": 772,
+      "characters_after": 590,
+      "words_before": 127,
+      "words_after": 94,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "d0ce3f98c9869849600ee88572154159879dfe725b0bc19777cd74eb99fb5c0f",
+        "findings": [
+          {
+            "rule": "AD04",
+            "language": "en",
+            "start": 214,
+            "end": 237,
+            "line": 1,
+            "column": 215,
+            "span": "It is worth noting that",
+            "question": "Check whether the framing adds information; keep the content it introduces.",
+            "status": "review_candidate"
+          }
+        ],
+        "counts": {
+          "AD04": 1
+        }
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "15c72c3c118b9ff09b79923cd84f4c236e71bcdd9207270517bc31109cbe6a5b",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 0,
+        "revision_span_count": 0,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "HC3-ZH-CHATGPT-02188",
+      "action": "edit",
+      "source_type": "HC3_chatgpt_answer",
+      "language": "zh",
+      "characters_before": 213,
+      "characters_after": 171,
+      "words_before": null,
+      "words_after": null,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "fb4bec8ebf40dfbdc442ae86c7df07b982311c53317e05f3dcd8695e116319a8",
+        "findings": [],
+        "counts": {}
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "eccc66c1870913b1bfe642af450141ed6f2730b0a6797922f2c214272785429f",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 4,
+        "revision_span_count": 4,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 1,
+        "findings": [
+          {
+            "risk_id": "R04",
+            "capability": "CW07",
+            "category": "causal_strength",
+            "original": [
+              {
+                "cue": "因为",
+                "line": 1,
+                "column": 40,
+                "context": "我无法给出关于莫言在诺贝尔文学奖颁奖仪式上的演讲在国内社交网络上的反响的评价，因为我是一个计算机程序，并不具备观看视频、阅读文字或使用社交媒体的能力。我无法了解国内的社交媒体上对"
+              }
+            ],
+            "revision": [
+              {
+                "cue": "因此",
+                "line": 1,
+                "column": 28,
+                "context": "我是计算机程序，无法观看视频、阅读文字或使用社交媒体，因此不了解莫言在诺贝尔文学奖颁奖仪式上的演讲在国内社交网络引起的反响，也无法作出评价。我只能提供莫言"
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "HC3-ZH-CHATGPT-02605",
+      "action": "edit",
+      "source_type": "HC3_chatgpt_answer",
+      "language": "zh",
+      "characters_before": 252,
+      "characters_after": 185,
+      "words_before": null,
+      "words_after": null,
+      "academic_before": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "ab90ea5b0cd6ea1e5c75b91c4a2cc3f37b9d45f59ef3012889af2bdd78140fed",
+        "findings": [],
+        "counts": {}
+      },
+      "academic_after": {
+        "schema_version": 1,
+        "operation": "academic_scan",
+        "input_sha256": "23c6f56910f6c86f4931b4c95c2a649abb0934a4324a7762c45140b70e3de3cc",
+        "findings": [],
+        "counts": {}
+      },
+      "literal": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 0,
+        "revision_span_count": 0,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 1,
+        "findings": [
+          {
+            "risk_id": "R02",
+            "capability": "CW06",
+            "category": "uncertainty",
+            "original": [
+              {
+                "cue": "可能",
+                "line": 1,
+                "column": 29,
+                "context": "人们喜欢看到前男友前女友或者现男友现女友前任们的社交网络可能是出于好奇心或者比较关心对方的原因。有时候，人们会想知道对方在社交网络上发布了什么信息，或者对方"
+              },
+              {
+                "cue": "可能",
+                "line": 1,
+                "column": 92,
+                "context": "方的原因。有时候，人们会想知道对方在社交网络上发布了什么信息，或者对方的生活情况如何。此外，人们可能还有一些心理上的需求，比如想知道自己是否被前任取代了，或者是否还有机会和前任复合。\n\n然而，在社"
+              },
+              {
+                "cue": "可能",
+                "line": 3,
+                "column": 35,
+                "context": "是否还有机会和前任复合。\n\n然而，在社交网络上看到前任的信息并不一定是一件好事。在某些情况下，这可能会让人感到不安或者心烦，特别是当前任对象在社交网络上发布了一些让人不满意的信息时。因此，最好的做"
+              }
+            ],
+            "revision": [
+              {
+                "cue": "可能",
+                "line": 1,
+                "column": 24,
+                "context": "人们喜欢查看前任，或现任伴侣的前任的社交网络，可能是出于好奇，也可能是比较关心对方。有时，人们想知道对方发布了什么，或近况如何，也可能有心理上的需"
+              },
+              {
+                "cue": "可能",
+                "line": 1,
+                "column": 33,
+                "context": "人们喜欢查看前任，或现任伴侣的前任的社交网络，可能是出于好奇，也可能是比较关心对方。有时，人们想知道对方发布了什么，或近况如何，也可能有心理上的需求，比如想知道自己"
+              },
+              {
+                "cue": "可能",
+                "line": 1,
+                "column": 66,
+                "context": "的社交网络，可能是出于好奇，也可能是比较关心对方。有时，人们想知道对方发布了什么，或近况如何，也可能有心理上的需求，比如想知道自己是否已被前任取代，或是否还有机会复合。\n\n但看到前任的信息不一定是"
+              },
+              {
+                "cue": "可能",
+                "line": 3,
+                "column": 24,
+                "context": "知道自己是否已被前任取代，或是否还有机会复合。\n\n但看到前任的信息不一定是好事。在某些情况下，这可能让人不安或心烦，尤其是看到让自己不满意的内容时。因此，最好保持一定距离，不要让自己的情绪完全依赖"
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    }
+  ]
+}

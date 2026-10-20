@@ -17,3 +17,11 @@ Several reviewed humanizer projects identify Wikipedia's Signs of AI writing or 
 Paul Goldsmith-Pinkham's [Writing & Thinking with AI Assistance](https://paulgp.substack.com/p/writing-and-thinking-with-ai-assistance) informed the separation of author control, voice samples, and editorial advice. It is an additional method source, not a 33rd skill.
 
 The source audit is dated 2026-10-20 and records inspections of mutable main branches, sometimes drawing on a documented prior reading on 2026-10-19. No commit-pinned upstream snapshot or complete fork graph is claimed.
+
+## Scholarly extension (v0.3.0)
+
+S33–S42 are credited in docs/source-audit.json and docs/scholarly-source-snapshots.json. New runtime prose and Python code are independently written for ClearWeave. The GPL-3.0 HD0NG entry and the license-unknown shannhk entry were reviewed as conceptual references, not copied into the package. YoakeLee attributes an underlying educational framework separately from its repository wording. Allan9719 attributes SciWrite (Lorena A. Barba, CC BY 4.0) and a writing framework; neither the underlying book nor its section tables are reproduced here. Source licenses retain their original scope.
+
+Public ACL abstract samples carry their authors, source URLs, and CC BY 4.0 attribution in evals/scholarly-2026-10-20. Revisions are labeled ClearWeave applications, not changes made by the original authors. HC3 source records retain the earlier CC BY-SA 4.0 notices and provenance.
+
+Additional conceptual references: OvOYu/anti-defensive-writing and Worigin0314/academic-defensive-writing-auditor declare MIT in their inspected entries; Mseymur/HCI-Academic-Writing has a LICENSE file whose text was not inspected in this review. No upstream source text or code from these projects is reproduced in the runtime.

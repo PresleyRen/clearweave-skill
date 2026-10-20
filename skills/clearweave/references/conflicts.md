@@ -25,4 +25,4 @@ Apply the current user's requested scope and output first. Within that scope, pr
 
 If the user requests a hard surface constraint that conflicts with exact quotation or another protected span, retain the protected span and briefly identify the conflict outside the text. Do not silently change source evidence to satisfy a cosmetic rule.
 
-The project-level provenance matrix in `docs/source-audit.json` records all 32 reviewed implementations. It is audit documentation, not a runtime dependency, and the installed skill does not need those repositories or services.
+The project-level provenance matrix in `docs/source-audit.json` records the 45 inventoried implementations. It is audit documentation, not a runtime dependency, and the installed skill does not need those repositories or services.
