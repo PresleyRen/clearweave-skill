@@ -1,93 +1,47 @@
 name: Collect academic writing sources
+
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/collect-academic-sources.yml]
+    paths:
+      - '.github/workflows/collect-academic-sources.yml'
+      - 'tools/collect_academic_sources.py'
+      - 'tests/test_academic_sources.py'
+      - 'evals/academic-sources/**'
+  pull_request:
+    paths:
+      - '.github/workflows/collect-academic-sources.yml'
+      - 'tools/collect_academic_sources.py'
+      - 'tests/test_academic_sources.py'
+      - 'evals/academic-sources/**'
+
 permissions:
   contents: read
+
 jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Fetch public reference text without executing it
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - name: Test parser, failures and real source records
         run: |
-          python3 - <<'PY'
-          import datetime, hashlib, json, os, pathlib, urllib.request, xml.etree.ElementTree as ET
-          out=pathlib.Path('research'); out.mkdir()
-          def get(url):
-              headers={'User-Agent':'ClearWeave-reference-audit'}
-              if url.startswith('https://api.github.com/'):
-                  headers['Authorization']='Bearer '+os.environ['GH_TOKEN']
-              with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=45) as r:
-                  return r.read()
-          def api(path): return json.loads(get('https://api.github.com/repos/'+path))
-          sources=[
-            ('S02','Kiterlin/anti-defensive-writing','skill/anti-defensive-writing/SKILL.md'),
-            ('S03','Simon-Chng/anti-defensive-writing','SKILL.md'),
-            ('S04','Adkid-Zephyr/anti-defensive-writing-Skill','skills/anti-defensive-writing-en/SKILL.md'),
-            ('S33','mronkko/claude-academic-research','skills/academic-style/SKILL.md'),
-            ('S34','HD0NG/claude-skills','skills/academic-writing/SKILL.md'),
-            ('S35','YoakeLee/academic-paper-writing-skill',None),
-            ('S36','Jingyang-Zhu/personal-academic-writing-skill','SKILL.md'),
-            ('S37','shannhk/writing-style-extractor','SKILL.md'),
-            ('S38','snowmays/style-alchemy','SKILL.md'),
-            ('S39','YuanZHAO321/Scientific-Writing','SKILL.md'),
-            ('S40','KalarisLabs/research-agent-skills','skills/ml-paper-writing/SKILL.md')]
-          manifest=[]
-          for sid,repo,entry in sources:
-              record={'id':sid,'repo':repo,'files':[]}
-              try:
-                  info=api(repo); sha=api(repo+'/commits/'+info['default_branch'])['sha']
-                  record.update(revision=sha,license=(info.get('license') or {}).get('spdx_id','unknown'))
-                  tree=api(repo+'/git/trees/'+sha+'?recursive=1')['tree']
-                  names=[x['path'] for x in tree if x['type']=='blob']
-                  if entry is None:
-                      entries=[n for n in names if n.endswith('SKILL.md') and 'academic-paper-writing' in n]
-                      entry=sorted(entries or [n for n in names if n.endswith('SKILL.md')],key=len)[0]
-                  prefix=str(pathlib.PurePosixPath(entry).parent)
-                  prefix='' if prefix=='.' else prefix+'/'
-                  extra=[n for n in names if n.startswith(prefix) and n.endswith(('.md','.yaml')) and any(k in n.lower() for k in ('style-grammar','sentence','word-level','author_style','style-profile','analysis-framework','writing-principles','writing-style'))]
-                  paths=list(dict.fromkeys([entry]+extra))[:10]
-                  paths += [n for n in names if '/' not in n and n.upper().startswith(('LICENSE','NOTICE'))][:2]
-                  for name in paths:
-                      data=get('https://raw.githubusercontent.com/'+repo+'/'+sha+'/'+name)
-                      if len(data)>150000: continue
-                      local=out/sid/name; local.parent.mkdir(parents=True,exist_ok=True);local.write_bytes(data)
-                      record['files'].append({'path':name,'sha256':hashlib.sha256(data).hexdigest(),'bytes':len(data)})
-              except Exception as exc: record['error']=type(exc).__name__+': '+str(exc)
-              manifest.append(record)
-          (out/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
-          repo='acl-org/acl-anthology'; rev=api(repo+'/commits/master')['sha']
-          ids={'N19': [('1','423','profile')], '2020.acl':[('demos','14','profile')], '2020.emnlp':[('main','550','profile')], 'D19':[('1','410','edit')], 'W19':[('50','34','edit')], 'D16':[('1','264','edit')]}
-          samples=[]
-          for collection,requests in ids.items():
-              raw=get('https://raw.githubusercontent.com/'+repo+'/'+rev+'/data/xml/'+collection+'.xml')
-              (out/(collection+'.xml')).write_bytes(raw)
-              root=ET.fromstring(raw)
-              for volume,paper_id,role in requests:
-                  paper=root.find('./volume[@id="'+volume+'"]'+'/paper[@id="'+paper_id+'"]')
-                  identifier=collection+'-'+volume+'.'+paper_id if '.' in collection else collection+'-'+volume+paper_id.zfill(2)
-                  record={'id':identifier,'role':role,'collection':collection,'volume':volume,'paper_id':paper_id,'revision':rev,'source_sha256':hashlib.sha256(raw).hexdigest(),'license':'CC-BY-4.0','url':'https://aclanthology.org/'+identifier+'/'}
-                  if paper is None:
-                      record['error']='Missing paper';samples.append(record);continue
-                  record['title']=''.join(paper.find('title').itertext())
-                  record['authors']=[(''.join(a.find('first').itertext())+' '+''.join(a.find('last').itertext())) for a in paper.findall('author')]
-                  elem=paper.find('abstract')
-                  text=''.join(elem.itertext()).strip() if elem is not None else ''
-                  record.update(text=text,text_sha256=hashlib.sha256(text.encode()).hexdigest())
-                  if not text: record['error']='Missing abstract'
-                  samples.append(record)
-          (out/'acl-samples.json').write_text(json.dumps({'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'selection':'Three named published NLP abstracts for a field-style profile; three different named abstracts for editing. Selected before edits.','samples':samples},ensure_ascii=False,indent=2))
-          print(json.dumps({'sources':len(manifest),'source_errors':[s for s in manifest if 'error' in s],'academic_samples':len(samples),'sample_errors':[s for s in samples if 'error' in s]},ensure_ascii=False))
-          PY
-      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+          python3 -m unittest discover -s tests -v
+          python3 tools/validate_repo.py
+          python3 tools/collect_academic_sources.py --replay-fixtures
+      - name: Fetch pinned references and require complete abstracts
+        run: python3 tools/collect_academic_sources.py --download --out research
+      - name: Keep data and diagnostics on either outcome
         if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: clearweave-academic-research
           path: research/
-          retention-days: 1
-          if-no-files-found: error
+          retention-days: 7
+          if-no-files-found: warn
