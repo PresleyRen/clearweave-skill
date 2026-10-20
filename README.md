@@ -1,57 +1,206 @@
 # ClearWeave
 
-**One English–Chinese skill for natural prose editing, with preservation checks and a traceable synthesis of complementary methods.**
+**An English–Chinese writing skill for natural, clear prose that preserves meaning and the author's voice.**
 
-[简体中文](README.zh-CN.md) · [Skill](skills/clearweave/SKILL.md) · [Capability atlas](docs/capabilities.md) · [32-source audit](docs/sources.md) · [v0.2.0 evidence](docs/evaluation-v0.2.0.md)
+[简体中文](README.zh-CN.md) · [Skill entry point](skills/clearweave/SKILL.md) · [Capability index](docs/capabilities.md) · [Public-corpus examples](docs/evaluation-hc3.md)
 
-**Clear** names the goal; **Weave** describes the synthesis. One shared editing contract routes English, Chinese, and mixed-language text to the relevant language and genre guidance. A Chinese request to polish an English paper keeps the paper in English unless translation is requested.
+ClearWeave edits papers, technical documents, READMEs, work emails, and everyday writing. It addresses stock phrasing, mechanical paragraph structures, repetition, and translation-shaped syntax. It also helps organize arguments, keep terminology consistent, and match a supplied writing style. One skill handles English, Chinese, and mixed text, with separate language choices for the finished text and editorial notes.
 
-This is an instruction package for a host model, with optional local Python helpers. **The host writes, translates, matches voice, and critiques. The scripts do not rewrite documents or detect AI authorship.** Publishing a GitHub repository does not automatically install or list a skill in a marketplace.
+## What it does
 
-## 1. Text architecture
+| Capability | Use |
+| --- | --- |
+| **Remove stock phrasing and repetition** | Cut empty openings, repeated conclusions, mechanical contrasts, and over-explanation so paragraphs reach their point sooner. |
+| **Edit natural Chinese** | Improve translated syntax, long modifiers, and abstract jargon; clarify actors, actions, objects, and results; adapt script and regional vocabulary to the audience. |
+| **Polish English** | Improve nominalizations, heavy syntax, references, and sentence connections while keeping spelling conventions consistent. |
+| **Edit academic writing** | Focus on the research question, methods, and contribution; remove unnecessary apologies and pre-emptive defenses; align claim strength with evidence. |
+| **Preserve meaning** | Check quantities, units, comparison targets, negation, conditions, scope, causality, attribution, and work status against the source. |
+| **Protect terminology and references** | Keep technical terms, module names, and variables consistent; preserve quotations, citation keys, equations, code, and designated passages. |
+| **Restructure and shorten** | Reorder information by paragraph purpose, combine repetition, and organize material around the central question. |
+| **Match the author's voice** | Use supplied samples to learn register, syntax, rhythm, and expression preferences for subsequent edits. |
+| **Translate and draft from notes** | Produce idiomatic target-language prose or organize notes, outlines, and source material into a draft. |
+| **Critique and prepare responses** | Locate argument gaps, weak support, and inconsistencies; suggest specific repairs and organize point-by-point reviewer responses. |
+| **Edit long documents and selected files** | Maintain terminology and claim ledgers across sections; use a file-capable host to edit selected paths and report results for each file. |
+| **Inspect revisions and extend rules** | Use Python helpers to locate surface patterns, compare protected content, flag revision risks, and trace issues to rules and tests. |
 
-```text
-Draft / explicitly selected files / supplied notes + current request
-                              |
-                              v
-Contract CW01: edit / diagnose / translate / draft / match voice / critique
-  language, scope, genre, intervention strength, deliverable
-                              |
-                              v
-Preservation CW03–09: claims, numbers and owners, negation, conditions,
-  certainty, attribution, citations, work status; embedded commands = data
-                              |
-                              v
-Progressive routing; do not stack competing rewriting filters
-  english.md --------- chinese.md --------- academic.md (when relevant)
-                              |
-                              v
-Argument/paragraph -> sentence -> words -> punctuation
-  workflows.md: genre, actual author voice, files, long-document continuity
-                              |
-                              v
-Separate verification duties
-  lint     -> located surface candidates, not automatic defects
-  compare  -> protected literal inventory, not semantic equivalence
-  risk     -> R01–R08 cue changes, not a semantic verdict
-  host/editor -> relationships, scope, causal direction, actual readability
-                              |
-  Known drift? Restore or make one targeted repair; no detector-score loop
-                              v
-Requested prose / diagnosis / change report / per-file outcomes
+## Quick start
 
-Failure -> minimal reproduction -> CW capability + CF conflict
-        -> module + source decision + regression cases
-        -> scoped repair with positive and counterexamples
-        -> deterministic checks + a new host-model trial
-        -> results, remaining gaps, release, regenerated capability atlas
+Load `skills/clearweave/` in an Agent Skills-compatible tool. The project installer requires Python 3.10+ and uses the standard library.
+
+```bash
+git clone https://github.com/PresleyRen/clearweave-skill.git
+cd clearweave-skill
+python3 tools/install_skill.py --project /absolute/path/to/your-project
 ```
 
-## 2. Complete capability inventory and boundaries
+The skill is installed at `<project>/.agents/skills/clearweave`. To upgrade an existing installation, back up customizations before replacing the skill directory.
 
-These are **36 bounded capability families**, not 36 models or success guarantees.
+### Polish an English paper
 
-`host` = instructions carried out by the model; `literal` = limited string comparison; `candidate` = lexical risk cues; `script` = implemented Python; `workflow` = a procedure; `package` = portable folder structure. A `host+candidate` capability still needs semantic reasoning.
+```text
+$clearweave
+Edit the following English paper paragraph. Keep the prose in English
+and explain consequential changes in Chinese.
+Focus on stock phrasing, heavy syntax, and defensive writing.
+Preserve terminology, numbers, citations, study conditions, and evidence strength.
+
+[paste text]
+```
+
+### Edit Chinese prose
+
+```text
+$clearweave
+编辑下面这段中文，去掉套话、重复解释和翻译腔。
+保持原有正式程度、事实和立场，只输出修改后的正文。
+
+[原文]
+```
+
+### Rewrite a README
+
+```text
+$clearweave
+Rewrite the README for someone seeing the project for the first time.
+Focus on features, use cases, installation, and example requests.
+Keep the main text about the product and link to the evaluation details.
+Retain the capability diagram and extension entry points.
+```
+
+## Choose a task and output
+
+Name the task in the request. You can also specify the depth of editing, audience, and delivery format.
+
+| Task | Example request | Output |
+| --- | --- | --- |
+| Polish | Keep the structure; make the smallest useful edits | Revised prose |
+| Restructure | Reorganize around the main question and combine repetition | A restructured article |
+| Diagnose | Locate issues, explain their effect, and suggest repairs | Located editorial notes |
+| Translate | Use natural academic English; retain terms and citations | Target-language prose |
+| Draft from material | Turn these notes into a project overview | A draft based on the supplied material |
+| Match voice | Follow the register and sentence style in these samples | A voice-matched revision |
+| Critique and respond | Review the argument, experiments, and evidence; prepare replies | Findings, revision suggestions, or a response draft |
+| Edit files | Edit the selected files and provide a change summary | Updated files and a summary |
+
+Finished prose, editorial notes, and verification records are separate deliverables. Reader-facing text stays focused on its subject; explanations of edits belong in the accompanying notes.
+
+## Editing workflow
+
+```text
+Draft / selected files / notes + user request
+                       |
+                       v
+Set the task: language, genre, audience, scope, output
+                       |
+                       v
+Inventory the information to preserve
+Claims · quantities · conditions · terms · citations · author positions
+                       |
+                       v
+Load the relevant guidance
+ English -------- Chinese -------- Academic writing
+                       |
+                       v
+Edit by layer
+Argument and paragraphs -> sentences -> words -> punctuation
+                       |
+                       v
+Compare and review
+Information retained · relationships accurate · voice consistent
+                       |
+                       v
+Deliver prose / editorial notes / revised files
+```
+
+Edits address specific reading problems. Useful long sentences, repeated technical terms, and procedural passive constructions can remain. Empty self-evaluation and repetitive framing can go. In papers, study conditions and adverse findings stay with the claims they qualify so readers can interpret the results accurately.
+
+## An editing example
+
+**English draft**
+
+> It is worth noting that the update introduces an export feature. This feature allows users to export reports as CSV files.
+
+**Revision**
+
+> The update lets users export reports as CSV files.
+
+**Chinese draft**
+
+> 值得注意的是，本次更新增加了导出功能。该功能可以帮助用户将报告导出为 CSV 文件。
+
+**Revision**
+
+> 本次更新支持将报告导出为 CSV 文件。
+
+More source texts, revisions, and individual checks are available in the [HC3 public-corpus examples](docs/evaluation-hc3.md) and [application records](evals/v0.2.0/applications.json).
+
+## Local checks
+
+The host model performs the writing. Read-only Python helpers locate expression patterns, compare literal content, and flag risk cues for passage-by-passage review. Run these commands from the repository root:
+
+```bash
+# Locate English and Chinese surface patterns
+python3 skills/clearweave/scripts/clearweave_check.py lint draft.md --language both --format json
+
+# Compare protected numbers, citations, code, and other literals
+python3 skills/clearweave/scripts/clearweave_check.py compare original.md revised.md --format json
+
+# Flag changes in negation, modality, work status, and numeric order
+python3 skills/clearweave/scripts/clearweave_risk.py original.md revised.md --format json
+```
+
+See the [tool reference](skills/clearweave/references/tooling.md) for parameters and output interpretation.
+
+## Modules and extension
+
+```text
+skills/clearweave/
+├── SKILL.md                    Task entry point and editing workflow
+├── references/
+│   ├── preservation.md         Meaning, quantities, relationships, references
+│   ├── english.md              English expression
+│   ├── chinese.md              Chinese expression and regional vocabulary
+│   ├── academic.md             Papers, evidence, critique, responses
+│   ├── workflows.md            Voice, long documents, files, deliverables
+│   ├── conflicts.md            Conflicting-rule decisions
+│   ├── tooling.md              Helper usage
+│   └── maintenance.md          New rules and regression tests
+├── scripts/                    Surface checks, risk cues, capability lookup
+└── assets/capabilities.json     Capability IDs, rule locations, test links
+```
+
+### Find the right module
+
+| Area to improve | Entry point |
+| --- | --- |
+| Quantities, negation, conditions, or claim strength | `preservation.md`, CW03–08 |
+| English syntax, paragraph flow, and rhythm | `english.md`, CW10–11, CW14 |
+| Chinese syntax, script, and regional usage | `chinese.md`, CW02, CW12 |
+| Academic expression, evidence, and critique | `academic.md`, CW13, CW17–20, CW35 |
+| Voice, long-document continuity, and file delivery | `workflows.md`, CW15, CW22, CW24–27, CW33, CW36 |
+| Checkers and maintenance indexes | `scripts/`, `maintenance.md`, CW28–32, CW34 |
+
+```bash
+# Locate a symptom, capability, or conflict
+python3 skills/clearweave/scripts/clearweave_trace.py --query "negation removed"
+python3 skills/clearweave/scripts/clearweave_trace.py --id CW06
+python3 skills/clearweave/scripts/clearweave_trace.py --id CF17
+
+# Inspect the synthesis decisions for a source
+python3 tools/coverage.py --source S01
+```
+
+For a revision that turns “may” into certainty, follow **CW06 → preservation.md / academic.md → CF01 / CF15** to the relevant guidance and cases. Save the source and problematic revision, add a faithful alternative and a drifting counterexample, then adjust the relevant rule.
+
+```text
+Example -> capability ID -> rule file -> conflict case
+        -> rule change -> regression checks -> updated index
+```
+
+<details>
+<summary>Browse all 36 capabilities and rule locations</summary>
+
+In the index, `host` denotes model execution, `script` a Python tool, `literal` string comparison, `candidate` risk cues, `workflow` a procedure, and `package` the skill's folder structure.
 
 <!-- capabilities:start -->
 | Capability | Implementation | Rule location |
@@ -94,116 +243,29 @@ These are **36 bounded capability families**, not 36 models or success guarantee
 | **CW36** Clean deliverables and separate notes | `host` | [references/workflows.md](skills/clearweave/references/workflows.md#cw36) |
 <!-- capabilities:end -->
 
-The [atlas](docs/capabilities.md) gives module locations, source links, scenarios, and boundaries for every capability. Editing includes empty framing, repetitive conclusions, over-explanation, nominalization, translation-shaped syntax, and paragraph structure. It retains useful passive constructions, technical terms, real uncertainty, adverse results, and supplied author positions.
+</details>
 
-File edits and batches require the host's tools and explicit scope; the Python helpers are read-only. A routine copyedit does not verify factual truth or citations. Explicit verification requires actual evidence and suitable tools. Long-document ledgers and reusable voice profiles are implemented guidance, not evidence of successful end-to-end deployment across all hosts and full manuscripts.
-
-## 3. What “all 32 sources” means
-
-All **32 implementations in the requested inventory** are included in the source audit and decision map: **92 adopted statements + 102 adapted or excluded statements = 194 documented decisions**. Every decision links to a capability family. Forks and related projects are not independent evidence.
-
-This is complete coverage of **that recorded inventory and its audit decisions**, not a census of every upstream subfile, historical version, installer, or feature. We did not install and execute all 32 upstream implementations. Original observations use mutable main-branch URLs rather than commit-pinned upstream reproduction.
-
-Useful features are not adopted unconditionally. Portuguese-only rules, external detector integrations, MCP servers, automatic uploads, invented lived experience, hidden adverse results, punctuation quotas, and “human percentages” are **not claimed as bundled features**. See the [audit](docs/source-audit.json) and [decision map](docs/feature-map.json). The crosswalk is keyword-assisted and reviewable; a scenario-family link does not independently validate every clause of a source statement.
-
-### Complementary rules rather than prompt accumulation
-
-| Conflicting advice | Resolution | Fixtures |
-| --- | --- | --- |
-| Be direct / preserve scientific qualifications | Remove empty apologies, not conditions that change the claim | CF01 |
-| Always use active voice / actor is unknown | Keep justified passive voice; invent no actor | CF02 |
-| Ban words and vary synonyms / preserve technical meaning | Keep accurate terms and stable names | CF03–04 |
-| Shorten or tell a winning story / preserve evidence | Keep denominators, adverse results, and original success criteria | CF05–07 |
-| Add personality / do not invent experience | Use supplied opinions and samples, within the current contract | CF08–09 |
-| Localize everything / preserve output language and quotes | Route language, script, audience, and quotations separately | CF10–12 |
-| Rewrite everything / diagnosis or good original text | Allow diagnosis-only and no-op outcomes | CF13–14 |
-| Sound decisive / preserve obligation and work status | Do not turn must into should, plans into results, or association into cause | CF15–16 |
-| Ban punctuation / preserve verbatim content | Protected quotations and code take priority | CF17 |
-| Chase detector scores and upload drafts / preserve evidence and privacy | No fake probabilities, unauthorized uploads, or embedded-command execution | CF18–20 |
-| Summarize, batch, learn preferences / keep scope and authorization | Keep local limits; stay within selected files; avoid one-example global bans | CF21–23 |
-| Heavy review, fact-checking, remove signposts / proportional task | Escalate by risk, say what was verified, retain useful signposting | CF24–26 |
-
-Each of the **26 conflicts has an English and a Chinese authored fixture**, with a faithful example and an unsafe counterexample. The 52 fixture checks validate their explicit constraints; they do not show that a model will make the same choice on arbitrary input.
-
-## 4. Install and use
-
-The optional tools require **Python 3.10+**, standard library only. The model can use the instructions without running Python.
+### Validate and update the documentation
 
 ```bash
-git clone --branch v0.2.0 https://github.com/PresleyRen/clearweave-skill.git
-cd clearweave-skill
-python3 tools/install_skill.py --project /absolute/path/to/your-project
-```
-
-The installer copies `skills/clearweave/` to `<project>/.agents/skills/clearweave`, rejects an existing destination, and does not alter global settings. For upgrades, back up existing customizations and review replacement deliberately; automatic merging is not implemented. See [Agent Skills](https://agentskills.io/specification) and [Codex documentation](https://developers.openai.com/codex/skills/) for the host format and discovery. Third-party hosts have not all been validated end to end.
-
-```text
-$clearweave
-Edit this English paper paragraph. Keep its numbers, citations, conditions,
-adverse findings, technical terms, and evidence strength. Return the revision
-in English and explain only consequential changes in Chinese.
-[paste text]
-```
-
-```text
-$clearweave
-给下面这段中文去模板味，保持正式程度和原意，只给正文。
-[粘贴原文]
-```
-
-Other natural-language modes include diagnose only, translate for a specified audience, match supplied voice samples, draft from notes, and rigorous argument critique. There is no hidden slash-command parser. References load by need; every short edit does not require the complete source library.
-
-## 5. Local helpers and extension entry points
-
-Run from the repository root:
-
-```bash
-python3 skills/clearweave/scripts/clearweave_check.py lint draft.md --language both --format json
-python3 skills/clearweave/scripts/clearweave_check.py compare original.md revised.md --format json
-python3 skills/clearweave/scripts/clearweave_risk.py original.md revised.md --format json
-
-python3 skills/clearweave/scripts/clearweave_trace.py --query "negation removed"
-python3 skills/clearweave/scripts/clearweave_trace.py --id CW05
-python3 skills/clearweave/scripts/clearweave_trace.py --id CF17 --format json
-python3 tools/coverage.py --source S01
-
 python3 -m unittest discover -s tests -v
 python3 tools/validate_repo.py
 python3 tools/coverage.py --format json
 python3 tools/render_catalog.py --write
 ```
 
-For example, a revision that changes “may” into certainty routes to **CW06 → preservation/academic guidance → CF01/CF15**. Add the smallest failing example and a legitimate paraphrase counterexample before changing the rule. Parser failures belong in Python; wrong genre selection belongs in routing. Do not solve every failure with a larger banned-word list.
+The capability registry links sources, rules, and test scenarios. The generator synchronizes the capability indexes in both READMEs and the [atlas](docs/capabilities.md). See the [extension guide](skills/clearweave/references/maintenance.md) for the maintenance workflow.
 
-`compare` exits 1 for literal differences. `risk` reports candidates without failing by default; `--fail-on-candidate` opts into exit 1. **Exit 0 never proves semantic fidelity.** The risk helper can surface some negation, modality, status, and numeric-order changes, but role swaps with unchanged numeric order can still escape it. Translation, paraphrase, and valid sentence reordering can also trigger candidates. See [tooling](skills/clearweave/references/tooling.md).
+## Method sources and test records
 
-## 6. Evidence, not detector promises
+ClearWeave draws on 32 writing skills, combining bilingual editing, clear expression, anti-defensive academic writing, author voice, and preservation checks in a shared workflow. The [source notes](docs/sources.md) and [decision map](docs/feature-map.json) record what was adopted and how conflicting advice was resolved.
 
-| Evidence layer | Recorded result | Interpretation |
-| --- | --- | --- |
-| Source and structure | 32 sources, 194 decisions, 36 capabilities, 26 conflicts; links and statement hashes checked | Coverage of recorded audit entries, not exhaustive behavioral coverage |
-| Deterministic checks | 179 local tests covering parsers, CLI, installation, trace lookup, fault injection, and fixture constraints | The 52 fixture and 32 source-link tests are included in 179, not additional independent experiments |
-| New application examples | 12 original English/Chinese requests and revisions in this conversation, with actual helper outputs | Same-session author-applied demonstrations; not independent or blinded trials |
-| Historical comparison | v0.1's 18 pairs: each condition preferred once, 16 ties; 4 follow-up regressions | Retained old evidence, not a new v0.2 paired experiment |
+| Record | Contents |
+| --- | --- |
+| [Regression and installation checks](docs/evaluation-v0.2.0.md) | 179 tests covering checkers, command-line tools, installation, capability lookup, and fixture constraints. |
+| [Bilingual conflict cases](evals/conflict-cases.json) | 26 conflict families and 52 English/Chinese scenarios with faithful examples and drifting counterexamples. |
+| [HC3 public-corpus applications](docs/evaluation-hc3.md) | Sampling method, original answers, revisions, repair history, and individual check results. |
 
-This revision fixed a date/modal collision for `May 12` and updated the obsolete test expectation after adding explicit Traditional Chinese phrase variants. Known semantic blind spots remain documented and tested instead of being hidden by a green test suite. [Raw outputs, environment, logs, and interpretation](docs/evaluation-v0.2.0.md) are available.
+## License
 
-**No broad superiority over ordinary prompts, detector pass rate, or zero-drift guarantee has been established.** The new applications have no independent reviewer, randomization, repeated sampling, multi-model comparison, or human editorial panel. The old small paired experiment is not evidence of universal superiority either.
-
-## 7. Maintain the right layer
-
-| Failure | First location | Repair pattern |
-| --- | --- | --- |
-| Negation, numbers, or conditions changed | `preservation.md`; risk helper | Meaning-sensitive positive case plus close counterexample |
-| Academic caution or adverse result deleted | `academic.md` | Evidence- and genre-specific exception, not blanket ban |
-| Chinese translation syntax or regional mismatch | `chinese.md`; `workflows.md` | Separate language, script, locale, and register |
-| Forced English fragments or passive-voice damage | `english.md` | Reader benefit rather than sentence-length quotas |
-| Quote, equation, or code protection leaks | Literal checker | Minimal parsing failure plus adjacent ordinary prose |
-| Long-document contradiction or file overreach | `workflows.md` | Ledgers, boundaries, explicit paths, global review |
-| New source or capability | Catalog, decision map, `maintenance.md` | Stable ID, disposition, bilingual conflict cases, updated docs and evidence |
-
-The read-only scripts have no network calls; that does not mean the host model runs locally. Its service and privacy rules still apply. Drafts and voice samples are not automatically sent to external services. Plain text and Markdown are native; DOCX/PDF/slide layout requires a separate document tool. English and Chinese are the designed languages, with limited regional vocabulary and incomplete complex Markdown/LaTeX parsing.
-
-## License and attribution
-
-Original ClearWeave contributions use [MIT](LICENSE). [NOTICE](NOTICE.md) retains upstream attribution and scope, including Lorena A. Barba's CC BY 4.0 *sciwrite*. Upstream projects are not relicensed; unknown licenses are not treated as permission to copy. Source authors are not represented as endorsing this project.
+Original code and instructions are [MIT licensed](LICENSE). Source attribution and related license notices are in [NOTICE](NOTICE.md).
