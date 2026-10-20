@@ -1,0 +1,122 @@
+name: Assemble tested ClearWeave Scholarly v0.3.0
+
+on:
+  push:
+    branches: [stage/clearweave-v0.3.0]
+
+permissions:
+  contents: read
+
+jobs:
+  assemble:
+    if: github.repository == 'PresleyRen/clearweave-skill' && github.ref == 'refs/heads/stage/clearweave-v0.3.0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Read isolated transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify patch checksum and save outside checkout
+        run: |
+          python3 - <<'PY'
+          import hashlib, lzma, os, pathlib
+          data = b''.join((pathlib.Path('.release-candidate') / f'part{i:02}').read_bytes() for i in range(8))
+          assert len(data) == 64472
+          assert hashlib.sha256(data).hexdigest() == '333d1b7cb64635fc0f6953580ee9ac813130bbee24b822bbe9316eea6a205f8d'
+          patch = lzma.decompress(data, memlimit=256*1024*1024)
+          assert len(patch) == 320129
+          (pathlib.Path(os.environ['RUNNER_TEMP']) / 'clearweave.patch').write_bytes(patch)
+          print('Verified source patch: 320129 bytes')
+          PY
+      - name: Restore current clean main base
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: d1d3b0959e0cc2831bcb51f1bbbcf0451f068e74
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - name: Archive historical runtime and apply scoped patch
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, subprocess
+          assert subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip() == 'd1d3b0959e0cc2831bcb51f1bbbcf0451f068e74'
+          manifest = json.loads(pathlib.Path('evals/hc3-2026-10-20/manifest.json').read_text())
+          assert len(manifest['skill_hashes']) == 15
+          archive = pathlib.Path('evals/hc3-2026-10-20/runtime-v0.2.0')
+          for name, expected in manifest['skill_hashes'].items():
+              p = pathlib.Path(name)
+              assert not p.is_absolute() and '..' not in p.parts and name.startswith('skills/clearweave/')
+              assert not p.is_symlink()
+              data = p.read_bytes()
+              assert hashlib.sha256(data).hexdigest() == expected
+              target = archive / p
+              target.parent.mkdir(parents=True,exist_ok=True)
+              target.write_bytes(data)
+          patch = pathlib.Path(os.environ['RUNNER_TEMP']) / 'clearweave.patch'
+          stats = subprocess.check_output(['git','apply','--numstat',str(patch)],text=True).splitlines()
+          assert len(stats) == 42
+          for line in stats:
+              name = line.split('\t',2)[2]
+              p = pathlib.PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              assert p.parts[0] in {'CHANGELOG.md','NOTICE.md','README.md','README.zh-CN.md','VERSION','docs','evals','skills','tests','tools'}
+          subprocess.run(['git','apply','--check',str(patch)],check=True)
+          subprocess.run(['git','apply',str(patch)],check=True)
+          assert pathlib.Path('VERSION').read_text().strip() == '0.3.0'
+          PY
+      - name: Rebuild generated documentation and recorded checks
+        run: |
+          python3 tools/render_catalog.py --write
+          python3 tools/evaluate_scholarly.py --write
+          python3 - <<'PY'
+          import json, pathlib, sys
+          sys.path.insert(0,'skills/clearweave/scripts')
+          import clearweave_scholar as scholar
+          root = pathlib.Path('evals/scholarly-2026-10-20')
+          samples = json.loads((root/'samples.json').read_text())
+          report = scholar.profile(samples,'field','NLP-abstracts')
+          (root/'profile-measurements.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Validate all tests and pinned real data
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python3 tools/preflight.py --download
+      - name: Push clean tested candidate only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add CHANGELOG.md NOTICE.md README.md README.zh-CN.md VERSION docs evals skills tests tools
+          git diff --cached --check
+          python3 - <<'PY'
+          import subprocess
+          names = subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines()
+          assert len(names) == 60, (len(names),names)
+          assert not any(n.startswith(('.github/','.release-candidate/')) for n in names)
+          PY
+          git commit -m 'feat: ClearWeave Scholarly v0.3.0 bilingual editing, anti-defensive grammar and voice profiles'
+          gh auth setup-git
+          branch="build/clearweave-v0.3.0-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git push origin "HEAD:refs/heads/${branch}"
+          printf 'Candidate branch: %s\nCandidate commit: %s\n' "$branch" "$(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
+          git archive --format=zip --output="$RUNNER_TEMP/clearweave-candidate.zip" HEAD
+      - name: Retain verification and source
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: clearweave-scholarly-candidate
+          include-hidden-files: true
+          path: |
+            .preflight/
+            ${{ runner.temp }}/clearweave-candidate.zip
+          retention-days: 14
