@@ -30,6 +30,21 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: python3 -m unittest discover -s tests -v
       - run: python3 tools/validate_repo.py
+      - name: Verify real sources before release
+        if: matrix.python-version == '3.13'
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python3 tools/preflight.py --download
+      - name: Retain release verification record
+        if: always() && matrix.python-version == '3.13'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: clearweave-release-verification-${{ github.sha }}
+          path: .preflight/
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
 
   release:
     if: github.ref == 'refs/heads/main'
@@ -79,5 +94,5 @@ jobs:
             echo "Release already exists; refusing to overwrite it."
             exit 1
           fi
-          gh release create "$tag" dist/* --target "$GITHUB_SHA" --title "ClearWeave ${tag} · Traceable bilingual editing" --notes-file "docs/releases/${tag}.md"
+          gh release create "$tag" dist/* --target "$GITHUB_SHA" --title "ClearWeave ${tag} · Scholarly writing and author voice" --notes-file "docs/releases/${tag}.md"
           gh release view "$tag" --json url,tagName,targetCommitish,isDraft

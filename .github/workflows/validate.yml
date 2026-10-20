@@ -27,6 +27,8 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Validate skill and source inventory
         run: python3 tools/validate_repo.py
+      - name: Replay scholarly public-data record
+        run: python3 tools/evaluate_scholarly.py
       - name: Archive tracked source
         if: matrix.python-version == '3.13' && github.event_name == 'push'
         run: git archive --format=zip --output=clearweave-source.zip HEAD
