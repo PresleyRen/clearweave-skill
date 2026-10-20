@@ -1,0 +1,55 @@
+name: Replay HC3 recorded real-data edits
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/evaluate_hc3.py'
+      - 'evals/hc3-2026-10-20/cases.json'
+      - 'evals/hc3-2026-10-20/edits.json'
+      - 'evals/hc3-2026-10-20/manifest.json'
+      - '.github/workflows/hc3-evaluation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - name: Retrieve pinned originals and replay diagnostics, not generation
+        run: python3 tools/evaluate_hc3.py --download
+      - name: Confirm recorded diagnostic counts
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('evals/hc3-2026-10-20/checks.json').read_text())
+          assert r['selected']==16 and r['skill_files_verified']==15
+          assert r['actions']=={'edit':9,'no_op':1,'hold_truncated':4,'excluded_finance':2}
+          assert r['edited_cases_with_literal_changes']==0
+          assert r['edited_cases_with_risk_candidates']==4
+          assert r['original_lint_candidate_total']==0 and r['revision_lint_candidate_total']==0
+          print('Recorded diagnostics reproduced; no semantic or authorship score asserted.')
+          PY
+      - name: Run existing regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Validate repository
+        run: python3 tools/validate_repo.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: hc3-real-data-inputs-outputs-checks
+          path: |
+            evals/hc3-2026-10-20/
+            docs/evaluation-hc3.md
+            tools/evaluate_hc3.py
+          if-no-files-found: error
+          retention-days: 30
