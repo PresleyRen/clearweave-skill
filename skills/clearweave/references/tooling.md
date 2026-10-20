@@ -1,5 +1,9 @@
 # 本地检查工具 / Local checker
 
+<a id="cw28"></a>
+<a id="cw29"></a>
+<a id="cw30"></a>
+
 ## 目录
 
 - [命令接口](#命令接口)
@@ -51,7 +55,7 @@ python skills/clearweave/scripts/clearweave_check.py compare original.md - --for
 
 当前规则只覆盖部分常见开场、空泛赞美、强调语和收尾。例如，中文的强调短语可能被列为候选，原因会提醒编辑保留后面的真正限制。总结连接词和邮件结尾可能完全合适，候选不是错误判决。
 
-中文短语规则目前主要采用简体词形，对繁体词形的覆盖有限。`--language zh` 只选择规则集，不会转换简繁或改写地区用语；繁体文稿没有命中，也需要正常的编辑复审。
+中文短语规则覆盖有限的简体短语，并为现有词族增加了明确的繁体词形；并非完整中文词库。`--language zh` 只选择规则集，不会转换简繁或改写地区用语；繁体文稿没有命中，也需要正常的编辑复审。
 
 规则没有禁止 `robust`、`significant`、`framework`、被动句、三项列举或正常破折号。没有命中候选只说明未命中当前短语规则，不能说明表达自然、论证完整或文章没有其他问题。
 
@@ -142,3 +146,26 @@ python -m unittest discover -s tests -v
 ```
 
 `tests/test_checker.py` 覆盖接口状态码、保护区跳过、外层结构中的定界符示例、中英文候选、数字与单位、URL 括号、代码变化、裸引文键与常见邮件地址的区分、重复条目减少，以及数值角色互换和否定变化这两个明确盲区。上述命令同时运行仓库中其余确定性测试。这些不是英文或中文写作效果的行为评测，也不是 AI 检测器测试。
+
+## v0.2 revision-risk candidates / 改写风险线索
+
+```bash
+python skills/clearweave/scripts/clearweave_risk.py original.md revised.md --format json
+```
+
+The companion helper checks limited English/Chinese cue inventories for negation,
+uncertainty, obligation, causal strength, work status, scope and attribution (R01–R07).
+R08 notices an unchanged numeric multiset in a different order. These are **review
+candidates**, not semantic verdicts. Changed roles with the same numeric order can
+still be invisible. Paraphrases, translations and legitimate sentence reordering can
+trigger warnings. Code, quotations and other recognized protected regions are masked;
+run `clearweave_check.py compare` to check their literals separately.
+
+Default exit status is 0 on a completed scan, even with candidates. The optional
+`--fail-on-candidate` returns 1 when candidates exist; 2 means invalid input or a read
+error. Both inputs cannot be stdin. No candidates is not semantic approval. `May 12`
+is excluded from the modal cue `may`; this narrow exception is not date parsing.
+
+The surface linter now recognizes explicit Traditional Chinese variants for its
+existing phrase families. It does not convert scripts or provide comprehensive
+Taiwan/Hong Kong localization. Neither helper modifies files or makes network calls.

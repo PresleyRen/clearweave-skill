@@ -1,5 +1,9 @@
 # English editing
 
+<a id="cw10"></a>
+<a id="cw11"></a>
+<a id="cw14"></a>
+
 Use this reference with the mode, scope, and preservation contract selected in SKILL.md.
 Apply only the sections relevant to the requested edit; a short message needs a short pass.
 These are editorial decision rules, not a classifier or a measure of who wrote a text.

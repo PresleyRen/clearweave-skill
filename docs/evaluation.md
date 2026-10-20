@@ -1,5 +1,7 @@
 # Evaluation report / 实测报告
 
+> Historical v0.1 evidence. For the v0.2.0 changes and newly executed checks, read [evaluation-v0.2.0.md](evaluation-v0.2.0.md). These older results have not been relabeled as new-version trials.
+
 **Date: 2026-10-20.** This report distinguishes observed writing behaviour, subjective editorial judgements, literal checks, and packaging tests.
 
 ## Findings that matter

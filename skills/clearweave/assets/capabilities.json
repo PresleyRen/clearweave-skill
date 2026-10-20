@@ -1,0 +1,1319 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "scope": "36 bounded capabilities, based on the 32-entry source audit. References are inspiration, not endorsements or replicated upstream performance.",
+  "capabilities": [
+    {
+      "id": "CW01",
+      "name_en": "Task and scope contract",
+      "name_zh": "任务、范围和模式",
+      "module": "SKILL.md",
+      "anchor": "cw01",
+      "kind": "host",
+      "keywords": "routing mode scope 意图 路由 范围 自动触发",
+      "sources": [
+        "S03",
+        "S06",
+        "S08",
+        "S09",
+        "S10",
+        "S13",
+        "S21",
+        "S31",
+        "S32"
+      ],
+      "cases": [
+        "CF09-EN",
+        "CF09-ZH",
+        "CF11-EN",
+        "CF11-ZH",
+        "CF13-EN",
+        "CF13-ZH",
+        "CF22-EN",
+        "CF22-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW02",
+      "name_en": "Language, script and spelling",
+      "name_zh": "语言、简繁与拼写",
+      "module": "references/chinese.md",
+      "anchor": "cw02",
+      "kind": "host",
+      "keywords": "language mixed spelling script 中英 混排 简体 繁体 英式 美式",
+      "sources": [
+        "S03",
+        "S18",
+        "S24"
+      ],
+      "cases": [
+        "CF10-EN",
+        "CF10-ZH",
+        "CF11-EN",
+        "CF11-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW03",
+      "name_en": "Claim ledger and work status",
+      "name_zh": "论断台账与完成状态",
+      "module": "references/preservation.md",
+      "anchor": "cw03",
+      "kind": "host+candidate",
+      "keywords": "planned completed simulated evidence 计划 完成 模拟 状态",
+      "sources": [
+        "S02",
+        "S06",
+        "S10",
+        "S11",
+        "S19",
+        "S27",
+        "S31"
+      ],
+      "cases": [
+        "CF16-EN",
+        "CF16-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW04",
+      "name_en": "Quantities, units and ownership",
+      "name_zh": "数字、单位与归属",
+      "module": "references/preservation.md",
+      "anchor": "cw04",
+      "kind": "host+literal+candidate",
+      "keywords": "numbers denominator units roles 数值 单位 分母 归属 百分点",
+      "sources": [
+        "S05",
+        "S06",
+        "S08",
+        "S10",
+        "S11",
+        "S12",
+        "S19",
+        "S20",
+        "S21",
+        "S24",
+        "S25",
+        "S27",
+        "S29",
+        "S31"
+      ],
+      "cases": [
+        "CF05-EN",
+        "CF05-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW05",
+      "name_en": "Negation, exceptions and scope",
+      "name_zh": "否定、例外与适用范围",
+      "module": "references/preservation.md",
+      "anchor": "cw05",
+      "kind": "host+candidate",
+      "keywords": "negation conditions exceptions 否定 例外 条件 范围",
+      "sources": [
+        "S02",
+        "S06",
+        "S10",
+        "S11",
+        "S17",
+        "S19",
+        "S21",
+        "S26",
+        "S27"
+      ],
+      "cases": [
+        "CF01-EN",
+        "CF01-ZH",
+        "CF15-EN",
+        "CF15-ZH",
+        "CF21-EN",
+        "CF21-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW06",
+      "name_en": "Uncertainty and obligation strength",
+      "name_zh": "不确定性与义务强度",
+      "module": "references/preservation.md",
+      "anchor": "cw06",
+      "kind": "host+candidate",
+      "keywords": "may must uncertainty permission 可能 必须 可以 许可 义务",
+      "sources": [
+        "S01",
+        "S02",
+        "S11",
+        "S19"
+      ],
+      "cases": [
+        "CF01-EN",
+        "CF01-ZH",
+        "CF15-EN",
+        "CF15-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW07",
+      "name_en": "Causality and attribution",
+      "name_zh": "因果强度与观点归属",
+      "module": "references/preservation.md",
+      "anchor": "cw07",
+      "kind": "host+candidate",
+      "keywords": "causal attribution association 因果 相关 归因 转述",
+      "sources": [
+        "S06",
+        "S10",
+        "S11",
+        "S17",
+        "S19"
+      ],
+      "cases": [
+        "CF16-EN",
+        "CF16-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW08",
+      "name_en": "Protected quotes, code and citations",
+      "name_zh": "引语、代码、公式及引用保护",
+      "module": "references/preservation.md",
+      "anchor": "cw08",
+      "kind": "host+literal",
+      "keywords": "quote code citation equation URL 引文 代码 公式 链接 保护",
+      "sources": [
+        "S05",
+        "S06",
+        "S08",
+        "S11",
+        "S12",
+        "S19",
+        "S20",
+        "S24"
+      ],
+      "cases": [
+        "CF12-EN",
+        "CF12-ZH",
+        "CF17-EN",
+        "CF17-ZH",
+        "CF19-EN",
+        "CF19-ZH",
+        "CF25-EN",
+        "CF25-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW09",
+      "name_en": "Document instructions stay data",
+      "name_zh": "文稿内指令仅作为数据",
+      "module": "SKILL.md",
+      "anchor": "cw09",
+      "kind": "host",
+      "keywords": "prompt injection untrusted 指令注入 越权 执行",
+      "sources": [
+        "S06",
+        "S10"
+      ],
+      "cases": [
+        "CF19-EN",
+        "CF19-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW10",
+      "name_en": "Argument and paragraph structure",
+      "name_zh": "论证和段落推进",
+      "module": "references/english.md",
+      "anchor": "cw10",
+      "kind": "host",
+      "keywords": "structure repetition signposting argument 结构 重复 段落 路标",
+      "sources": [
+        "S05",
+        "S07",
+        "S09",
+        "S12",
+        "S14",
+        "S15",
+        "S22",
+        "S23",
+        "S26",
+        "S30",
+        "S32"
+      ],
+      "cases": [
+        "CF26-EN",
+        "CF26-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW11",
+      "name_en": "Idiomatic English syntax",
+      "name_zh": "自然英文句法",
+      "module": "references/english.md",
+      "anchor": "cw11",
+      "kind": "host",
+      "keywords": "nominalization passive adverb english 英文 被动 名词化 副词",
+      "sources": [
+        "S01",
+        "S07",
+        "S09",
+        "S12",
+        "S14",
+        "S17",
+        "S29",
+        "S30"
+      ],
+      "cases": [
+        "CF02-EN",
+        "CF02-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW12",
+      "name_en": "Idiomatic Chinese and concrete jargon",
+      "name_zh": "中文句法与黑话还原",
+      "module": "references/chinese.md",
+      "anchor": "cw12",
+      "kind": "host",
+      "keywords": "chinese translated jargon concrete 翻译腔 黑话 定语 主体 动作",
+      "sources": [
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "cases": [
+        "CF10-EN",
+        "CF10-ZH",
+        "CF26-EN",
+        "CF26-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW13",
+      "name_en": "Stable technical terminology",
+      "name_zh": "技术术语一致性",
+      "module": "references/academic.md",
+      "anchor": "cw13",
+      "kind": "host",
+      "keywords": "terminology synonyms acronym robust provenance 术语 同义词 缩写",
+      "sources": [
+        "S01",
+        "S07",
+        "S08",
+        "S11",
+        "S12",
+        "S14",
+        "S18",
+        "S22",
+        "S23",
+        "S25",
+        "S27",
+        "S28",
+        "S29",
+        "S30"
+      ],
+      "cases": [
+        "CF03-EN",
+        "CF03-ZH",
+        "CF04-EN",
+        "CF04-ZH",
+        "CF23-EN",
+        "CF23-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW14",
+      "name_en": "Functional rhythm, not quotas",
+      "name_zh": "节奏服务含义、不追配额",
+      "module": "references/english.md",
+      "anchor": "cw14",
+      "kind": "host",
+      "keywords": "rhythm punctuation triads fragments 节奏 标点 三项 短句 配额",
+      "sources": [
+        "S07",
+        "S09",
+        "S12",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S21",
+        "S23",
+        "S26",
+        "S29",
+        "S30"
+      ],
+      "cases": [
+        "CF14-EN",
+        "CF14-ZH",
+        "CF17-EN",
+        "CF17-ZH",
+        "CF26-EN",
+        "CF26-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW15",
+      "name_en": "Author voice and preference precedence",
+      "name_zh": "作者声音与偏好优先级",
+      "module": "references/workflows.md",
+      "anchor": "cw15",
+      "kind": "host",
+      "keywords": "voice samples preference 文风 样本 偏好 优先",
+      "sources": [
+        "S05",
+        "S08",
+        "S10",
+        "S11",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S19",
+        "S20",
+        "S22",
+        "S23",
+        "S25",
+        "S27"
+      ],
+      "cases": [
+        "CF08-EN",
+        "CF08-ZH",
+        "CF09-EN",
+        "CF09-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW16",
+      "name_en": "No invented nonfiction specifics",
+      "name_zh": "非虚构细节不编造",
+      "module": "references/preservation.md",
+      "anchor": "cw16",
+      "kind": "host",
+      "keywords": "invent anecdote precision experience 细节 编造 经历 情绪",
+      "sources": [
+        "S05",
+        "S10",
+        "S11",
+        "S15",
+        "S17",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "cases": [
+        "CF02-EN",
+        "CF02-ZH",
+        "CF08-EN",
+        "CF08-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW17",
+      "name_en": "Anti-defensive academic expression",
+      "name_zh": "学术反防御表达",
+      "module": "references/academic.md",
+      "anchor": "cw17",
+      "kind": "host",
+      "keywords": "defensive caveat limitation 反防御 限制 道歉 谦虚",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S09"
+      ],
+      "cases": [
+        "CF01-EN",
+        "CF01-ZH",
+        "CF21-EN",
+        "CF21-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW18",
+      "name_en": "Claim–evidence and cross-section consistency",
+      "name_zh": "论点证据及跨章节一致性",
+      "module": "references/academic.md",
+      "anchor": "cw18",
+      "kind": "host",
+      "keywords": "evidence consistency results abstract 证据 一致性 摘要 结果",
+      "sources": [
+        "S01",
+        "S04",
+        "S12",
+        "S28",
+        "S29",
+        "S31"
+      ],
+      "cases": [
+        "CF01-EN",
+        "CF01-ZH",
+        "CF06-EN",
+        "CF06-ZH",
+        "CF07-EN",
+        "CF07-ZH",
+        "CF16-EN",
+        "CF16-ZH",
+        "CF25-EN",
+        "CF25-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW19",
+      "name_en": "Contribution narrative and adverse results",
+      "name_zh": "贡献叙事与不利结果保留",
+      "module": "references/academic.md",
+      "anchor": "cw19",
+      "kind": "host",
+      "keywords": "contribution adverse metric fairness 贡献 负结果 指标 公平",
+      "sources": [
+        "S03",
+        "S04",
+        "S31"
+      ],
+      "cases": [
+        "CF06-EN",
+        "CF06-ZH",
+        "CF07-EN",
+        "CF07-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW20",
+      "name_en": "Rigorous critique and author responses",
+      "name_zh": "严格审稿与逐条回复",
+      "module": "references/academic.md",
+      "anchor": "cw20",
+      "kind": "host",
+      "keywords": "review critique rejection rebuttal 审稿 拒稿 返修 回复",
+      "sources": [
+        "S03",
+        "S04",
+        "S32"
+      ],
+      "cases": [
+        "CF07-EN",
+        "CF07-ZH",
+        "CF24-EN",
+        "CF24-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW21",
+      "name_en": "Diagnosis, no-op and bounded editing",
+      "name_zh": "只诊断、无改动与有限修订",
+      "module": "SKILL.md",
+      "anchor": "cw21",
+      "kind": "host",
+      "keywords": "diagnosis no-op iteration 检查 不修改 无需修改 停止",
+      "sources": [
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S13",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S29",
+        "S32"
+      ],
+      "cases": [
+        "CF13-EN",
+        "CF13-ZH",
+        "CF14-EN",
+        "CF14-ZH",
+        "CF18-EN",
+        "CF18-ZH",
+        "CF24-EN",
+        "CF24-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW22",
+      "name_en": "Explicit translation and localization",
+      "name_zh": "明确授权的翻译与本地化",
+      "module": "references/workflows.md",
+      "anchor": "cw22",
+      "kind": "host",
+      "keywords": "translate localization quotation 翻译 本地化 地区 引语",
+      "sources": [
+        "S03",
+        "S24"
+      ],
+      "cases": [
+        "CF10-EN",
+        "CF10-ZH",
+        "CF11-EN",
+        "CF11-ZH",
+        "CF12-EN",
+        "CF12-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW23",
+      "name_en": "Drafting and shortening from material",
+      "name_zh": "按材料起草与压缩",
+      "module": "references/preservation.md",
+      "anchor": "cw23",
+      "kind": "host",
+      "keywords": "draft notes summary shorten 起草 材料 缩写 摘要",
+      "sources": [
+        "S25"
+      ],
+      "cases": [
+        "CF05-EN",
+        "CF05-ZH",
+        "CF21-EN",
+        "CF21-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW24",
+      "name_en": "Genre-aware business, news and personal prose",
+      "name_zh": "商务、新闻与个人文体适配",
+      "module": "references/workflows.md",
+      "anchor": "cw24",
+      "kind": "host",
+      "keywords": "genre business news social 文体 商务 新闻 社媒",
+      "sources": [
+        "S08",
+        "S10",
+        "S15",
+        "S17",
+        "S20",
+        "S21",
+        "S22",
+        "S25",
+        "S26",
+        "S28"
+      ],
+      "cases": [
+        "CF02-EN",
+        "CF02-ZH",
+        "CF08-EN",
+        "CF08-ZH",
+        "CF15-EN",
+        "CF15-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW25",
+      "name_en": "Output, selected files and safe batches",
+      "name_zh": "输出、指定文件与批量安全",
+      "module": "references/workflows.md",
+      "anchor": "cw25",
+      "kind": "host",
+      "keywords": "file diff batch selected scope 文件 批量 差异 覆盖",
+      "sources": [
+        "S05",
+        "S06"
+      ],
+      "cases": [
+        "CF19-EN",
+        "CF19-ZH",
+        "CF22-EN",
+        "CF22-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW26",
+      "name_en": "Long-document continuity",
+      "name_zh": "长文连续性和全局台账",
+      "module": "references/workflows.md",
+      "anchor": "cw26",
+      "kind": "host",
+      "keywords": "long chunk context consistency 长文 分块 上下文 全局",
+      "sources": [
+        "S29",
+        "S31"
+      ],
+      "cases": [
+        "CF04-EN",
+        "CF04-ZH",
+        "CF21-EN",
+        "CF21-ZH",
+        "CF22-EN",
+        "CF22-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW27",
+      "name_en": "Reusable voice profiles",
+      "name_zh": "可维护的文风档案",
+      "module": "references/workflows.md",
+      "anchor": "cw27",
+      "kind": "host",
+      "keywords": "profile style whitelist sample 文风档案 白名单 样稿",
+      "sources": [
+        "S13",
+        "S16"
+      ],
+      "cases": [
+        "CF09-EN",
+        "CF09-ZH",
+        "CF23-EN",
+        "CF23-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW28",
+      "name_en": "Located bilingual surface candidates",
+      "name_zh": "带位置的双语表面诊断",
+      "module": "references/tooling.md",
+      "anchor": "cw28",
+      "kind": "script",
+      "keywords": "lint location rule traditional 检查 定位 规则 繁体",
+      "sources": [
+        "S06",
+        "S09",
+        "S18"
+      ],
+      "cases": [
+        "CF03-EN",
+        "CF03-ZH",
+        "CF18-EN",
+        "CF18-ZH",
+        "CF26-EN",
+        "CF26-ZH"
+      ],
+      "implementation_boundary": "The helper reports limited candidates or literal differences; semantic review remains necessary.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW29",
+      "name_en": "Protected-literal comparison",
+      "name_zh": "受保护字面差异检查",
+      "module": "references/tooling.md",
+      "anchor": "cw29",
+      "kind": "script",
+      "keywords": "compare literal keep numbers 字面 比较 keep",
+      "sources": [
+        "S06",
+        "S08",
+        "S10",
+        "S11"
+      ],
+      "cases": [
+        "CF05-EN",
+        "CF05-ZH",
+        "CF17-EN",
+        "CF17-ZH"
+      ],
+      "implementation_boundary": "The helper reports limited candidates or literal differences; semantic review remains necessary.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW30",
+      "name_en": "Revision-risk cue review",
+      "name_zh": "改写风险线索提示",
+      "module": "references/tooling.md",
+      "anchor": "cw30",
+      "kind": "script",
+      "keywords": "risk negation modality reordered 风险 否定 数值互换",
+      "sources": [
+        "S08",
+        "S11"
+      ],
+      "cases": [
+        "CF15-EN",
+        "CF15-ZH",
+        "CF16-EN",
+        "CF16-ZH"
+      ],
+      "implementation_boundary": "The helper reports limited candidates or literal differences; semantic review remains necessary.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW31",
+      "name_en": "Honest layered evaluation",
+      "name_zh": "分层评测与能力边界",
+      "module": "references/maintenance.md",
+      "anchor": "cw31",
+      "kind": "workflow",
+      "keywords": "evaluation detector score validation 评测 检测 分数 验证",
+      "sources": [
+        "S01",
+        "S04",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S21",
+        "S22",
+        "S24",
+        "S25"
+      ],
+      "cases": [
+        "CF18-EN",
+        "CF18-ZH",
+        "CF20-EN",
+        "CF20-ZH",
+        "CF25-EN",
+        "CF25-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW32",
+      "name_en": "Traceable maintenance and conflict repair",
+      "name_zh": "来源追溯、冲突修复与扩展",
+      "module": "references/maintenance.md",
+      "anchor": "cw32",
+      "kind": "script+workflow",
+      "keywords": "trace extension conflict repair 来源 追溯 扩展 冲突 修复",
+      "sources": [
+        "S13",
+        "S26"
+      ],
+      "cases": [
+        "CF23-EN",
+        "CF23-ZH"
+      ],
+      "implementation_boundary": "The helper reports limited candidates or literal differences; semantic review remains necessary.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW33",
+      "name_en": "Privacy and host boundary",
+      "name_zh": "隐私与宿主边界",
+      "module": "references/workflows.md",
+      "anchor": "cw33",
+      "kind": "host+workflow",
+      "keywords": "privacy offline network detector 隐私 离线 网络 外传",
+      "sources": [
+        "S06",
+        "S08",
+        "S10",
+        "S16"
+      ],
+      "cases": [
+        "CF20-EN",
+        "CF20-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW34",
+      "name_en": "Portable skill and optional tools",
+      "name_zh": "可移植技能与可选工具",
+      "module": "references/maintenance.md",
+      "anchor": "cw34",
+      "kind": "package",
+      "keywords": "install portability codex python 安装 宿主 可选工具",
+      "sources": [
+        "S18",
+        "S19",
+        "S30"
+      ],
+      "cases": [
+        "CF18-EN",
+        "CF18-ZH",
+        "CF24-EN",
+        "CF24-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW35",
+      "name_en": "Explicit evidence verification",
+      "name_zh": "明确授权的证据核查",
+      "module": "references/academic.md",
+      "anchor": "cw35",
+      "kind": "host",
+      "keywords": "factcheck citations verified 核查 文献 真伪 来源",
+      "sources": [
+        "S01",
+        "S28",
+        "S29",
+        "S31"
+      ],
+      "cases": [
+        "CF25-EN",
+        "CF25-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    },
+    {
+      "id": "CW36",
+      "name_en": "Clean deliverables and separate notes",
+      "name_zh": "净稿与编辑意见分离",
+      "module": "references/workflows.md",
+      "anchor": "cw36",
+      "kind": "host",
+      "keywords": "clean output notes placeholders 净稿 备注 占位符",
+      "sources": [
+        "S02",
+        "S03",
+        "S20",
+        "S28",
+        "S32"
+      ],
+      "cases": [
+        "CF12-EN",
+        "CF12-ZH",
+        "CF13-EN",
+        "CF13-ZH",
+        "CF24-EN",
+        "CF24-ZH",
+        "CF25-EN",
+        "CF25-ZH"
+      ],
+      "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
+      "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CF01",
+      "name_en": "Directness vs necessary caveats",
+      "name_zh": "直接表达与必要限制",
+      "capabilities": [
+        "CW05",
+        "CW06",
+        "CW17",
+        "CW18"
+      ],
+      "cases": [
+        "CF01-EN",
+        "CF01-ZH"
+      ]
+    },
+    {
+      "id": "CF02",
+      "name_en": "Active voice vs unknown actors",
+      "name_zh": "主动语态与未知主体",
+      "capabilities": [
+        "CW11",
+        "CW16",
+        "CW24"
+      ],
+      "cases": [
+        "CF02-EN",
+        "CF02-ZH"
+      ]
+    },
+    {
+      "id": "CF03",
+      "name_en": "Word bans vs technical precision",
+      "name_zh": "禁词与技术精确性",
+      "capabilities": [
+        "CW13",
+        "CW28"
+      ],
+      "cases": [
+        "CF03-EN",
+        "CF03-ZH"
+      ]
+    },
+    {
+      "id": "CF04",
+      "name_en": "Synonym variety vs stable terminology",
+      "name_zh": "同义替换与术语一致",
+      "capabilities": [
+        "CW13",
+        "CW26"
+      ],
+      "cases": [
+        "CF04-EN",
+        "CF04-ZH"
+      ]
+    },
+    {
+      "id": "CF05",
+      "name_en": "Shortness vs quantities and denominators",
+      "name_zh": "简洁与数字分母",
+      "capabilities": [
+        "CW04",
+        "CW23",
+        "CW29"
+      ],
+      "cases": [
+        "CF05-EN",
+        "CF05-ZH"
+      ]
+    },
+    {
+      "id": "CF06",
+      "name_en": "Positive story vs adverse evidence",
+      "name_zh": "正面叙事与负结果",
+      "capabilities": [
+        "CW18",
+        "CW19"
+      ],
+      "cases": [
+        "CF06-EN",
+        "CF06-ZH"
+      ]
+    },
+    {
+      "id": "CF07",
+      "name_en": "Winning metric vs prespecified outcome",
+      "name_zh": "换指标取胜与原定结局",
+      "capabilities": [
+        "CW18",
+        "CW19",
+        "CW20"
+      ],
+      "cases": [
+        "CF07-EN",
+        "CF07-ZH"
+      ]
+    },
+    {
+      "id": "CF08",
+      "name_en": "Human warmth vs invented experience",
+      "name_zh": "个人温度与虚构经历",
+      "capabilities": [
+        "CW15",
+        "CW16",
+        "CW24"
+      ],
+      "cases": [
+        "CF08-EN",
+        "CF08-ZH"
+      ]
+    },
+    {
+      "id": "CF09",
+      "name_en": "Current request vs style samples",
+      "name_zh": "当次要求与历史文风",
+      "capabilities": [
+        "CW01",
+        "CW15",
+        "CW27"
+      ],
+      "cases": [
+        "CF09-EN",
+        "CF09-ZH"
+      ]
+    },
+    {
+      "id": "CF10",
+      "name_en": "Regional default vs source variety",
+      "name_zh": "地区默认与原文简繁",
+      "capabilities": [
+        "CW02",
+        "CW12",
+        "CW22"
+      ],
+      "cases": [
+        "CF10-EN",
+        "CF10-ZH"
+      ]
+    },
+    {
+      "id": "CF11",
+      "name_en": "Prompt language vs output language",
+      "name_zh": "提问语言与交付语言",
+      "capabilities": [
+        "CW01",
+        "CW02",
+        "CW22"
+      ],
+      "cases": [
+        "CF11-EN",
+        "CF11-ZH"
+      ]
+    },
+    {
+      "id": "CF12",
+      "name_en": "Translation vs quoted evidence",
+      "name_zh": "翻译与引语保全",
+      "capabilities": [
+        "CW08",
+        "CW22",
+        "CW36"
+      ],
+      "cases": [
+        "CF12-EN",
+        "CF12-ZH"
+      ]
+    },
+    {
+      "id": "CF13",
+      "name_en": "Diagnosis vs unrequested rewrite",
+      "name_zh": "只诊断与越权改写",
+      "capabilities": [
+        "CW01",
+        "CW21",
+        "CW36"
+      ],
+      "cases": [
+        "CF13-EN",
+        "CF13-ZH"
+      ]
+    },
+    {
+      "id": "CF14",
+      "name_en": "Edit pressure vs no-op",
+      "name_zh": "强制修改与保留好文本",
+      "capabilities": [
+        "CW14",
+        "CW21"
+      ],
+      "cases": [
+        "CF14-EN",
+        "CF14-ZH"
+      ]
+    },
+    {
+      "id": "CF15",
+      "name_en": "Decisiveness vs obligation and permission",
+      "name_zh": "果断表达与义务许可",
+      "capabilities": [
+        "CW05",
+        "CW06",
+        "CW24",
+        "CW30"
+      ],
+      "cases": [
+        "CF15-EN",
+        "CF15-ZH"
+      ]
+    },
+    {
+      "id": "CF16",
+      "name_en": "Fluent narrative vs status and causation",
+      "name_zh": "流畅叙事与状态因果",
+      "capabilities": [
+        "CW03",
+        "CW07",
+        "CW18",
+        "CW30"
+      ],
+      "cases": [
+        "CF16-EN",
+        "CF16-ZH"
+      ]
+    },
+    {
+      "id": "CF17",
+      "name_en": "Punctuation ban vs verbatim material",
+      "name_zh": "禁标点与逐字保护",
+      "capabilities": [
+        "CW08",
+        "CW14",
+        "CW29"
+      ],
+      "cases": [
+        "CF17-EN",
+        "CF17-ZH"
+      ]
+    },
+    {
+      "id": "CF18",
+      "name_en": "Detector optimization vs real evaluation",
+      "name_zh": "检测分优化与真实验证",
+      "capabilities": [
+        "CW21",
+        "CW28",
+        "CW31",
+        "CW34"
+      ],
+      "cases": [
+        "CF18-EN",
+        "CF18-ZH"
+      ]
+    },
+    {
+      "id": "CF19",
+      "name_en": "Embedded instruction vs editing contract",
+      "name_zh": "内嵌指令与编辑权限",
+      "capabilities": [
+        "CW08",
+        "CW09",
+        "CW25"
+      ],
+      "cases": [
+        "CF19-EN",
+        "CF19-ZH"
+      ]
+    },
+    {
+      "id": "CF20",
+      "name_en": "External detector vs privacy",
+      "name_zh": "外部检测与隐私",
+      "capabilities": [
+        "CW31",
+        "CW33"
+      ],
+      "cases": [
+        "CF20-EN",
+        "CF20-ZH"
+      ]
+    },
+    {
+      "id": "CF21",
+      "name_en": "Summary compression vs local qualifiers",
+      "name_zh": "摘要压缩与就近限定",
+      "capabilities": [
+        "CW05",
+        "CW17",
+        "CW23",
+        "CW26"
+      ],
+      "cases": [
+        "CF21-EN",
+        "CF21-ZH"
+      ]
+    },
+    {
+      "id": "CF22",
+      "name_en": "Batch efficiency vs file scope",
+      "name_zh": "批量效率与文件边界",
+      "capabilities": [
+        "CW01",
+        "CW25",
+        "CW26"
+      ],
+      "cases": [
+        "CF22-EN",
+        "CF22-ZH"
+      ]
+    },
+    {
+      "id": "CF23",
+      "name_en": "One disliked phrase vs permanent rule",
+      "name_zh": "单次偏好与永久规则",
+      "capabilities": [
+        "CW13",
+        "CW27",
+        "CW32"
+      ],
+      "cases": [
+        "CF23-EN",
+        "CF23-ZH"
+      ]
+    },
+    {
+      "id": "CF24",
+      "name_en": "Heavy review vs task proportionality",
+      "name_zh": "重型审稿与任务比例",
+      "capabilities": [
+        "CW20",
+        "CW21",
+        "CW34",
+        "CW36"
+      ],
+      "cases": [
+        "CF24-EN",
+        "CF24-ZH"
+      ]
+    },
+    {
+      "id": "CF25",
+      "name_en": "Fact verification vs confident copyediting",
+      "name_zh": "事实核查与流畅但无依据的确信",
+      "capabilities": [
+        "CW08",
+        "CW18",
+        "CW31",
+        "CW35",
+        "CW36"
+      ],
+      "cases": [
+        "CF25-EN",
+        "CF25-ZH"
+      ]
+    },
+    {
+      "id": "CF26",
+      "name_en": "Pattern removal vs useful signposting",
+      "name_zh": "去模板与有用的逻辑路标",
+      "capabilities": [
+        "CW10",
+        "CW12",
+        "CW14",
+        "CW28"
+      ],
+      "cases": [
+        "CF26-EN",
+        "CF26-ZH"
+      ]
+    }
+  ],
+  "source_inventory_count": 32
+}

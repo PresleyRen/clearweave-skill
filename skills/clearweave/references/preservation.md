@@ -1,5 +1,14 @@
 # Preserve the editing contract
 
+<a id="cw03"></a>
+<a id="cw04"></a>
+<a id="cw05"></a>
+<a id="cw06"></a>
+<a id="cw07"></a>
+<a id="cw08"></a>
+<a id="cw16"></a>
+<a id="cw23"></a>
+
 ## Contents
 
 - [Claim ledger](#claim-ledger)

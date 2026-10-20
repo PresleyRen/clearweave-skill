@@ -1,5 +1,12 @@
 # Academic writing: evidence, scope, and author control
 
+<a id="cw13"></a>
+<a id="cw17"></a>
+<a id="cw18"></a>
+<a id="cw19"></a>
+<a id="cw20"></a>
+<a id="cw35"></a>
+
 Use this module for scholarly drafting, editing, translation, and requested review. Discuss decisions in the user's language; deliver manuscript text in the requested language. When the established project convention is English papers with Chinese discussion, preserve that convention.
 
 ## Contents

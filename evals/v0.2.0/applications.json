@@ -1,0 +1,739 @@
+{
+  "schema_version": 1,
+  "release": "0.2.0",
+  "date": "2026-10-20",
+  "method": "Same-session assistant application examples: the maintainer assistant wrote these original synthetic inputs and applied the skill to produce revisions, then ran the actual local helpers. This is not an independent, randomized, blinded, held-out or comparative host-model experiment.",
+  "model": "GPT-6 Astra Pro (assistant self-identification; API model ID and sampling parameters unavailable)",
+  "limits": [
+    "Inputs and outputs are from the same assistant in the same context.",
+    "No unassisted baseline, independent reviewer, repeated trials, human editor or commercial detector was used.",
+    "Author review is qualitative; it is not a calibrated accuracy measurement.",
+    "Diagnosis is assessed against its requested output contract, not literal identity to the source."
+  ],
+  "cases": [
+    {
+      "id": "APP01",
+      "language": "en",
+      "operation": "edit",
+      "request": "Edit this abstract passage; keep limitations and numbers.",
+      "original": "It is important to note that our retrieval controller achieved 81.2% accuracy on 240 English queries. These results may suggest that the controller helps in this offline setting. Multilingual performance has not been evaluated.",
+      "revision": "Our retrieval controller achieved 81.2% accuracy on 240 English queries. These results may suggest that the controller helps in this offline setting. Multilingual performance has not been evaluated.",
+      "capabilities": [
+        "CW11",
+        "CW17",
+        "CW18"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Removed empty introductory framing; retained the cautious inference, offline scope, denominator and untested population. No new effectiveness claim."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 2,
+        "revision_span_count": 2,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP02",
+      "language": "zh",
+      "operation": "edit",
+      "request": "去掉空话，保持正式语气，保留统计口径。",
+      "original": "值得注意的是，本次测试在200条离线请求上进行，失败率为3%。这仅说明当前测试集上的表现，并不意味着线上请求也有同样的失败率。",
+      "revision": "本次测试覆盖200条离线请求，失败率为3%。这仅说明当前测试集上的表现，并不意味着线上请求也有同样的失败率。",
+      "capabilities": [
+        "CW04",
+        "CW05",
+        "CW12"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "删去开场强调语，保留样本量、离线范围和不能外推到线上请求的限定。"
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 2,
+        "revision_span_count": 2,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP03",
+      "language": "mixed",
+      "operation": "edit",
+      "request": "润色这段英文技术说明，正文保留英文，不改代码。",
+      "original": "It is worth noting that the retry controller uses `max_retries=3`. The controller does not retry payment requests unless the caller supplies an idempotency key.",
+      "revision": "The retry controller uses `max_retries=3`. It does not retry payment requests unless the caller supplies an idempotency key.",
+      "capabilities": [
+        "CW01",
+        "CW02",
+        "CW08"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Kept English despite the Chinese request; preserved code, prohibition and its exception."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 1,
+        "revision_span_count": 1,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP04",
+      "language": "en",
+      "operation": "edit",
+      "request": "Make this methods description natural. Do not invent an actor.",
+      "original": "In order to measure latency, 120 requests were replayed on the same server. Failed requests were excluded from the latency estimate, but they were included in the failure rate.",
+      "revision": "To measure latency, 120 requests were replayed on the same server. Failed requests were excluded from the latency estimate but included in the failure rate.",
+      "capabilities": [
+        "CW04",
+        "CW11",
+        "CW14"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Reduced scaffolding without forcing active voice; retained the distinct denominators."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 1,
+        "revision_span_count": 1,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP05",
+      "language": "zh-Hant",
+      "operation": "edit",
+      "request": "整理語句，維持繁體中文和正式語氣。",
+      "original": "值得注意的是，系統目前僅支援唯讀查詢，並未開放資料修改功能。未來可期。",
+      "revision": "系統目前僅支援唯讀查詢，並未開放資料修改功能。",
+      "capabilities": [
+        "CW02",
+        "CW12",
+        "CW24"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "刪除空泛開場和沒有獨立資訊的結尾；保留繁體、唯讀範圍與未開放狀態。"
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 0,
+        "revision_span_count": 0,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP06",
+      "language": "en",
+      "operation": "edit",
+      "request": "Improve readability without changing the technical terms or uncertainty.",
+      "original": "It is worth noting that the robust estimator retains provenance records. Processing approximately 500 records requires 2 GB of memory in our test configuration.",
+      "revision": "The robust estimator retains provenance records. Processing about 500 records requires 2 GB of memory in our test configuration.",
+      "capabilities": [
+        "CW06",
+        "CW13",
+        "CW30"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Kept robust/provenance and resource conditions. Approximately→about is a faithful paraphrase that the deliberately incomplete risk vocabulary flags; the flag is not a semantic failure."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 2,
+        "revision_span_count": 2,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 1,
+        "findings": [
+          {
+            "risk_id": "R02",
+            "capability": "CW06",
+            "category": "uncertainty",
+            "original": [
+              {
+                "cue": "approximately",
+                "line": 1,
+                "column": 85,
+                "context": "stimator retains provenance records. Processing approximately 500 records requires 2 GB of memory in our test"
+              }
+            ],
+            "revision": [],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP07",
+      "language": "zh",
+      "operation": "edit",
+      "request": "精简这段工作安排，不改变义务强度。",
+      "original": "需要强调的是，负责人必须在周五前确认预算，其他成员可以补充意见。未经批准，不得对外发布结果。",
+      "revision": "负责人必须在周五前确认预算，其他成员可以补充意见。未经批准，不得对外发布结果。",
+      "capabilities": [
+        "CW05",
+        "CW06",
+        "CW24"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "仅删除空开场；必须、可以、未经批准与不得均保留。"
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 0,
+        "revision_span_count": 0,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP08",
+      "language": "en",
+      "operation": "edit",
+      "request": "Make this personal update less stiff. Do not add experiences.",
+      "original": "I would like to say that I enjoyed the workshop. The debugging exercise was my favorite part, although I still find the deployment steps confusing.",
+      "revision": "I enjoyed the workshop. The debugging exercise was my favorite part, although I still find the deployment steps confusing.",
+      "capabilities": [
+        "CW15",
+        "CW16"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Retained the supplied preference and difficulty; added no anecdote, emotion or invented sensory detail."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 0,
+        "revision_span_count": 0,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP09",
+      "language": "zh",
+      "operation": "diagnose",
+      "request": "只指出问题，不要替我重写。",
+      "original": "这个平台全面赋能团队，推动高质量发展。",
+      "revision": "“全面赋能团队”“推动高质量发展”没有说明平台提供什么功能、作用于哪项任务，以及具体改善了什么。需要补充这些信息后才能做有依据的具体化；目前不应凭空补写功能或收益。",
+      "capabilities": [
+        "CW21",
+        "CW28",
+        "CW36"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "按要求交付诊断而非改写。原稿是笼统评价，诊断没有补造功能、数字或已有证据。"
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": true,
+        "change_count": 2,
+        "original_span_count": 0,
+        "revision_span_count": 2,
+        "changes": [
+          {
+            "kind": "quotation",
+            "literal": "“全面赋能团队”",
+            "original_count": 0,
+            "revision_count": 1,
+            "delta": 1,
+            "status": "added",
+            "original_locations": [],
+            "revision_locations": [
+              {
+                "line": 1,
+                "column": 1
+              }
+            ]
+          },
+          {
+            "kind": "quotation",
+            "literal": "“推动高质量发展”",
+            "original_count": 0,
+            "revision_count": 1,
+            "delta": 1,
+            "status": "added",
+            "original_locations": [],
+            "revision_locations": [
+              {
+                "line": 1,
+                "column": 9
+              }
+            ]
+          }
+        ],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 1,
+        "findings": [
+          {
+            "risk_id": "R01",
+            "capability": "CW05",
+            "category": "negation",
+            "original": [],
+            "revision": [
+              {
+                "cue": "没有",
+                "line": 1,
+                "column": 18,
+                "context": "“全面赋能团队”“推动高质量发展”没有说明平台提供什么功能、作用于哪项任务，以及具体改善了什么。需要补充这些信息后才能做有依据的具体化"
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP10",
+      "language": "zh-en",
+      "operation": "translate",
+      "request": "Translate into natural English. Keep the limits and citation key.",
+      "original": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。",
+      "revision": "We plan to evaluate the retriever using 40 questions. The experiment is not yet complete, so we cannot currently claim that the retriever outperforms the baseline [@lee2024].",
+      "capabilities": [
+        "CW03",
+        "CW07",
+        "CW22"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "Preserved the proposed/completed distinction, prohibition on a superiority claim, quantity and citation key. Translation can legitimately change every lexical-cue inventory."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": true,
+        "change_count": 2,
+        "original_span_count": 2,
+        "revision_span_count": 2,
+        "changes": [
+          {
+            "kind": "number",
+            "literal": "40",
+            "original_count": 0,
+            "revision_count": 1,
+            "delta": 1,
+            "status": "added",
+            "original_locations": [],
+            "revision_locations": [
+              {
+                "line": 1,
+                "column": 41
+              }
+            ]
+          },
+          {
+            "kind": "number",
+            "literal": "40个",
+            "original_count": 1,
+            "revision_count": 0,
+            "delta": -1,
+            "status": "lost",
+            "original_locations": [
+              {
+                "line": 1,
+                "column": 6
+              }
+            ],
+            "revision_locations": []
+          }
+        ],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 4,
+        "findings": [
+          {
+            "risk_id": "R01",
+            "capability": "CW05",
+            "category": "negation",
+            "original": [
+              {
+                "cue": "尚未",
+                "line": 1,
+                "column": 21,
+                "context": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。"
+              },
+              {
+                "cue": "不能",
+                "line": 1,
+                "column": 30,
+                "context": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。"
+              }
+            ],
+            "revision": [
+              {
+                "cue": "not",
+                "line": 1,
+                "column": 73,
+                "context": "retriever using 40 questions. The experiment is not yet complete, so we cannot currently claim that"
+              },
+              {
+                "cue": "cannot",
+                "line": 1,
+                "column": 97,
+                "context": "ions. The experiment is not yet complete, so we cannot currently claim that the retriever outperforms "
+              }
+            ],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          },
+          {
+            "risk_id": "R04",
+            "capability": "CW07",
+            "category": "causal_strength",
+            "original": [
+              {
+                "cue": "因此",
+                "line": 1,
+                "column": 26,
+                "context": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。"
+              }
+            ],
+            "revision": [],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          },
+          {
+            "risk_id": "R05",
+            "capability": "CW03",
+            "category": "work_status",
+            "original": [
+              {
+                "cue": "计划",
+                "line": 1,
+                "column": 3,
+                "context": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。"
+              }
+            ],
+            "revision": [],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          },
+          {
+            "risk_id": "R07",
+            "capability": "CW07",
+            "category": "attribution",
+            "original": [
+              {
+                "cue": "声称",
+                "line": 1,
+                "column": 32,
+                "context": "我们计划用40个问题评估检索器。这项实验尚未完成，因此目前不能声称检索器优于基线 [@lee2024]。"
+              }
+            ],
+            "revision": [],
+            "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+          }
+        ],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP11",
+      "language": "en",
+      "operation": "edit",
+      "request": "Check whether this needs editing; return the text only.",
+      "original": "The cache stores responses for 30 seconds. It does not store payment data.",
+      "revision": "The cache stores responses for 30 seconds. It does not store payment data.",
+      "capabilities": [
+        "CW05",
+        "CW21"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "No edit needed. A no-op preserves clear, complete technical prose."
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 1,
+        "revision_span_count": 1,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "APP12",
+      "language": "zh",
+      "operation": "edit",
+      "request": "压缩成两句话，不能丢掉反面结果和研究范围。",
+      "original": "本次评估使用同一个离线测试集。方法A的准确率为82%，方法B的准确率为80%。但是，方法A的平均延迟为900ms，方法B为600ms。我们没有评估线上表现。",
+      "revision": "在同一个离线测试集上，方法A的准确率为82%，方法B为80%；平均延迟则分别为900ms和600ms。我们没有评估线上表现。",
+      "capabilities": [
+        "CW04",
+        "CW19",
+        "CW23"
+      ],
+      "review": {
+        "reviewer": "same assistant that authored the revision",
+        "status": "no material fidelity or task issue identified by author review",
+        "reason": "保留准确率收益、延迟代价与未测线上范围。数值对应关系需语义复核，不能仅依赖字面清点。"
+      },
+      "literal_check": {
+        "mode": "compare",
+        "comparison_scope": "supported_literal_multiset",
+        "supported_literal_changes": false,
+        "change_count": 0,
+        "original_span_count": 4,
+        "revision_span_count": 4,
+        "changes": [],
+        "semantic_review_required": true,
+        "limitations": [
+          "Counts are literal and unordered; moving values between roles may be invisible.",
+          "Negation, attribution, causal strength, and other prose meaning are not checked.",
+          "Only documented syntax and units are recognized; no completeness guarantee."
+        ]
+      },
+      "risk_check": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    }
+  ]
+}

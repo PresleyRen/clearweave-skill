@@ -90,9 +90,9 @@ class LintTests(unittest.TestCase):
         report = checker.lint_text(text)
         self.assertEqual([item["rule_id"] for item in report["diagnostics"]], ["EN002"])
 
-    def test_traditional_word_forms_are_a_documented_coverage_limit(self):
+    def test_supported_traditional_word_forms_are_detected(self):
         report = checker.lint_text("綜上所述，未來可期。", "zh")
-        self.assertEqual(report["candidate_count"], 0)
+        self.assertEqual(report["candidate_count"], 2)
         self.assertTrue(report["semantic_review_required"])
 
 

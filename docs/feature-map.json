@@ -1,0 +1,2648 @@
+{
+  "schema_version": 1,
+  "audit_file": "docs/source-audit.json",
+  "scope": "All 194 documented decision statements (92 adopted, 102 adapted/excluded) in the existing audit. Not a claim to enumerate every upstream file or feature.",
+  "features": [
+    {
+      "id": "S01-A01",
+      "source": "S01",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "36a22326415acdfa6a72d690391c8db6c6a9c47f22f6aadb34ffd393c6d75831",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW18",
+        "CW35"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S01-A02",
+      "source": "S01",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "68cf69f7f0a5c3c788439aec11e777fc78aa2940e6b161afa90cc822f7dae4d7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW11",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S01-D01",
+      "source": "S01",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "9f9c193a156f94462dad3aeffebf97a2ca09a1c0e90eda97783996a2fbc318ec",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW06",
+        "CW11"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S01-D02",
+      "source": "S01",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "c8c47eff2e72f5b2bfa992cad5f0408a8661f2538983c640beb2b68ce699520c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW18"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S01-D03",
+      "source": "S01",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "74570669e53ac4940319ccef2e30e5a2593b74123687d7e69326451ab1efd59c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW13",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S02-A01",
+      "source": "S02",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "4e21b1af4e568b0f58de12775e0dd1441126708bdfa91d723d5f15b7160ad1de",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03",
+        "CW05"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S02-A02",
+      "source": "S02",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "830a6e7c2dc5c26ad580abed599f5a4a4afa1e9361e9fedaba11e3dcd2854a1d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW05",
+        "CW17"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S02-A03",
+      "source": "S02",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "a8abe6fabab4863c928b1aab38b8364e4a63e10cee3c610c4713b53cb293ea8c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03",
+        "CW05"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S02-D01",
+      "source": "S02",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "5267204e5a71320d7d389e81ba7e79dc92d9a19ccc7dcde5a28ef3c1f5232358",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW05",
+        "CW17"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S02-D02",
+      "source": "S02",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "4cba901f674a85d7d203d9d169eb88b016a0adc96c5de3c85ebfebb7c2226442",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW05"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S03-A01",
+      "source": "S03",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "32f70a66e3ebb92fe33d134201cc5e0d41725ae34fda38e4af631f71e7fd200d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW02"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S03-A02",
+      "source": "S03",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "d63dcd83ac66ca91536f1dcff983f7583b8090bed8a517d3dc849f7788085628",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW19"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S03-A03",
+      "source": "S03",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "ed8a3cc3b776c242cf4f2e5c1f6d8b3653da7ba9dcae8874a203e2621c1120ff",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW20",
+        "CW36"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S03-D01",
+      "source": "S03",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "55a2830875d64e3671249c27014c37421c830283c75e9b00bca34a8eceb7ccd9",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW02",
+        "CW22"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S03-D02",
+      "source": "S03",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "1e1d4096e8979fcd06ba575b92f7f4c17058f565a327c8f3c14bfb4390932b7a",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW19"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S04-A01",
+      "source": "S04",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "39be6758d6ee66ed2b65f3862278605d174b4246a25b2b24eba4ef960ffe6bfd",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW19"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S04-A02",
+      "source": "S04",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "e5257cdb1377ae1376e4e5a78ea08acb405b3f4caf45cd0a03f3ed6b655f29c3",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW18",
+        "CW19"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S04-D01",
+      "source": "S04",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "6b927ed1dbb4efa9fe74c71513073da75f9a3ccf9f97d8ccd0ca710ae309bcff",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW19",
+        "CW20"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S04-D02",
+      "source": "S04",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "d5ccc613d92568bc8ebf648100ad69f8c01677d71d70104ac3f51947ecd7b9df",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW19",
+        "CW20"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S04-D03",
+      "source": "S04",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "8a896a79379acfed94e9a8700da4476d63dba95f26d82a86f8a199cc4d228296",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW18"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-A01",
+      "source": "S05",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "0c3981796a13fef9390b69e97f753f300fb8411d567089d6c0ec853e4bd18425",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-A02",
+      "source": "S05",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "3cf2009f0786ad45ca70fa3bd5b271fab79db21756e5affcceadb9b1a9f420bc",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-A03",
+      "source": "S05",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "3710c37b97ee7356f601e697468bb3a8a965e8f8f1598ca6ffe0ade9d11b7eb7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15",
+        "CW25"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-D01",
+      "source": "S05",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "96820a56a5d9e529a78222954be3933e812a59a7e1f7d1a1c6b4fa20190c58a0",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-D02",
+      "source": "S05",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "22451cbde73c2d0e000f4307bfbc6b38e25d3cea1d3305714f5a2a2c9efa2abd",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S05-D03",
+      "source": "S05",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "a38e523623cdbcda8a8e971d09339597d597f63b2411b1679b47d651efbc00a6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW08"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-A01",
+      "source": "S06",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "b1543b2ca5201a1b5f91aa1b94d4eaed413cbddbb4056ffe597c07023f920332",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW28"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-A02",
+      "source": "S06",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "71c0178b17f0782c9ad984d7511dc4ebe1ca4430354076c4aa6711046f10e28a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW05",
+        "CW07",
+        "CW09",
+        "CW25"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-A03",
+      "source": "S06",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "2afbf920ca2bc50f734390f755f9693c1e0f2dba2b0e073f849aca318cc3107a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-A04",
+      "source": "S06",
+      "audit_field": "adopted",
+      "audit_index": 3,
+      "statement_sha256": "d0377db58e39831afb0f8984d36b2173a2b23630404fcebf6dbc18d11782707f",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-D01",
+      "source": "S06",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a73e879ef9e683586e927874ba166d35c97405db8736129e79ff060a12384888",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW03"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-D02",
+      "source": "S06",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "21087d5262f37ac7fa20839894a3575eedacb19bdadfe0eb8cb90c8a55ffd6e4",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW03"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-D03",
+      "source": "S06",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "44b4735b4626a393520f769427c9cf18f27c4916dd66e0d3f4acfe7dc6e4530b",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31",
+        "CW33"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S06-D04",
+      "source": "S06",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "12272c1f57edd9b346e139c51c4f4582f1a1a88c3a0d22611eadb689a5ae5109",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21",
+        "CW25"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-A01",
+      "source": "S07",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "84a91bab8c27e332f41e07e619decee7c002b6c24aac58646d7571e699bdff68",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-A02",
+      "source": "S07",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "c8e3376f7310a8e14483f6fe3460ae23eacd5c79f8dd2fb800232511f5b55307",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-A03",
+      "source": "S07",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "62e991b73c9e8ccb3e1cbe044c412a9fac64fc4f5ebb382027435cc0a455fd05",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-D01",
+      "source": "S07",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "eb0e176cee60d41f0a341a958ec252093f6d5bf30953a5077d7a147d20b10010",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-D02",
+      "source": "S07",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "34c51ad31b1c18a6766d8a3194494860f3e4764219c684db79a426a5bd47a8ee",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW11"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S07-D03",
+      "source": "S07",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "bec69b12e4c0a92348c0260bae7ba1c194646b2f37e114065e4992af26d7e963",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-A01",
+      "source": "S08",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "41c91299b3a3e2e67cf8f65678421cb0c8b4501d655c76de71cfa3eed52568dd",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-A02",
+      "source": "S08",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "83389dc631f3cceac7dc174a08885f3c56269a557b2e0bdd0aa61d733992addd",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW08",
+        "CW13",
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-A03",
+      "source": "S08",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "6f089a177426bb9fdec6ff6a26318ae25010a1a670f6fd369df695974bdc923a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-D01",
+      "source": "S08",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a012e0143faedd2bc51dbcd56da2d41eb6fe484e876655aa9a4bf97890f04691",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31",
+        "CW33"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-D02",
+      "source": "S08",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "acdddd3a419417138123d9e815b5bacf8458d5f2d3de71e7365627fa152d39ac",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-D03",
+      "source": "S08",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "7c0da33cf5d1afe746fcb15fdd69c6196042f3dca8e3c5c2670592f18d439d8a",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW21",
+        "CW29",
+        "CW30"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S08-D04",
+      "source": "S08",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "602bdbdec36ab5a63118aff9ba6c01d0fafa5baec9ec4dc1734028ae399880d3",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW33"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-A01",
+      "source": "S09",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "ff38bf323abcd96ff16b62c0126bba09831fed5fae79e803980287d1f030635e",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10",
+        "CW14",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-A02",
+      "source": "S09",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "b9373c37200fde679eddc49dc7db1c0531d89aca5f267b87b0349ae94f4f5b67",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-A03",
+      "source": "S09",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "0ded1274d963a38856a61d1cf609320931cdbe36cf338c3568bff59ed81257a1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-D01",
+      "source": "S09",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "7178a45ef791ecc3090244f6238ac3966eb07f5c1e4b4a667e7e25233eceb3c6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-D02",
+      "source": "S09",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "e8b05aaed880d49c5a5b632444cc4562d4fbfdd8d7828884dcecd5ee20c440ec",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S09-D03",
+      "source": "S09",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "a91f12dc7727e0dacfe6014598189605a77fcf55fc1a50801aafedc0e9512789",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-A01",
+      "source": "S10",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "b79363ab6c2584ad858b5ebfd0ce0b42b789e1a3a08d20159ba59aad82c98696",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW15",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-A02",
+      "source": "S10",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "f61dc2edd2f6c24c60dd8f49f0a910befc995b5bd6ce68f3d738bb5e27de1d28",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW05",
+        "CW07"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-A03",
+      "source": "S10",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "1846fb8e6f1c145bbf3283790c0fc631840c1229145b129a08f8cd2d2131f00d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-A04",
+      "source": "S10",
+      "audit_field": "adopted",
+      "audit_index": 3,
+      "statement_sha256": "bf6b6d1ce1ae2fa7d0d1d71cce630d5a424a3e236da0a71c6ce4d8c6be5f17db",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-D01",
+      "source": "S10",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "e21aab4e6f1f008628a737e3a2bcec0cf035f43c5831d4e0c28dd72ce034a02c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31",
+        "CW33"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-D02",
+      "source": "S10",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "a3227c45d5e758539fd707d7ac66da63bfce25ace1dfa365180962a741684818",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW03"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S10-D03",
+      "source": "S10",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "986b68876976ba0d0f1d44efa5bc10feb6ffbcf149dde476d3dc43ea8ccda3d2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-A01",
+      "source": "S11",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "7adca1c92928ee4066d946f1192d2e80a17d0ad0e8f47cc22373726c99033dbe",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW07",
+        "CW08"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-A02",
+      "source": "S11",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "19e59cdfca1aa893aa9c6f4463dfd51475b11c075f4682430a94ba61c6fb9890",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-A03",
+      "source": "S11",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "ceb08e81af559d5e1874b99034ee8b3ddb28a70e42726a0677a662af05d1c24e",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-D01",
+      "source": "S11",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a5dd32f5ddae650ff7e6f8cfb4092ee05bda46c745be579c2918e9aca24b4bd4",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-D02",
+      "source": "S11",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "c88c811a19d53515e87d1355135d262fb9b3ff5cb338dadccdb984834b247a45",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW06",
+        "CW15",
+        "CW30"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S11-D03",
+      "source": "S11",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "e93bcf79e0c4619b9ba0cfa80d8f3a6c825c4af8d7b22faf41be2513b7cacb58",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW06",
+        "CW30"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-A01",
+      "source": "S12",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "7b7fdf65fddbd7a48b9ee6e2440f24497d28cca47050b470c77ef83648871ba3",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW18"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-A02",
+      "source": "S12",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "09f168b5f5245df0524219a8bfe45fbcffdb0862a4705c620252c045edc3e4b7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW13",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-A03",
+      "source": "S12",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "17f4d43b26cf69cdbfc19e1debb33eff25a50001cc4f66397b850e58f4ee429a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-D01",
+      "source": "S12",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "952235eb590a2bd87f6fe4f64107e01ade2e89ef3e339af25cc7534264fe4a6b",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW18",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-D02",
+      "source": "S12",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "17f230f56384c8e6b9fce84aefc5b870bf6687c70d7eb4f33f1343a88cef8d22",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S12-D03",
+      "source": "S12",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "47df41a58206c63e332cd4946644522aa1836720122d3fdf2f0feea5340f9c4b",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-A01",
+      "source": "S13",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "89443fdb787a0cdadac9acdeeff853ffef88f7d9487235d1df94f8e7112718ac",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15",
+        "CW32"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-A02",
+      "source": "S13",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "0f73073618fd941c4f5dddcc24243c2bf63abc5c8aace33bb8138838cb5f36bc",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW32"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-A03",
+      "source": "S13",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "b2f5fc6e82d18916ee7d9a8f23cc89d2fa52f3ee5f285f75e8a06b8e49aadffa",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-D01",
+      "source": "S13",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "cd4e5c41e7fa8ddb1fbf52ef428ef451656e100096837d85122451f9d957d042",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-D02",
+      "source": "S13",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "84c07e24db67914cc6337033acd81da5ad75b527af72d7e4e47bbbe3d7aab915",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW32"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S13-D03",
+      "source": "S13",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "2f85240302da0dd193af70ce35d4c0c99efe438f20f070f439e152f075730306",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW15",
+        "CW27"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-A01",
+      "source": "S14",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "3a5198c925f75ba1709f5e7e1fcbb1c96d4ddc07bae440ab6dd1669380b3b7da",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-A02",
+      "source": "S14",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "10fc932422030645b80754b26f82f5bbdf80c314a16cec2fbe1de9adf57c9e0a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-A03",
+      "source": "S14",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "7871019180e805b64e961db11e93d558a50884a9de1b8ce17d2133ec0a888299",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-D01",
+      "source": "S14",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "73e8bb87d1c2dc94f7d557e7a21c9a984ecdd9425b4552e59ece53728f8c2bec",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-D02",
+      "source": "S14",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "34326926fda1fe34c39bf12fabed4737b6335381f177b0457eea6a4b12d90a8f",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S14-D03",
+      "source": "S14",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "0a5a4eba7118686b5949961a5e7a8a92a117dbe11ac3677d62f6f9250d3ee344",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-A01",
+      "source": "S15",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "9d6fbede53a2c67e1dd22e097b33f2c0d94d38ca515f47af031e0ebf69a9848c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-A02",
+      "source": "S15",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "8320d984e8e3cac1ffb96412f1a92376611fbb4d307708bdf42fe2ebb6310420",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW14",
+        "CW15",
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-A03",
+      "source": "S15",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "39323f0c8143f746fd88cbe6699a941a67304a4b14c4c39022a5864d03dd78f0",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-D01",
+      "source": "S15",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "7b57a6bba8ae8ded13f1af890613b611cde3418e861aefee8abceea94112ce6c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-D02",
+      "source": "S15",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "655f81143e3a1d942f1b18e85b0c25849a924e91d99632db5a5fd05fcbebe47c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S15-D03",
+      "source": "S15",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "dae1efb6e55858edc557ae1293808c22031b3167ce4fd0fb7037e13674375308",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-A01",
+      "source": "S16",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "58c71214bb5d9e152e0a5c1a582590a467527c10a31684781e230a9141241312",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW14",
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-A02",
+      "source": "S16",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "40d273aee8d25bdec39e94cf1762f32c8782de4c22b8c9d9b1eba3368a8707fc",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-A03",
+      "source": "S16",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "69add86dc76c646ddd55bf12c094e685b87dcd29ac5e5e8f1400f79cfce463c1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-D01",
+      "source": "S16",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "0dd6b3f1da8e91eebbaf05b6e7547649ab44d30a557607e9d48e2d59985ba8a6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-D02",
+      "source": "S16",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "099b7be0889b0a5c71ef181a25c1e59517c749f860d8f9a52115260f75117c5e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-D03",
+      "source": "S16",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "2e66a9972a6451745c9ca3029d9bf21859efe1c75b20313fd1cd628c99cbbbcd",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14",
+        "CW15"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S16-D04",
+      "source": "S16",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "8ce619f4255ad56d0ad6100040cefc5d263f6f7bb92db6984d1908a42edc259f",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14",
+        "CW15"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-A01",
+      "source": "S17",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "0bdbdf3075ab39072e2a7e3d5b1cd3e3744d1748959a939a8f63e655a4029ec5",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW05",
+        "CW07"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-A02",
+      "source": "S17",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "c073485c91038e8c78534b92fe7919ca01bc94b42604e782382098d0e52abe9a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-A03",
+      "source": "S17",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "57c29966983f6f70844a6824ab07dc23b6ed7e69ea93ec04bea52184b817947c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-D01",
+      "source": "S17",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "0fc66f36a940f691f0707b959efb3bfdc22d9fe594eea8281a9780fd5f96ddd0",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-D02",
+      "source": "S17",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "77e3b1ff04e9d6bc0c631ea12750bfe6dd47cb5382e3e0bee5a01026b6835647",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW05",
+        "CW07"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-D03",
+      "source": "S17",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "dd5db27c9cf418043c86031a18095aafca12ee3cb8b3300f8d3830e6cfe5fb03",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW05",
+        "CW07"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S17-D04",
+      "source": "S17",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "75fdb9f8bb75fcc4806d030d6ecd00db4364ecb7566f39bfad5d4bdb23301d12",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-A01",
+      "source": "S18",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "7944bbb501e44f97e85d2abac3ed3306922a4a0e58505d19629f9cbaa607aa9c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21",
+        "CW28"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-A02",
+      "source": "S18",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "ca3ca1226b7f38ebc4abbd181b34df6f93f91b68300b325ff2270d9918863a96",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-A03",
+      "source": "S18",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "ed407bc21491c1250143c63ae3e566b95817c503afd5efc26d0e98b2b8eb2f9d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW02",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-D01",
+      "source": "S18",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "9b9e38621f02198037715bf5f54380d071cef3109f1c58594aea1d4bec2f993d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-D02",
+      "source": "S18",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "83e67faef1d75c7203d26966374c3909bbb3e69a0b2be66dbf3eeb0370c62e89",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW34"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-D03",
+      "source": "S18",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "7572339f32b10825946c5604ff78a3b6d06e653eba49ab7834b7505d6dfff480",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21",
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S18-D04",
+      "source": "S18",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "0d8602db649263ef2a65b328274aea97524c474ccb3e03b1cf3f2b14d3a1a52f",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21",
+        "CW34"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-A01",
+      "source": "S19",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "a84643f2050b562852262c5d2c8dcd7a44391490f46381b0d484764707388663",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03",
+        "CW05",
+        "CW06",
+        "CW07"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-A02",
+      "source": "S19",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "9ddaf84b572c31c63fc20f1d3c1742c159e321d9eabe7e35c05aaae028e17892",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-A03",
+      "source": "S19",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "37b7ff0a2b0bdcff88f927300c0af3c439d7a67cd9cedf15cbe7c8799d63f53b",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-D01",
+      "source": "S19",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "ba2ba3aad2638c25d2f6f13b5e86a0ba667d0e1f6d899a495f2e0bf5772f7759",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-D02",
+      "source": "S19",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "cc7ffddf8a78bf731676fcdb41b5822c6a465d47b1fef6d0cc977d294ec17b36",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW34"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S19-D03",
+      "source": "S19",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "1cd6838984cf4e38cd2f97dea4df5ed55ffb7d166dd37a59a3ef71c0f12f491d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-A01",
+      "source": "S20",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "9c7ecb4e863adafd09c4b717c558d03d80a7150ead9718e83a2f5e7be2347223",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-A02",
+      "source": "S20",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "183606ce59301b28aec561163d6a9d598bf99aa54578ad3c71134ed315887ff9",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-A03",
+      "source": "S20",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "544ed0254099342050aaea456d07f38bbbbe224ee71b4697d55fad0ae1905411",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW15",
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-D01",
+      "source": "S20",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "e2e114605e68b45499251889e98eda4edb0ebb453b6821666a9c90d30af700a8",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW15",
+        "CW36"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-D02",
+      "source": "S20",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "1ddbca761e90a34984168781204ffbee11c7679d9cf9054474a4d93c8f3b61aa",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S20-D03",
+      "source": "S20",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "3abe158d4bbdd637aef8299b20a75841c879e45ad2535964ebfdef207fd7f4d6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW36"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-A01",
+      "source": "S21",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "41c0d6dd48421c95a0775b5c09bb7f1dd1a0e34f8fbc1150fb5d34de0031a5f0",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-A02",
+      "source": "S21",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "7ac7920ef1327f77c3e8a89a275f81c27349612fabc121a4964fcbd651c659f0",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW05"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-A03",
+      "source": "S21",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "2276efe682b1ac6c1c30141632ffdfc4bea0f669a4b2971df5d98f9ed780f96a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-D01",
+      "source": "S21",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "e27db2f7dc364494211b3f3f6cc307b2166c3e4c793da29cb94b7d0ffc8bcbff",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-D02",
+      "source": "S21",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "1b5194e717913b9f61b5fca4f30c2b2ec21770ae45fc6a00acec3866c1ea606d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-D03",
+      "source": "S21",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "5764d14eeb1550c3394af9791a7ea4fa4a54cc49b737daefd2f88bd2ac24dabc",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S21-D04",
+      "source": "S21",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "f444be0b544541a1e065fc1efa6f396104b1584e080e092e306655e0cbc74daa",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-A01",
+      "source": "S22",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "76b93d71480fa20545236494a7c58a50577f2d2a9e76e7161768b726954497ce",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10",
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-A02",
+      "source": "S22",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "68d0575cf303c7f8e3f562ae7ec4a068a40703cf954daa25f74b3a8ff40495dc",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW16",
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-A03",
+      "source": "S22",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "98138ff75c47aedda1755b7f8ed8c939b139b99ca69e617f39f3e8b47e7af5ca",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-D01",
+      "source": "S22",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "cc469fbeee5cd6065d62593d1cff589c6da390eafd1c6530789bfe5ecbe01257",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-D02",
+      "source": "S22",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "3dcdc981426a8db16be05d56b4a533076a15d2d6cec7cee8a5a20ac89ec9385d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW12"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S22-D03",
+      "source": "S22",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "6e862bacb2ee56d7fead1d6a50a85999db3f40640d4d10d8d8c42bcac52ce9a5",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-A01",
+      "source": "S23",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "195dec1329996cfabbde617bda82fb718332dc0fde49b71dce1984bf7e969572",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-A02",
+      "source": "S23",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "8a7b77f39edb489677c7ddd407a5ec82e2dbd117ff3f2888910e173617486513",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-A03",
+      "source": "S23",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "b68c8f205acb83d6d7f7ad841bb9ef7ab15fdb905bec3083f56cbf2299884381",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-D01",
+      "source": "S23",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "f65bb4e75d39f7c40c9a0db9d11297f8b30805872a7f45cf2ef54a2f96612b77",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-D02",
+      "source": "S23",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "bb63599c6057fb515936807574c18cfb89feeb6b099fe7502e2efa58a365e0a2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW12"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S23-D03",
+      "source": "S23",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "0ced79b4059b109db5f0394e97844f6cda2cf56027b3103bfb3aee83a40ed359",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-A01",
+      "source": "S24",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "0e00b0e37f3003576148b8057ff6d2f5807bd1be46e585e47a3b095ee517fb89",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW02"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-A02",
+      "source": "S24",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "b947b5afc902331a064591c5e7c3aed26ae4333991fe20dd396d4bb583965999",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-A03",
+      "source": "S24",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "4e9d1b2c5eb4f6a91c0bae1b1c9131eb7eecc4e138033f9002a0d7dd4a61e133",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW02",
+        "CW04"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-D01",
+      "source": "S24",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "b484573ec7179a8a84329e592d3afb01cd55be9f5a6c65177793a6f7ab073d67",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW02"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-D02",
+      "source": "S24",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "961d11cbe80a1592cb4fa53fa78df2f92ada9b238c3b7406ea47290cb596ff7c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S24-D03",
+      "source": "S24",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "16c0ea997aacc0b8aee6f2a27847288f3f3573e0999c5efd1bd1840c1f1e4043",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW31"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-A01",
+      "source": "S25",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "b45783b94c9e13744300dc01d21856b7c985b0faf5a72e9069bcdca31a602a2c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW13"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-A02",
+      "source": "S25",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "0737b9139345bb6172194894754351ff979b05d544c851255ffd5e2e177fa9d4",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-A03",
+      "source": "S25",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "8b3d736c1aaf474ae875370838ff697ea9db9b8f3d43477827edda257172e75c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-D01",
+      "source": "S25",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "663f0ea745eb4d961d489a3a80ac145e58b7ee8406e3434b421b72c1fda791c3",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-D02",
+      "source": "S25",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "710c97d46071c56edfc8dd271fc2515218ae41b8f37d2699884ed302b1fbcae6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-D03",
+      "source": "S25",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "5ea5c642a1c7d2f28af5ad81ea3efc2e972c35b2db878277c3a6375980497b9e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S25-D04",
+      "source": "S25",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "e916be8c0c9f9ca534e93cdcefbfdbfaadd43b0f05295eed4695908f57be1549",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW13"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-A01",
+      "source": "S26",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "096ede562aa3058c73ab6e51e2e6432acbf970060beeb7e25a0a2c873726c2a9",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW05",
+        "CW10"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-A02",
+      "source": "S26",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "4672e42ae7e69ead3a7ff14692cdd40bbcd3dab3935091639b55200faeab2602",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-A03",
+      "source": "S26",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "adc3a76ba2f00a3ead2ab434dc4db671d69ab2a4fea033b9a006f85637a08ab6",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-D01",
+      "source": "S26",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "4ba68cc09637ad69ce2008e310ba1f646964f0a3fe50de450c1ab594240d8625",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW05"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-D02",
+      "source": "S26",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "7cd2409ecd219d41f7d372539bfcc59bd126d1aef69bb6182bc7449d6a00bdd8",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-D03",
+      "source": "S26",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "d04766ea84e3f248d3434ef5c08dd4a720efc7fe2d1f3d0e14a4f51a8427f56e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S26-D04",
+      "source": "S26",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "a3a403d149ac80e5dfd98d1e46937701acf24732e723726b58ec1393d84cc05d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-A01",
+      "source": "S27",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "c34a395200501e671e23ad65da4e1882391f8cf4e9f3ee8d26b27da809293666",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-A02",
+      "source": "S27",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "b2e5aaed168274dead4b627ce609c6cb932c91702c0d521af3487e9bdc8ba200",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW15"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-A03",
+      "source": "S27",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "fb096209fcdfd8756cb681c3bd804a67472d2eb89ee250eb79ac33a5a2f2935d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW03",
+        "CW16"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-D01",
+      "source": "S27",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "fac47839af483eefb34b0a33230c6377ba3e8ab9b3a63a2a598fe8bfd4b3e8a5",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW03",
+        "CW04"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-D02",
+      "source": "S27",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "3994e95f71182936ca400e8007af7047d7f8b66105decca790c7210d1633f855",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW03",
+        "CW04"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S27-D03",
+      "source": "S27",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "96d3c00d09a1d0f0dbf927414d0452fa022ab9c6d0c3e17d6f4d691b030a954b",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW03",
+        "CW04"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-A01",
+      "source": "S28",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "16c1c6939437256d6c8e7df4e7e30ed5ed6a3b0505d8ab3877c89c1727f1f040",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW12",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-A02",
+      "source": "S28",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "54ebaa81b833e93cb5e440ae9d6e11dcf52a36e4ccc1179839afccef9eb7b832",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW24"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-A03",
+      "source": "S28",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "d820d5bac13547581b4c00dee95308df6152ad6dc9de72515bdc37f661bc43b1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW35"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-D01",
+      "source": "S28",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "a5daa69d4de376bc0ddb38eb98eecf6a2468d731427e994f082aea413db9a92a",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW36"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-D02",
+      "source": "S28",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "e62d0ed1501319e425bf21fb2ef1daf828a83e9b0853e9cc4567faddb2a80718",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW12",
+        "CW13"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S28-D03",
+      "source": "S28",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "64e47e2e686a483928b08e5f74a87507ad7c8468295ab09bda0d2a6ec17b31b2",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW12"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S29-A01",
+      "source": "S29",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "e11dc2a95fd14c53890d556098006cbc9aa5da44490df9e1847a689e6f1ce38c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW13",
+        "CW26"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S29-A02",
+      "source": "S29",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "5972d9c3305911c0dcaa06cf3e3169e5e1c1952f7be107a20cf17bd723b989b3",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW11"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S29-D01",
+      "source": "S29",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "fca2c23595d1f487fddb4b2611f49699f9e0259c0524e800e1af14aa4ceb6095",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11",
+        "CW14"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S29-D02",
+      "source": "S29",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "70e269f9ea7fc50d9c78bb8582d442d7235bb3bb79cc1db103a5de1c5787f17f",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S29-D03",
+      "source": "S29",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "210d43539f839937806e31408c9dcc93abf4376854d080e206827ba34bac1e3e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW18"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S30-A01",
+      "source": "S30",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "41b713a0119faf1f8a2e93be43d00f0e5787c50af2946a76ee62b339cc58e025",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S30-A02",
+      "source": "S30",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "263c861a90a4fa9af7027a803f48cc4d3d3a75195bb602e09e475853551fd908",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW34"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S30-D01",
+      "source": "S30",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "01ea9b954c5e6b4966ebb00cbd1e86b2497a337f4f59c772aab5274fc1da3f5c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW13"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S30-D02",
+      "source": "S30",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "bc6ec365e982e87f3e9bccbc6e1c91a605074fd977bc40a9f865f8a6180d5840",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW11"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S30-D03",
+      "source": "S30",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "7bdaa337e7007f9224aabe30bc4790ef616800ba34bfcdac8eaf16f477f187f4",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW10",
+        "CW11"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S31-A01",
+      "source": "S31",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "761d69136180ba736c7c8238b7be16948fe1aee5ea8747edd54e0119c75beac7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW18",
+        "CW35"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S31-A02",
+      "source": "S31",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "1aa6ce4e9cf9b0cedec6a4e2179a6b2c25e19991fb33853cbb506a95cd0fbde1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW26"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S31-D01",
+      "source": "S31",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "836ea72792e03e4e57a3753efb0e18c8ee63ba92cc3138f92d9f86c8b8747119",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW03"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S31-D02",
+      "source": "S31",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "2b1b0dc69add33399c59aa680c7f1666f19cb7f078653c1f7397c9415e832cf9",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW18"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S31-D03",
+      "source": "S31",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "b6f7c03acdd7e2b37b4544d790e5bf6968bf4f6ed65ce29618fa0d4261fc5827",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW03"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S32-A01",
+      "source": "S32",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "7f90e2a1043103ecb3386a498243734551b16e5ab45197a008cafb2d33674570",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW10"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S32-A02",
+      "source": "S32",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "63379c981acd7a19c2a87a151de9d7f836a9737e7d964fcde4f07270865747d8",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW01",
+        "CW10"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S32-D01",
+      "source": "S32",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "9d8d8005ded78eb964f06b6fb458588db11beca1abafad4f93875b953a557dbb",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW20",
+        "CW36"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S32-D02",
+      "source": "S32",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "e10dd772ff8df321fd6dd67d449d1ee0fcf0cc265a053805b5c4e18863b83121",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW10"
+      ],
+      "mapping_basis": "source-level contextual crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    },
+    {
+      "id": "S32-D03",
+      "source": "S32",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "dfa97bfedfa2d37ba26d26b5315133935e4f7f98f58930c8129e085df3b1930f",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW01",
+        "CW10",
+        "CW21"
+      ],
+      "mapping_basis": "keyword-assisted, manually reviewable crosswalk",
+      "evidence_scope": "Links to scenarios for this family; not an exhaustive behavioral test of every clause or of the upstream implementation."
+    }
+  ]
+}

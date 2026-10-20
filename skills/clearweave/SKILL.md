@@ -5,6 +5,10 @@ description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style
 
 # ClearWeave
 
+<a id="cw01"></a>
+<a id="cw09"></a>
+<a id="cw21"></a>
+
 Make the writer's meaning easier to read in English, Chinese, or a mixture of both. Edit with reasons, not a vocabulary blacklist. A good passage may need no changes.
 
 ## 1. Establish the editing contract
@@ -23,7 +27,7 @@ Infer the following from the request and text. Do not make a routine edit wait f
 
 The language of the request is not automatically the language of the deliverable. A Chinese request to polish an English abstract normally requires an English abstract. Preserve Simplified/Traditional Chinese and US/UK spelling unless a change is requested.
 
-Read [preservation.md](references/preservation.md) before an edit or translation. Then load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md).
+Read [preservation.md](references/preservation.md) before an edit or translation. Then load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
 
 ## 2. Protect meaning before changing style
 
@@ -92,7 +96,7 @@ The Python helper only lints surface patterns and compares selected literal span
 Compare the revision against the original, not against a generic ideal voice:
 
 1. Check every claim and dependency in the ledger, especially negation, quantities, scope, certainty, and causal direction.
-2. Check protected spans. Use `scripts/clearweave_check.py compare` if local execution is available and useful; interpret its output as a limited literal check.
+2. Check protected spans. Use `scripts/clearweave_check.py compare` if local execution is available and useful; interpret its output as a limited literal check. `scripts/clearweave_risk.py` can additionally flag some changed negation, modality, status, attribution and numeric ordering cues. Neither tool proves semantic equivalence; examine the actual claim relationships.
 3. Read the revision on its own. Is the information easier to follow? Does it fit the requested genre and retain the author's voice?
 4. Remove new stock phrasing introduced during revision. Accept intentional repetition and unchanged good text.
 
@@ -101,3 +105,9 @@ Use one editing pass and one targeted repair pass at most. If a check exposes an
 Deliver the requested output without a standard preamble or self-congratulation. Put only material uncertainties or requested change notes outside the revised text. If the user asks for the text only, honor that format. For diagnosis, "no material problem found" is an acceptable outcome.
 
 Never claim that wording proves whether AI wrote a passage, that a detector will label it human, or that these checks establish factual truth. State which checks actually ran when reporting verification.
+
+## 7. Traceability and extension
+
+Use stable capability IDs `CW01`–`CW36` and conflict IDs `CF01`–`CF26` from `assets/capabilities.json` when the user asks about coverage or a failure. `scripts/clearweave_trace.py --query "否定"` locates related modules and regression case IDs; it is an index, not a semantic diagnosis. Do not load the full audit for an ordinary edit.
+
+For maintenance, reproduce the failure, locate the smallest responsible rule, add a legitimate counterexample, and run the relevant tests. Do not turn one disliked phrase into a global blacklist. Keep source decisions classified as adopted or adapted/excluded; combining sources does not require retaining harmful or incompatible behavior. Report actual tests and untested behavior separately.

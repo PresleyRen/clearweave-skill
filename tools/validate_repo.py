@@ -2,6 +2,7 @@
 """Validate the ClearWeave package, source coverage, and recorded output structure."""
 from __future__ import annotations
 import json
+import importlib.util
 from pathlib import Path
 import re
 import sys
@@ -41,10 +42,14 @@ def validate() -> list[str]:
         if "[TODO" in file.read_text(encoding="utf-8"):
             errors.append(f"Unfinished template: {file.relative_to(ROOT)}")
     audit = json.loads((ROOT / "docs/source-audit.json").read_text(encoding="utf-8"))["sources"]
-    if [s["id"] for s in audit] != [f"S{i:02}" for i in range(1, 33)]:
-        errors.append("Source coverage must be exactly S01–S32 in order")
-    if len({s["repo"] for s in audit}) != 32:
-        errors.append("The source inventory must have 32 distinct repository entries")
+    catalog = json.loads((skill / "assets/capabilities.json").read_text(encoding="utf-8"))
+    source_count = catalog["source_inventory_count"]
+    if [s["id"] for s in audit] != [f"S{i:02}" for i in range(1, source_count + 1)]:
+        errors.append("Source IDs differ from the declared inventory")
+    if len({s["repo"] for s in audit}) != source_count:
+        errors.append("Source repositories must be distinct within the declared inventory")
+    if (ROOT / "VERSION").read_text().strip() != catalog["version"]:
+        errors.append("VERSION and capability catalog differ")
     for source in audit:
         expected = f"https://github.com/{source['repo']}/blob/main/{source['skill_path']}"
         if source["url"] != expected:
@@ -75,6 +80,14 @@ def validate() -> list[str]:
                     errors.append(f"Empty output: {condition} {row['id']}")
         if len(ids) != len(set(ids)) or set(ids) != expected_ids:
             errors.append(f"Writing case coverage mismatch: {condition}")
+    for module_name in ("coverage", "render_catalog"):
+        spec = importlib.util.spec_from_file_location("cw_" + module_name, ROOT / "tools" / (module_name + ".py"))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        if module_name == "coverage":
+            errors.extend(module.validate(ROOT)["structural_errors"])
+        else:
+            errors.extend("Stale generated documentation: " + p for p in module.stale_documents())
     return errors
 
 
@@ -88,7 +101,7 @@ def main() -> int:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
-    print("Package structure, linked references, 32-source coverage, and 18 recorded cases per condition: OK")
+    print("Package, decision crosswalk, generated documentation, and historical writing record structure: OK")
     print("This checks structure and coverage; it does not establish writing quality or semantic fidelity.")
     return 0
 

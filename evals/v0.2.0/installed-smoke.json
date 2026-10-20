@@ -1,0 +1,10 @@
+{
+  "scope": "Actual temporary-project installation and installed helper execution from an unrelated working directory; not host automatic-discovery verification.",
+  "installation": "Successful copy to temporary project/.agents/skills/clearweave; existing-destination behavior is separately unit-tested.",
+  "trace_capability_ids": [
+    "CW05"
+  ],
+  "risk_ids": [
+    "R02"
+  ]
+}

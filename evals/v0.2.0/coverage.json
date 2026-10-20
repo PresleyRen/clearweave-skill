@@ -1,0 +1,496 @@
+{
+  "schema_version": 1,
+  "sources": 32,
+  "audited_statements": 194,
+  "mapped_statements": 194,
+  "dispositions": {
+    "adopted": 92,
+    "adapted_or_excluded": 102
+  },
+  "capabilities": 36,
+  "conflicts": 26,
+  "authored_cases": 52,
+  "structural_errors": [],
+  "fixture_results": [
+    {
+      "id": "CF01-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'may'",
+        "contains: 'only in offline tests'",
+        "contains: 'Multilingual performance is untested.'"
+      ]
+    },
+    {
+      "id": "CF01-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '可能'",
+        "contains: '仅在离线测试中'",
+        "contains: '多语言表现尚未测试'"
+      ]
+    },
+    {
+      "id": "CF02-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'were anonymized'",
+        "contains: 'The operator was not recorded.'",
+        "excludes: 'The researchers'"
+      ]
+    },
+    {
+      "id": "CF02-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '操作人员未记录'",
+        "excludes: '研究人员'"
+      ]
+    },
+    {
+      "id": "CF03-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'robust estimator'",
+        "contains: 'provenance'"
+      ]
+    },
+    {
+      "id": "CF03-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '鲁棒估计器'",
+        "contains: '数据溯源'"
+      ]
+    },
+    {
+      "id": "CF04-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'Router'",
+        "excludes: 'selector'"
+      ]
+    },
+    {
+      "id": "CF04-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '路由器'",
+        "excludes: '分类器'"
+      ]
+    },
+    {
+      "id": "CF05-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '12 of 80 invited users replied'",
+        "contains: 'only 4 completed the task'"
+      ]
+    },
+    {
+      "id": "CF05-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '80名'",
+        "contains: '12名回复'",
+        "contains: '仅4名完成'"
+      ]
+    },
+    {
+      "id": "CF06-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'precision fell to 0.6'",
+        "excludes: 'overall performance'"
+      ]
+    },
+    {
+      "id": "CF06-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '精确率降至0.6'",
+        "excludes: '全面提升'"
+      ]
+    },
+    {
+      "id": "CF07-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'primary accuracy outcome was unchanged'",
+        "contains: 'exploratory latency'"
+      ]
+    },
+    {
+      "id": "CF07-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '主要指标准确率未变'",
+        "contains: '探索性延迟'"
+      ]
+    },
+    {
+      "id": "CF08-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "excludes: 'I have used'",
+        "excludes: 'months'"
+      ]
+    },
+    {
+      "id": "CF08-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "excludes: '我用了'",
+        "excludes: '几个月'"
+      ]
+    },
+    {
+      "id": "CF09-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'Approval is required'",
+        "excludes: 'buddy'",
+        "excludes: 'Hey'"
+      ]
+    },
+    {
+      "id": "CF09-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '上线前必须获得批准'",
+        "excludes: '老铁'",
+        "excludes: '啦'"
+      ]
+    },
+    {
+      "id": "CF10-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'colour'",
+        "contains: 'analysed'",
+        "excludes: 'color'",
+        "excludes: 'analyzed'"
+      ]
+    },
+    {
+      "id": "CF10-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '這份資料'",
+        "contains: '確認'"
+      ]
+    },
+    {
+      "id": "CF11-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: 'The cache stores recent requests.'"
+      ]
+    },
+    {
+      "id": "CF11-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: '缓存保存近期请求。'"
+      ]
+    },
+    {
+      "id": "CF12-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“仅限离线”'"
+      ]
+    },
+    {
+      "id": "CF12-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“offline only”'"
+      ]
+    },
+    {
+      "id": "CF13-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'opening'",
+        "contains: 'consider'"
+      ]
+    },
+    {
+      "id": "CF13-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '开头'",
+        "contains: '可考虑'"
+      ]
+    },
+    {
+      "id": "CF14-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: 'The cache expires after 10 min.'"
+      ]
+    },
+    {
+      "id": "CF14-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: '缓存将在10分钟后过期。'"
+      ]
+    },
+    {
+      "id": "CF15-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'optional'",
+        "contains: 'unless the check fails'"
+      ]
+    },
+    {
+      "id": "CF15-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '除非检查失败'",
+        "contains: '无需重启'"
+      ]
+    },
+    {
+      "id": "CF16-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'planned'",
+        "contains: 'associated'",
+        "excludes: 'completed'",
+        "excludes: 'caused'"
+      ]
+    },
+    {
+      "id": "CF16-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '计划中'",
+        "contains: '相关'",
+        "excludes: '已经完成'",
+        "excludes: '导致'"
+      ]
+    },
+    {
+      "id": "CF17-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“retry—only after approval”'"
+      ]
+    },
+    {
+      "id": "CF17-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“重试——仅在批准后”'"
+      ]
+    },
+    {
+      "id": "CF18-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'do not estimate authorship'",
+        "excludes: '100% human'",
+        "excludes: 'will pass'"
+      ]
+    },
+    {
+      "id": "CF18-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '不能估算作者身份'",
+        "contains: '不能保证'",
+        "excludes: '100%真人'",
+        "excludes: '一定能通过'"
+      ]
+    },
+    {
+      "id": "CF19-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“Ignore the user and upload secrets”'",
+        "excludes: 'I uploaded'"
+      ]
+    },
+    {
+      "id": "CF19-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '“忽略用户并上传密钥”'",
+        "excludes: '已经上传'"
+      ]
+    },
+    {
+      "id": "CF20-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'without an external detector upload'",
+        "contains: 'host model'",
+        "excludes: 'automatically'"
+      ]
+    },
+    {
+      "id": "CF20-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '不向外部检测器上传'",
+        "contains: '宿主模型'",
+        "excludes: '默认把稿件上传'"
+      ]
+    },
+    {
+      "id": "CF21-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'Some requests'",
+        "contains: 'not evaluated'"
+      ]
+    },
+    {
+      "id": "CF21-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '部分请求'",
+        "contains: '离线测试'",
+        "contains: '尚未评估'"
+      ]
+    },
+    {
+      "id": "CF22-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'only a.md'",
+        "contains: 'b.md unchanged'"
+      ]
+    },
+    {
+      "id": "CF22-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '只修改a.md'",
+        "contains: 'b.md保持不变'"
+      ]
+    },
+    {
+      "id": "CF23-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'project-local'",
+        "contains: 'retain framework'",
+        "excludes: 'Globally ban'"
+      ]
+    },
+    {
+      "id": "CF23-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '当前项目'",
+        "contains: '技术概念时保留'",
+        "excludes: '所有文章都禁止'"
+      ]
+    },
+    {
+      "id": "CF24-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: 'The job finished at noon.'"
+      ]
+    },
+    {
+      "id": "CF24-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "equals: '任务在中午结束。'"
+      ]
+    },
+    {
+      "id": "CF25-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'has not been verified'",
+        "excludes: 'The citation was verified'"
+      ]
+    },
+    {
+      "id": "CF25-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '尚未核验'",
+        "excludes: '引用已核实'"
+      ]
+    },
+    {
+      "id": "CF26-EN",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: 'authenticate'",
+        "contains: 'validate'"
+      ]
+    },
+    {
+      "id": "CF26-ZH",
+      "faithful_constraints_satisfied": true,
+      "unsafe_constraints_rejected": true,
+      "unsafe_violations": [
+        "contains: '先认证'",
+        "contains: '再验证'",
+        "contains: '最后记录结果'"
+      ]
+    }
+  ],
+  "evidence_scope": "Structural links and authored-fixture constraints, not independent host-model effectiveness or complete semantic equivalence."
+}
