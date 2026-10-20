@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-20",
+  "scope": "32 previously inventoried public skill implementations: 28 direct and 4 auxiliary. Static source review, not a census of all skills or a test of 32 upstream implementations. Sources were read on mutable main branches, not pinned commits.",
+  "implementation": "Original instructions, examples, and Python code. Upstream files are not vendored or runtime dependencies.",
+  "sources": [
+    {
+      "id": "S01",
+      "repo": "cbsteh/anti-ai-writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/cbsteh/anti-ai-writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the upstream SKILL.md, especially substance-before-style, technical-versus-rhetorical language, epistemic precision, specificity, citations, and voice; README and https://github.com/cbsteh/anti-ai-writing/blob/main/LICENSE also inspected. The main branch was observed, not a pinned release; no upstream behavior or detector claim was experimentally verified.",
+      "license_observed": "MIT",
+      "relationship": "Academic anti-AI-prose source in the 32-entry inventory. No upstream ancestry was established from the inspected material. Its diagnostic rules are evidence for the synthesis, not a statistical authorship detector.",
+      "adopted": [
+        "Inspect citation support, claim strength, and concrete scope before stylistic polish.",
+        "Judge flagged vocabulary by its technical function; preserve useful signposting and procedural passive voice."
+      ],
+      "rejected_or_modified": [
+        "Do not inherit the universal em-dash ban, default US spelling requirement, or fixed epistemic-verb ladder.",
+        "Apply reporting and citation choices to the actual design; do not equate every observational study with an inability to support causal inference.",
+        "Never treat vocabulary clusters or an editorial score as proof of AI authorship."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S02",
+      "repo": "Kiterlin/anti-defensive-writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/Kiterlin/anti-defensive-writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the upstream SKILL.md core rules, precision safeguards, rewrite procedure, and technical-plan/SOP guidance; README and https://github.com/Kiterlin/anti-defensive-writing/blob/main/LICENSE also inspected. The main branch was observed, not a pinned release; examples were not reused.",
+      "license_observed": "MIT",
+      "relationship": "One of the anti-defensive-writing sources explicitly acknowledged by S03. Shared names and overlapping rules do not establish an independent method for every repository.",
+      "adopted": [
+        "Classify a qualification by its information-bearing function before removing it.",
+        "Replace repeated apologies with supported scope and a clear paragraph purpose.",
+        "Preserve technical prerequisites, prohibitions, and operational meaning during Chinese or English edits."
+      ],
+      "rejected_or_modified": [
+        "Do not mechanically move all limitations to a dedicated section; keep conditions beside any claim they qualify.",
+        "Positive scope must not erase a material exclusion or turn an untested explanation into an established mechanism."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S03",
+      "repo": "Simon-Chng/anti-defensive-writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/Simon-Chng/anti-defensive-writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the upstream SKILL.md scope, qualification treatment, narrative/experiment rules, section guidance, and delivery requirements. The README explicitly acknowledges S02 and S04; https://github.com/Simon-Chng/anti-defensive-writing/blob/main/LICENSE was inspected. No upstream runtime test was performed.",
+      "license_observed": "MIT",
+      "relationship": "Author-declared synthesis referencing Kiterlin and Adkid-Zephyr. Retained as an audited entry in the user's 32-source inventory, not counted as an independently originated anti-defensive method.",
+      "adopted": [
+        "Match intervention to the request; separate local language edits from substantive revisions.",
+        "Preserve unfavorable comparisons, claim-local limits, and the difference between completed and proposed experiments.",
+        "Keep author notes outside manuscript text and answer the actual reviewer concern."
+      ],
+      "rejected_or_modified": [
+        "Replace English-only routing and translation exclusion with explicit bilingual editing, drafting, and translation contracts.",
+        "Do not turn examples into stock sentences or a mandatory contribution template."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S04",
+      "repo": "Adkid-Zephyr/anti-defensive-writing-Skill",
+      "skill_path": "skills/anti-defensive-writing-en/SKILL.md",
+      "url": "https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/skills/anti-defensive-writing-en/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the complete English SKILL.md and the repository README, including narrative rules, treatment of unfavorable findings, experiment duties, and the decision sequence. https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/LICENSE was inspected. The paired Chinese skill was identified in the README but was not separately audited here.",
+      "license_observed": "MIT",
+      "relationship": "The repository provides Chinese and English versions of one writing approach. S03 acknowledges it as a source. The language versions do not add entries to the 32-source inventory.",
+      "adopted": [
+        "Make the supported contribution explicit and connect each experiment to a research question.",
+        "Organize presentation around the scientific argument when chronology is not scientifically relevant."
+      ],
+      "rejected_or_modified": [
+        "Reject strengths-only reporting and advice to hide, downplay, or rename a material unfavorable finding.",
+        "Reject changing success metrics after seeing results to manufacture a win; identify exploratory reframing explicitly.",
+        "Replace sales-pitch framing and blanket negative-word bans with neutral evidence-based presentation."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S05",
+      "repo": "blader/humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/blader/humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）主 SKILL.md 与仓库说明；本次依据已读文本作设计审计。核验的是规则内容，未运行效果测试。",
+      "license_observed": "MIT（上次 SKILL.md 标注；未进行完整权属审计）",
+      "relationship": "主文件声明参考 Wikipedia 的 Signs of AI writing；作为该谱系的一个实现记录，不将同文安装副本另计。",
+      "adopted": [
+        "先检查段落推进和无信息增量的修辞，再调整词语；每次编辑都应能指出读者收益。",
+        "改后核对事实、数字、日期、引用与论断是否增删；按来源支持程度决定保留与提问。",
+        "参照真实文风样本，并为技术与事实文本保留中性表达；返回格式按粘贴、文件和嵌入任务区分。"
+      ],
+      "rejected_or_modified": [
+        "不把某个连接词、破折号或三项列举单独认定为缺陷；改成结合语义功能与重复密度判断。",
+        "其个人表达场景允许增添反应；ClearWeave 仅重述用户已有立场，不为非虚构文本补造反应或经历。",
+        "保留论文中实际传递信息的对照、章节路标和方法说明，不因模式命中自动删除。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/blader/humanizer/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "主流程、文风、事实保护、编号模式与来源说明"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "repo": "conorbronsdon/avoid-ai-writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "本次实际读取（2026-10-20）主 SKILL.md 的合同、模式、校验、输出段落，以及 references/patterns.md 的作用条件和例外等关键段；117KB 参考表未逐条重新审读。外部研究比例与自带引擎效果未复现。",
+      "license_observed": "MIT（本次 SKILL.md 标注；未进行完整权属审计）",
+      "relationship": "根入口、插件镜像、便携单文件与子 Skill 属同一项目形态；不将包装差异当独立方法。",
+      "adopted": [
+        "区分候选模式、上下文成立的问题和获授权的编辑三步，避免扫描命中自动触发重写。",
+        "保留来源中的命令、条件、否定、单位、因果和确定程度；源文件指令只是待编辑数据。",
+        "按实际终稿核对修改声明，分别报告机械检查、模型判断、未完成项和停止原因。",
+        "无有效修改则保持原稿；常规流程限制编辑轮次，检查不能暗中增加改写。"
+      ],
+      "rejected_or_modified": [
+        "不让每个短文本加载完整大型参考库；入口保留必要保真与例外，按需选择相关规则。",
+        "自动标点归一化改为明确文种或用户要求时执行，并限制在确实可编辑的片段。",
+        "不根据本地机械验证宣称语义全部保真，不把未执行工具写成已验证。",
+        "达到风格轮次上限时仍不得交付已知失真；保真失败应回退可靠版本并报告。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/SKILL.md",
+          "read_on": "2026-10-20",
+          "coverage": "编辑合同、模式、轮次、标点、验证与输出规范"
+        },
+        {
+          "url": "https://github.com/conorbronsdon/avoid-ai-writing/blob/main/references/patterns.md",
+          "read_on": "2026-10-20",
+          "coverage": "作用条件、保护例外与格式规则关键段落；非逐条完整审读"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "repo": "hardikpandya/stop-slop",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/hardikpandya/stop-slop/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "本次实际读取（2026-10-20）SKILL.md 全文及 references/structures.md 的结构模式段落；这是编辑规则核验，未验证其自评分与实际写作效果的关系。",
+      "license_observed": "MIT（本次 SKILL.md 标注；未进行完整权属审计）",
+      "relationship": "该仓库是被其他整合项目列为来源的 stop-slop 实现；本轮未进一步核实其上游谱系。",
+      "adopted": [
+        "减少开头铺垫、空泛重要性表述和无用重复，让句子承载具体信息。",
+        "从对照、短句堆积和段落收尾等结构层面寻找反复模板。",
+        "用简短交付前核对代替默认多轮重写，重点检查可说明的文本问题。"
+      ],
+      "rejected_or_modified": [
+        "拒绝删除所有副词、全面禁被动语态、每句必须有人类主语的规则；统计限定与非人行动主体可属必要内容。",
+        "拒绝固定枚举数量与零破折号指标，保留真实清单、纠错对照和文种需求。",
+        "35/50 等主观阈值不作为质量验证或检测通过门槛；使用定位到片段的判断及保全检查。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/academic.md",
+        "skills/clearweave/references/english.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/hardikpandya/stop-slop/blob/main/SKILL.md",
+          "read_on": "2026-10-20",
+          "coverage": "全文"
+        },
+        {
+          "url": "https://github.com/hardikpandya/stop-slop/blob/main/references/structures.md",
+          "read_on": "2026-10-20",
+          "coverage": "对照、否定清单、片段化、开头和主体规则"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "repo": "Aboudjem/humanizer-skill",
+      "skill_path": "skills/humanizer/SKILL.md",
+      "url": "https://github.com/Aboudjem/humanizer-skill/blob/main/skills/humanizer/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）核心 SKILL.md 及 README 的 CLI、模式、文风说明；本次仅作设计映射。未执行 Node CLI，未复现其评分或保全检查。",
+      "license_observed": "MIT（上次 README 标注；未进行完整权属审计）",
+      "relationship": "README 将基础模式的一部分追溯到 Wikipedia；未核实直接 fork 关系。仓库内 CLI 和示例不另计为写作 Skill。",
+      "adopted": [
+        "明确区分只诊断、返回改写和指定文件编辑，避免自动扩大修改范围。",
+        "使用成簇特征与受保护文本例外，保留正式语气、技术术语和非母语作者真实文风。",
+        "借鉴改前改后数字、日期、URL、版本与缩写清点，并限制纠正循环次数。"
+      ],
+      "rejected_or_modified": [
+        "本地启发式分数只作为可解释的风格信号，不显示为作者身份概率或商业检测器通过率。",
+        "论文场景不自动套用强个性、无保留词或激进改写；证据强度与明确授权优先。",
+        "数字与字符串保全不能替代语义核对；另外检查否定、条件、因果、单位和比较对象。",
+        "无网络的辅助脚本不等于调用模型时数据留在本地，不继承此类过宽隐私表述。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/Aboudjem/humanizer-skill/blob/main/skills/humanizer/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "核心模式、文风、误报与受保护内容"
+        },
+        {
+          "url": "https://github.com/Aboudjem/humanizer-skill",
+          "read_on": "2026-10-19",
+          "coverage": "可选 CLI、事实令牌检查及作者声明"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "repo": "keez97/humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/keez97/humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md 与 README；本次实际读取（2026-10-20）references/DETECTION-LIMITS.md。仅审读规则与作者小样本报告，没有复现实验。",
+      "license_observed": "MIT（上次 SKILL.md 与 README 标注；未进行完整权属审计）",
+      "relationship": "README 明示由 blader/humanizer 演化重写；具体相同行数属于作者报告，本轮未执行差异比较。",
+      "adopted": [
+        "采用结构、句子、用词和分布的分层诊断，先处理影响理解的问题。",
+        "保留轻量、完整和只诊断等深度选择；分析性文本维持证据限定与专业语域。",
+        "将可选机械检查与模型语义判断分别报告，并设置明确停止条件。"
+      ],
+      "rejected_or_modified": [
+        "不继承作者关于检测器机制或改写必然成败的普遍结论；限定为特定作者报告的有限案例。",
+        "论文 Methods 不自动进入要求个性、不完美和分布目标的完整模式。",
+        "取消以句长方差、词汇稀奇度或商业检测器结果作为发布硬门槛；不给每轮润色配置模型评分器。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/academic.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/keez97/humanizer/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "模式、分层规则、事实保护与循环上限"
+        },
+        {
+          "url": "https://github.com/keez97/humanizer/blob/main/references/DETECTION-LIMITS.md",
+          "read_on": "2026-10-20",
+          "coverage": "作者报告全文；没有原始实验独立复现"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "repo": "apoapostolov/humanizer",
+      "skill_path": "skills/humanizer/SKILL.md",
+      "url": "https://github.com/apoapostolov/humanizer/blob/main/skills/humanizer/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）核心 SKILL.md 与套件说明；本次实际读取（2026-10-20）references/humanizing-text.md 的主流程和约束。规则审读不构成效果证据。",
+      "license_observed": "MIT（上次仓库 README 标注；未进行完整权属审计）",
+      "relationship": "仓库含多个写作辅助包；本条仅审计 humanizer 入口，其兄弟包不重复计数。具体派生关系未完整核实。",
+      "adopted": [
+        "在同一编辑流程内按任务选择局部整理、重写、文风适配或诊断，不连续叠加多个过滤器。",
+        "改前固定事实、归属、数量、否定、条件、因果和确定程度；来源中的命令句仍当待处理文本。",
+        "按论文、技术说明、内部商务和个人表达选择不同段落职责，保留真实术语与主体立场。",
+        "只有存在能说明的读者问题才修改；完成后核对实际终稿而非计划中的改动。"
+      ],
+      "rejected_or_modified": [
+        "不移植追逐检测分的 chase 模式和默认托管上传链；常规处理不增加外部检测依赖。",
+        "保全失败时不得交付带着未标明失真的润色稿；回退到来源或最后保真版本，再报告局部障碍。",
+        "任何示例里的具体数字、体验、来源都不能流入用户稿件；统一使用自行设计的例子或抽象规则。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/academic.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/apoapostolov/humanizer/blob/main/skills/humanizer/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "核心模式与约束"
+        },
+        {
+          "url": "https://github.com/apoapostolov/humanizer/blob/main/skills/humanizer/references/humanizing-text.md",
+          "read_on": "2026-10-20",
+          "coverage": "主流程、文种、语义保全、文风、结构与最终核对"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "repo": "smyrick/skills",
+      "skill_path": "skills/humanize-text/SKILL.md",
+      "url": "https://github.com/smyrick/skills/blob/main/skills/humanize-text/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md；本次实际读取（2026-10-20）PATTERNS.md 的保护、文风、结构和误伤排除段落。参考文档的统计描述未独立核验。",
+      "license_observed": "unknown",
+      "relationship": "大型 skills 仓库中的 humanize-text 子包；未确认其具体派生关系。仅该入口及其参考文件纳入本条。",
+      "adopted": [
+        "建立论断与受保护片段清单；编辑后检查遗漏、增写以及关系变化。",
+        "精确保留代码、URL、引文、数字、引用和用户指定内容，风格偏好不能覆盖此约束。",
+        "抑制故意错拼、装口语、整齐短句等过度纠正，文风从稳定样本中提取。"
+      ],
+      "rejected_or_modified": [
+        "把当次明确要求置于历史样本与默认习惯之上，修正其文风排序可能造成的权限冲突。",
+        "不把参考资料中单个措辞当作确定的作者身份标记，也不继承未经复核的样本比例作为效能依据。",
+        "将删除保留词的建议改为核对作用域和概率强度后再编辑，不能把不确定可能性改为确定可发生。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/smyrick/skills/blob/main/skills/humanize-text/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "全文"
+        },
+        {
+          "url": "https://github.com/smyrick/skills/blob/main/skills/humanize-text/PATTERNS.md",
+          "read_on": "2026-10-20",
+          "coverage": "保护、文风、结构、限定词及误伤排除关键段落"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "repo": "ashgreat/humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/ashgreat/humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md 与 README；本次尝试核对 measured-signals.md 但未取回正文，未将该引用视作已独立核验。作者语料和评分表现未复现。",
+      "license_observed": "MIT（上次 SKILL.md 与 README 标注；未进行完整权属审计）",
+      "relationship": "作者称方法来自营销/商科研究的 495 对段落；本轮未确认其与其他 humanizer 的具体代码派生关系。",
+      "adopted": [
+        "让研究主体、实际操作和结果直接进入句子，减少以自我评价代替论证的表达。",
+        "保留有功能的长句、三项枚举和推理连接词，避免从通用反套话词表推导论文禁令。",
+        "把引用、公式、数字、定义和术语保全列为语言编辑的先决条件。"
+      ],
+      "rejected_or_modified": [
+        "不把作者所述 495 对段落或检测排序结果写成 ClearWeave 对所有学科有效的证据。",
+        "取消零破折号和机械缩短等配额；由文种、句法和投稿规范决定。",
+        "evaluate、assess、operationalize 等学术动词只能按实际含义改写，不能机械替换成 measure 或 test。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/ashgreat/humanizer/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "主流程、保全约束、误伤排除规则"
+        },
+        {
+          "url": "https://github.com/ashgreat/humanizer",
+          "read_on": "2026-10-19",
+          "coverage": "作者报告的语料、脚本与局限说明"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "repo": "kjmagnan1s/anti-slop",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/kjmagnan1s/anti-slop/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md 的流程、protect list、子代理复核和来源说明；本次作架构映射。未执行 ingest、评测或子代理工作流。",
+      "license_observed": "MIT（主文件对自身文本的标注；来源说明另提 Wikipedia 衍生材料的 CC BY-SA，不据此断言全部材料均为 MIT）",
+      "relationship": "主文件明示整合 avoid-ai-writing、humanizer、stop-slop、no-ai-slop、unslop、soundshuman 等先行工作；按整合实现记录。",
+      "adopted": [
+        "把原作者需要保留的习惯与通用编辑规则分开，冲突时保留受保护文风并说明。",
+        "将新发现的写作问题记录成有例外、有作用范围的规则候选，去重后再纳入维护。",
+        "较复杂文本可使用独立复核角色查找遗漏；允许判定原稿无需修改。"
+      ],
+      "rejected_or_modified": [
+        "取消每次短文和只诊断都强制启动子代理；以稿件长度、改写幅度与保真风险决定是否升级。",
+        "不让一次对话中的单例自动变成全局禁令；新增规则先人工审阅或通过明确维护授权。",
+        "未配置个人文风文件时使用任务和文種默认值继续，不因可选配置缺失制造无谓阻塞。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/conflicts.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/kjmagnan1s/anti-slop/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "模式、protect list、复核、循环与来源说明"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "repo": "ryanmaule/humanize",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/ryanmaule/humanize/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md；本次尝试核对 eval.md 但未取回正文，不将该检查文件视为已审计。主文件规则未做效果测试。",
+      "license_observed": "unknown",
+      "relationship": "独立仓库入口；未确认 fork 或直接派生关系，不以名称相似判断原创性。",
+      "adopted": [
+        "用足以解决问题的最小改动保留作者声音，不为统一排版或语气重写好句子。",
+        "只诊断时定位具体措辞和读者问题，不输出作者身份猜测或伪精确分数。",
+        "让段落顺序服务实际表达，保留有功能的长句、节奏变化和真实不确定性。"
+      ],
+      "rejected_or_modified": [
+        "绝对禁词改为按语境判断；科研和技术术语不能因为在词表中出现而被替换。",
+        "主动语态和删总结都是可选手段；方法报告、程序说明与学术总结保留其必要形式。",
+        "缺少可选评估文件时不声称已执行其检查，用已提供的保真核对要求完成任务。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/ryanmaule/humanize/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "全文；未读取所链接 eval.md 正文"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "repo": "spuvr/humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/spuvr/humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md 与 README；本次仅提取设计思想，未对改写质量做用户样本测试。",
+      "license_observed": "MIT（上次 README 标注；未进行完整权属审计）",
+      "relationship": "作者表示有别于纯禁词表路线；未确认与其他仓库的具体派生关系。",
+      "adopted": [
+        "检查重复解释、无信息增量的收尾和不连贯句群，让句法体现论述关系。",
+        "文风适配到读者与媒介，个人文本可保留真实的温度和不规则节奏。",
+        "完整阅读再编辑，不把逐词替换误认为解决了段落层面的表达问题。"
+      ],
+      "rejected_or_modified": [
+        "朋友聊天、个人感受和故意留白只作为适用场景选项，不覆盖论文与正式商务语域。",
+        "禁止为了具体性添加来源不存在的地点、动机、经历、时间或事实关系。",
+        "不机械改变三项枚举、不把规范标点当作者身份指纹；以可读性与保真决定。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/spuvr/humanizer/blob/main/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "全文及其示例的语义保全风险"
+        },
+        {
+          "url": "https://github.com/spuvr/humanizer",
+          "read_on": "2026-10-19",
+          "coverage": "README 的定位与许可证标注"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "repo": "hachisuka-mh/humanizer",
+      "skill_path": "skill/humanizer/SKILL.md",
+      "url": "https://github.com/hachisuka-mh/humanizer/blob/main/skill/humanizer/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "上次实际读取（2026-10-19）SKILL.md 与 README；本次尝试核对 detection-heuristics.md 但未取回正文。主文件已直接载有评分映射和循环规定，未核验其校准效果。",
+      "license_observed": "unknown",
+      "relationship": "主文件明示建立在 blader/humanizer 上，并扩展文风指纹、模型 profile 及自评分。",
+      "adopted": [
+        "可由用户真实样本提炼句子密度、正式程度、标点和保留词习惯，作为文风参考。",
+        "按需读取样本特征而非重复携带全部历史原文，并避免复用样本中的事实与显眼措辞。",
+        "文风应定期与用户新近表达对照，但更新须处于用户授权的维护范围。"
+      ],
+      "rejected_or_modified": [
+        "删除启发式分数到 AI 概率的映射，不隐藏低分时的不确定性，也不循环改到 Low。",
+        "删除机械清除 Unicode 标点和符号的步骤，保护公式、范围符号、语言字符和引用。",
+        "不默认改写用户主目录的指纹文件或维护运行次数；把持久化设为明确配置。",
+        "不凭模型名称推定一段文字应有的缺陷，仍须定位可见证据。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/hachisuka-mh/humanizer/blob/main/skill/humanizer/SKILL.md",
+          "read_on": "2026-10-19",
+          "coverage": "主流程、符号清理、文风指纹、评分映射与运行次数更新"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "repo": "jalaalrd/anti-ai-slop-writing",
+      "skill_path": "skills/anti-ai-slop-writing/SKILL.md",
+      "url": "https://github.com/jalaalrd/anti-ai-slop-writing/blob/main/skills/anti-ai-slop-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "本次实际读取（2026-10-20）SKILL.md 与 references/banned-words.md。只核验规则和例外的存在；没有验证其关于统计检测信号的效能表述。",
+      "license_observed": "unknown",
+      "relationship": "单个写作 Skill 及其禁词参考表；未确认其与其他仓库的具体派生关系。",
+      "adopted": [
+        "跨句检查因果、转折与限定关系，避免把一段论述切成彼此无关的短句。",
+        "文风依据人物样本与实际发布媒介校准，不凭通用营销语气生成。",
+        "禁止虚构数据、引语或经历；假设情境须可辨认，信息不足时明确缺口。"
+      ],
+      "rejected_or_modified": [
+        "不用全面禁词、句长配额、统一缩写、强制不被动和强行选边作为通用规则。",
+        "没有数值时不得添加 roughly 或 around 来暗示已有估计；应保留未知或请求依据。",
+        "不通过稀奇词、坏语法和突兀结尾伪造人感；句式变化必须服务含义。",
+        "不按模型常见开头词禁止正常句首，也不声称消除了可检测 AI 模式。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/jalaalrd/anti-ai-slop-writing/blob/main/skills/anti-ai-slop-writing/SKILL.md",
+          "read_on": "2026-10-20",
+          "coverage": "全文"
+        },
+        {
+          "url": "https://github.com/jalaalrd/anti-ai-slop-writing/blob/main/skills/anti-ai-slop-writing/references/banned-words.md",
+          "read_on": "2026-10-20",
+          "coverage": "词表、场景例外、开头和模型特征规则"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "repo": "israelsaba/ai-writing-detector-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/israelsaba/ai-writing-detector-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "本次实际读取（2026-10-20）SKILL.md 全文；reference.md 未能取回正文。未运行 MCP、CLI 或验证其检测引擎，不能把项目的 evidence-backed 声称当实测结果。",
+      "license_observed": "MIT（本次 SKILL.md 标注；未进行完整权属审计）",
+      "relationship": "一个提供英语及巴西葡语规则并封装同一 lint 引擎的 Skill；MCP 与 CLI 两种入口不重复计数。",
+      "adopted": [
+        "可选检查器输出位置、规则、强弱信号与可操作建议，而非只有单个总分。",
+        "将自动文本检查与读者导向的人工/模型编辑分工，保留可解释的诊断记录。",
+        "不同语言需要自己的词法和结构规则，不把英语词表当成中文标准。"
+      ],
+      "rejected_or_modified": [
+        "不把 em dash、三项枚举、句长组合或单词命中设为无条件发布失败。",
+        "不默认安装 MCP、执行 shell 包装器或启用严格 CI；基本编辑应不依赖外部引擎。",
+        "保留 provenance 等准确专业词；检查提示与作者身份、论文质量无直接等同关系。",
+        "只诊断不必强制委派子代理；使用成本与篇幅触发的可选复核。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/english.md",
+        "skills/clearweave/references/preservation.md"
+      ],
+      "inspected_sources": [
+        {
+          "url": "https://github.com/israelsaba/ai-writing-detector-skill/blob/main/SKILL.md",
+          "read_on": "2026-10-20",
+          "coverage": "全文；未取得 reference.md 正文、未审计执行引擎"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "repo": "op7418/Humanizer-zh",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/op7418/Humanizer-zh/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开 GitHub 原始技能文件；检查编辑优先级、语义保护、文体与声音、中文检查点和交付核对。当前编号至 31，文件声明参考 Humanizer v3.0.0、PR 39 及 stop-slop。",
+        "limitations": "检查的是可变 main 分支的规则文本；未固定提交、执行上游代码或验证检测器通过率。未单独检查仓库 LICENSE。"
+      },
+      "license_observed": "unknown",
+      "relationship": "文件声明改编自 blader/humanizer v3.0.0，并整合 Humanizer-zh PR 39 和 hardikpandya/stop-slop；视为同源中文变体，不计为独立方法验证。",
+      "adopted": [
+        "将否定、条件、范围、归因、完成状态和确定程度纳入改写前后核对。",
+        "按句子功能决定修改，允许保留无问题段落及必要连接词。",
+        "匹配用户声音时仅借鉴表达习惯，禁止迁入样稿中的事实。"
+      ],
+      "rejected_or_modified": [
+        "不复制检查点全文或例句；以 ClearWeave 原创规则和假设教学句重述。",
+        "不继承上游允许工具清单或工具权限；遵守运行环境实际能力。",
+        "规则审阅不等于证明改写效果，不把来源数量或风格特征当检测证据。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S20",
+      "repo": "syw2039/humanizer-zh",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/syw2039/humanizer-zh/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始技能文件；检查事实锁、轻改与嵌入模式、声线样稿、文体保留及模板模式使用方式。",
+        "limitations": "未运行上游技能；未逐页重读其全部 references，也未单独核实 LICENSE；检查 main 分支文本。"
+      },
+      "license_observed": "unknown",
+      "relationship": "来源声明以 blader/humanizer v2.9.1 的保真、校准和误判防护思想为基础，重新设计中文规则；属于 Humanizer 同源变体。",
+      "adopted": [
+        "先保持正式程度与人称，再决定中文润色强度。",
+        "保留核心信息、数字、引用、代码和结构化内容。",
+        "采用用户样稿校准表达；不给没有问题的文本强加口语或情绪。"
+      ],
+      "rejected_or_modified": [
+        "将问题数量和样稿段数视为参考，不设置必须凑满的输出配额。",
+        "将概括表达具体化的条件明确为原稿或授权材料确实提供该细节。",
+        "审校意见仅在用户需要时输出，避免进入最终正文。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S21",
+      "repo": "ksufer/humanizer-zh-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/ksufer/humanizer-zh-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；检查四类文体路由、引语与事实及立场限制、中文句法表、博客示例和 60 分内部评分表。",
+        "limitations": "未运行技能或核实其自评与真实效果的相关性；文体子文件及 LICENSE 未逐一核实。"
+      },
+      "license_observed": "unknown",
+      "relationship": "元数据明确声明改写自 blader/humanizer，并增补中文表达资料与多文体路由；不视为独立实证方法。",
+      "adopted": [
+        "文体路由先于语言处理，区分新闻、公文、个人文章等不同要求。",
+        "直接引语与转述分别处理，保留事实限定和作者立场。",
+        "提供仅标注问题的审校模式；中文长定语和弱动词按理解负担调整。"
+      ],
+      "rejected_or_modified": [
+        "移除以特定分数作为质量保证或循环返工的门槛。",
+        "不用字数、句长、三个并列项等机械阈值删改有用内容。",
+        "不继承示例中从部分人意见推成对半分布的新增量化信息；风格增强不能改变主张。",
+        "混合文体按段落功能处理，不因可自行判断的文体问题中断任务。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S22",
+      "repo": "jiji262/humanizer-chinese",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/jiji262/humanizer-chinese/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始技能文件；文件声明 36 个中文模式、版本 1.0.0，frontmatter 标为 MIT；检查文体判断、事实保护、声线校准及模型风格速查。",
+        "limitations": "MIT 为技能文件中观察到的声明，未单独审阅 LICENSE；未验证模式与具体模型来源的对应关系，也未运行改写评测。"
+      },
+      "license_observed": "MIT",
+      "relationship": "明确声明由 blader/humanizer 的英文模式迁移、合并和新增为中文模式；属于中文本土化变体。",
+      "adopted": [
+        "关注空泛开场、无内容升华、模板互动和中文翻译腔。",
+        "区分中性文本与个人文章的声线，禁止虚构第一人称经历。",
+        "保留独立信息并允许有依据的段落重组。"
+      ],
+      "rejected_or_modified": [
+        "不以某种文风给作者或生成模型作身份判定。",
+        "编辑已有文章时不得仅为显得有立场而添加作者未表达的观点。",
+        "保留有意义的排比、术语重复和正式表达；不把整齐本身当错误。"
+      ],
+      "target_modules": [
+        "skills/clearweave/SKILL.md",
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S23",
+      "repo": "ai-zixun/humanizer-zh",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/ai-zixun/humanizer-zh/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；检查中文主线、段落功能、翻译腔、标点术语规则及可选作者声音流程。",
+        "limitations": "未核实 Git fork 图或 LICENSE；未加载所有作者声音参考，不将其效果当已验证能力。"
+      },
+      "license_observed": "unknown",
+      "relationship": "已核实独立仓库和技能入口；本次证据不足以确认与 blader/humanizer 的直接 fork 关系。",
+      "adopted": [
+        "检查段落是否推进同一个问题，调整偏题或重复的结构。",
+        "拆解英式长定语和抽象表达，保留句子的真实修饰关系。",
+        "保持术语、品牌名和正文格式一致。"
+      ],
+      "rejected_or_modified": [
+        "不主动引导用户套用名家声音；优先原稿与用户自己的样稿。",
+        "不继承长破折号等字符的全局禁令；按文体和项目规范处理。",
+        "不把 PR 等技术缩写机械译成近似概念；按具体术语含义和用户约定保留。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S24",
+      "repo": "acchuang/zh-tw-humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/acchuang/zh-tw-humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；版本 1.8.0，frontmatter 声明 MIT；检查台湾繁体本地化、保护清单、标注模式、事实规则及代表性示例。",
+        "limitations": "未重跑作者提供的脚本或 benchmark；不把规则数、词表规模或作者自述测试数当独立效果证据。MIT 声明未通过单独审阅 LICENSE 复核。"
+      },
+      "license_observed": "MIT",
+      "relationship": "文件声明整合英／繁体 Wikipedia 指南及台湾编辑观察；明确具有台湾本地化目标，未据此确认直接 Git fork 关系。",
+      "adopted": [
+        "受众明确需要时区分地区用词、简繁转换与自然表达。",
+        "保护数字、直接引语、代码和承诺范围，支持只标问题不改文。",
+        "重视重写过度导致的新模板腔。"
+      ],
+      "rejected_or_modified": [
+        "将始终输出台湾繁体改为按用户明确受众和目标语言选择；不贬低其他地区的正常中文。",
+        "不继承示例中未经原稿支持的折扣幅度、日期或亲身经历。",
+        "不将不可见字符或排版习惯作为作者身份依据，也不承诺移除统计水印。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S25",
+      "repo": "huang-kaibo/content-humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/huang-kaibo/content-humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；检查其明确排除英文和学术正式文体、口语情绪处理、信息完整度核对以及消费体验示例。",
+        "limitations": "仅审查文本设计，未运行其评分流程或验证实际效果；未单独核实 LICENSE。"
+      },
+      "license_observed": "unknown",
+      "relationship": "已核实仓库与技能入口；本次未确认独立原创或直接 fork 关系。",
+      "adopted": [
+        "在改写后逐项核对原稿信息点，防止为了口语化丢失信息。",
+        "将社媒的语气需求与学术、商务等正式文本分开。",
+        "保留指定品牌、专业术语、价格及数据精度。"
+      ],
+      "rejected_or_modified": [
+        "不把社媒口语规则用于英文论文或正式报告。",
+        "不强加情绪起伏、第一人称、不完整句、购买记录或感官体验。",
+        "原例句存在凭空增补消费细节的情况；所有 ClearWeave 教学例句另行原创，并显式检查信息来源。",
+        "不用固定篇幅倍率或人味自评分证明编辑成功。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S26",
+      "repo": "masterball-w/Master-humanizer-skill",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/masterball-w/Master-humanizer-skill/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；检查 18 条基础规则与文体分流、先写后检、否定句限制、冗余及结构调整要求。",
+        "limitations": "未逐篇重读 genres 目录，未运行效果测评或核实 LICENSE；检查 main 分支上的规则文本。"
+      },
+      "license_observed": "unknown",
+      "relationship": "作者以个人总结的中文反向法则组织规则；本次未确认与 Humanizer 的直接 fork 关系。",
+      "adopted": [
+        "完成初稿后按表达功能复查，避免无限扩张词语黑名单。",
+        "检查抽象评价是否真正说明了对象和状态。",
+        "将文体相关细则与通用信息保护分开。"
+      ],
+      "rejected_or_modified": [
+        "移除广泛禁止否定判断句的要求；必须保留逻辑否定和真实对照。",
+        "不强制添加冗余、极端句长、闲笔或弱关联跳跃。",
+        "不为补足叙事编造时间、版本、情绪或行为；缺少细节时保持概括。",
+        "不清零合法标点、不为去模板删除方法编号及有意义的论证顺序。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S27",
+      "repo": "nothing0here/humanizer-zh",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/nothing0here/humanizer-zh/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；版本 3.0.0-cn，frontmatter 声明 MIT；检查黑话与欧化表达、样稿校准、事实规则和前后改写示例。",
+        "limitations": "未以运行测试验证其双语能力；MIT 仅为技能文件声明，未单独审阅 LICENSE。"
+      },
+      "license_observed": "MIT",
+      "relationship": "文件声明在 Wikipedia 原版指南基础上做中文本土化；不能仅根据版本号确认与 blader 某个版本或提交完全对应。",
+      "adopted": [
+        "处理缺乏信息的职场黑话与翻译腔时，检查动作和实际对象。",
+        "按用户样稿调节句式和语气，保留数字、名称、逻辑关系。",
+        "缺少具体信息时不靠造细节完成重写。"
+      ],
+      "rejected_or_modified": [
+        "拒绝把业务问题换成另一个问题；增长放缓、成本增加和交付延期不能互换。",
+        "不凭机构名称补写职责，也不为笼统效果补造性能事实。",
+        "规则与示例冲突时以信息保全为准，不迁入上游示例。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S28",
+      "repo": "holygeek00/humanizer-zh-cn",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/holygeek00/humanizer-zh-cn/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": {
+        "type": "primary-source-static-review",
+        "artifacts": [
+          "SKILL.md"
+        ],
+        "observed": "重新打开原始文件；版本 2.9.1-zh.2，frontmatter 声明 MIT；检查主体动作对象结果的诊断方法、文体要求、声音校准与审校意见位置。",
+        "limitations": "未运行上游技能；MIT 为 SKILL.md 中的许可声明，未单独复核 LICENSE，也未检查完整 fork 图。"
+      },
+      "license_observed": "MIT",
+      "relationship": "技能明确说明基于 blader 的 Humanizer 并重编中文规则；属于同源中文变体，不能当独立效果复现。",
+      "adopted": [
+        "不把抽象词天然列入禁用词表，而是问清主体、动作、对象、结果和依据。",
+        "技术、论文和正式文本优先精确克制，个人文章按已有声音处理。",
+        "把事实核查建议与可直接使用的终稿分开。"
+      ],
+      "rejected_or_modified": [
+        "纯润色不默认删除作者的实质主张；无依据之处保留原有归因并在审校意见中标记。",
+        "不在每个终稿段落追加材料没有说明某事的审校套话。",
+        "不用另一个抽象近义词代替原来的抽象词来伪装成改进。"
+      ],
+      "target_modules": [
+        "skills/clearweave/references/chinese.md"
+      ]
+    },
+    {
+      "id": "S29",
+      "repo": "labarba/sciwrite",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/labarba/sciwrite/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the manuscript-writing-review SKILL.md, including its five editorial passes, scientific-content boundary, and delivery modes. https://github.com/labarba/sciwrite/blob/main/LICENSE identifies Lorena A. Barba and CC BY 4.0. No source examples or numerical illustrations were copied; the integration uses newly written rules and examples.",
+      "license_observed": "CC-BY-4.0",
+      "relationship": "Distinct manuscript editing skill whose declared skill name is manuscript-writing-review. The repository describes an approach informed by Writing in the Sciences; this audit does not imply endorsement by that course or its teacher.",
+      "adopted": [
+        "Check terminology and repeated numerical statements for consistency across paper sections and displays.",
+        "Improve verbs and sentence structure while respecting legitimate passive constructions and author voice."
+      ],
+      "rejected_or_modified": [
+        "Treat sentence-length and subject-verb-distance thresholds as inspection cues, not automatic rewrite triggers.",
+        "Do not ban all newly defined acronyms, force a fixed number of priority revisions, or require confirmation after every paragraph.",
+        "Flag scientific corrections separately instead of silently changing the research claim during copyediting."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S30",
+      "repo": "softaworks/agent-toolkit",
+      "skill_path": "skills/writing-clearly-and-concisely/SKILL.md",
+      "url": "https://github.com/softaworks/agent-toolkit/blob/main/skills/writing-clearly-and-concisely/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the SKILL.md composition and AI-pattern sections. The skill README attributes work to joshuadavidthomas/agent-skills and obra/the-elements-of-style; https://github.com/softaworks/agent-toolkit/blob/main/LICENSE was inspected. Repository license observation does not certify the licensing of every embedded reference.",
+      "license_observed": "MIT",
+      "relationship": "A documented adaptation in the writing-clearly-and-concisely family. The Elements of Style repository name and mirrored versions do not constitute additional unique skills here.",
+      "adopted": [
+        "Cut empty framing and inflated language while making each paragraph's purpose legible.",
+        "Prefer concrete explanations and load detailed guidance only when needed."
+      ],
+      "rejected_or_modified": [
+        "Convert vocabulary lists into context-sensitive checks; technical meanings take priority.",
+        "Do not force every sentence into active voice, positive form, or a fixed cadence.",
+        "Do not treat editorial pattern lists as validated authorship evidence."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S31",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "skill_path": "skills/scientific-writing/SKILL.md",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/scientific-writing/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of SKILL.md purpose, evidence binding, scientific fidelity, drafting, consistency, and revision rules. The frontmatter and repository declare MIT, but the attempted LICENSE endpoint did not return the license text, so license_observed remains unknown pending that check. The repository explicitly states its rename from Claude Scientific Skills. No bundled CLI was executed.",
+      "license_observed": "unknown",
+      "relationship": "Scientific manuscript and evidence workflow, adjacent to stylistic humanization. The repository's old name, mirrors, and ports are not additional independent methods in this inventory.",
+      "adopted": [
+        "Maintain a proportionate claim-to-evidence map and distinguish verified support from supplied assertions.",
+        "Preserve uncertainty, denominators, analysis scope, and method-result consistency."
+      ],
+      "rejected_or_modified": [
+        "Do not impose full registries, a fixed biomedical reporting checklist, or universal human approval gates on a local paragraph edit.",
+        "Select applicable venue and study-design requirements instead of assuming every paper is a trial.",
+        "Do not add the skill author's publication to a user's manuscript automatically."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    },
+    {
+      "id": "S32",
+      "repo": "YuanZHAO321/Academic-Writing",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/YuanZHAO321/Academic-Writing/blob/main/SKILL.md",
+      "inspected_on": "2026-10-20",
+      "evidence_basis": "Static inspection of the academic-writing SKILL.md task routes, editing funnel, before/after feedback, and distinction between clarity and taste. The repository was inspected; the attempted LICENSE endpoint did not return a license, so its license is not established. No reference book text or source examples were copied.",
+      "license_observed": "unknown",
+      "relationship": "Adjacent academic-writing coach. The same author's Scientific-Writing repository overlaps in scope; no fork relationship was established and it is not an extra source in this 32-entry inventory.",
+      "adopted": [
+        "Address document and paragraph structure before word-level polish when structural revision is authorized.",
+        "Explain consequential edits and distinguish necessary corrections from stylistic preference."
+      ],
+      "rejected_or_modified": [
+        "Do not mandate praise-criticism-encouragement feedback for rigorous reviewer mode.",
+        "Do not infer authority from an attributed aphorism or import an unverified book wholesale.",
+        "Keep the requested scope and avoid rewriting a sound structure merely to follow a funnel."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic.md"
+      ]
+    }
+  ]
+}

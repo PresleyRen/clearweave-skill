@@ -1,0 +1,490 @@
+{
+  "recorded_on": "2026-10-20",
+  "writing_cases_per_condition": 18,
+  "judgement_type": "anonymous fresh-context model editor; not human review",
+  "conditions": {
+    "plain": {
+      "fidelity_pass": 17,
+      "task_pass": 18,
+      "restraint_pass": 18,
+      "preferred_cases": 1
+    },
+    "clearweave": {
+      "fidelity_pass": 18,
+      "task_pass": 18,
+      "restraint_pass": 18,
+      "preferred_cases": 1
+    }
+  },
+  "preferences": {
+    "tie": 16,
+    "plain": 1,
+    "clearweave": 1
+  },
+  "no_op_controls": {
+    "plain": {
+      "CW07": true,
+      "CW08": true
+    },
+    "clearweave": {
+      "CW07": true,
+      "CW08": true
+    }
+  },
+  "post_refinement_cases": {
+    "count": 4,
+    "fidelity_pass": 4,
+    "task_pass": 4
+  },
+  "literal_checks_scope": "12 original edit/shorten outputs, selected before reporting. Translation, diagnosis, critique and drafting are excluded because their output contract differs.",
+  "literal_checks": [
+    {
+      "id": "CW01",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW02",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW03",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW04",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW05",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW06",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW07",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW08",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW13",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW14",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW17",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "changes": []
+    },
+    {
+      "id": "CW18",
+      "supported_literal_changes": true,
+      "change_count": 1,
+      "changes": [
+        {
+          "kind": "number",
+          "literal": "12",
+          "original_count": 2,
+          "revision_count": 1,
+          "delta": -1,
+          "status": "lost",
+          "original_locations": [
+            {
+              "line": 1,
+              "column": 71
+            },
+            {
+              "line": 1,
+              "column": 94
+            }
+          ],
+          "revision_locations": [
+            {
+              "line": 1,
+              "column": 46
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "case_reviews": [
+    {
+      "id": "CW01",
+      "reason": "Both clearly preserve the 48 reviewed accounts, 11 outstanding approvals, conditional pilot date and deadline, Singapore-only scope, and archived-account exclusion. Splitting the first two facts versus joining them is an optional style choice.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW02",
+      "reason": "Both remove the empty framing while preserving the planned date and 120 work orders, the September-and-still-open restriction, attachment exclusion, and not-yet-started status. Both retain confirmation of revoked access as a necessary condition for permission to delete; neither turns permission into an obligation. The wording differences are optional.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW03",
+      "reason": "Both return suitable English research prose and retain all metrics, the offline sample size, citation [4], tentative interpretation, multilingual limitation, and lack of an established production preference. Adding the article before Recall@10 does not create a meaningful quality difference.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW04",
+      "reason": "Both preserve the 36 trials, correlation coefficient, explicit noncausal interpretation, latency/error trade-off, nonsignificant throughput result, mobile-network exclusion, and unfinished follow-up validation. Neither mistakes nonsignificance for equivalence. The small lexical changes in B are acceptable but do not establish a substantive advantage.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW05",
+      "reason": "Both keep the Chinese release-note format and every protected English term, quotation, inline example, URL, formula, reference, and fenced code block. Both treat the quoted imperative as test material and preserve the unavailable automatic retry and nonequivalent statuses. Their final purpose sentences differ only in acceptable register.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW06",
+      "reason": "Both preserve the export capability, administrator approval condition, CSV-only limitation, exact UI label, and API field in appropriate Traditional Chinese. B more closely fits the requested formal but friendly explanation by addressing the reader politely and opening with what they can do. A has no substantive error; its retained generic opener is a modest readability drawback.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 4,
+        "issues": [
+          "Optional tightening: the opening, “我們希望這次調整能進一步提升使用體驗”, still gives a generic aspiration before the concrete instructions. It is faithful, but less direct and less useful to the reader than starting with the available action."
+        ]
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "plain"
+    },
+    {
+      "id": "CW07",
+      "reason": "The candidates are identical to each other and to an already natural source. Both appropriately retain the personal voice and every event and quantity without adding feelings, imagery, or unnecessary edits.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW08",
+      "reason": "The candidates are identical and appropriately leave the clear original alone. Both preserve the sequence, two metal sounds, cooled tea, and understated personal voice without invented details.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW09",
+      "reason": "Both are suitable Simplified Chinese technical translations and preserve the tentative cache-dependent benefit, 62 offline runs, failure-rate decrease, 5 ms latency increase, excluded bypass requests, and absence of production testing. The cache terminology distinction is a minor precision preference rather than a meaningful difference in the reported findings.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": [
+          "Optional technical precision: “缓存已预热时” can suggest a cache-warming process, while the source specifies only that the cache is warm. A state-based expression is slightly more exact, but the ordinary technical reading here still preserves the intended condition; this is not a substantive fidelity failure."
+        ]
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW10",
+      "reason": "A preserves the source’s temporal observation; B strengthens it into a causal assertion. Both are fluent British English and preserve the 40 simulations, measured times, necessary synchronisation condition, deployment limitation, planned 2027 field tests, and outstanding approval. The preference concerns fidelity, not fluency; “policy” and “strategy” are both defensible translations in this context.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": false,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": [
+          "Material fidelity issue: “enabling the new strategy reduced the mean recovery time” explicitly attributes the reduction to the strategy. The source reports that mean recovery time fell after activation (“启用新策略后”), without explicitly establishing that causal relationship. Under the rubric’s requirement to preserve certainty and evidence status, use a temporal formulation such as “After the new strategy was enabled, mean recovery time fell from 18 s to 15 s.”"
+        ]
+      },
+      "preference": "clearweave"
+    },
+    {
+      "id": "CW11",
+      "reason": "Both locate specific empty framing, unsupported praise, unnecessary lead-ins, repetitive transitions, and the vague closing. Both offer optional local fixes without a complete replacement paragraph or authorship claim. The valid CSV, JSON, and workspace-owner facts remain intact, including in A’s suggested local combination.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW12",
+      "reason": "Both give located Chinese diagnoses and actionable local suggestions for the vague framing, abstract claims, and empty emphasis without rewriting the paragraph or inventing benefits. A explicitly affirms the concrete second sentence; B separates the opening claims into more granular items. Both approaches adequately meet the request.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW13",
+      "reason": "The candidates are identical. Both use the samples’ directness in a formal update, retain the finance team, 19 completed vendor checks and 4 missing-form cases, and make the remaining Monday checks conditional on receiving those forms. Neither imports facts or casual flourishes from the voice samples.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW14",
+      "reason": "Both produce a direct formal notice while preserving the administrative team’s planned Thursday inspection of 12 east-zone rooms, west-zone exclusion, Wednesday access-approval deadline, conditional delay, and unknown replacement time. Neither borrows personal events or tone from the samples. The small connective and noun differences are optional.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW15",
+      "reason": "Both turn the notes into a concise, natural single-paragraph weekly update. They retain both completed changes, ongoing historical sampling with an unknown count, the absent online stress test and publishable performance data, and next week’s proposal submission with test execution conditional on operations approval. Neither implies that approval or testing has already occurred.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW16",
+      "reason": "Both provide strict, grounded critiques of universal scope, unsupported statistical significance, self-selection and causal language, inadequate group counts and sample reporting, and the longer completion time. Both distinguish unreported significance from demonstrated nonsignificance and treat future mobile work as unperformed. B’s proposed replacement conclusion is permitted by this request for correction methods; A’s concrete item-by-item fixes are also sufficient. Neither invents measured results or misconduct.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW17",
+      "reason": "The candidates are identical. Both remove the unsupported promotional closing while retaining offline recording and keyword search, the team’s tentative and unmeasured time-saving belief, desktop-only availability, and the mobile planning status. This improves credibility without creating a new efficacy claim.",
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    },
+    {
+      "id": "CW18",
+      "reason": "A has 44 whitespace-delimited words and B has 45, so both satisfy the 55-word maximum. Both preserve all counts, identify the 9 completions as occurring among 12 respondents, retain the missing-email and pre-page-stop observations, restrict those observations to respondents, and leave the other 68 customers’ nonresponse unexplained. Their sentence structures are both clear.",
+      "clearweave": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "plain": {
+        "fidelity_pass": true,
+        "task_pass": true,
+        "restraint_pass": true,
+        "readability": 5,
+        "issues": []
+      },
+      "preference": "tie"
+    }
+  ],
+  "limitations": "One response per case and condition, two batches per condition, one host model family, synthetic short texts, subjective model judgements. The 18-case comparison precedes the documented generic-aspiration clarification; four new cases test the clarification. No population success rate, authorship inference, or detector measurement."
+}

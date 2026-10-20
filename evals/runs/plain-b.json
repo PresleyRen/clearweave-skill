@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CW10",
+    "text": "In 40 simulation trials, enabling the new strategy reduced the mean recovery time from 18 s to 15 s. Automatic restart is permitted only after the node has completed state synchronisation. These results do not represent performance in real deployments. The team plans to conduct field tests in 2027, but approval has not yet been granted."
+  },
+  {
+    "id": "CW11",
+    "text": "1. **Opening phrase: “In today's ever-evolving landscape”** — This is a familiar cliché with no specific context. Optional fix: delete it.\n2. **Opening claim: “stands as a testament to innovation”** — The praise is abstract and unsupported by the paragraph. Optional fix: remove the claim or replace it with a documented feature that explains what is innovative.\n3. **Second sentence: “It is important to note that”** — This delays a straightforward fact without explaining why it needs emphasis. Optional fix: start with “The tool exports CSV files.”\n4. **Third and fourth sentences: “Moreover” and “Furthermore”** — Repeated transitions make closely related details feel mechanical and unnecessarily fragmented. Optional fix: combine those details locally, for example, “Workspace owners can export CSV and JSON files.”\n5. **Final sentence: “open up a world of possibilities”** — This promises a benefit without identifying one. Optional fix: delete the sentence or replace it with a specific, supported use case."
+  },
+  {
+    "id": "CW12",
+    "text": "- **第1句：“在当今时代背景下”**。没有说明具体背景，也不影响后面的功能信息。建议删去。\n- **第1句：“我们始终坚持以用户为中心”**。只有理念表态，没有说明这次功能如何回应用户需求。建议删去；如需保留，应补充已有的具体依据。\n- **第1句：“持续赋能协同工作的高质量发展”**。抽象词堆叠，“赋能”与“高质量发展”的关系含混，读者看不出系统具体做了什么。建议删去，直接进入下一句的功能说明。\n- **第3句：“值得注意的是”**。没有需要特别强调的对比或限制，属于多余的引导语。建议删去。\n- **第3句：“为工作方式带来了全新的可能性”**。没有指出具体变化，“全新”也缺乏依据。建议删去；若有可核实的使用效果，再改为具体描述。"
+  },
+  {
+    "id": "CW13",
+    "text": "The finance team has completed audit checks for 19 vendors. Tax forms are still missing for 4 vendors. The remaining checks are scheduled for Monday, provided those forms are received."
+  },
+  {
+    "id": "CW14",
+    "text": "行政组计划于周四检查东区的12间会议室。西区不在此次检查范围内。如周三下班前仍未收到门禁授权，检查将推迟，新的时间尚未确定。"
+  },
+  {
+    "id": "CW15",
+    "text": "已完成检索日志格式统一，并修复2处时间戳解析错误。目前正在抽查历史日志，抽查数量尚未确定。线上压力测试尚未开展，暂无可公布的性能提升数据。下周计划提交测试方案，能否开展测试取决于运维组是否批准。"
+  },
+  {
+    "id": "CW16",
+    "text": "摘要中的“在所有场景下均显著提高了任务成功率”超出了现有证据的支持范围。\n\n1. **“所有场景”没有依据。** 测试仅使用桌面浏览器，16名志愿者各完成一次任务，无法覆盖所有设备、任务和用户群体。计划研究手机场景不等于已经完成验证。修改：删除“所有场景”，将结论限定在本次桌面浏览器测试范围内。\n\n2. **“显著”未经证实。** 75%与63%是所报告的样本成功率，数值有差异不等于差异具有统计显著性。材料未提供统计检验或置信区间。修改：报告组间差异及适当的置信区间，说明检验方法。在补充分析前，只能陈述观察到的差异，也不能反过来断言差异“不显著”。\n\n3. **现有设计不能支持“提高了”的因果表述。** 参与者自行选择界面，分组并非随机。能力、经验或偏好可能同时影响界面选择与任务成功率，现有材料无法排除这些解释。修改：将措辞改为两组的观察结果；后续采用随机分组，并控制任务条件。\n\n4. **样本和成功次数的报告不足。** 总样本为16人，但未给出各组人数、成功次数和百分比的取整方式，无法核对75%和63%的计算，也不应自行假定两组各有8人。修改：补充两组原始计数、招募方式和任务说明，充分呈现估计的不确定性，并依据研究目标规划后续样本量与任务覆盖。\n\n5. **平均耗时更长这一结果也需要讨论。** 成功率与完成速度是不同指标，不能从成功率的数值差异推断效率也有所改善。修改：同时报告两组耗时及其不确定性，讨论成功率与耗时的可能权衡；现有材料同样不足以判断耗时差异是否具有统计显著性。\n\n摘要结论可先收窄为：“在16名志愿者各完成一次任务的桌面浏览器测试中，参与者自行选择界面。新界面组和旧界面组的成功率分别为75%和63%，新界面组的平均耗时更长。由于未报告统计检验或置信区间，且分组并非随机，现有结果不足以证明新界面显著提高任务成功率，也不能推广至未测试场景。”"
+  },
+  {
+    "id": "CW17",
+    "text": "这款便签工具支持离线记录和关键词检索。团队认为它可能减少整理笔记的时间，但尚未测量具体效果。目前只有桌面版，移动版仍在规划中。"
+  },
+  {
+    "id": "CW18",
+    "text": "We invited 80 customers to the pilot; 12 responded, and 9 of them completed setup. Two respondents reported missing email notifications; one stopped before opening the setup page. These observations cover respondents only. We do not know why the other 68 customers did not respond."
+  }
+]

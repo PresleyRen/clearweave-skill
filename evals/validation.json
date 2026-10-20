@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-20 02:56:42 UTC",
+  "python": "Python 3.12.14",
+  "scope": "Deterministic helper/installer tests and package validation; these checks do not establish semantic fidelity or writing quality.",
+  "unittest": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "tests_run": 46,
+    "checker_tests": 43,
+    "installer_tests": 3,
+    "reported_test_seconds": 0.641,
+    "result": "OK",
+    "log": "evals/unittest.log"
+  },
+  "repository_validator": {
+    "command": "python3 tools/validate_repo.py",
+    "exit_code": 0,
+    "stdout": "Package structure, linked references, 32-source coverage, and 18 recorded cases per condition: OK\nThis checks structure and coverage; it does not establish writing quality or semantic fidelity.\n"
+  },
+  "skill_creator_validator": {
+    "tool": "skill-creator/scripts/quick_validate.py",
+    "arguments": [
+      "skills/clearweave"
+    ],
+    "provided_by": "Build environment; not vendored in this repository",
+    "exit_code": 0,
+    "stdout": "Skill is valid!\n"
+  },
+  "independent_review": {
+    "initial": "docs/checker-review.md",
+    "final": "docs/checker-review-final.md"
+  },
+  "ci": {
+    "workflow": ".github/workflows/validate.yml",
+    "python_versions": [
+      "3.10",
+      "3.13"
+    ],
+    "status_source": "GitHub Actions run history for the release commit; local records do not assert an unobserved CI result."
+  }
+}

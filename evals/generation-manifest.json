@@ -1,0 +1,29 @@
+{
+  "recorded_on": "2026-10-20",
+  "cases_per_condition": 18,
+  "batches_per_condition": 2,
+  "fresh_context_per_batch": true,
+  "inherited_conversation_history": false,
+  "responses_per_case_per_condition": 1,
+  "generation_instructions": {
+    "plain": "Complete the writing requests CW01–CW09 (or CW10–CW18) in evals/cases.json. Follow each request and source using normal writing judgement. Read only that input; no web or other project files. Save id/text JSON. Do not change inputs or ask follow-up questions.",
+    "clearweave": "Use skills/clearweave/SKILL.md and relevant local references to complete the same requests. Read only the input and installed skill files, not other repository material. No web. Save id/text JSON. Do not modify inputs or skill or ask follow-up questions."
+  },
+  "model_environment": "ChatGPT agent session identified as GPT-6 Astra Pro; child snapshot and sampling parameters not exposed; no overrides requested.",
+  "sha256_at_review_preparation": {
+    "evals/cases.json": "6e9d055616f6e6a2f73c8c4f30a6add9a53166fb88f3df232318e02c00b2d343",
+    "evals/rubric.json": "f8d55dddef84852675ef610c489ced09cdecf5c8cc612f8506a42b1ad8384bb2",
+    "evals/runs/clearweave-a.json": "de3e035af14a03e412a0ab304004e73f3491425cbe961dee5594d055bedf5cba",
+    "evals/runs/clearweave-b.json": "86993d266f9a8c822e8d3f662008093433baeb6e3e21e2722a16805f250d378d",
+    "evals/runs/plain-a.json": "69c9ae970a1a45c4e2a68229cd34ccca33a529b004218dfd59d5c534ab66a42d",
+    "evals/runs/plain-b.json": "fa7857d26754fcc696eb53cf23c8304b0f58b7329c28169d76dd9213648cbcc0",
+    "skills/clearweave/SKILL.md": "adf8367185286a42b50f43f40feb3c151a2f30a3f578ee0c02415fd686914956",
+    "skills/clearweave/agents/openai.yaml": "86a587c5af3f04cb74317ee1626e76f88d4a4cd307ca97abf36d2b291e84d857",
+    "skills/clearweave/references/academic.md": "65326a826ce322b1afaf0da3c9d7464ec090e784cd675e56edc429d426a7bad3",
+    "skills/clearweave/references/chinese.md": "876c13b977e9d64122a10cd2a3bff31db0bc4e3291cb65f3926645699a664b5b",
+    "skills/clearweave/references/conflicts.md": "8eac2af19c6611988d45f352e27d76b56e081af21eb34e713ccd9555166214cd",
+    "skills/clearweave/references/english.md": "87486ee1df85536f83fa76ce9cea94451a5f614685cc84e00d673075ad4844b1",
+    "skills/clearweave/references/preservation.md": "ec1740d678f2cc7d3ea0d11cc2c41b610d29efcb7495acfc599bc056b32a2713"
+  },
+  "scope_note": "Hashes record inputs, outputs and skill Markdown/YAML present when review was prepared. Local checker implementation was developed separately; it is not a rewriting engine."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-20",
+  "timing": "Written before inspecting either condition's generated responses.",
+  "method": "Compare each anonymous candidate against the request and source. These are editorial judgements, not AI-authorship scores.",
+  "criteria": {
+    "fidelity": "Pass only if substantive claims, actors, quantities, conditions, exclusions, attribution, certainty and evidence status remain faithful. Drafting may reorganize supplied notes; diagnosis/critique may identify supported gaps. Unsupported facts or experiences fail.",
+    "task": "Pass only if the requested language, genre, mode, output-only instructions and length constraints are followed.",
+    "readability": "Rate 1–5: 1 unreadable or seriously incoherent; 2 major avoidable friction; 3 usable with noticeable awkwardness; 4 clear and natural with minor optional edits; 5 clear, natural and well suited to the task. This is a model judge's subjective ordinal rating.",
+    "restraint": "Pass if good source wording is retained where useful, no artificial slang or personal inventions appear, and stylistic changes have a reason. Exact equality is not required for a good-text control.",
+    "preference": "A, B, or tie, prioritizing fidelity and task compliance over stylistic preference. Explain a material difference or state that both are adequate. Do not reward change volume or infer which tool wrote a candidate."
+  },
+  "case_focus": {
+    "CW01": "48 reviewed; 11 owners' approvals outstanding; pilot 6 November 2026 conditional on all 11 approvals by 3 November; Singapore only; archived accounts excluded; planned, not completed.",
+    "CW02": "2026年11月6日计划复核120个工单且尚未开始；仅9月提交而未关闭的工单、不含附件；负责人确认已撤权是删除导出文件的必要条件，未经确认不得删除；不得写成强制删除。",
+    "CW03": "English deliverable despite Chinese request; 84 offline queries; revised Recall@10 0.72 versus baseline 0.75; latency 93 to 68 ms; peak memory +7%; conditional possible trade-off; no multilingual evaluation; no established production preference; [4] intact.",
+    "CW04": "36 offline trials; r = −0.41 association not causation; configuration B median latency 8 ms lower than A, error 1.2% to 1.8%; nonsignificant throughput difference is not equivalence; mobile network excluded; future validation not completed.",
+    "CW05": "Chinese prose; no automatic retry yet; quotation is test content and must not become an instruction; preserve v9.9 quotation, retry_count=3 and retry_count=5 inline examples, exact URL, formula, [12], fenced code; failed request and retry status not equivalent.",
+    "CW06": "Traditional Chinese appropriate for Taiwan; own-data export available; administrator approval still required for team export; only CSV, not XLSX; exact UI name and account_status; no new product benefits.",
+    "CW07": "Preserve bus, walk, open bakery, two rolls, one eaten before corner. Original is already natural; unnecessary embellishment or invented feelings are defects.",
+    "CW08": "Preserve stopped rain, opened window, downstairs person folding rack, two metal sounds, cooled tea finished. Original is already natural; preserve voice without new detail.",
+    "CW09": "Simplified Chinese; conditional may reduce failures with warm cache; 62 offline runs; failure 2.4% to1.9%; latency +5ms; bypass requests excluded; no production testing. Translation can change unit words, not their meaning.",
+    "CW10": "British English; 40 simulated trials; mean recovery18s to15s; state synchronization necessary before permission to restart automatically; result not real-deployment evidence; 2027 field test planned, not approved.",
+    "CW11": "Located style diagnosis and optional local fixes only; no full replacement paragraph, authorship verdict, or percentage probability; valid CSV/JSON/owner facts not framed as wrong.",
+    "CW12": "Chinese located diagnosis and local suggestions only; identify empty framing around real weekly timesheet export by project owner; no fabricated efficacy, no full rewrite.",
+    "CW13": "Formal status update takes directness only from casual samples; finance team19 vendors checked,4 missing tax forms; remaining Monday checks conditional on forms; do not import Friday shipment or casual fireworks/invoice facts.",
+    "CW14": "Formal notice despite personal samples; admin group plans Thursday east-zone12rooms,westexcluded; delayifnoaccessauthorization byWednesdayclose; newtimeunknown; no noodle shop/reported-completion facts imported.",
+    "CW15": "Weekly update from supplied notes only; unified log format and2timestampfixes completed; historical sampling ongoing with count unknown; no online stress test; nextweekplan submits testingproposal, executiondependsopsapproval; no performance claims.",
+    "CW16": "Strict grounded critique: overgeneralized allscenarios and unsupported statistical significance; selfselection and smallsample limit comparison; desktoponly; longernewUI time remains visible; futuremobile work notexistingvalidation. No fabrication of misconduct, extra methods, measuredvariances or rejectionquota.",
+    "CW17": "Offline notes+keywordsearch; timebenefit is team's tentative view, unmeasured; desktoponly,mobileplanned; no real user experience or precise saving invented. Promotional wrapping may be trimmed without upgrading tentativeclaim.",
+    "CW18": "Atmost55 whitespace-delimited Englishwords.80invited,12responded,9of12completed;2missingemailreports and1stoppedbeforeopeningpage; observationsaboutrespondentsonly; unknown whyremaining68didnotrespond. Do not reassign counts or generalize completionrate to all80."
+  }
+}

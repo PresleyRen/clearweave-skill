@@ -1,0 +1,34 @@
+[
+  {
+    "id": "CW19",
+    "fidelity_pass": true,
+    "task_pass": true,
+    "readability": 5,
+    "issues": [],
+    "explanation": "The revision removes a generic promotional opening while preserving every substantive product detail, including the settings-page location, available JSON export, unavailable planned CSV export, and required administrator approval. The Traditional Chinese is natural and appropriate for Taiwan, and the response contains only the requested body text."
+  },
+  {
+    "id": "CW20",
+    "fidelity_pass": true,
+    "task_pass": true,
+    "readability": 5,
+    "issues": [],
+    "explanation": "Leaving this already clear, natural personal note unchanged is appropriate because polishing was requested only if necessary. The response preserves the writer's voice, preference for the manual check, reason concerning new staff, and qualification about speed, with no added commentary."
+  },
+  {
+    "id": "CW21",
+    "fidelity_pass": true,
+    "task_pass": true,
+    "readability": 5,
+    "issues": [],
+    "explanation": "The concise edits preserve the hoped-for May 2027 pilot, restriction to East China, budget approval condition, pending budget status, unsettled launch timing, and distinction from full deployment. The Simplified Chinese remains natural and formal, and the output contains only the requested body text."
+  },
+  {
+    "id": "CW22",
+    "fidelity_pass": true,
+    "task_pass": true,
+    "readability": 5,
+    "issues": [],
+    "explanation": "Removing the vague statement of intended user benefit gives the release note a direct opening while retaining all concrete release information. The revision accurately preserves JSON availability, CSV's planned but unavailable status, and the continuing approval requirement. The restrained English revision is clear and contains only the note."
+  }
+]

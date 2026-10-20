@@ -1,0 +1,18 @@
+[
+  {
+    "id": "CW19",
+    "text": "工作區擁有者現在可以在設定頁面匯出 JSON 格式的稽核紀錄。CSV 匯出仍在規劃中，目前尚未提供。團隊層級的匯出仍須經管理員核准。"
+  },
+  {
+    "id": "CW20",
+    "text": "I hope we keep the manual check. It gives new staff a chance to ask questions before they approve a refund. The automated check is faster, but that is not my only concern."
+  },
+  {
+    "id": "CW21",
+    "text": "我们希望在2027年5月启动仅覆盖华东区的试点，前提是预算获批。目前预算尚未获批，上线时间也未确定。试点启动不代表全面部署。"
+  },
+  {
+    "id": "CW22",
+    "text": "Workspace owners can now export audit logs as JSON. CSV export is planned but is not available yet. Team-wide exports still require an administrator's approval."
+  }
+]

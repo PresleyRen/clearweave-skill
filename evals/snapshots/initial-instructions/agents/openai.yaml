@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClearWeave"
+  short_description: "Natural English and Chinese, with meaning preserved"
+  default_prompt: "Use $clearweave to edit this text naturally while preserving its facts, intent, and voice."

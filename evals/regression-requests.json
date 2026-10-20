@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "id": "CW19",
+      "request": "請把這段產品說明寫得自然、直接，適合臺灣使用者，只回傳正文。",
+      "source": "我們希望透過本次更新，進一步改善使用體驗，為大家提供更多便利。工作區擁有者現在可以在設定頁面匯出 JSON 格式的稽核紀錄；CSV 匯出仍在規劃中，目前尚未提供。團隊層級的匯出仍須經管理員核准。"
+    },
+    {
+      "id": "CW20",
+      "request": "Polish this personal note if necessary. Keep my voice and return only the note.",
+      "source": "I hope we keep the manual check. It gives new staff a chance to ask questions before they approve a refund. The automated check is faster, but that is not my only concern."
+    },
+    {
+      "id": "CW21",
+      "request": "把这段内部计划说明写得自然、正式，保留原意，只给正文。",
+      "source": "我们希望在2027年5月启动一个仅覆盖华东区的试点，但前提是预算获得批准。目前预算尚未获批，也没有确定上线时间。需要特别说明的是，试点启动不代表全面部署。"
+    },
+    {
+      "id": "CW22",
+      "request": "Make this release note clear and natural. Keep the information and return only the note.",
+      "source": "With this update, we aim to make your day smoother and provide a better experience. Workspace owners can now export audit logs as JSON. CSV export is planned but is not available yet. Team-wide exports still require an administrator's approval."
+    }
+  ]
+}
