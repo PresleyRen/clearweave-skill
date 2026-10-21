@@ -1,0 +1,95 @@
+name: Assemble tested ClearWeave Lieflat v0.4.0
+
+on:
+  push:
+    branches: [stage/clearweave-v0.4.0]
+
+permissions:
+  contents: read
+
+jobs:
+  assemble:
+    if: github.repository == 'PresleyRen/clearweave-skill' && github.ref == 'refs/heads/stage/clearweave-v0.4.0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Read isolated transport
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify the tested patch
+        run: |
+          python3 - <<'PY'
+          import hashlib, lzma, os, pathlib
+          data = b''.join((pathlib.Path('.lieflat-transport') / f'part{i:02}').read_bytes() for i in range(6))
+          assert len(data) == 41512
+          assert hashlib.sha256(data).hexdigest() == 'e4b7bd11e0ca8d9578d19ff0bc4d0b3f8c7b1e41ed9cd307187cdaab67ab405e'
+          raw = lzma.decompress(data, memlimit=256*1024*1024)
+          assert len(raw) == 172735
+          (pathlib.Path(os.environ['RUNNER_TEMP']) / 'lieflat-v040.patch').write_bytes(raw)
+          PY
+      - name: Restore the verified base
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 773c7d8a100c8cb02268db2f6b50142810032866
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.13'
+      - name: Preserve historical runtime and apply verified source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib, subprocess
+          assert subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip() == '773c7d8a100c8cb02268db2f6b50142810032866'
+          archive = pathlib.Path('evals/scholarly-2026-10-20/runtime-v0.3.0')
+          archive.mkdir(parents=True, exist_ok=False)
+          names = subprocess.check_output(['git','ls-files','-z','skills/clearweave'], text=True).split('\0')
+          for name in (x for x in names if x):
+              target = archive / name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(pathlib.Path(name).read_bytes())
+          (archive / 'README.md').write_text('Historical ClearWeave 0.3.0 runtime, archived byte-for-byte before the 0.4.0 extension. The original protocol and writing outputs remain unchanged.\n', encoding='utf-8')
+          PY
+          git apply --check "$RUNNER_TEMP/lieflat-v040.patch"
+          git apply "$RUNNER_TEMP/lieflat-v040.patch"
+          git add .
+          test "$(git write-tree)" = '3b6334baa1b2b63ba7de88519e359b2c83f8bc75'
+          git diff --cached --check
+      - name: Verify code, integration, and pinned public data
+        env:
+          OPENBLAS_NUM_THREADS: '1'
+          OMP_NUM_THREADS: '1'
+        run: python3 tools/preflight.py --download
+      - name: Publish a clean tested candidate branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add .
+          test "$(git write-tree)" = '3b6334baa1b2b63ba7de88519e359b2c83f8bc75'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'feat: integrate Lieflat precision Chinese cleanup with bilingual coverage and 383 regressions'
+          gh auth setup-git
+          branch="build/clearweave-v0.4.0-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git push origin "HEAD:refs/heads/$branch"
+          git archive --format=zip --output="$RUNNER_TEMP/clearweave-v0.4.0.zip" HEAD
+          printf 'Candidate branch: %s\nCandidate commit: %s\n' "$branch" "$(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Retain source and verification
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: clearweave-lieflat-verified
+          path: |
+            .preflight/
+            ${{ runner.temp }}/clearweave-v0.4.0.zip
+          include-hidden-files: true
+          retention-days: 14
+          if-no-files-found: error
