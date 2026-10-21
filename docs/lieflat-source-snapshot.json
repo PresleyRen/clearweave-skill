@@ -1,0 +1,17 @@
+{
+  "source": "S46",
+  "repository": "larashero3-dotcom/lieflat-less-ai-tone",
+  "revision": "27d29232f10124db904ca9c0536d0b67cb3b2833",
+  "inspected_on": "2026-10-21",
+  "method": "GitHub connector, source text inspected without executing upstream scripts",
+  "files": {
+    "SKILL.md": "6d07d49649c676619f8ca53f09014665109f51ba",
+    "RESEARCH.md": "767ffe6686ec9c03b53c8256cc7eb57b32a368c6",
+    "LICENSE": "8e2cd658cf9c54fa58bec4e4cf0b3a8d11e70666",
+    "scripts/check-structure.py": "35132c32d9c6b096cfe286e6a5714225748b568c",
+    "scripts/check-translationese.py": "a7ba68ef2ec29145e00b46aae4da83c70ea97090",
+    "scripts/compare-human-ai.py": "645607ba88617fe300bb3be7e01f73fd332aef13"
+  },
+  "hash_kind": "git_blob_sha1",
+  "upstream_corpus_available": false
+}

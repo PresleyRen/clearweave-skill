@@ -1,6 +1,6 @@
 # ClearWeave · Scholarly
 
-**English–Chinese editing for natural prose, direct academic writing, precise grammar and sample-grounded author voice.**
+**English–Chinese natural prose, direct research writing, academic voice and precise finished-draft cleanup.**
 
 [简体中文](README.zh-CN.md) · [Skill](skills/clearweave/SKILL.md) · [Capability index](docs/capabilities.md) · [Published-paper examples](docs/scholarly-examples.md)
 
@@ -10,6 +10,8 @@ ClearWeave edits papers, technical documents, READMEs, work emails and everyday 
 
 | Module | What it does | Typical output |
 | --- | --- | --- |
+| **Lieflat precision cleanup** | Eleven Chinese pattern families, minimal rule-linked edits and fixed document structure. | Finished draft with unmatched text preserved |
+| **Corpus and edit-ledger checks** | Candidate locations, comparable denominators, corpus comparisons and exact edit reconstruction. | Measurements and edit verification |
 | **Natural bilingual prose** | Revises empty openings, mechanical paragraphs, repeated conclusions, over-explanation, translation-shaped Chinese and nominalized English. | Clear revised prose |
 | **Anti-defensive editing** | Separates empty apologies and pre-emptive defenses from meaningful qualifications; states claims, evidence and comparison conditions directly. | Focused abstracts, introductions and conclusions |
 | **Academic grammar** | Selects tense by sentence function; checks agreement, articles, number, pronouns, modifiers, parallelism and information flow. | Grammar edits with reasons |
@@ -21,41 +23,45 @@ ClearWeave edits papers, technical documents, READMEs, work emails and everyday 
 | **Translation, drafting and shortening** | Writes from supplied material, adapts language and locale, and consolidates repetition. | Target-language prose |
 | **Long documents and maintenance** | Maintains terminology and claim ledgers, handles selected files and locates rules, sources, conflicts and tests. | Per-file results and extension routes |
 
+**New in 0.4.0:** LF01–LF11 Chinese precision cleanup, fixed-structure edit ledgers, element-normalized corpus measurement and style-specific exceptions (CW49–CW54).
+
 ## Function map
 
 ```text
-Draft / paper / notes / selected samples + current request
+Draft / paper / notes / designated samples + current request
                            |
-                           v
-Task: edit / diagnose / restructure / translate / draft / match voice / critique
-  Language, genre, section, intervention strength, deliverable
+                 Language / genre / section / scope / style guide
                            |
-                           v
-Meaning and terminology ledger: facts, quantities, conditions, citations, status
+                 Facts / quantities / conditions / citations / terms
                            |
-      +--------------------+-------------------+--------------------+
-      v                    v                   v                    v
-Natural EN/ZH       Direct contribution   Academic grammar    Sample-based voice
-english.md          anti-defensive.md    academic-grammar.md author-voice.md
-chinese.md          academic.md          tense / agreement   samples -> profile
-structure / syntax  claim -> evidence    modifiers / flow    draft -> preferences
-      +--------------------+-------------------+--------------------+
+              +------------+-----------------------+
+              |                                    |
+       Full editing path                   Lieflat precision cleanup
+       Polish / rewrite / translate        Lock structure and unmatched text
+       Natural EN + ZH prose                        |
+       Direct research writing             LF01–LF11 Chinese patterns
+       Academic grammar                    Contrast / enumeration / sentence shape
+       Argument / sampled author voice     Punctuation / heading ordinals
+       Approved-revision preferences       Analogy / existing detail / openers
+              |                            Five translation structures / reference
+              |                                    |
+              |                            Genre + author-style review
+              |                            Rule → original span → minimal edit
+              +------------+-----------------------+
                            |
-                           v
-Review: lint / literal comparison / risk cues / scholarly scan
-        profile measurements / editor's semantic review
+       Literal differences / risk cues / semantic review
+       Scholar: academic style; tone: candidates, corpus counts, edit ledger
                            |
-                           v
-Clean prose / diagnosis / edit notes / response letter / voice profile
+              Revised text / diagnosis / response / style profile
+Diagnosis-only requests leave the draft unchanged on either path.
 
-Extend: symptom -> CW capability -> CF conflict -> rule module
-       -> positive and counterexample tests -> public-text replay -> updated index
+Extend: issue → CW capability → LF rule / CF conflict → file → counterexamples → real-text test
 ```
 
 ## Install and use
 
 ```bash
-git clone --branch v0.3.0 https://github.com/PresleyRen/clearweave-skill.git
+git clone --branch v0.4.0 https://github.com/PresleyRen/clearweave-skill.git
 cd clearweave-skill
 python3 tools/install_skill.py --project /absolute/path/to/your-project
 ```
@@ -84,11 +90,41 @@ $clearweave
 [原文]
 ```
 
-See [copy-ready scholarly prompts](skills/clearweave/prompts/scholarly.md).
+See [scholarly prompts](skills/clearweave/prompts/scholarly.md) and [precision prompts](skills/clearweave/prompts/precision.md).
+
+## Lieflat finished-draft cleanup
+
+Use this mode for **Chinese prose that should keep its structure and wording except for specific style issues**. The editor reads designated style evidence, locates a rule, reviews its function and changes only the relevant span.
+
+| Rules | Capabilities |
+| --- | --- |
+| LF01–LF03 | Unnecessary antithesis, dense enumeration and adjacent sentence patterns, with real distinctions and list membership preserved. |
+| LF04–LF06 | Functional review of dashes, prompt colons and decorative heading ordinals, calibrated to author habits and references. |
+| LF07–LF09 | Idealized occupational analogies, summaries grounded in existing detail and empty opening cues. |
+| LF10 | Long premodifiers, when-clauses, topic shells, initial connectors and restatement cues in Chinese. |
+| LF11 | Clear antecedents for paragraph-opening commentary. |
+
+```text
+$clearweave
+Use lieflat whitelist mode on this Chinese draft. Preserve headings, paragraphs,
+lists, tables, facts and all unmatched text. Follow the supplied style guide.
+Return the revised text only.
+[Draft and style reference]
+```
+
+The full editor remains available for English, academic grammar, drafting and restructuring. See the [integration map](docs/lieflat-integration.md), [rule reference](skills/clearweave/references/lieflat.md) and [real-text records](docs/evaluation-lieflat.md).
+
+```bash
+python3 skills/clearweave/scripts/clearweave_tone.py scan draft.md --genre academic
+python3 skills/clearweave/scripts/clearweave_tone.py scan draft.md --keep-rule LF04
+python3 skills/clearweave/scripts/clearweave_tone.py measure corpus/
+python3 skills/clearweave/scripts/clearweave_tone.py compare-corpora --a reference/ --b drafts/
+python3 skills/clearweave/scripts/clearweave_tone.py verify-edits original.md revised.md edits.json
+```
 
 ## Real-text examples
 
-The new application set uses published abstracts for grammar, anti-defensive editing and terminology checks; three separate NLP abstracts form a field-style profile. It also includes two historical Chinese HC3 answers.
+The scholarly application set uses published abstracts for grammar, anti-defensive editing and terminology checks; three separate NLP abstracts form a field-style profile. It also includes two historical Chinese HC3 answers.
 
 | Source | Editing result |
 | --- | --- |
@@ -120,6 +156,8 @@ python3 skills/clearweave/scripts/clearweave_scholar.py learn original.md final.
 
 | Concern | Entry point | Capability |
 | --- | --- | --- |
+| LF-only cleanup, Chinese pattern families and semantic exceptions | `lieflat.md`, `lieflat-rules.json` | CW49–51 |
+| Corpus measurement, minimal edits and candidate review | `clearweave_tone.py` | CW52–54 |
 | Stock phrasing, translation syntax, flow | `english.md`, `chinese.md` | CW10–14 |
 | Defensive framing, contribution, editorial lanes | `anti-defensive.md` | CW37–38, CW46 |
 | Tense, agreement, modifiers, semantic scope | `academic-grammar.md` | CW39–42 |
@@ -194,15 +232,21 @@ Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the
 | **CW46** Manuscript and editorial lanes | `host` | [references/anti-defensive.md](skills/clearweave/references/anti-defensive.md#cw46) |
 | **CW47** Located scholarly candidates | `script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw47) |
 | **CW48** Provenance-separated scholarly evaluation | `workflow+script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw48) |
+| **CW49** Whitelist finished-draft mode | `host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw49) |
+| **CW50** Eleven localized Chinese patterns | `host+candidate` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw50) |
+| **CW51** Five scoped translationese patterns | `host+candidate` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw51) |
+| **CW52** Element-normalized corpus measurement | `script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw52) |
+| **CW53** Rule-linked minimal-edit ledger | `script+host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw53) |
+| **CW54** Candidate review and style exceptions | `host+script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw54) |
 <!-- capabilities:end -->
 
 </details>
 
 ## Sources and tests
 
-The integration registry covers **45 sources, 246 adoption/adaptation decisions, 48 capabilities, 34 conflict families and 68 bilingual conflict fixtures**. This release adds 13 scholarly/style references and revisits the existing anti-defensive modules.
+The integration registry covers **46 sources, 262 adoption/adaptation decisions, 54 capabilities, 42 conflict families and 84 bilingual conflict fixtures**. This release adds lieflat precision cleanup, corpus measurement and edit-ledger verification.
 
-[Source decisions](docs/sources.md) · [Capability atlas](docs/capabilities.md) · [Integration guide](docs/scholarly-integration.md) · [Public-paper evaluation](docs/evaluation-scholarly.md) · [Raw records](evals/scholarly-2026-10-20/)
+[Lieflat integration](docs/lieflat-integration.md) · [Precision tests](docs/evaluation-lieflat.md) · [Source decisions](docs/sources.md) · [Capability atlas](docs/capabilities.md) · [Integration guide](docs/scholarly-integration.md) · [Public-paper evaluation](docs/evaluation-scholarly.md) · [Raw records](evals/scholarly-2026-10-20/)
 
 ## License
 

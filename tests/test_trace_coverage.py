@@ -41,7 +41,7 @@ class TraceTests(unittest.TestCase):
 class CoverageTests(unittest.TestCase):
     def test_complete_current_inventory(self):
         report=coverage.validate();self.assertEqual(report['structural_errors'],[])
-        self.assertEqual((report['sources'],report['audited_statements'],report['capabilities'],report['conflicts'],report['authored_cases']),(45,246,48,34,68))
+        self.assertEqual((report['sources'],report['audited_statements'],report['capabilities'],report['conflicts'],report['authored_cases']),(46,262,54,42,84))
     def mutate(self,path,change):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d)/'repo'

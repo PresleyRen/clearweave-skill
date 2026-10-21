@@ -26,3 +26,7 @@ Apply the current user's requested scope and output first. Within that scope, pr
 If the user requests a hard surface constraint that conflicts with exact quotation or another protected span, retain the protected span and briefly identify the conflict outside the text. Do not silently change source evidence to satisfy a cosmetic rule.
 
 The project-level provenance matrix in `docs/source-audit.json` records the 45 inventoried implementations. It is audit documentation, not a runtime dependency, and the installed skill does not need those repositories or services.
+
+## Lieflat precision mode (CF35–CF42)
+
+Mode exclusivity, substantive contrast, complete inventories, author preference scope, logical relations, corpus denominators, paragraph parsing and heading references are governed by [lieflat.md](lieflat.md). Apply this mode only when selected; do not mix broad polishing into an LF-only revision.

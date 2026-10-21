@@ -3431,6 +3431,222 @@
       ],
       "mapping_basis": "explicit scholarly-extension design decision",
       "evidence_scope": "Rule mapping; evaluation is recorded separately."
+    },
+    {
+      "id": "S46-A01",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "eb29f83207bf3b5049fbce5324cf72eb36e964801a116485f7767743941d9b46",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW49",
+        "CW53"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A02",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "a9b1c98655a4a2848cb342475158fe6ac08dbb7dbd2fca186ab97fe2c6be838d",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW50"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A03",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "4461f2b1aa9951a278ff794bab18b2492119951d603da14623f076ada5b045ad",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW51"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A04",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 3,
+      "statement_sha256": "6af9147465fdd59af50d4938eab1e76be5a76d8ea7196dcc835438e405f854a7",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW49",
+        "CW54"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A05",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 4,
+      "statement_sha256": "3c225b9210dc5c27549d8e0e9236994d71d1b23eaef6baf9249053f43b6b75ec",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW50",
+        "CW54"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A06",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 5,
+      "statement_sha256": "7d0114dd917310e00991ab52039fbf595b36997d4e7394096373d85c7de50178",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW52"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A07",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 6,
+      "statement_sha256": "9efda536551d2ba4e3f3e8a0fae170103e091400865ae62c54892d2412192193",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW53"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-A08",
+      "source": "S46",
+      "audit_field": "adopted",
+      "audit_index": 7,
+      "statement_sha256": "1bf1b4138e5603a1e4dcd4df07bbb5e4830470c216d678a1de9e2053603cb3fc",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW52",
+        "CW54"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D01",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "437b4baa45c4e9319a12f29b068a47550fe2dd572089a653d72b556587e58d99",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW49"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D02",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "a32a063b4348265a5e07f504324a46e397a320ec42d6c97ef225da63a661db1a",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW50",
+        "CW53"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D03",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "4241cfc589a09c0a568035999725af2e57088612dbc4ef3ebe57d7db3a2b250e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW49",
+        "CW54"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D04",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "7971d3af883b8d6bd8275e5003cabd5b2d70acadf2af4bcfb5953185c2f4c0c6",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW50"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D05",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 4,
+      "statement_sha256": "ad3cee5dcbcb5abeda0ef0185f0805c1a4422afd335c9ec1722cdeff59b48063",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW51"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D06",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 5,
+      "statement_sha256": "c46a064d00bab776da775b8505c3fa2ec0abe9e90efad200428482665df0d4e9",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW52"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D07",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 6,
+      "statement_sha256": "7723e12eab83ffdb59ffd062e69ccbdce7356a9f4689cc42920d3ff78263447d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW52",
+        "CW54"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S46-D08",
+      "source": "S46",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 7,
+      "statement_sha256": "57f8bc837209a53d2f140b7d019944060f6d7945b56e270209134650e2304618",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW50",
+        "CW51"
+      ],
+      "mapping_basis": "explicit Lieflat integration decision",
+      "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-20",
+  "reviewed_on": "2026-10-21",
   "scope": "Original 32-source inventory plus 13 scholarly/style references (S33–S45).",
   "implementation": "Original instructions, examples, and Python code. Upstream files are not vendored or runtime dependencies.",
   "sources": [
@@ -1298,6 +1298,43 @@
       ],
       "target_modules": [
         "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S46",
+      "repo": "larashero3-dotcom/lieflat-less-ai-tone",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/larashero3-dotcom/lieflat-less-ai-tone/blob/main/SKILL.md",
+      "inspected_on": "2026-10-21",
+      "revision": "27d29232f10124db904ca9c0536d0b67cb3b2833",
+      "pinned_url": "https://github.com/larashero3-dotcom/lieflat-less-ai-tone/blob/27d29232f10124db904ca9c0536d0b67cb3b2833/SKILL.md",
+      "evidence_basis": "Full SKILL.md, RESEARCH.md, LICENSE and all three Python scripts inspected via the GitHub connector at the pinned revision. Research prose and executable operators were compared. No upstream corpus was available.",
+      "license_observed": "MIT; Copyright (c) 2026 shiujan; full license inspected and included.",
+      "relationship": "New explicit Chinese finished-draft mode and independently implemented local tools; existing bilingual editor retained.",
+      "adopted": [
+        "Whitelist-only finished-draft cleanup: every edit names a rule, unselected text stays exact, and structure is locked.",
+        "Eleven traceable Chinese pattern families, including contrast framing, enumeration, adjacent sentence patterns, punctuation, numbered headings, idealized analogy, existing details, openers and paragraph reference.",
+        "The five LF10 translation-shaped structures and their genre, temporal, scope and inference exceptions.",
+        "Read the authorized relevant style guide before editing and use real author preferences to calibrate stylistic suggestions.",
+        "Preserve questions, ordinary metaphors, passives, repeated terms, in-sentence parallelism and legitimate regular sentence lengths.",
+        "Use raw counts, coverage, element-matched denominators and corpus comparisons rather than ungrounded style scores.",
+        "Perform minimal-span edits with a rule ledger, unchanged-region reconstruction and structure checks.",
+        "Inspect located examples before interpreting frequency; retain source version, operators, test inputs and negative controls."
+      ],
+      "rejected_or_modified": [
+        "Limit the strict whitelist to its selected mode; do not disable existing English, academic grammar, drafting or structural-editing tasks.",
+        "Retain substantive negation and every enumerated item; reject upstream example transformations that discard exclusions or storage from an inventory.",
+        "Author style overrides only stylistic defaults, not current instructions, facts, attribution or necessary scientific uncertainty.",
+        "Do not treat any metaphor as evidence of an actual unlimited capability, or invent data when replacing an abstract summary.",
+        "Keep necessary temporal conditions, causality, contrast and new inferences; do not swap formal connectors for colloquial ones mechanically.",
+        "Use blank-line-aware paragraphs, whole supported protected blocks, actual headings, and first-sentence reference checks instead of the scripts' inconsistent line-based proxies.",
+        "Standardize ratios as B/A with explicit denominators and null at zero; do not transfer the unshared corpus counts as ClearWeave validation or universal thresholds.",
+        "Do not use generic nominalization or exactly three examples as a cleanup trigger; resolve contradictions with the research exclusions and preservation requirements."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/lieflat.md",
+        "skills/clearweave/scripts/clearweave_tone.py",
+        "skills/clearweave/assets/lieflat-rules.json"
       ]
     }
   ]

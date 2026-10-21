@@ -1,6 +1,6 @@
 ---
 name: clearweave
-description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style writing while preserving meaning, evidence, and the author's voice. Use for 去AI味、去机器味、润色、自然化、改掉翻译腔, humanizing, de-slopping, style diagnosis, anti-defensive writing, academic grammar, author-voice profiles, or plain-language editing of academic, technical, business, news, and personal writing. Also supports explicitly requested translation, drafting from supplied notes, and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
+description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style writing while preserving meaning, evidence, and the author's voice. Use for 去AI味、去机器味、润色、自然化、改掉翻译腔, humanizing, de-slopping, style diagnosis, lieflat precision cleanup, 只去味不润色, anti-defensive writing, academic grammar, author-voice profiles, or plain-language editing of academic, technical, business, news, and personal writing. Also supports explicitly requested translation, drafting from supplied notes, and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
 ---
 
 # ClearWeave
@@ -27,7 +27,7 @@ Infer the following from the request and text. Do not make a routine edit wait f
 
 The language of the request is not automatically the language of the deliverable. A Chinese request to polish an English abstract normally requires an English abstract. Preserve Simplified/Traditional Chinese and US/UK spelling unless a change is requested.
 
-Read [preservation.md](references/preservation.md) before an edit or translation. Then load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
+Read [preservation.md](references/preservation.md) before an edit or translation. For selected lieflat precision cleanup, follow [lieflat.md](references/lieflat.md) instead of the broad language-editing rules. For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
 
 ## Scholarly extension routing
 
@@ -36,6 +36,10 @@ For academic grammar, tense, agreement, modifiers, and section-function choices,
 For 真人论文风格、作者文风、样稿模仿 or learning approved revision preferences, read [author-voice.md](references/author-voice.md).
 For academic scanning and profile commands, read [scholarly-tools.md](references/scholarly-tools.md).
 Use only relevant modules. Keep review notes outside the finished text. Preserve the core rules when applying a style profile.
+
+## Finished-draft precision routing
+
+For `lieflat`, `白名单清理`, `只去味不润色`, or `成稿精准清理`, load [lieflat.md](references/lieflat.md). Use its LF01–LF11 catalog instead of the broad style-editing passes below. Lock paragraph/heading/list/table structure and retain unmatched text exactly. Diagnose-only requests still return findings without rewriting. Read an authorized project style guide before applying punctuation/style candidates; preserve all factual conditions. For mixed Chinese/English drafts, this mode edits only eligible Chinese prose. Broader grammar, translation or restructuring is a separate explicit task, not an automatic second pass.
 
 ## 2. Protect meaning before changing style
 
@@ -91,6 +95,7 @@ Do not target sentence-length distributions, synonym diversity, a count of rheto
 | Mode | Deliverable and boundary |
 | --- | --- |
 | Edit / 去AI味 / 润色 | Revised text in its original language and genre. Preserve meaning; no compulsory rewrite of already-good prose. |
+| Precision cleanup / lieflat / 白名单清理 | LF01–LF11 Chinese finished-draft cleanup, fixed structure, rule-linked minimal edits; leave unmatched and foreign-language text intact. |
 | Diagnose / 检查 | Location, quoted short span, the actual readability problem, and an optional fix. Do not rewrite the full passage unless requested. Findings are not evidence of authorship. |
 | Translate / 翻译 | Natural target-language prose carrying the same claims, uncertainty, attribution, and register. Keep code, citation keys, and names unless a valid requested convention changes them. |
 | Draft from notes / 按材料起草 | Compose only from supplied material. Use explicit assumptions only when authorized; identify missing information separately. An invented scene is allowed only when clearly requested as fiction or illustration. |
@@ -117,6 +122,6 @@ Never claim that wording proves whether AI wrote a passage, that a detector will
 
 ## 7. Traceability and extension
 
-Use stable capability IDs `CW01`–`CW36` and conflict IDs `CF01`–`CF26` from `assets/capabilities.json` when the user asks about coverage or a failure. `scripts/clearweave_trace.py --query "否定"` locates related modules and regression case IDs; it is an index, not a semantic diagnosis. Do not load the full audit for an ordinary edit.
+Use stable capability IDs `CW01`–`CW54` and conflict IDs `CF01`–`CF42` from `assets/capabilities.json` when the user asks about coverage or a failure. `scripts/clearweave_trace.py --query "否定"` locates related modules and regression case IDs; it is an index, not a semantic diagnosis. Do not load the full audit for an ordinary edit.
 
 For maintenance, reproduce the failure, locate the smallest responsible rule, add a legitimate counterexample, and run the relevant tests. Do not turn one disliked phrase into a global blacklist. Keep source decisions classified as adopted or adapted/excluded; combining sources does not require retaining harmful or incompatible behavior. Report actual tests and untested behavior separately.

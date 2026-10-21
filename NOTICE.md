@@ -25,3 +25,8 @@ S33–S42 are credited in docs/source-audit.json and docs/scholarly-source-snaps
 Public ACL abstract samples carry their authors, source URLs, and CC BY 4.0 attribution in evals/scholarly-2026-10-20. Revisions are labeled ClearWeave applications, not changes made by the original authors. HC3 source records retain the earlier CC BY-SA 4.0 notices and provenance.
 
 Additional conceptual references: OvOYu/anti-defensive-writing and Worigin0314/academic-defensive-writing-auditor declare MIT in their inspected entries; Mseymur/HCI-Academic-Writing has a LICENSE file whose text was not inspected in this review. No upstream source text or code from these projects is reproduced in the runtime.
+
+Lieflat integration (S46, 2026-10-21): rule design adapted from
+larashero3-dotcom/lieflat-less-ai-tone, revision 27d29232f10124db904ca9c0536d0b67cb3b2833.
+Copyright (c) 2026 shiujan, MIT. The complete upstream notice is included at
+skills/clearweave/licenses/lieflat-MIT.txt. ClearWeave's Python candidate/ledger implementation is newly written.

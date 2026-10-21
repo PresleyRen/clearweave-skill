@@ -1,6 +1,6 @@
 # ClearWeave · 清织
 
-**中英文去 AI 味、反防御写作与学术文风编辑，一套流程完成表达、语法和原意核对。**
+**中英文去 AI 味、反防御写作、学术文风与成稿精准清理。**
 
 [English](README.md) · [Skill 入口](skills/clearweave/SKILL.md) · [功能与规则索引](docs/capabilities.md) · [真实论文示例](docs/scholarly-examples.md)
 
@@ -10,6 +10,8 @@ ClearWeave 用于英文论文、中文文章、技术文档、README 和工作�
 
 | 模块 | 具体功能 | 常见交付 |
 | --- | --- | --- |
+| **lieflat 精准清理** | 按十一类中文规则定位，只改命中片段；锁定段落、标题层级、列表和表格，保留其余原文。 | 规则对应的最小修改稿 |
+| **语料对比与改动验收** | 测量中文表达候选、段落与标题指标；比较两组语料，核对每处改动及未改区域。 | 位置报告、语料测量、改动清单核验 |
 | **双语去 AI 味** | 调整空泛开场、机械段落、反复总结、过度解释、中文翻译腔和英文名词化。 | 自然清楚的修订稿 |
 | **反防御写作** | 区分空道歉、预设辩解、重复保留词与必要条件；把贡献、证据和比较条件直接写清楚。 | 聚焦研究内容的摘要、引言与结论 |
 | **论文语法** | 按句子功能选择时态；检查主谓一致、冠词、单复数、指代、修饰关系、平行结构和信息顺序。 | 语法修订与逐项说明 |
@@ -27,35 +29,41 @@ ClearWeave 用于英文论文、中文文章、技术文档、README 和工作�
 原稿 / 论文 / 笔记 / 指定样稿 + 本次要求
                        │
                        ▼
-任务入口：润色 · 诊断 · 重写 · 翻译 · 起草 · 文风匹配 · 审稿
-                       │
-        语言 / 文体 / 章节 / 修改强度 / 输出形式
+任务与风格：语言 · 文体 · 章节 · 修改强度 · 项目风格指南
                        │
                        ▼
-信息与术语台账：事实 · 数值 · 条件 · 引用 · 研究状态
+信息台账：事实 · 数值 · 条件 · 引用 · 术语 · 研究状态
                        │
-        ┌──────────────┼──────────────┬────────────────┐
-        ▼              ▼              ▼                ▼
-双语自然表达      反防御与贡献      论文语法         样稿与作者文风
-english.md       anti-defensive    academic-grammar  author-voice
-chinese.md       academic.md       时态 / 一致性      样稿 → 画像
-结构 / 句式      主张 → 证据       修饰 / 指代        初稿 → 定稿偏好
-        └──────────────┴──────────────┴────────────────┘
+           ┌───────────┴───────────────────┐
+           ▼                               ▼
+完整编辑路径                         lieflat 成稿精准清理
+润色 / 重写 / 翻译 / 起草             锁定结构与未命中原文
+双语表达 · 反防御与贡献                    │
+论文语法 · 论证组织                        ▼
+真实样稿文风 · 定稿偏好              LF01–LF11 中文规则
+           │                       ├─ 翻案 / 列举 / 句间结构
+           │                       ├─ 破折号 / 冒号 / 标题编号
+           │                       ├─ 拟人 / 已有数据 / 空起手
+           │                       └─ 五类翻译句式 / 段首回指
+           │                               │
+           │                       体裁与作者习惯复核
+           │                       每处修改 → 规则 → 最小片段
+           └───────────┬───────────────────┘
+                       ▼
+复核：compare 字面差异 · risk 变化线索 · 编辑者语义核对
+      scholar 学术与文风 · tone 候选/分母/语料对比/改动清单
                        │
                        ▼
-复核：lint 表达定位 · compare 字面差异 · risk 变化线索
-      scholar 学术扫描与文风测量 · 编辑者语义核对
-                       │
-                       ▼
-交付：正文 / 修改说明 / 诊断 / 回复信 / 文风档案
+交付：正文 / 诊断 / 修改说明 / 回复信 / 文风档案
+只诊断请求在选定路径中返回定位与建议，原稿保持不变。
 
-扩展：问题 → CW 能力 → CF 冲突 → 规则文件 → 正反例测试 → 真实文本复测
+扩展：问题 → CW 能力 → LF 规则 / CF 冲突 → 文件 → 正反例 → 真实文本复测
 ```
 
 ## 安装与调用
 
 ```bash
-git clone --branch v0.3.0 https://github.com/PresleyRen/clearweave-skill.git
+git clone --branch v0.4.0 https://github.com/PresleyRen/clearweave-skill.git
 cd clearweave-skill
 python3 tools/install_skill.py --project /你的项目绝对路径
 ```
@@ -82,11 +90,33 @@ $clearweave
 [原文]
 ```
 
-更多可直接复制的用法见[学术提示词](skills/clearweave/prompts/scholarly.md)。
+更多用法见[学术提示词](skills/clearweave/prompts/scholarly.md)和[精准清理提示词](skills/clearweave/prompts/precision.md)。
+
+## lieflat 成稿精准清理
+
+适合“只去味，不顺便润色”的中文成稿。先读取指定文风资料，再定位规则、核对上下文，只改需要处理的片段。
+
+| 规则 | 能力 |
+| --- | --- |
+| LF01–LF03 | 检查虚设误解、密集列举和相邻句重复；保留真实对照、完整项目和叙事顺序。 |
+| LF04–LF06 | 按作用处理破折号、提示性冒号和装饰性标题编号；保留作者标点习惯与交叉引用。 |
+| LF07–LF09 | 把冗余职业拟人、泛化概括和空起手改为原文已支持的直接表达。 |
+| LF10 | 检查长定语、当…时、话题壳、句首连接词和复述提示语，保持时间、条件、转折与推断关系。 |
+| LF11 | 给对象明确的非首段评论补回指，帮助上下段衔接。 |
+
+```text
+$clearweave
+按 lieflat 白名单模式清理这份中文成稿。
+保留标题、段落、列表、表格、事实和未命中的原文。
+参考我提供的语言DNA.md，只输出修改后的正文。
+[原文与风格资料]
+```
+
+普通英文润色、论文语法和全文重写继续使用完整编辑路径。逐条规则、工具用法与对照示例见 [lieflat 整合说明](docs/lieflat-integration.md) 和 [本轮真实文本记录](docs/evaluation-lieflat.md)。
 
 ## 真实文本效果
 
-本轮使用已发表论文摘要检查语法、反防御编辑与术语保留，用另外三篇 NLP 摘要建立领域文风档案，并加入两条中文 HC3 历史回答。
+学术版测试使用已发表论文摘要检查语法、反防御编辑与术语保留，用另外三篇 NLP 摘要建立领域文风档案，并加入两条中文 HC3 历史回答。
 
 | 样本 | 处理效果 |
 | --- | --- |
@@ -117,12 +147,29 @@ python3 skills/clearweave/scripts/clearweave_scholar.py compare-profile profile.
 python3 skills/clearweave/scripts/clearweave_scholar.py learn original.md final.md --scope English-abstract
 ```
 
+中文精准清理工具：
+
+```bash
+# 定位十一类候选；按作者习惯保留破折号
+python3 skills/clearweave/scripts/clearweave_tone.py scan draft.md --genre academic
+python3 skills/clearweave/scripts/clearweave_tone.py scan draft.md --keep-rule LF04
+
+# 语料测量与对比；A、B 使用同一套分母
+python3 skills/clearweave/scripts/clearweave_tone.py measure corpus/
+python3 skills/clearweave/scripts/clearweave_tone.py compare-corpora --a reference/ --b drafts/
+
+# 检查规则编号、原文片段、结构与未列出的改动
+python3 skills/clearweave/scripts/clearweave_tone.py verify-edits original.md revised.md edits.json
+```
+
 样稿格式、输出字段和各工具用法见[学术工具说明](skills/clearweave/references/scholarly-tools.md)。
 
 ## 快速定位与扩展
 
 | 要改进的地方 | 入口 | 编号 |
 | --- | --- | --- |
+| 白名单模式、十一类中文规则、五类翻译句式 | `lieflat.md`、`lieflat-rules.json` | CW49–51 |
+| 中文测量、改动清单、候选复核 | `clearweave_tone.py` | CW52–54 |
 | 套话、翻译腔、句式 | `english.md`、`chinese.md` | CW10–14 |
 | 防御表达、贡献叙事、正文与意见分离 | `anti-defensive.md` | CW37–38、CW46 |
 | 时态、主谓一致、修饰与语义作用域 | `academic-grammar.md` | CW39–42 |
@@ -144,7 +191,7 @@ python3 tools/render_catalog.py --write
 新增规则时，保存一个问题样本和一个合理的相似表达，定位模块、补充测试，再更新能力索引。详见[整合与扩展说明](docs/scholarly-integration.md)。
 
 <details>
-<summary>展开全部 48 项能力及规则位置</summary>
+<summary>展开全部 54 项能力及规则位置</summary>
 
 <!-- capabilities:start -->
 | 能力编号与名称 | 执行方式 | 规则位置 |
@@ -197,15 +244,21 @@ python3 tools/render_catalog.py --write
 | **CW46** 正文与审稿意见分离 | `host` | [references/anti-defensive.md](skills/clearweave/references/anti-defensive.md#cw46) |
 | **CW47** 学术语法与反防御扫描 | `script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw47) |
 | **CW48** 真实论文分角色测试 | `workflow+script` | [references/scholarly-tools.md](skills/clearweave/references/scholarly-tools.md#cw48) |
+| **CW49** 白名单成稿精准清理 | `host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw49) |
+| **CW50** 十一类中文表达定位 | `host+candidate` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw50) |
+| **CW51** 五类翻译句式与语义关系 | `host+candidate` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw51) |
+| **CW52** 同类分母的语料对比测量 | `script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw52) |
+| **CW53** 规则映射与未改区域核对 | `script+host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw53) |
+| **CW54** 候选复核与作者风格例外 | `host+script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw54) |
 <!-- capabilities:end -->
 
 </details>
 
 ## 来源与测试
 
-整合记录覆盖 **45 个来源、246 条采用与调整决定、48 项能力、34 类冲突及 68 个中英文冲突场景**。本轮新增 13 个学术与文风来源，并复查原有反防御模块。
+整合记录覆盖 **46 个来源、262 条采用与调整决定、54 项能力、42 类冲突及 84 个中英文冲突场景**。本轮新增 lieflat 精准清理、语料测量和改动清单验收。
 
-[来源与取舍](docs/sources.md) · [完整能力索引](docs/capabilities.md) · [整合说明](docs/scholarly-integration.md) · [真实论文测试](docs/evaluation-scholarly.md) · [原始测试数据](evals/scholarly-2026-10-20/)
+[lieflat 整合](docs/lieflat-integration.md) · [精准清理测试](docs/evaluation-lieflat.md) · [来源与取舍](docs/sources.md) · [完整能力索引](docs/capabilities.md) · [整合说明](docs/scholarly-integration.md) · [真实论文测试](docs/evaluation-scholarly.md) · [原始测试数据](evals/scholarly-2026-10-20/)
 
 ## 许可
 

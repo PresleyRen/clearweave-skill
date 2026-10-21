@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "provenance": "Original synthetic examples authored in this session. These are regression fixtures, not independently generated model trials.",
   "cases": [
     {
@@ -1502,6 +1502,278 @@
         }
       ],
       "assessment": "Constructed regression oracle; separate from public-data host applications."
+    },
+    {
+      "id": "CF35-EN",
+      "conflict": "CF35",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "Only clean listed patterns. Keep the English sentence: The model was trained on two corpora.",
+      "faithful_example": "The model was trained on two corpora.",
+      "unsafe_example": "We trained the model on two corpora.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "The model was trained"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF35-ZH",
+      "conflict": "CF35",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "只按白名单清理。原句：方案已完成评估。",
+      "faithful_example": "方案已完成评估。",
+      "unsafe_example": "我们把方案测完了。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "方案已完成评估"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF36-EN",
+      "conflict": "CF36",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "This measures association, not causation.",
+      "faithful_example": "This measures association, not causation.",
+      "unsafe_example": "This proves causation.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "not causation"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF36-ZH",
+      "conflict": "CF36",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "该检验测量相关性，而非因果关系。",
+      "faithful_example": "该检验测量相关性，而非因果关系。",
+      "unsafe_example": "该检验证明因果关系。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "而非因果关系"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF37-EN",
+      "conflict": "CF37",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "Keep collection, storage and display.",
+      "faithful_example": "Collection, storage and display.",
+      "unsafe_example": "From collection to display.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "storage"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF37-ZH",
+      "conflict": "CF37",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "保留采集、存储、展示。",
+      "faithful_example": "采集、存储和展示。",
+      "unsafe_example": "从采集到展示。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "存储"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF38-EN",
+      "conflict": "CF38",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "The author likes dashes. The effect may occur.",
+      "faithful_example": "The effect may occur—under the stated condition.",
+      "unsafe_example": "The effect occurs.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "may"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF38-ZH",
+      "conflict": "CF38",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "作者喜欢破折号，结果可能改善。",
+      "faithful_example": "结果可能改善——在原文条件下。",
+      "unsafe_example": "结果一定改善。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "可能"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF39-EN",
+      "conflict": "CF39",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "When temperature exceeds 80°C, the system stops.",
+      "faithful_example": "The system stops when temperature exceeds 80°C.",
+      "unsafe_example": "The system stops.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "when temperature exceeds 80°C"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF39-ZH",
+      "conflict": "CF39",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "当温度超过80°C时，系统停机。",
+      "faithful_example": "温度超过80°C时，系统停机。",
+      "unsafe_example": "系统停机。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "超过80°C时"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF40-EN",
+      "conflict": "CF40",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "A corpus has more dashes; inspect this author's prose.",
+      "faithful_example": "Inspect each candidate in context.",
+      "unsafe_example": "Delete every dash.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "in context"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF40-ZH",
+      "conflict": "CF40",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "语料中破折号较多；检查作者稿件。",
+      "faithful_example": "按上下文判断候选。",
+      "unsafe_example": "删除所有破折号。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "上下文"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF41-EN",
+      "conflict": "CF41",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "A wrapped paragraph has two source lines.",
+      "faithful_example": "Count one paragraph.",
+      "unsafe_example": "Count two paragraphs.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "one paragraph"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF41-ZH",
+      "conflict": "CF41",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "同一个段落在源文件中折成两行。",
+      "faithful_example": "计为一个段落。",
+      "unsafe_example": "计为两个段落。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "一个段落"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF42-EN",
+      "conflict": "CF42",
+      "language": "en",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "See Section 3 for details.",
+      "faithful_example": "See Section 3 for details.",
+      "unsafe_example": "See the section for details.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "Section 3"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF42-ZH",
+      "conflict": "CF42",
+      "language": "zh",
+      "kind": "editing",
+      "request": "Apply the selected scope and retain the stated information.",
+      "original": "详见第三节。",
+      "faithful_example": "详见第三节。",
+      "unsafe_example": "详见该节。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "第三节"
+        }
+      ],
+      "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
     }
   ]
 }

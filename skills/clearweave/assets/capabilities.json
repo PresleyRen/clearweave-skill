@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "scope": "42 inventoried implementations; stable core CW01–CW36 plus scholarly extension CW37–CW48.",
   "capabilities": [
     {
@@ -1225,6 +1225,132 @@
       ],
       "implementation_boundary": "Host instructions plus explicitly documented candidate/measurement tools; see scholarly-tools.md for operations and public-data evaluation.",
       "repair": "Locate this capability, add an incorrect case and a legitimate lookalike, update the narrow rule and rerun public-data checks."
+    },
+    {
+      "id": "CW49",
+      "name_en": "Whitelist finished-draft mode",
+      "name_zh": "白名单成稿精准清理",
+      "module": "references/lieflat.md",
+      "anchor": "cw49",
+      "kind": "host",
+      "keywords": "白名单 lieflat 精准 成稿 strict whitelist",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF35-EN",
+        "CF35-ZH",
+        "CF38-EN",
+        "CF38-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW50",
+      "name_en": "Eleven localized Chinese patterns",
+      "name_zh": "十一类中文表达定位",
+      "module": "references/lieflat.md",
+      "anchor": "cw50",
+      "kind": "host+candidate",
+      "keywords": "lieflat 中文 翻案 顿号 标点 标题 拟人 回指",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF36-EN",
+        "CF36-ZH",
+        "CF37-EN",
+        "CF37-ZH",
+        "CF42-EN",
+        "CF42-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW51",
+      "name_en": "Five scoped translationese patterns",
+      "name_zh": "五类翻译句式与语义关系",
+      "module": "references/lieflat.md",
+      "anchor": "cw51",
+      "kind": "host+candidate",
+      "keywords": "translationese 翻译腔 条件 转折 时间 推断",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF39-EN",
+        "CF39-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW52",
+      "name_en": "Element-normalized corpus measurement",
+      "name_zh": "同类分母的语料对比测量",
+      "module": "references/lieflat.md",
+      "anchor": "cw52",
+      "kind": "script",
+      "keywords": "corpus 语料 统计 分母 比率 段落 frequency",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF40-EN",
+        "CF40-ZH",
+        "CF41-EN",
+        "CF41-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW53",
+      "name_en": "Rule-linked minimal-edit ledger",
+      "name_zh": "规则映射与未改区域核对",
+      "module": "references/lieflat.md",
+      "anchor": "cw53",
+      "kind": "script+host",
+      "keywords": "ledger 最小改动 未命中 原样 结构 核对",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF35-EN",
+        "CF35-ZH",
+        "CF37-EN",
+        "CF37-ZH",
+        "CF42-EN",
+        "CF42-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW54",
+      "name_en": "Candidate review and style exceptions",
+      "name_zh": "候选复核与作者风格例外",
+      "module": "references/lieflat.md",
+      "anchor": "cw54",
+      "kind": "host+script",
+      "keywords": "candidate 误报 风格 样稿 文学 排比 例外",
+      "sources": [
+        "S46"
+      ],
+      "cases": [
+        "CF38-EN",
+        "CF38-ZH",
+        "CF39-EN",
+        "CF39-ZH",
+        "CF40-EN",
+        "CF40-ZH",
+        "CF41-EN",
+        "CF41-ZH"
+      ],
+      "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
+      "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
     }
   ],
   "conflicts": [
@@ -1701,7 +1827,110 @@
         "CF34-EN",
         "CF34-ZH"
       ]
+    },
+    {
+      "id": "CF35",
+      "name_en": "Whitelist vs broad polishing",
+      "name_zh": "白名单与全面润色",
+      "capabilities": [
+        "CW49",
+        "CW53"
+      ],
+      "cases": [
+        "CF35-EN",
+        "CF35-ZH"
+      ]
+    },
+    {
+      "id": "CF36",
+      "name_en": "Antithesis vs meaningful exclusion",
+      "name_zh": "翻案句式与实质否定",
+      "capabilities": [
+        "CW50"
+      ],
+      "cases": [
+        "CF36-EN",
+        "CF36-ZH"
+      ]
+    },
+    {
+      "id": "CF37",
+      "name_en": "Compression vs complete inventories",
+      "name_zh": "压缩列举与项目完整性",
+      "capabilities": [
+        "CW50",
+        "CW53"
+      ],
+      "cases": [
+        "CF37-EN",
+        "CF37-ZH"
+      ]
+    },
+    {
+      "id": "CF38",
+      "name_en": "Author style vs facts",
+      "name_zh": "作者文风与事实约束",
+      "capabilities": [
+        "CW49",
+        "CW54"
+      ],
+      "cases": [
+        "CF38-EN",
+        "CF38-ZH"
+      ]
+    },
+    {
+      "id": "CF39",
+      "name_en": "Translation cleanup vs logical relations",
+      "name_zh": "翻译句式与逻辑关系",
+      "capabilities": [
+        "CW51",
+        "CW54"
+      ],
+      "cases": [
+        "CF39-EN",
+        "CF39-ZH"
+      ]
+    },
+    {
+      "id": "CF40",
+      "name_en": "Corpus rate vs edit decision",
+      "name_zh": "语料频率与单句决策",
+      "capabilities": [
+        "CW52",
+        "CW54"
+      ],
+      "cases": [
+        "CF40-EN",
+        "CF40-ZH"
+      ]
+    },
+    {
+      "id": "CF41",
+      "name_en": "Visible lines vs prose paragraphs",
+      "name_zh": "可见行与真实段落",
+      "capabilities": [
+        "CW52",
+        "CW54"
+      ],
+      "cases": [
+        "CF41-EN",
+        "CF41-ZH"
+      ]
+    },
+    {
+      "id": "CF42",
+      "name_en": "Heading cleanup vs references",
+      "name_zh": "标题清理与交叉指代",
+      "capabilities": [
+        "CW50",
+        "CW53"
+      ],
+      "cases": [
+        "CF42-EN",
+        "CF42-ZH"
+      ]
     }
   ],
-  "source_inventory_count": 45
+  "source_inventory_count": 46
 }

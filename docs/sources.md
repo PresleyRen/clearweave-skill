@@ -1,6 +1,6 @@
-# Source synthesis / 45 项来源与取舍
+# Source synthesis / 46 项来源与取舍
 
-Reviewed: 2026-10-20. The original count was 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
+Reviewed: 2026-10-21. The original count was 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
 
 This table is a compact index. The [machine-readable audit](source-audit.json) records inspection scope, license observations, relationships, adopted ideas, rejected rules, and implementation paths. Main-branch URLs are mutable; this release does not claim commit-pinned upstream reproduction.
 
@@ -80,3 +80,8 @@ See [scholarly integration](scholarly-integration.md) for the module map, source
 采用：Separate register problems from contribution framing; describe the specific technical or empirical advance rather than relying on a flattering label. Distinguish proposed outcomes from delivered findings, and synthesize related work around the actual research question.
 
 调整：Do not generalize HCI framing into a rule that systems or combinations can never be research contributions. Reject exactly-once limitations, universal contribution ordering, and deletion of material adverse evidence to simplify the storyline.
+
+## S46 · lieflat-less-ai-tone (0.4.0)
+
+[Fixed source](https://github.com/larashero3-dotcom/lieflat-less-ai-tone/tree/27d29232f10124db904ca9c0536d0b67cb3b2833) · [Integration map](lieflat-integration.md).
+Full entry, research report, three scripts and license reviewed. Eleven pattern families and five translation subpatterns are integrated in a selected precision-cleanup mode. Source statistics are upstream reports, not reproduced ClearWeave results. File fingerprints: `lieflat-source-snapshot.json`.

@@ -1,0 +1,3 @@
+# Precision-mode public-text applications
+
+Two complete HC3 Chinese answers and two published English abstracts retained from the 0.3.0 source inventory. This run applies the new LF-only contract, not the earlier polishing output. Sources, rows, revisions, labels, licenses and SHA256 values are in samples.json. HC3 material/adaptations: CC BY-SA 4.0; ACL excerpts: CC BY 4.0, attributed in each record. One assistant produced and reviewed the local revision. Run `python3 tools/evaluate_lieflat.py` to replay mechanical checks; `--download` verifies pinned upstream text. See docs/evaluation-lieflat.md.

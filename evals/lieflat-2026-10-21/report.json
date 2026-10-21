@@ -1,0 +1,323 @@
+{
+  "version": "0.4.0",
+  "records": [
+    {
+      "id": "HC3-ZH-CHATGPT-02188",
+      "action": "keep",
+      "before": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 184,
+          "paragraphs": 2,
+          "nonfirst_paragraphs": 1,
+          "headings": 0
+        },
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "rule": "LF02",
+            "subtype": "",
+            "start": 155,
+            "end": 174,
+            "line": 3,
+            "excerpt": "他的作品涉及历史、文化、政治等多个领域",
+            "review": "Keep every distinct item and its order; lists and required inventories stay intact.",
+            "shape_proxy": false
+          }
+        ],
+        "judgment": "editorial_candidates"
+      },
+      "after": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 184,
+          "paragraphs": 2,
+          "nonfirst_paragraphs": 1,
+          "headings": 0
+        },
+        "candidate_count": 1,
+        "candidates": [
+          {
+            "rule": "LF02",
+            "subtype": "",
+            "start": 155,
+            "end": 174,
+            "line": 3,
+            "excerpt": "他的作品涉及历史、文化、政治等多个领域",
+            "review": "Keep every distinct item and its order; lists and required inventories stay intact.",
+            "shape_proxy": false
+          }
+        ],
+        "judgment": "editorial_candidates"
+      },
+      "ledger": {
+        "mode": "verify-edits",
+        "mechanical_checks": "passed",
+        "edit_count": 0,
+        "rules_used": [],
+        "unlisted_changes": false,
+        "block_structure_preserved": true,
+        "semantic_review": "Required for applicability, relationships and antecedents"
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "HC3-ZH-CHATGPT-02605",
+      "action": "edit",
+      "before": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 234,
+          "paragraphs": 2,
+          "nonfirst_paragraphs": 1,
+          "headings": 0
+        },
+        "candidate_count": 3,
+        "candidates": [
+          {
+            "rule": "LF10",
+            "subtype": "d",
+            "start": 86,
+            "end": 89,
+            "line": 1,
+            "excerpt": "此外，",
+            "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+            "shape_proxy": false
+          },
+          {
+            "rule": "LF10",
+            "subtype": "d",
+            "start": 136,
+            "end": 139,
+            "line": 3,
+            "excerpt": "然而，",
+            "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+            "shape_proxy": false
+          },
+          {
+            "rule": "LF10",
+            "subtype": "d",
+            "start": 213,
+            "end": 216,
+            "line": 3,
+            "excerpt": "因此，",
+            "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+            "shape_proxy": false
+          }
+        ],
+        "judgment": "editorial_candidates"
+      },
+      "after": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 232,
+          "paragraphs": 2,
+          "nonfirst_paragraphs": 1,
+          "headings": 0
+        },
+        "candidate_count": 2,
+        "candidates": [
+          {
+            "rule": "LF10",
+            "subtype": "d",
+            "start": 133,
+            "end": 136,
+            "line": 3,
+            "excerpt": "然而，",
+            "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+            "shape_proxy": false
+          },
+          {
+            "rule": "LF10",
+            "subtype": "d",
+            "start": 210,
+            "end": 213,
+            "line": 3,
+            "excerpt": "因此，",
+            "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+            "shape_proxy": false
+          }
+        ],
+        "judgment": "editorial_candidates"
+      },
+      "ledger": {
+        "mode": "verify-edits",
+        "mechanical_checks": "passed",
+        "edit_count": 1,
+        "rules_used": [
+          "LF10"
+        ],
+        "unlisted_changes": false,
+        "block_structure_preserved": true,
+        "semantic_review": "Required for applicability, relationships and antecedents"
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "D19-1410",
+      "action": "keep",
+      "before": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 0,
+          "paragraphs": 0,
+          "nonfirst_paragraphs": 0,
+          "headings": 0
+        },
+        "candidate_count": 0,
+        "candidates": [],
+        "judgment": "editorial_candidates"
+      },
+      "after": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 0,
+          "paragraphs": 0,
+          "nonfirst_paragraphs": 0,
+          "headings": 0
+        },
+        "candidate_count": 0,
+        "candidates": [],
+        "judgment": "editorial_candidates"
+      },
+      "ledger": {
+        "mode": "verify-edits",
+        "mechanical_checks": "passed",
+        "edit_count": 0,
+        "rules_used": [],
+        "unlisted_changes": false,
+        "block_structure_preserved": true,
+        "semantic_review": "Required for applicability, relationships and antecedents"
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    },
+    {
+      "id": "W19-5034",
+      "action": "keep",
+      "before": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 0,
+          "paragraphs": 0,
+          "nonfirst_paragraphs": 0,
+          "headings": 0
+        },
+        "candidate_count": 0,
+        "candidates": [],
+        "judgment": "editorial_candidates"
+      },
+      "after": {
+        "schema_version": 1,
+        "mode": "scan",
+        "language": "zh",
+        "genre": "general",
+        "kept_rules": [],
+        "counts": {
+          "han_characters": 0,
+          "paragraphs": 0,
+          "nonfirst_paragraphs": 0,
+          "headings": 0
+        },
+        "candidate_count": 0,
+        "candidates": [],
+        "judgment": "editorial_candidates"
+      },
+      "ledger": {
+        "mode": "verify-edits",
+        "mechanical_checks": "passed",
+        "edit_count": 0,
+        "rules_used": [],
+        "unlisted_changes": false,
+        "block_structure_preserved": true,
+        "semantic_review": "Required for applicability, relationships and antecedents"
+      },
+      "risk": {
+        "mode": "risk",
+        "candidate_count": 0,
+        "findings": [],
+        "semantic_review_required": true,
+        "verdict": "not_provided",
+        "limitations": [
+          "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+          "Unchanged cue and numeric inventories can conceal meaning changes.",
+          "Translation and faithful paraphrases can legitimately change cue inventories.",
+          "Run the separate literal comparison for changes inside protected spans."
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "inputs": 4,
+    "edited": 1,
+    "unchanged": 3,
+    "edits": 1,
+    "candidates_before": 4,
+    "candidates_after": 3,
+    "mechanical_checks": "passed"
+  },
+  "evaluation_type": "Recorded same-assistant application; no authorship or quality score"
+}

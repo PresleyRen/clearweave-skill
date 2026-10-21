@@ -12,7 +12,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'evals/scholarly-2026-10-20'
-sys.path.insert(0,str(ROOT/'skills/clearweave/scripts'))
+RUNTIME = DATA / 'runtime-v0.3.0'
+sys.path.insert(0,str(RUNTIME/'skills/clearweave/scripts'))
 import clearweave_scholar as scholar
 import clearweave_check as checker
 import clearweave_risk as risk
@@ -82,7 +83,7 @@ def evaluate(samples: list[dict], outputs: list[dict], protocol: dict, root: Pat
     for name,sha in protocol['runtime_files'].items():
         p=Path(name)
         if p.is_absolute() or '..' in p.parts or not name.startswith('skills/clearweave/'):raise ValueError('Invalid runtime path')
-        if hashlib.sha256((root/p).read_bytes()).hexdigest()!=sha:raise ValueError('Runtime differs: '+name)
+        if hashlib.sha256((root/'evals/scholarly-2026-10-20/runtime-v0.3.0'/p).read_bytes()).hexdigest()!=sha:raise ValueError('Runtime differs: '+name)
     records=[]
     for r in edits:
         o=out[r['id']];before=r['text'];after=o['revision']

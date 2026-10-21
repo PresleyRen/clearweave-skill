@@ -1,0 +1,29 @@
+MIT License
+
+Copyright (c) 2026 PresleyRen and ClearWeave contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+## Scholarly extension (v0.3.0)
+
+S33–S42 are credited in docs/source-audit.json and docs/scholarly-source-snapshots.json. New runtime prose and Python code are independently written for ClearWeave. The GPL-3.0 HD0NG entry and the license-unknown shannhk entry were reviewed as conceptual references, not copied into the package. YoakeLee attributes an underlying educational framework separately from its repository wording. Allan9719 attributes SciWrite (Lorena A. Barba, CC BY 4.0) and a writing framework; neither the underlying book nor its section tables are reproduced here. Source licenses retain their original scope.
+
+Public ACL abstract samples carry their authors, source URLs, and CC BY 4.0 attribution in evals/scholarly-2026-10-20. Revisions are labeled ClearWeave applications, not changes made by the original authors. HC3 source records retain the earlier CC BY-SA 4.0 notices and provenance.
+
+Additional conceptual references: OvOYu/anti-defensive-writing and Worigin0314/academic-defensive-writing-auditor declare MIT in their inspected entries; Mseymur/HCI-Academic-Writing has a LICENSE file whose text was not inspected in this review. No upstream source text or code from these projects is reproduced in the runtime.

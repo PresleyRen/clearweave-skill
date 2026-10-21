@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0 — 2026-10-21
+
+- Integrate lieflat-less-ai-tone as source S46 and a selected Chinese precision-cleanup mode.
+- Add eleven rule families, five translation subtypes, scoped style exceptions and a rule-linked edit ledger.
+- Add read-only scan, measure, compare-corpora and verify-edits commands.
+- Extend the registry to 54 capabilities and 42 conflict families; update both README diagrams and usage routes.
+- Preserve the 0.3.0 scholarly runtime and all historical writing records for reproducible replay.
+- Add constructed regressions and a separate public-text application record.
+
+
 ## 0.3.0 — 2026-10-20
 
 - Integrated 13 additional academic/voice sources; registry now covers 45 sources and 48 capability families.
