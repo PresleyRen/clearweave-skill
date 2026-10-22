@@ -1,5 +1,7 @@
 # Lieflat integration / 精准清理能力整合
 
+[简体中文](lieflat-integration.zh-CN.md) · [Documentation index](README.md)
+
 Source: [larashero3-dotcom/lieflat-less-ai-tone](https://github.com/larashero3-dotcom/lieflat-less-ai-tone/tree/27d29232f10124db904ca9c0536d0b67cb3b2833), MIT, Copyright (c) 2026 shiujan. Fixed revision and inspected Git blob IDs are in [source snapshot](lieflat-source-snapshot.json). ClearWeave 0.4.0 adds a selected precision mode to the existing bilingual editor.
 
 ## Coverage / 能力对应
