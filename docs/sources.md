@@ -1,5 +1,7 @@
 # Source synthesis / 46 项来源与取舍
 
+[简体中文](sources.zh-CN.md) · [Documentation index](README.md)
+
 Reviewed: 2026-10-21. The original count was 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
 
 This table is a compact index. The [machine-readable audit](source-audit.json) records inspection scope, license observations, relationships, adopted ideas, rejected rules, and implementation paths. Main-branch URLs are mutable; this release does not claim commit-pinned upstream reproduction.
