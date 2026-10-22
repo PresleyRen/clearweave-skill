@@ -2,7 +2,7 @@
 
 **中英文去 AI 味、反防御写作、学术文风与成稿精准清理。**
 
-[English](README.md) · [Skill 入口](skills/clearweave/SKILL.md) · [功能与规则索引](docs/capabilities.md) · [真实论文示例](docs/scholarly-examples.md)
+[English](README.md) · [中文文档中心](docs/README.zh-CN.md) · [Skill 入口](skills/clearweave/SKILL.md) · [功能与规则索引](docs/capabilities.zh-CN.md) · [真实论文示例](docs/scholarly-examples.zh-CN.md)
 
 ClearWeave 用于英文论文、中文文章、技术文档、README 和工作邮件。它清理套话与重复，直接呈现研究贡献，修正学术语法，并从指定样稿中提取可复用的文风。正文语言、说明语言、文体和修改幅度可以分别设置。
 
@@ -112,7 +112,7 @@ $clearweave
 [原文与风格资料]
 ```
 
-普通英文润色、论文语法和全文重写继续使用完整编辑路径。逐条规则、工具用法与对照示例见 [lieflat 整合说明](docs/lieflat-integration.md) 和 [本轮真实文本记录](docs/evaluation-lieflat.md)。
+普通英文润色、论文语法和全文重写继续使用完整编辑路径。逐条规则、工具用法与对照示例见 [lieflat 整合说明](docs/lieflat-integration.zh-CN.md) 和 [本轮真实文本记录](docs/evaluation-lieflat.zh-CN.md)。
 
 ## 真实文本效果
 
@@ -258,7 +258,7 @@ python3 tools/render_catalog.py --write
 
 整合记录覆盖 **46 个来源、262 条采用与调整决定、54 项能力、42 类冲突及 84 个中英文冲突场景**。本轮新增 lieflat 精准清理、语料测量和改动清单验收。
 
-[lieflat 整合](docs/lieflat-integration.md) · [精准清理测试](docs/evaluation-lieflat.md) · [来源与取舍](docs/sources.md) · [完整能力索引](docs/capabilities.md) · [整合说明](docs/scholarly-integration.md) · [真实论文测试](docs/evaluation-scholarly.md) · [原始测试数据](evals/scholarly-2026-10-20/)
+[中文文档中心](docs/README.zh-CN.md) · [lieflat 整合](docs/lieflat-integration.zh-CN.md) · [精准清理测试](docs/evaluation-lieflat.zh-CN.md) · [来源与取舍](docs/sources.zh-CN.md) · [完整能力索引](docs/capabilities.zh-CN.md) · [学术整合说明](docs/scholarly-integration.zh-CN.md) · [真实论文测试](docs/evaluation-scholarly.zh-CN.md) · [原始测试数据](evals/scholarly-2026-10-20/)
 
 ## 许可
 
