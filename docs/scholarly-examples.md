@@ -1,5 +1,7 @@
 # Published-paper and Chinese examples / 真实文本修改对照
 
+[简体中文](scholarly-examples.zh-CN.md) · [Documentation index](README.md)
+
 These are edited demonstrations of the cited public texts, not replacement publications. Original authors and source licenses are listed with each case. Revisions were produced by the current conversational assistant using ClearWeave 0.3.0 and reviewed by that same assistant. Source facts were not independently verified.
 
 [Evaluation and provenance](evaluation-scholarly.md) · [Raw inputs](../evals/scholarly-2026-10-20/samples.json) · [Outputs](../evals/scholarly-2026-10-20/outputs.json)
