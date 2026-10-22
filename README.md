@@ -2,7 +2,7 @@
 
 **English–Chinese natural prose, direct research writing, academic voice and precise finished-draft cleanup.**
 
-[简体中文](README.zh-CN.md) · [Skill](skills/clearweave/SKILL.md) · [Capability index](docs/capabilities.md) · [Published-paper examples](docs/scholarly-examples.md)
+[简体中文](README.zh-CN.md) · [Documentation](docs/README.md) · [Skill](skills/clearweave/SKILL.md) · [Capability index](docs/capabilities.md) · [Published-paper examples](docs/scholarly-examples.md)
 
 ClearWeave edits papers, technical documents, READMEs, work emails and everyday writing. It removes stock phrasing and repetition, brings the contribution into focus, corrects academic grammar, and builds reusable style profiles from selected samples. Choose the language of the finished text and editorial notes separately.
 
@@ -246,7 +246,7 @@ Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the
 
 The integration registry covers **46 sources, 262 adoption/adaptation decisions, 54 capabilities, 42 conflict families and 84 bilingual conflict fixtures**. This release adds lieflat precision cleanup, corpus measurement and edit-ledger verification.
 
-[Lieflat integration](docs/lieflat-integration.md) · [Precision tests](docs/evaluation-lieflat.md) · [Source decisions](docs/sources.md) · [Capability atlas](docs/capabilities.md) · [Integration guide](docs/scholarly-integration.md) · [Public-paper evaluation](docs/evaluation-scholarly.md) · [Raw records](evals/scholarly-2026-10-20/)
+[Documentation index](docs/README.md) · [Lieflat integration](docs/lieflat-integration.md) · [Precision tests](docs/evaluation-lieflat.md) · [Source decisions](docs/sources.md) · [Capability atlas](docs/capabilities.md) · [Scholarly integration](docs/scholarly-integration.md) · [Public-paper evaluation](docs/evaluation-scholarly.md) · [Raw records](evals/scholarly-2026-10-20/)
 
 ## License
 
