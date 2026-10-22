@@ -1,5 +1,7 @@
 # Scholarly evaluation / 真实论文与文风测试
 
+[简体中文](evaluation-scholarly.zh-CN.md) · [Documentation index](README.md)
+
 Date: 2026-10-20. Runtime: ClearWeave **0.3.0**. Test inputs are existing public text, not rewritten synthetic “AI-sounding” prompts. Full source text, authors, licenses, pinned revisions and SHA256 values are saved in the raw record.
 
 ## Data and roles
