@@ -1,5 +1,7 @@
 # Lieflat integration evaluation / 精准清理测试
 
+[简体中文](evaluation-lieflat.zh-CN.md) · [Documentation index](README.md)
+
 Date: 2026-10-21. ClearWeave 0.4.0. The new task is **LF-only Chinese finished-draft cleanup**, with original structure and unmatched wording fixed.
 
 ## Executed regression checks
