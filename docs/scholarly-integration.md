@@ -1,5 +1,7 @@
 # Scholarly integration / 学术写作整合说明
 
+[简体中文](scholarly-integration.zh-CN.md) · [Documentation index](README.md)
+
 ## Four editing layers / 四层编辑
 
 | Layer | Work | Modules |
