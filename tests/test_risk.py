@@ -40,10 +40,28 @@ class RiskTests(unittest.TestCase):
         report=risk.assess('A scored 0.8. B scored 0.6.','B scored 0.6. A scored 0.8.')
         self.assertIn('R08',{f['risk_id'] for f in report['findings']})
         self.assertEqual(report['verdict'],'not_provided')
-    def test_same_numeric_order_can_still_hide_changed_roles(self):
+    def test_same_numeric_order_changed_roles(self):
         report=risk.assess('A scored 0.8; B scored 0.6.','B scored 0.8; A scored 0.6.')
-        self.assertEqual(report['candidate_count'],0)
+        self.assertIn('number_binding', {f['category'] for f in report['findings']})
         self.assertTrue(report['semantic_review_required'])
+    def test_swapped_citation_support(self):
+        original = 'Prior work studied retrieval [1]. Our experiment measured latency [2].'
+        revision = 'Prior work studied latency [1]. Our experiment measured retrieval [2].'
+        self.assertIn('R09', ids(original, revision))
+        self.assertNotIn('R09', ids(original, 'Our experiment measured latency [2]. Prior work studied retrieval [1].'))
+
+    def test_changed_assumption(self):
+        self.assertIn('R10', ids('The bound holds for independent samples.',
+                                 'The bound holds for dependent samples.'))
+        self.assertNotIn('R10', ids('The bound holds for independent samples.',
+                                    'For independent samples, the bound holds.'))
+
+    def test_reported_baseline_router_example(self):
+        original = 'The baseline missed 11 requests. The adapted router missed 8 requests.'
+        revision = 'The adapted router missed 11 requests. The baseline missed 8 requests.'
+        self.assertIn('R09', ids(original, revision))
+        self.assertNotIn('R09', ids(original, original))
+
     def test_same_negation_inventory_can_hide_scope_swap(self):
         report=risk.assess('A works; B does not.','A does not; B works.')
         self.assertEqual(report['candidate_count'],0)

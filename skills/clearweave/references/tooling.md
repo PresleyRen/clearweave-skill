@@ -169,3 +169,8 @@ is excluded from the modal cue `may`; this narrow exception is not date parsing.
 The surface linter now recognizes explicit Traditional Chinese variants for its
 existing phrase families. It does not convert scripts or provide comprehensive
 Taiwan/Hong Kong localization. Neither helper modifies files or makes network calls.
+
+
+### Content relationships in manuscript edits
+
+Run `python3 scripts/clearweave_risk.py original.md revision.md --format json` on comparable prose. R09 reports distinctive words that exchanged two unique number or citation anchors across single-anchor clauses. R10 reports changed independence or correlation cues. Read the two source claims whenever a candidate appears. Shared anchors, implicit assumptions, tables, paraphrases and claims with multiple numbers need direct evidence review; a zero count cannot clear them. See [manuscript routing and the evidence map](manuscript-routing.md).

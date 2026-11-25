@@ -24,6 +24,7 @@ CUES = (
     ("R04", "causal_strength", r"\b(?:causes?|caused|associated|correlat(?:e[ds]?|ion)|because|therefore)\b|(?:导致|導致|相关|相關|因果|因为|因為|因此)", "CW07"),
     ("R05", "work_status", r"\b(?:planned|planning|proposed|simulated|completed|validated|deployed|will)\b|(?:计划|計劃|拟于|擬於|已完成|已经|已經|模拟|模擬|拟议|擬議|已部署|将于|將於)", "CW03"),
     ("R06", "scope", r"\b(?:only|unless|except|all|some|under|at\s+least|at\s+most)\b|(?:仅|僅|只有|除非|至少|至多|所有|部分|条件下|條件下)", "CW05"),
+    ("R10", "assumption", r"\b(?:independent|dependent|uncorrelated|correlated)\b|(?:独立|獨立|相依|不相关|不相關)", "CW05"),
     ("R07", "attribution", r"\b(?:according\s+to|reported|claimed|estimated)\b|(?:据称|據稱|据报道|據報導|根据|根據|声称|聲稱|估计|估計)", "CW07"),
 )
 PATTERNS = [(rid, name, re.compile(pattern, re.I), cap) for rid, name, pattern, cap in CUES]
@@ -52,6 +53,53 @@ def _hits(text: str, pattern: re.Pattern[str]) -> list[dict]:
     return result
 
 
+def _anchored_words(text: str) -> dict[str, dict[str, str]]:
+    """Associate distinctive words with unique numbers or citations in single-anchor clauses."""
+    spans = [span for span in checker.collect_protected_spans(text)
+             if span.kind in {"number", "citation", "at_key"}]
+    counts = Counter((span.kind, span.literal) for span in spans)
+    owners = {}
+    visible = _visible(text)
+    index = 0
+    for clause in re.finditer(r"[^.!?;。！？；，,\n]+", visible):
+        anchors = []
+        while index < len(spans) and spans[index].start < clause.end():
+            span = spans[index]
+            if clause.start() <= span.start:
+                anchors.append(span)
+            index += 1
+        if len(anchors) != 1:
+            continue
+        anchor = anchors[0]
+        if counts[(anchor.kind, anchor.literal)] != 1:
+            continue
+        terms = owners.setdefault(anchor.kind, {})
+        for word in set(re.findall(r"[^\W\d_]+", clause.group().casefold())):
+            previous = terms.setdefault(word, anchor.literal)
+            if previous != anchor.literal:
+                terms[word] = ""
+    return owners
+
+
+def _binding_swaps(original: str, revision: str) -> list[dict]:
+    before, after = _anchored_words(original), _anchored_words(revision)
+    findings = []
+    for kind in sorted(before.keys() & after.keys()):
+        moves = {}
+        for term, source in before[kind].items():
+            target = after[kind].get(term)
+            if source and target and source != target:
+                moves.setdefault((source, target), []).append(term)
+        for (left, right), terms in sorted(moves.items()):
+            reverse = moves.get((right, left))
+            if left < right and reverse:
+                findings.append({"risk_id": "R09", "capability": "CW04" if kind == "number" else "CW07",
+                                 "category": kind + "_binding", "original": [left, right],
+                                 "revision": [right, left], "moved_terms": [sorted(terms), sorted(reverse)],
+                                 "reason": "Context terms exchanged anchors. Check the two source claims."})
+    return findings
+
+
 def assess(original: str, revision: str) -> dict:
     findings = []
     for rid, category, pattern, cap in PATTERNS:
@@ -69,6 +117,7 @@ def assess(original: str, revision: str) -> dict:
         findings.append({"risk_id": "R08", "capability": "CW04", "category": "number_order",
                          "original": old, "revision": new,
                          "reason": "The numeric inventory is unchanged but its order differs. Check which actor/metric owns each value. Legitimate sentence reordering also triggers this."})
+    findings.extend(_binding_swaps(original, revision))
     return {"mode": "risk", "candidate_count": len(findings), "findings": findings,
             "semantic_review_required": True, "verdict": "not_provided",
             "limitations": ["Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",

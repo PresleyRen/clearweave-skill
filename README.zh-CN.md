@@ -70,6 +70,25 @@ python3 tools/install_skill.py --project /你的项目绝对路径
 
 安装脚本会把技能复制到项目的 `.agents/skills/clearweave`。更新旧版时，先把该目录移到备份位置，再从最新的 `main` 分支运行安装脚本。Python 工具使用 Python 3.10+ 标准库。
 
+### 按任务选择技能
+
+日常使用只需说“用 $clearweave”并附上材料。可直接说“用这些结果写英文 Results”“按目标期刊的范文改引言”或“只润色定理旁边的英文”。系统先按任务选方法，再按成文语言处理表达。
+
+| 你的任务 | ClearWeave 会选什么 |
+| --- | --- |
+| 有实验表，还没想好能写什么结论 | 从原表提取方法、基线、指标、数值、条件、证据位置；多文件项目参考 paperwriter |
+| 写整章 Results、Discussion 或组织全文 | nature-writing 规划每段要回答的问题和证据顺序 |
+| 学目标期刊写法、转刊、核对主稿与补充材料 | paperwriter 分开管理范文和自己的实验事实，核对跨文件一致性 |
+| 润色含公式、定理、假设或 LaTeX 引用的段落 | academic-humanizer 先保护技术内容，再润色周围的句子 |
+| 英文短摘要、审稿回复、项目消息 | humanizer 配合内置学术或技术表达规则 |
+| 简体中文 README、邮件、工作消息 | humanizer-zh |
+| 中文论文、开题、逐条审稿回复 | anti-defensive-writing-zh，学术任务再读它的学术附录 |
+| 明确面向台湾读者的繁体文稿 | zh-tw-humanizer，学术内容另用内置学术规则 |
+
+例如，写英文 Results 整章时，先由 nature-writing 安排证据和段落，再按 humanizer 的相关规则落笔。只改定理旁的语句时，由 academic-humanizer 处理一次。范文只用于学习表达，论文引用仍要对照原文核实它支持哪句话。
+
+[完整场景与核验流程](skills/clearweave/references/manuscript-routing.md)
+
 ### 用笔记起草
 
 ```text

@@ -1,6 +1,6 @@
 ---
 name: clearweave
-description: "Write English or Chinese first drafts from notes, evidence, or a brief, and edit existing prose. Use for 按材料写、从零起草、写论文摘要、写审稿回复、写项目说明、写邮件 as well as 去AI味、润色、反防御写作、改掉翻译腔、只去味不润色. Apply genre, author voice, evidence boundaries and relevant Humanizer guidance while composing. Supports mixed-language prose, academic grammar, translation, style diagnosis, lieflat precision cleanup and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
+description: "Write English or Chinese first drafts from notes, evidence, or a brief, and edit existing prose. Use for 按材料写、从零起草、写论文摘要、写审稿回复、写项目说明、写邮件 as well as 去AI味、润色、反防御写作、改掉翻译腔、只去味不润色. Apply genre, author voice, evidence boundaries and relevant Humanizer guidance while composing. Use for Results/Discussion structure, target-journal writing, manuscript/supplement consistency and evidence-to-claim checks. Supports mixed-language prose, academic grammar, translation, style diagnosis, lieflat precision cleanup and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
 ---
 
 # ClearWeave
@@ -30,6 +30,8 @@ The language of the request is not automatically the language of the deliverable
 Read [preservation.md](references/preservation.md) before drafting, editing or translating. For a first draft or a new section, use [drafting.md](references/drafting.md) **before writing the first sentence**. It selects a companion by output language and purpose and applies its relevant rules as each paragraph is composed. For selected lieflat precision cleanup, follow [lieflat.md](references/lieflat.md) instead of the broad language-editing rules. For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
 
 ## Scholarly extension routing
+
+Before drafting or restructuring a manuscript, checking evidence, learning a target journal's style, preparing a submission package, or polishing formal LaTeX statements, select the task in [manuscript-routing.md](references/manuscript-routing.md). Apply its evidence map before the language route. A short message or ordinary copyedit can go straight to its existing route.
 
 For defensive framing, contribution narrative, or clean manuscript/README delivery, read [anti-defensive.md](references/anti-defensive.md).
 For academic grammar, tense, agreement, modifiers, and section-function choices, read [academic-grammar.md](references/academic-grammar.md).

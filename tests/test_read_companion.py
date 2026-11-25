@@ -97,6 +97,17 @@ class CompanionTests(unittest.TestCase):
             fetch.assert_called_once_with(
                 f"https://raw.githubusercontent.com/example/writing/{'a' * 40}/references/academic-zh.md")
 
+    def test_nested_repository_uses_skill_directory_locally(self):
+        companion = COMPANION._replace(skill_root="skills/writing")
+        with TemporaryDirectory() as directory, patch.object(reader, "fetch", return_value=SKILL) as fetch:
+            root = Path(directory)
+            (root / "SKILL.md").write_bytes(SKILL)
+            self.assertEqual(reader.read_rules(companion, "skill", root, True)[0].encode(), SKILL)
+            fetch.assert_not_called()
+            reader.read_rules(companion, "skill", None, False)
+            fetch.assert_called_once_with(
+                f"https://raw.githubusercontent.com/example/writing/{'a' * 40}/skills/writing/SKILL.md")
+
     def test_unsupported_resources_fail_before_fetch(self):
         with patch.object(reader, "fetch") as fetch:
             for name in ("humanizer", "humanizer-zh", "zh-tw-humanizer"):

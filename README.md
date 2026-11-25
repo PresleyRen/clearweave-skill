@@ -6,6 +6,8 @@
 
 ClearWeave drafts papers and technical documents from your notes and edits existing papers, READMEs, work emails and everyday writing. It removes stock phrasing and repetition, brings the contribution into focus, corrects academic grammar, and builds reusable style profiles from selected samples. Choose the language of the finished text and editorial notes separately.
 
+For evidence mapping, section drafting, target-journal adaptation, submission consistency or formal LaTeX editing, see the [task-to-skill routing table](skills/clearweave/references/manuscript-routing.md). ClearWeave selects the specialist before applying its language guidance.
+
 ## Capabilities
 
 | Module | What it does | Typical output |

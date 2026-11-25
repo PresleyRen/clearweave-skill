@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Select the manuscript task before its language companion. Add pinned section, journal and formal-writing guides, an evidence map and risk candidates for exchanged numeric/citation contexts and changed assumptions.
+
 - Apply the existing drafting and preservation rules before the first sentence. Route English, Simplified Chinese, Taiwan Traditional Chinese and Chinese scholarly writing to a source-specific companion; keep the bundled drafting route usable offline.
 
 ## 0.4.0 — 2026-10-21

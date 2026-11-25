@@ -4,7 +4,7 @@ Use this route for new prose, including a new paragraph in an existing document.
 
 ## Select before writing
 
-Use the **language of the deliverable** and the **reader**. Start with one companion per target passage. Choose separately for a bilingual deliverable; share its facts and terminology. Traditional Chinese by itself does not establish a Taiwan audience.
+Use the **language of the deliverable** and the **reader**. For manuscripts, select the task workflow in [manuscript-routing.md](manuscript-routing.md) first. Then select one language companion per target passage; an academic-humanizer polish already covers language editing, so skip a duplicate rewrite. Choose separately for a bilingual deliverable; share its facts and terminology. Traditional Chinese by itself does not establish a Taiwan audience.
 
 | What the user is writing | Companion to load | Decisions to make during composition |
 | --- | --- | --- |
