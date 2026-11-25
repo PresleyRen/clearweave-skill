@@ -1,6 +1,6 @@
 ---
 name: clearweave
-description: "Edit English, Chinese, or mixed prose to remove formulaic AI-style writing while preserving meaning, evidence, and the author's voice. Use for 去AI味、去机器味、润色、自然化、改掉翻译腔, humanizing, de-slopping, style diagnosis, lieflat precision cleanup, 只去味不润色, anti-defensive writing, academic grammar, author-voice profiles, or plain-language editing of academic, technical, business, news, and personal writing. Also supports explicitly requested translation, drafting from supplied notes, and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
+description: "Write English or Chinese first drafts from notes, evidence, or a brief, and edit existing prose. Use for 按材料写、从零起草、写论文摘要、写审稿回复、写项目说明、写邮件 as well as 去AI味、润色、反防御写作、改掉翻译腔、只去味不润色. Apply genre, author voice, evidence boundaries and relevant Humanizer guidance while composing. Supports mixed-language prose, academic grammar, translation, style diagnosis, lieflat precision cleanup and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
 ---
 
 # ClearWeave
@@ -17,7 +17,7 @@ Infer the following from the request and text. Do not make a routine edit wait f
 
 | Choice | Default | Change it when |
 | --- | --- | --- |
-| Task | Edit the supplied prose | The user asks for diagnosis, translation, drafting, voice matching, or critique |
+| Task | Draft when the user asks to write from notes, evidence or a brief. Edit when the input is a passage the user wants revised. | The requested action governs diagnosis, translation, voice matching or critique. |
 | Language | Keep each passage's language | Translation or localization is explicitly requested |
 | Strength | Smallest useful edit | The user authorizes a structural rewrite, simplification, or stronger change of register |
 | Genre | Infer from the supplied text | The user identifies another audience, outlet, or document type |
@@ -27,7 +27,7 @@ Infer the following from the request and text. Do not make a routine edit wait f
 
 The language of the request is not automatically the language of the deliverable. A Chinese request to polish an English abstract normally requires an English abstract. Preserve Simplified/Traditional Chinese and US/UK spelling unless a change is requested.
 
-Read [preservation.md](references/preservation.md) before an edit or translation. For selected lieflat precision cleanup, follow [lieflat.md](references/lieflat.md) instead of the broad language-editing rules. For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
+Read [preservation.md](references/preservation.md) before drafting, editing or translating. For a first draft or a new section, use [drafting.md](references/drafting.md) **before writing the first sentence**. It selects a companion by output language and purpose and applies its relevant rules as each paragraph is composed. For selected lieflat precision cleanup, follow [lieflat.md](references/lieflat.md) instead of the broad language-editing rules. For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
 
 ## Scholarly extension routing
 
@@ -98,7 +98,7 @@ Do not target sentence-length distributions, synonym diversity, a count of rheto
 | Precision cleanup / lieflat / 白名单清理 | LF01–LF11 Chinese finished-draft cleanup, fixed structure, rule-linked minimal edits; leave unmatched and foreign-language text intact. |
 | Diagnose / 检查 | Location, quoted short span, the actual readability problem, and an optional fix. Do not rewrite the full passage unless requested. Findings are not evidence of authorship. |
 | Translate / 翻译 | Natural target-language prose carrying the same claims, uncertainty, attribution, and register. Keep code, citation keys, and names unless a valid requested convention changes them. |
-| Draft from notes / 按材料起草 | Compose only from supplied material. Use explicit assumptions only when authorized; identify missing information separately. An invented scene is allowed only when clearly requested as fiction or illustration. |
+| Draft from notes / 按材料起草 | Select the drafting route first. Compose each paragraph from the supplied material. Use explicit assumptions only when authorized; identify missing information separately. An invented scene is allowed only when clearly requested as fiction or illustration. |
 | Match voice / 按我的风格 | Apply relevant samples within the same factual and genre constraints. If no sample exists, work with the draft's observable voice; do not pretend to know the author. |
 | Explain / 学术写作教学 | Explain the requested grammar or rhetorical choice using the supplied passage, a correction and a short original practice example. Keep grammatical correction distinct from author preference. |
 | Critique / 审稿式检查 | Report supported weaknesses, their consequence, and a concrete repair or question. Distinguish demonstrated errors from unresolved questions. Do not invent findings, demand a rejection quota, or claim external peer review. |
@@ -107,7 +107,7 @@ The Python helper only lints surface patterns and compares selected literal span
 
 ## 6. Verify and stop
 
-Compare the revision against the original, not against a generic ideal voice:
+For a first draft, compare the result against the brief and evidence. For an edit, compare it against the original passage.
 
 1. Check every claim and dependency in the ledger, especially negation, quantities, scope, certainty, and causal direction.
 2. Check protected spans. Use `scripts/clearweave_check.py compare` if local execution is available and useful; interpret its output as a limited literal check. `scripts/clearweave_risk.py` can additionally flag some changed negation, modality, status, attribution and numeric ordering cues. Neither tool proves semantic equivalence; examine the actual claim relationships.

@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Apply the existing drafting and preservation rules before the first sentence. Route English, Simplified Chinese, Taiwan Traditional Chinese and Chinese scholarly writing to a source-specific companion; keep the bundled drafting route usable offline.
+
 ## 0.4.0 — 2026-10-21
 
 - Integrate lieflat-less-ai-tone as source S46 and a selected Chinese precision-cleanup mode.

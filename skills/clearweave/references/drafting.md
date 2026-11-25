@@ -1,0 +1,34 @@
+# Compose from a brief or evidence (CW23)
+
+Use this route for new prose, including a new paragraph in an existing document. The notes can be rough or in another language. An instruction such as “按这些结果写英文摘要” is enough to start. If the user supplied a complete passage and asked to translate, edit, or diagnose it, keep that contract instead. When the user explicitly requests one of the companions for an edit or diagnosis, load it in the requested mode and preserve the scope.
+
+## Select before writing
+
+Use the **language of the deliverable** and the **reader**. Start with one companion per target passage. Choose separately for a bilingual deliverable; share its facts and terminology. Traditional Chinese by itself does not establish a Taiwan audience.
+
+| What the user is writing | Companion to load | Decisions to make during composition |
+| --- | --- | --- |
+| English paper, abstract or response to a reviewer | [Aparnabuilds/humanizer](https://github.com/Aparnabuilds/humanizer/blob/fd9728f1a66a5338dff533c712dd44509900e065/SKILL.md) (`humanizer`), plus the bundled academic and anti-defensive guides | Use the companion for sentence shape, empty framing and attribution. Put the actual result beside its baseline and conditions. Answer a real reviewer concern directly and distinguish changes made from work proposed. |
+| English README, article, email or project update | The same English `humanizer` | Start with the reader's task, the event or the decision. Choose examples and commitments from the brief. Preserve commands, dates and technical terms. |
+| Simplified Chinese project update, README, article or everyday message | [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh/blob/f4518a8eab97b8bfebc66a89d34320a89bef6930/SKILL.md) (`humanizer-zh`) | Use its Chinese expression checks as writing constraints: name the actor and action, place conditions near them, skip stock openings and imagined objections. The upstream skill edits existing prose; ClearWeave composes the new text. |
+| Chinese manuscript, proposal, academic rebuttal, or a Chinese request specifically centered on defensive writing | [Devilyuu/anti-defensive-writing-zh](https://github.com/Devilyuu/anti-defensive-writing-zh/blob/1b0e2025cb42186767db903231db536be1e32405/SKILL.md) (`anti-defensive-writing-zh`). For scholarly work also read its [academic guidance](https://github.com/Devilyuu/anti-defensive-writing-zh/blob/1b0e2025cb42186767db903231db536be1e32405/references/academic-zh.md). | Write the supported claim with its actual uncertainty and material counterevidence. In a response, say what the reviewer asked, what changed and where, to the extent supplied. Keep the requested Chinese script and local usage. |
+| Copy for Taiwan readers in Traditional Chinese | [acchuang/zh-tw-humanizer](https://github.com/acchuang/zh-tw-humanizer/blob/76d7d181067a0cd160d021e0e7b02cc50b191fc6/SKILL.md) (`zh-tw-humanizer`) | Use its Taiwan vocabulary and register while composing. For a Taiwan academic deliverable, use this companion with the bundled academic and anti-defensive guides. Preserve quoted wording, identifiers and product names. |
+
+For other Chinese locales, preserve the requested locale with the bundled Chinese guidance. Use a validated same-genre writing sample for voice when supplied. If the user specifies a companion, follow that choice within their language and factual requirements.
+
+## Use the selected rules
+
+1. Read the chosen companion's actual instructions once before composing. Where the host exposes the matching skill **and its source is known**, use it within the scope in the table. Multiple projects register the name `humanizer`; the English route above specifies Aparnabuilds.
+2. For a file-based host, run `python3 scripts/read_companion.py NAME` relative to the installed ClearWeave directory. It checks sibling and standard personal skill directories for the matching file, then tries its pinned upstream version when online. Use `--local /path/to/companion` for a nonstandard checkout. For the Chinese academic supplement use the same command with `--resource academic`. The reader verifies the selected rule file and prints it. Pass only the companion name and options. Manuscript text and private samples stay in the writing session.
+3. If Python or direct upstream access is unavailable and the host can read GitHub, use the corresponding pinned link. Honor offline requests by using only installed files (`--offline` with the script) and bundled rules. If the chosen source cannot be read, proceed with the bundled language guide and, when applicable, the academic and anti-defensive guides. Never report an external skill as used if only the fallback ran. Keep any requested provenance outside the finished prose.
+
+Read only the relevant sections of lengthy guides. For an editing-only companion, use its guidance to choose the wording as each paragraph is formed. Do not delegate a blank page to its rewrite mode or schedule a full second draft. ClearWeave's evidence, voice, requested output and genre rules govern any conflict. Keep necessary hedges, unfavorable results and citations, including citations to competing work. Apply a security or factual warning when the content calls for it. Do not inherit blanket word bans, punctuation quotas, commercial source preferences, detection targets, or an instruction to change the output locale.
+
+## Write the paragraph
+
+- Identify the reader's question and the supplied detail that answers it. Open the paragraph with that detail or the context the reader needs to understand it.
+- Choose verbs as you write: distinguish planned, implemented, tested and observed. Attach the limiting condition to the precise claim it changes. Use the author's sample for expression only.
+- Before moving to the next paragraph, check whether each sentence adds a fact, necessary link or action. Leave out repeated cautions, invented consensus, routine praise and generic significance claims. Keep independently meaningful list items, genuine contrasts and established technical terms.
+- At delivery, check the draft against the source notes for values, attribution, scope, adverse findings and commitments. Deliver the requested prose. Mention a missing fact separately only when it affects the deliverable.
+
+Example notes: “Offline test, 80 requests. Both routers missed six. Latency wasn't measured.” A results paragraph can begin “Both routers missed six of the 80 requests in the offline test. We did not measure latency.” Reporting this observation supports neither an equivalence claim nor a prediction about production latency.

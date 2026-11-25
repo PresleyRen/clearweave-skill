@@ -1,4 +1,4 @@
 interface:
   display_name: "ClearWeave · Scholarly"
-  short_description: "Bilingual prose, academic grammar and author voice"
-  default_prompt: "Use $clearweave to edit this text, refine its academic grammar and remove defensive framing while preserving meaning and the supplied author voice."
+  short_description: "Draft and edit natural English and Chinese prose"
+  default_prompt: "Use $clearweave to write from my notes or edit my passage. Apply the writing rules from the first sentence, keep the evidence and limits intact, and write for my reader."

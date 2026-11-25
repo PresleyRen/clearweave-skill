@@ -4,7 +4,7 @@
 
 [简体中文](README.zh-CN.md) · [Documentation](docs/README.md) · [Skill](skills/clearweave/SKILL.md) · [Capability index](docs/capabilities.md) · [Published-paper examples](docs/scholarly-examples.md)
 
-ClearWeave edits papers, technical documents, READMEs, work emails and everyday writing. It removes stock phrasing and repetition, brings the contribution into focus, corrects academic grammar, and builds reusable style profiles from selected samples. Choose the language of the finished text and editorial notes separately.
+ClearWeave drafts papers and technical documents from your notes and edits existing papers, READMEs, work emails and everyday writing. It removes stock phrasing and repetition, brings the contribution into focus, corrects academic grammar, and builds reusable style profiles from selected samples. Choose the language of the finished text and editorial notes separately.
 
 ## Capabilities
 
@@ -61,12 +61,25 @@ Extend: issue → CW capability → LF rule / CF conflict → file → counterex
 ## Install and use
 
 ```bash
-git clone --branch v0.4.0 https://github.com/PresleyRen/clearweave-skill.git
+git clone --branch main https://github.com/PresleyRen/clearweave-skill.git
 cd clearweave-skill
 python3 tools/install_skill.py --project /absolute/path/to/your-project
 ```
 
-The project installation is `.agents/skills/clearweave`. Back up customizations before replacing an existing installation. Python helpers use the Python 3.10+ standard library.
+The installer copies the skill into `.agents/skills/clearweave` in your project. To update an older installation, move its directory to a backup location, then run the installer from the current `main` checkout. Python helpers use the Python 3.10+ standard library.
+
+### Draft from notes
+
+```text
+$clearweave
+Write a short Results paragraph for my paper in English using these notes.
+On the same 100 queries, the baseline ranked the correct answer first 71 times.
+With reranking, it did so 76 times. We have not tested the difference for significance.
+```
+
+ClearWeave uses the language and purpose of the draft to select among four optional writing guides. It reads a matching local guide when the host provides the pinned version, or reads the pinned upstream file when accessible. If neither copy is available, it drafts immediately with its built-in rules, including offline. See [first-draft guidance and guide selection](skills/clearweave/references/drafting.md).
+
+### Edit or profile existing text
 
 ```text
 $clearweave

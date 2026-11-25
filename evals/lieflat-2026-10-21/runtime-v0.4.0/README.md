@@ -1,0 +1,1 @@
+Archived ClearWeave 0.4.0 runtime for the recorded precision-mode evaluation. Each of the 26 files under `skills/clearweave` matches the SHA-256 digest in the original protocol. Run `python3 tools/evaluate_lieflat.py` from the repository to replay the saved edits using this snapshot.

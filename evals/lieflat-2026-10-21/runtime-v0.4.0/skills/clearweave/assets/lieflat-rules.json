@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "source": "S46",
+  "language": "zh",
+  "upstream_revision": "27d29232f10124db904ca9c0536d0b67cb3b2833",
+  "rules": [
+    {
+      "id": "LF01",
+      "name_zh": "虚设误解后的翻案",
+      "name_en": "Unnecessary antithesis",
+      "review": "Preserve a substantive exclusion or contrast; edit only an invented objection.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "(?:不是|并非|不在于)[^。！？\\n]{1,36}?(?:而是|而在于)|(?:你以为|看似|表面上)[^。！？\\n]{1,36}?(?:其实|实则|实际上)"
+        }
+      ]
+    },
+    {
+      "id": "LF02",
+      "name_zh": "密集顿号列举",
+      "name_en": "Dense enumeration",
+      "review": "Keep every distinct item and its order; lists and required inventories stay intact.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "[^，。！？；：、\\n]{1,30}、[^，。！？；：、\\n]{1,30}、[^，。！？；：、\\n]{1,30}"
+        }
+      ]
+    },
+    {
+      "id": "LF03",
+      "name_zh": "相邻句结构重复",
+      "name_en": "Adjacent sentence patterns",
+      "review": "Check rhetorical purpose; preserve chronological narrative and deliberate parallelism.",
+      "patterns": []
+    },
+    {
+      "id": "LF04",
+      "name_zh": "揭晓式破折号",
+      "name_en": "Reveal-style dashes",
+      "review": "Review the dash function and the supplied author profile, not a punctuation quota.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "——|—"
+        }
+      ]
+    },
+    {
+      "id": "LF05",
+      "name_zh": "提示性冒号与空列表引导",
+      "name_en": "Prompt colons and empty list lead-ins",
+      "review": "Keep direct speech, explanatory hierarchy and substantive lead-in information.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "(?:一句话总结|简单来说|核心是|关键在于|原因如下|总结|结论|换句话说)[：:]"
+        }
+      ]
+    },
+    {
+      "id": "LF06",
+      "name_zh": "连续编号小标题",
+      "name_en": "Repeated numbered headings",
+      "review": "Only remove heading ordinals; retain cross-references, procedural numbering, wording and levels.",
+      "patterns": []
+    },
+    {
+      "id": "LF07",
+      "name_zh": "理想化职业拟人",
+      "name_en": "Idealized occupational analogy",
+      "review": "Use an already stated function; do not convert metaphorical praise into an invented capability.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "(?:像|相当于)[^。！？\\n]{0,8}?(?:一个|一位)[^。！？\\n]{0,25}?(?:智慧|全能|永不疲倦|贴身|完美)[^。！？\\n]{0,15}?(?:导师|秘书|助手|顾问|管家|审查员|实习生)"
+        }
+      ]
+    },
+    {
+      "id": "LF08",
+      "name_zh": "用已有数据承接概括",
+      "name_en": "Ground a summary in existing detail",
+      "review": "Use only the matching existing quantity, object, unit and condition; add no evidence.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "显著提升|大幅增长|明显改善|效率的提升|大量|众多"
+        }
+      ]
+    },
+    {
+      "id": "LF09",
+      "name_zh": "空泛起手式",
+      "name_en": "Empty opening cues",
+      "review": "Delete only the cue; preserve the following claim and register.",
+      "patterns": [
+        {
+          "subtype": "",
+          "pattern": "^(?:说白了|说穿了|先说结论)[，,:：]?"
+        }
+      ]
+    },
+    {
+      "id": "LF10",
+      "name_zh": "五类中文翻译腔",
+      "name_en": "Five Chinese translation-shaped patterns",
+      "review": "Resolve syntactic burden without losing temporal, causal or scope relationships.",
+      "patterns": [
+        {
+          "subtype": "a",
+          "name_zh": "前置长定语",
+          "pattern": "(?:一个|一种|一套|这个|这种)[^，。、；：！？\\n\\ufffc]{15,60}的[\\u4e00-\\u9fff]{2,6}"
+        },
+        {
+          "subtype": "b",
+          "name_zh": "当…时",
+          "pattern": "^当[^，。！？\\n]{2,40}(?<!的)时，"
+        },
+        {
+          "subtype": "c",
+          "name_zh": "前置话题壳",
+          "pattern": "^(?:对于[^，。！？\\n]{1,25}来说|对[^，。！？\\n]{1,25}而言|就[^，。！？\\n]{1,25}而言|关于[^，。！？\\n]{1,25}|在[^，。！？\\n]{1,25}方面)[，,]"
+        },
+        {
+          "subtype": "d",
+          "name_zh": "句首连接词",
+          "pattern": "^(?:然而|因此|此外|与此同时|换言之|总而言之)[，,]"
+        },
+        {
+          "subtype": "e",
+          "name_zh": "复述提示语",
+          "pattern": "^(?:这意味着|这表明|这说明|换句话说)"
+        }
+      ]
+    },
+    {
+      "id": "LF11",
+      "name_zh": "非首段评论缺回指",
+      "name_en": "Paragraph commentary without a referent",
+      "review": "Add a reference only when its antecedent is unambiguous; otherwise retain the original.",
+      "patterns": []
+    }
+  ]
+}

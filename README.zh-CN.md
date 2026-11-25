@@ -4,7 +4,7 @@
 
 [English](README.md) · [中文文档中心](docs/README.zh-CN.md) · [Skill 入口](skills/clearweave/SKILL.md) · [功能与规则索引](docs/capabilities.zh-CN.md) · [真实论文示例](docs/scholarly-examples.zh-CN.md)
 
-ClearWeave 用于英文论文、中文文章、技术文档、README 和工作邮件。它清理套话与重复，直接呈现研究贡献，修正学术语法，并从指定样稿中提取可复用的文风。正文语言、说明语言、文体和修改幅度可以分别设置。
+给 ClearWeave 实验笔记或技术要点，它可以直接起草英文论文段落或中文技术文档。已有稿件也可以交给它编辑，包括论文、中文文章、README 和工作邮件。它清理套话与重复，直接呈现研究贡献，修正学术语法，并从指定样稿中提取可复用的文风。正文语言、说明语言、文体和修改幅度可以分别设置。
 
 ## 能做什么
 
@@ -63,12 +63,25 @@ ClearWeave 用于英文论文、中文文章、技术文档、README 和工作�
 ## 安装与调用
 
 ```bash
-git clone --branch v0.4.0 https://github.com/PresleyRen/clearweave-skill.git
+git clone --branch main https://github.com/PresleyRen/clearweave-skill.git
 cd clearweave-skill
 python3 tools/install_skill.py --project /你的项目绝对路径
 ```
 
-安装位置为项目的 `.agents/skills/clearweave`。更新已有安装时，先备份自定义内容，再替换对应目录。Python 工具使用 Python 3.10+ 标准库。
+安装脚本会把技能复制到项目的 `.agents/skills/clearweave`。更新旧版时，先把该目录移到备份位置，再从最新的 `main` 分支运行安装脚本。Python 工具使用 Python 3.10+ 标准库。
+
+### 用笔记起草
+
+```text
+$clearweave
+根据下面的实验记录，为我的论文写一段简短的英文 Results 正文。
+对同一批 100 条查询，基线有 71 次把正确答案排在第一，加入重排后有 76 次。
+尚未检验差异是否显著。
+```
+
+起草时，ClearWeave 按成稿语言和用途，从四份可选写作指南中选择适用规则。优先读取当前工具能找到且版本匹配的本地指南，也可以读取上游仓库中锁定版本的文件。如果两处都读不到，就直接用内置规则成稿，离线也可使用。详见[起草流程与四份指南的选择规则](skills/clearweave/references/drafting.md)。
+
+### 编辑原文或提取文风
 
 ```text
 $clearweave
