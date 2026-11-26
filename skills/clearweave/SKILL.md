@@ -107,6 +107,10 @@ Do not target sentence-length distributions, synonym diversity, a count of rheto
 
 The Python helper only lints surface patterns and compares selected literal spans. All rewriting, translation, voice adaptation, and substantive review are performed by the host model, not the script.
 
+## Final-manuscript handoff
+
+ClearWeave owns expression and preservation of scientific meaning, not full paper validity. For a publication workflow, hand the edited current manuscript and changed claims/citation/number/figure bindings to Paper Review Atlas (https://github.com/PresleyRen/paper-review-atlas/blob/main/skills/paper-review-atlas/references/acceptance-gates.md); do not label style checks as full publication acceptance. The final owner must run the actual applicable 18-gate review and publication-mode checker. Recheck affected evidence after a substantive edit. Grammar-only or standalone editing stays scoped.
+
 ## 6. Verify and stop
 
 For a first draft, compare the result against the brief and evidence. For an edit, compare it against the original passage.
