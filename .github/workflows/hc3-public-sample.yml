@@ -1,9 +1,6 @@
 name: Collect HC3 public evaluation sample
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/hc3-public-sample.yml']
   workflow_dispatch:
 
 permissions:

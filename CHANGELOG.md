@@ -2,6 +2,8 @@
 
 ## 0.5.0 — 2026-11-27
 
+- Keep routine CI to offline unit tests and package validation on main pushes and pull requests, cancelling superseded runs. Make publication and external source collection/replays manual; require release notes only for explicit publication.
+
 - Apply Academic Humanizer guidance while composing the first English academic paragraph. Add Draft, scoped Polish and fixed-structure Cleanup modes, with a bundled offline route and a single language editor.
 - Retain the pinned junbolian source, add its checked examples resource and a separately identified AIScientists evidence/style companion. Preserve scientific conditions, statistical summaries, citations and reproducibility details when adapting upstream examples.
 - Detect changes to common LaTeX labels and cross-reference keys in the protected-literal checker, including keys without numbers.
