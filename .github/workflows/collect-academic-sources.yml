@@ -2,19 +2,6 @@ name: Collect academic writing sources
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/collect-academic-sources.yml'
-      - 'tools/collect_academic_sources.py'
-      - 'tests/test_academic_sources.py'
-      - 'evals/academic-sources/**'
-  pull_request:
-    paths:
-      - '.github/workflows/collect-academic-sources.yml'
-      - 'tools/collect_academic_sources.py'
-      - 'tests/test_academic_sources.py'
-      - 'evals/academic-sources/**'
 
 permissions:
   contents: read

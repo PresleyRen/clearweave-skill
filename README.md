@@ -256,6 +256,8 @@ Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the
 
 ## Sources and tests
 
+Routine GitHub CI runs the offline unit suite and package checks on main pushes and pull requests. Superseded runs are cancelled; branch pushes do not duplicate PR checks. Release publishing and network-based source collection/replays are manual workflows. Release notes are required by `python3 tools/validate_repo.py --release` only for explicit publication. When changing generated capability documentation, update its source and run `python3 tools/render_catalog.py --write`, committing the generated files with that change.
+
 The 0.5.0 [Academic Humanizer validation record](docs/evaluation-academic-humanizer.md) reports 411 passing local unit tests and a fresh-context four-case paired trial. Both versions met the scoped requests; all four comparisons tied.
 
 The integration registry covers **48 sources, 278 adoption/adaptation decisions, 55 capabilities, 44 conflict families and 88 authored bilingual conflict cases**. This release adds the academic language protocol and LaTeX cross-reference protection. Authored cases document expected behavior; they do not establish writing quality or semantic guarantees.

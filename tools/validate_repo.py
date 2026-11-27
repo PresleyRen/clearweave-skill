@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the ClearWeave package, source coverage, and recorded output structure."""
 from __future__ import annotations
+import argparse
 import json
 import importlib.util
 from pathlib import Path
@@ -10,7 +11,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def validate() -> list[str]:
+def validate(*, release: bool = False) -> list[str]:
     errors = []
     for file in ROOT.rglob("*.json"):
         if ".git" in file.relative_to(ROOT).parts:
@@ -48,8 +49,13 @@ def validate() -> list[str]:
         errors.append("Source IDs differ from the declared inventory")
     if len({s["repo"] for s in audit}) != source_count:
         errors.append("Source repositories must be distinct within the declared inventory")
-    if (ROOT / "VERSION").read_text().strip() != catalog["version"]:
+    version = (ROOT / "VERSION").read_text().strip()
+    if version != catalog["version"]:
         errors.append("VERSION and capability catalog differ")
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
+        errors.append("VERSION must contain a numeric major.minor.patch version")
+    elif release and not (ROOT / "docs/releases" / f"v{version}.md").is_file():
+        errors.append(f"Missing reviewed release notes: docs/releases/v{version}.md")
     for source in audit:
         expected = f"https://github.com/{source['repo']}/blob/main/{source['skill_path']}"
         if source["url"] != expected:
@@ -91,9 +97,13 @@ def validate() -> list[str]:
     return errors
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--release", action="store_true",
+                        help="Also require the reviewed notes for an explicit version release")
+    args = parser.parse_args(argv)
     try:
-        errors = validate()
+        errors = validate(release=args.release)
     except (OSError, ValueError, KeyError, TypeError) as exc:
         print(f"Validation error: {exc}", file=sys.stderr)
         return 1

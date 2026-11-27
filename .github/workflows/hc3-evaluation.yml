@@ -1,14 +1,6 @@
 name: Replay HC3 recorded real-data edits
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/evaluate_hc3.py'
-      - 'evals/hc3-2026-10-20/cases.json'
-      - 'evals/hc3-2026-10-20/edits.json'
-      - 'evals/hc3-2026-10-20/manifest.json'
-      - '.github/workflows/hc3-evaluation.yml'
   workflow_dispatch:
 
 permissions:
