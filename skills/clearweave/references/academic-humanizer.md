@@ -36,6 +36,8 @@ Reuse the map in [manuscript-routing.md](manuscript-routing.md): result or claim
 
 Use these checks when the corresponding problem occurs; they are not word bans or a paragraph template.
 
+Apply the [CW37 evidence-calibration decision and counterexamples](anti-defensive.md#apply-evidence-calibration-as-the-sentence-is-written) during first composition, not just as a post-draft rewrite. For Polish or Cleanup, apply only changes within the requested scope. Use the existing claim map to recognize redundant cross-paragraph caveats without suppressing real uncertainty.
+
 | Candidate problem | Smallest useful action | Preserve the legitimate case |
 | --- | --- | --- |
 | Empty opening, importance announcement, or repeated conclusion | Start with the supplied finding or necessary context; remove the redundant announcement | Keep background needed to understand the question and summaries with an independent reading purpose |
