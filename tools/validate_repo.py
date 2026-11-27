@@ -48,8 +48,13 @@ def validate() -> list[str]:
         errors.append("Source IDs differ from the declared inventory")
     if len({s["repo"] for s in audit}) != source_count:
         errors.append("Source repositories must be distinct within the declared inventory")
-    if (ROOT / "VERSION").read_text().strip() != catalog["version"]:
+    version = (ROOT / "VERSION").read_text().strip()
+    if version != catalog["version"]:
         errors.append("VERSION and capability catalog differ")
+    if not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", version):
+        errors.append("VERSION must contain a numeric major.minor.patch version")
+    elif not (ROOT / "docs/releases" / f"v{version}.md").is_file():
+        errors.append(f"Missing reviewed release notes: docs/releases/v{version}.md")
     for source in audit:
         expected = f"https://github.com/{source['repo']}/blob/main/{source['skill_path']}"
         if source["url"] != expected:

@@ -3,7 +3,7 @@ name: Publish ClearWeave release
 on:
   push:
     branches: [main]
-    paths: [VERSION]
+    paths: [VERSION, 'docs/releases/**']
   workflow_dispatch:
 
 permissions:
@@ -91,8 +91,12 @@ jobs:
           set -euo pipefail
           tag="v${RELEASE_VERSION}"
           if gh release view "$tag" >/dev/null 2>&1; then
-            echo "Release already exists; refusing to overwrite it."
-            exit 1
+            echo "Release already exists; leaving it unchanged."
+            exit 0
+          fi
+          if gh api "repos/${GH_REPO}/git/ref/tags/${tag}" >/dev/null 2>&1; then
+            echo "Tag already exists; leaving it and any release unchanged."
+            exit 0
           fi
           gh release create "$tag" dist/* --target "$GITHUB_SHA" --title "ClearWeave ${tag} · Scholarly writing and author voice" --notes-file "docs/releases/${tag}.md"
           gh release view "$tag" --json url,tagName,targetCommitish,isDraft
