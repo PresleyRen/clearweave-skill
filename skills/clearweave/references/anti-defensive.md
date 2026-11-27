@@ -22,6 +22,39 @@ Stacked hedges need interpretation: “may possibly suggest” often has redunda
 
 中文处理同样按作用判断：“遗憾的是”“我们承认”“需要强调的是”可改为直接陈述；“仅在离线数据上成立”“尚未评估多语言”承载信息，应保留。删“仅”之前要分清自我贬低和集合范围。
 
+### Apply evidence calibration as the sentence is written
+
+For drafting and substantive expression edits, use the following decision, not a banned-word list. Grammar-only, translation and fixed-structure cleanup keep their requested scope.
+
+| Evidence or wording | Decision |
+| --- | --- |
+| A directly observed result | State the observation in its actual evaluation setting, with its supplied comparator, metric, unit and magnitude. Replace vague degree words only with available measurements. |
+| An estimate with statistical uncertainty | Report the estimate and the supplied uncertainty; distinguish a measured difference from significance, equivalence and generalization. |
+| Implemented behavior, design intention, a prediction or an untested mechanism | Use the appropriate status verb; do not turn a design goal or hypothesis into a demonstrated result. |
+| A proposition with no support | Narrow or omit the new claim; flag a material missing input separately. In a style-only edit, preserve the original claim and report the evidence problem separately rather than silently correcting it. |
+| Empty framing, anticipatory defense or stacked hedges | Remove the wrapper or redundant modality only if the remaining proposition has the same meaning. A genuine contrast, independently meaningful uncertainty or required disclosure stays. |
+
+Candidate cues include “it should be noted”, “it is worth emphasizing”, “may potentially”, “relatively”, “to some extent”, “does not necessarily mean”, “需要注意的是”, “在一定程度上”, “相对而言” and “并不意味着”. Inspect their function; do not automatically delete or count words such as may, only, not, approximately or significant as defects.
+
+Before moving to the next paragraph, ask whether each sentence contributes a fact, evidence, rationale, necessary qualification or logical connection. Reuse the existing claim map, if any. When a caveat repeats across adjacent paragraphs, retain it at the nearest relevant claim and remove redundant wrappers; keep it in each independently read abstract, caption or conclusion where omission would mislead. Do not place all limitations at the end to hide a material condition. Keep chat caveats and audit commentary outside the requested prose. Disclose real blockers and required safety, methodological or publication information when material.
+
+#### Constructed academic examples and counterexamples
+
+These are teaching cases, not observations about a real study.
+
+| Input / evidence | Appropriate wording or decision |
+| --- | --- |
+| 76/100 versus 71/100 under the same evaluation; no significance test | “On these 100 queries, reranking raised top-1 accuracy from 71% to 76%.” Retain the untested significance where interpreting the difference; do not assert statistical significance or a general gain. |
+| Estimated change 0.008, interval −0.002 to 0.018 | “The estimated increase was 0.008 (interval: −0.002 to 0.018).” Do not turn an interval spanning zero into proof of improvement or equivalence. |
+| “It is worth noting that both agents used six tool calls.” | “Both agents used six tool calls.” Preserve the experimental control. |
+| “The trace suggests that stale state may explain the failure”; mechanism not established | Keep the distinct uncertainty about the mechanism. Do not rewrite it as a causal finding. |
+| “The router performed relatively well”; no metric supplied | Ask for or flag the missing comparison when material; never invent accuracy or replace the phrase with an unsupported superlative. |
+| Only offline English tasks were evaluated; the same warning occurs in three adjacent sentences | State the evaluated setting and material untested scope clearly, then remove redundant repetitions. Retain the scope in independently read summaries if necessary. |
+
+For a targeted A/B evaluation, use the same source notes, task, model and output scope, with the current and candidate rules in fresh contexts. Record actual outputs; judge unnecessary disclaimers, redundant qualifiers, repeated caveats and vague claims with available measurements alongside factual distortions, unsupported claims and lost material uncertainty. Aim for zero *identified unnecessary* instances and zero evidence changes, not zero hedging tokens. Keep no-edit and grammar-only controls; preserve failed cases and separate model behavior from deterministic checks. Do not claim a pass or improvement without running the evaluation.
+
+Method references: [Manchester Academic Phrasebank: Being cautious](https://www.phrasebank.manchester.ac.uk/using-cautious-language/) for legitimate epistemic restraint; [blader/humanizer](https://github.com/blader/humanizer) (existing S05) for redundant staging and framing; [OpenAI: Rethinking skills and prompts](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) for keeping instructions focused. These are guidance, not an independent evaluation. In particular, do not adopt upstream permission to add unsupplied details in a scientific style edit.
+
 <a id="cw38"></a>
 ## CW38 · Contribution-first narrative
 
