@@ -10,6 +10,7 @@
 
 | 模块 | 具体功能 | 常见交付 |
 | --- | --- | --- |
+| **英文学术表达** | 起草、常规润色和成稿最小清理共用一套证据与表达规则，按任务限制修改范围。 | 有据可查的初稿、润色稿或最小清理稿 |
 | **lieflat 精准清理** | 按十一类中文规则定位，只改命中片段；锁定段落、标题层级、列表和表格，保留其余原文。 | 规则对应的最小修改稿 |
 | **语料对比与改动验收** | 测量中文表达候选、段落与标题指标；比较两组语料，核对每处改动及未改区域。 | 位置报告、语料测量、改动清单核验 |
 | **双语去 AI 味** | 调整空泛开场、机械段落、反复总结、过度解释、中文翻译腔和英文名词化。 | 自然清楚的修订稿 |
@@ -18,47 +19,25 @@
 | **论证与章节组织** | 围绕问题、方法、证据和贡献安排段落，综合相关工作，区分研究计划与已完成结果。 | 反向提纲、章节草稿、结构修改 |
 | **真实样稿文风** | 从指定论文或个人样稿提取句式、语气、结构与术语习惯；按语言、领域和章节组织档案。 | 作者、团队或领域文风档案 |
 | **定稿偏好学习** | 比较初稿与认可的定稿，记录改动及适用范围，整理待确认的文风偏好。 | 带来源的偏好提案 |
-| **原意与术语核对** | 核对数字、单位、否定、条件、证据强度、比较对象、工作状态，以及引语、公式和代码。 | 修改前后差异与待复核位置 |
+| **原意与术语核对** | 核对数字、单位、否定、条件、证据强度、比较对象、工作状态，以及引语、公式、LaTeX 标签与引用键和代码。 | 修改前后差异与待复核位置 |
 | **审稿与回复** | 定位论证缺口、证据不足和前后矛盾；组织逐条回复并核对引用的修订正文。 | 审稿意见、回复信、净稿 |
 | **翻译、起草与压缩** | 按材料写作，转换语言和地区用语，合并重复信息。 | 目标语言正文 |
 | **长文、多文件与维护** | 维护术语和论断台账，处理指定文件，按能力编号定位规则、来源、冲突和测试。 | 逐文件结果与扩展入口 |
 
+**0.5.0 新增：**内置 Academic Humanizer 学术语言协议（CW55），统一英文起草、润色与成稿清理；按需读取对应上游指南，并增加 LaTeX 标签和交叉引用的字面核对。
+
 ## 完整功能图
 
-```text
-原稿 / 论文 / 笔记 / 指定样稿 + 本次要求
-                       │
-                       ▼
-任务与风格：语言 · 文体 · 章节 · 修改强度 · 项目风格指南
-                       │
-                       ▼
-信息台账：事实 · 数值 · 条件 · 引用 · 术语 · 研究状态
-                       │
-           ┌───────────┴───────────────────┐
-           ▼                               ▼
-完整编辑路径                         lieflat 成稿精准清理
-润色 / 重写 / 翻译 / 起草             锁定结构与未命中原文
-双语表达 · 反防御与贡献                    │
-论文语法 · 论证组织                        ▼
-真实样稿文风 · 定稿偏好              LF01–LF11 中文规则
-           │                       ├─ 翻案 / 列举 / 句间结构
-           │                       ├─ 破折号 / 冒号 / 标题编号
-           │                       ├─ 拟人 / 已有数据 / 空起手
-           │                       └─ 五类翻译句式 / 段首回指
-           │                               │
-           │                       体裁与作者习惯复核
-           │                       每处修改 → 规则 → 最小片段
-           └───────────┬───────────────────┘
-                       ▼
-复核：compare 字面差异 · risk 变化线索 · 编辑者语义核对
-      scholar 学术与文风 · tone 候选/分母/语料对比/改动清单
-                       │
-                       ▼
-交付：正文 / 诊断 / 修改说明 / 回复信 / 文风档案
-只诊断请求在选定路径中返回定位与建议，原稿保持不变。
+先按本次要求确定语言、文体、章节、作者文风和修改范围。以下路径均保留事实、数值、条件、引用和术语。
 
-扩展：问题 → CW 能力 → LF 规则 / CF 冲突 → 文件 → 正反例 → 真实文本复测
-```
+| 材料与要求 | 路径 | 修改范围 |
+| --- | --- | --- |
+| 用笔记或证据写新的英文学术正文 | **Draft 起草** | 第一段落笔前读取学术规则，沿用已有证据图和章节计划，逐段写作时应用。 |
+| 编辑已有英文学术段落 | **Polish 润色** | 按要求调整语法、清晰度或文风；只改语法就保持该范围。 |
+| 英文学术成稿，只处理具体表达问题 | **Cleanup 成稿清理** | 固定标题、段落分隔、列表、表格和论证顺序，逐字保留未命中的原文。 |
+| 中文成稿精准清理 | **Lieflat** | 按 LF01–LF11 定位候选，结合上下文判断后做必要的最小修改。 |
+
+日常双语编辑、翻译、重组、审稿与文风提取继续走对应任务路径。只诊断时返回问题位置，原稿不变。交付前结合字面差异、工具提示和编辑者的语义核对；脚本检查通过本身不能证明意思完全相同。
 
 ## 安装与调用
 
@@ -77,15 +56,16 @@ python3 tools/install_skill.py --project /你的项目绝对路径
 | 你的任务 | ClearWeave 会选什么 |
 | --- | --- |
 | 有实验表，还没想好能写什么结论 | 从原表提取方法、基线、指标、数值、条件、证据位置；多文件项目参考 paperwriter |
-| 写整章 Results、Discussion 或组织全文 | nature-writing 规划每段要回答的问题和证据顺序 |
+| 写整章 Results、Discussion 或组织全文 | 沿用已有证据和章节计划；需要规划时参考 nature-writing，英文正文从第一段使用学术 Draft 规则 |
 | 学目标期刊写法、转刊、核对主稿与补充材料 | paperwriter 分开管理范文和自己的实验事实，核对跨文件一致性 |
-| 润色含公式、定理、假设或 LaTeX 引用的段落 | academic-humanizer 先保护技术内容，再润色周围的句子 |
-| 英文短摘要、审稿回复、项目消息 | humanizer 配合内置学术或技术表达规则 |
+| 润色含公式、定理、假设或 LaTeX 引用的段落 | 学术 Polish 保护技术内容、标签和引用键，按要求修改周围的句子 |
+| 英文论文段落、摘要、研究计划、审稿回复 | 内置学术语言协议；新内容用 Draft，已有稿用 Polish，成稿最小清理用 Cleanup |
+| 英文 README、邮件、项目消息 | humanizer 配合内置通用或技术表达规则 |
 | 简体中文 README、邮件、工作消息 | humanizer-zh |
 | 中文论文、开题、逐条审稿回复 | anti-defensive-writing-zh，学术任务再读它的学术附录 |
 | 明确面向台湾读者的繁体文稿 | zh-tw-humanizer，学术内容另用内置学术规则 |
 
-例如，写英文 Results 整章时，先由 nature-writing 安排证据和段落，再按 humanizer 的相关规则落笔。只改定理旁的语句时，由 academic-humanizer 处理一次。范文只用于学习表达，论文引用仍要对照原文核实它支持哪句话。
+例如，写英文 Results 整章时，先沿用已有的证据和段落计划；确需规划才参考 nature-writing，然后按学术 Draft 规则落笔。`academic-humanizer` 对应 junbolian 的可选学术指南；`academic-humanizer-evidence` 对应 AIScientists 的可选证据、样稿文风或提案指南，只取当前需要的部分。两者为同一个写作者提供规则，每段只做一次语言编辑。范文只用于学习表达，论文引用仍要对照原文核实它支持哪句话。
 
 [完整场景与核验流程](skills/clearweave/references/manuscript-routing.md)
 
@@ -94,11 +74,12 @@ python3 tools/install_skill.py --project /你的项目绝对路径
 ```text
 $clearweave
 根据下面的实验记录，为我的论文写一段简短的英文 Results 正文。
+从第一段开始使用学术 Draft 规则。
 对同一批 100 条查询，基线有 71 次把正确答案排在第一，加入重排后有 76 次。
 尚未检验差异是否显著。
 ```
 
-起草时，ClearWeave 按成稿语言和用途，从四份可选写作指南中选择适用规则。优先读取当前工具能找到且版本匹配的本地指南，也可以读取上游仓库中锁定版本的文件。如果两处都读不到，就直接用内置规则成稿，离线也可使用。详见[起草流程与四份指南的选择规则](skills/clearweave/references/drafting.md)。
+英文学术任务先使用[内置学术语言协议](skills/clearweave/references/academic-humanizer.md)，在每段写作时检查证据、术语和表达。可选外部指南优先读取版本匹配的本地文件，也可以读取上游仓库中锁定版本的文件；读取一次后沿用相关规则。外部指南不可用时继续使用内置规则，离线也可写作。一般英文与中文写作保留各自路线。详见[起草流程与指南选择](skills/clearweave/references/drafting.md)。
 
 ### 编辑原文或提取文风
 
@@ -107,6 +88,16 @@ $clearweave
 润色这段英文论文：去套话与防御性表达，检查主谓一致、时态、冠词和修饰关系。
 正文保留英文，说明用中文；保持数值、引用、术语和证据强度。
 [原文]
+```
+
+英文成稿只需最小清理时，可以这样说：
+
+```text
+$clearweave
+用 Cleanup 模式清理这份英文论文成稿的套话。
+固定标题、段落分隔、列表、表格和论证顺序，保留引用、公式、LaTeX 标签与引用键。
+未命中的原文逐字保留，只输出修改后的英文正文。
+[英文原稿]
 ```
 
 ```text
@@ -144,7 +135,7 @@ $clearweave
 [原文与风格资料]
 ```
 
-普通英文润色、论文语法和全文重写继续使用完整编辑路径。逐条规则、工具用法与对照示例见 [lieflat 整合说明](docs/lieflat-integration.zh-CN.md) 和 [本轮真实文本记录](docs/evaluation-lieflat.zh-CN.md)。
+英文学术成稿使用上面的 Academic Humanizer **Cleanup** 路径。Lieflat 保持中文范围；更广的语法修改、起草和重组按本次任务执行。逐条规则、工具用法与对照示例见 [lieflat 整合说明](docs/lieflat-integration.zh-CN.md) 和 [真实文本记录](docs/evaluation-lieflat.zh-CN.md)。
 
 ## 真实文本效果
 
@@ -163,6 +154,8 @@ $clearweave
 ## 本地检查与文风工具
 
 模型完成编辑、翻译、论证审查和文风应用；以下 Python 工具提供位置、差异、测量和维护索引。
+
+比较工具也会报告常见 LaTeX 标签和交叉引用命令的字面变化，覆盖范围见[工具说明](skills/clearweave/references/tooling.md)。它不能据此判定语义等价，数字、引用及其支持的具体论断仍需核对。
 
 ```bash
 # 表达、字面差异与变化线索
@@ -200,6 +193,7 @@ python3 skills/clearweave/scripts/clearweave_tone.py verify-edits original.md re
 
 | 要改进的地方 | 入口 | 编号 |
 | --- | --- | --- |
+| 英文学术起草、润色与成稿最小清理 | `academic-humanizer.md` | CW55 |
 | 白名单模式、十一类中文规则、五类翻译句式 | `lieflat.md`、`lieflat-rules.json` | CW49–51 |
 | 中文测量、改动清单、候选复核 | `clearweave_tone.py` | CW52–54 |
 | 套话、翻译腔、句式 | `english.md`、`chinese.md` | CW10–14 |
@@ -223,7 +217,7 @@ python3 tools/render_catalog.py --write
 新增规则时，保存一个问题样本和一个合理的相似表达，定位模块、补充测试，再更新能力索引。详见[整合与扩展说明](docs/scholarly-integration.md)。
 
 <details>
-<summary>展开全部 54 项能力及规则位置</summary>
+<summary>展开全部 55 项能力及规则位置</summary>
 
 <!-- capabilities:start -->
 | 能力编号与名称 | 执行方式 | 规则位置 |
@@ -282,13 +276,16 @@ python3 tools/render_catalog.py --write
 | **CW52** 同类分母的语料对比测量 | `script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw52) |
 | **CW53** 规则映射与未改区域核对 | `script+host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw53) |
 | **CW54** 候选复核与作者风格例外 | `host+script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw54) |
+| **CW55** 学术起草与成稿最小清理 | `host+literal+candidate` | [references/academic-humanizer.md](skills/clearweave/references/academic-humanizer.md#cw55) |
 <!-- capabilities:end -->
 
 </details>
 
 ## 来源与测试
 
-整合记录覆盖 **46 个来源、262 条采用与调整决定、54 项能力、42 类冲突及 84 个中英文冲突场景**。本轮新增 lieflat 精准清理、语料测量和改动清单验收。
+0.5.0 的 [Academic Humanizer 整合验证](docs/evaluation-academic-humanizer.zh-CN.md) 记录了 411 项通过的本地单元测试，以及四组新上下文配对试跑。两版均符合限定请求，四组比较均为平局。
+
+整合记录覆盖 **48 个来源、278 条采用与调整决定、55 项能力、44 类冲突及 88 个编写的中英文冲突场景**。本轮新增学术语言协议与 LaTeX 交叉引用保护。编写的场景用于记录预期行为，本身不能证明写作质量或保证语义不变。
 
 [中文文档中心](docs/README.zh-CN.md) · [lieflat 整合](docs/lieflat-integration.zh-CN.md) · [精准清理测试](docs/evaluation-lieflat.zh-CN.md) · [来源与取舍](docs/sources.zh-CN.md) · [完整能力索引](docs/capabilities.zh-CN.md) · [学术整合说明](docs/scholarly-integration.zh-CN.md) · [真实论文测试](docs/evaluation-scholarly.zh-CN.md) · [原始测试数据](evals/scholarly-2026-10-20/)
 

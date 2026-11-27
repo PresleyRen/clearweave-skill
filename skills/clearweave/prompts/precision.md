@@ -1,5 +1,17 @@
 # Precision cleanup prompts / 成稿精准清理
 
+## English academic finished draft
+
+```text
+$clearweave
+Use academic Cleanup mode on this finished English manuscript.
+Change only specific stock phrasing and the grammar needed for those changes.
+Preserve headings, paragraph breaks, lists, tables and argument order.
+Keep facts, uncertainty, terminology, citations, equations, LaTeX labels and reference keys.
+Leave every unmatched span exactly as written and return only the revised text.
+[manuscript]
+```
+
 ## 中文成稿
 
 ```text

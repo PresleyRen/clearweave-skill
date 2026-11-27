@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.0",
-  "provenance": "Original synthetic examples authored in this session. These are regression fixtures, not independently generated model trials.",
+  "version": "0.5.0",
+  "provenance": "Original synthetic regression fixtures authored during the recorded ClearWeave versions. These are constrained examples, not independently generated model trials; CF43–CF44 were added on 2026-11-27.",
   "cases": [
     {
       "id": "CF01-EN",
@@ -1774,6 +1774,110 @@
         }
       ],
       "assessment": "Authored conflict oracle, not a model-run benchmark. English cases check mode boundaries, not Chinese detection."
+    },
+    {
+      "id": "CF43-EN",
+      "conflict": "CF43",
+      "language": "en",
+      "kind": "editing",
+      "request": "Only clean stock phrasing in this final academic passage. Preserve headings, paragraph breaks and already precise wording; return only the text.",
+      "original": "# Results\n\nThe control group made 11 errors in 120 trials. The adapted model made 8 errors in the same 120 trials.\n\n# Interpretation\n\nThe difference may reflect the sampling design; we did not estimate a causal effect.",
+      "faithful_example": "# Results\n\nThe control group made 11 errors in 120 trials. The adapted model made 8 errors in the same 120 trials.\n\n# Interpretation\n\nThe difference may reflect the sampling design; we did not estimate a causal effect.",
+      "unsafe_example": "# Findings\n\nThe adapted model reduced errors from 11 to 8 in 120 trials, demonstrating its advantage.",
+      "checks": [
+        {
+          "type": "equals",
+          "value": "# Results\n\nThe control group made 11 errors in 120 trials. The adapted model made 8 errors in the same 120 trials.\n\n# Interpretation\n\nThe difference may reflect the sampling design; we did not estimate a causal effect."
+        }
+      ],
+      "assessment": "Authored synthetic conflict fixture, not a model-generated trial. Literal constraints check the stated preservation boundary; they do not prove scientific support or general semantic equivalence."
+    },
+    {
+      "id": "CF43-ZH",
+      "conflict": "CF43",
+      "language": "zh",
+      "kind": "editing",
+      "request": "对这份中文学术成稿只清理无信息的套话。保留标题、分段和已经准确的原句，只返回正文。",
+      "original": "# 结果\n\n对照组在120次试验中出现11次错误。调整后的模型在相同的120次试验中出现8次错误。\n\n# 解释\n\n差异可能与抽样设计有关；本研究没有估计因果效应。",
+      "faithful_example": "# 结果\n\n对照组在120次试验中出现11次错误。调整后的模型在相同的120次试验中出现8次错误。\n\n# 解释\n\n差异可能与抽样设计有关；本研究没有估计因果效应。",
+      "unsafe_example": "# 研究发现\n\n调整后的模型将120次试验中的错误从11次减少到8次，证明了模型的优势。",
+      "checks": [
+        {
+          "type": "equals",
+          "value": "# 结果\n\n对照组在120次试验中出现11次错误。调整后的模型在相同的120次试验中出现8次错误。\n\n# 解释\n\n差异可能与抽样设计有关；本研究没有估计因果效应。"
+        }
+      ],
+      "assessment": "Authored synthetic conflict fixture, not a model-generated trial. Literal constraints check the stated preservation boundary; they do not prove scientific support or general semantic equivalence."
+    },
+    {
+      "id": "CF44-EN",
+      "conflict": "CF44",
+      "language": "en",
+      "kind": "editing",
+      "request": "Polish expression only. Retain the reported statistic, interval definition and all numerical settings needed to reproduce these results.",
+      "original": "It is worth noting that mean error was 3.1% (95% CI 2.4%–3.8%) across five runs with seed 42. The stopping tolerance was 0.001, and each request allowed two retries.",
+      "faithful_example": "Mean error was 3.1% (95% CI 2.4%–3.8%) across five runs with seed 42. The stopping tolerance was 0.001, and each request allowed two retries.",
+      "unsafe_example": "Error ranged from 2.4% to 3.8% across five runs.",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "Mean error was 3.1% (95% CI 2.4%–3.8%)"
+        },
+        {
+          "type": "contains",
+          "value": "five runs with seed 42"
+        },
+        {
+          "type": "contains",
+          "value": "The stopping tolerance was 0.001"
+        },
+        {
+          "type": "contains",
+          "value": "each request allowed two retries"
+        },
+        {
+          "type": "excludes",
+          "value": "It is worth noting that"
+        }
+      ],
+      "assessment": "Authored synthetic conflict fixture, not a model-generated trial. Literal constraints check the stated preservation boundary; they do not prove scientific support or general semantic equivalence."
+    },
+    {
+      "id": "CF44-ZH",
+      "conflict": "CF44",
+      "language": "zh",
+      "kind": "editing",
+      "request": "只润色表达，保留已报告的统计量、区间含义和复现结果所需的全部数值设置。",
+      "original": "需要强调的是，五次运行的平均误差为3.1%（95%置信区间为2.4%–3.8%），随机种子为42。停止容差为0.001，每个请求允许重试两次。",
+      "faithful_example": "五次运行的平均误差为3.1%（95%置信区间为2.4%–3.8%），随机种子为42。停止容差为0.001，每个请求允许重试两次。",
+      "unsafe_example": "五次运行的误差范围为2.4%至3.8%。",
+      "checks": [
+        {
+          "type": "contains",
+          "value": "平均误差为3.1%（95%置信区间为2.4%–3.8%）"
+        },
+        {
+          "type": "contains",
+          "value": "五次运行"
+        },
+        {
+          "type": "contains",
+          "value": "随机种子为42"
+        },
+        {
+          "type": "contains",
+          "value": "停止容差为0.001"
+        },
+        {
+          "type": "contains",
+          "value": "每个请求允许重试两次"
+        },
+        {
+          "type": "excludes",
+          "value": "需要强调的是"
+        }
+      ],
+      "assessment": "Authored synthetic conflict fixture, not a model-generated trial. Literal constraints check the stated preservation boundary; they do not prove scientific support or general semantic equivalence."
     }
   ]
 }

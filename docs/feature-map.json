@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "audit_file": "docs/source-audit.json",
-  "scope": "All 194 documented decision statements (92 adopted, 102 adapted/excluded) in the existing audit. Not a claim to enumerate every upstream file or feature.",
+  "scope": "All 278 documented decision statements (133 adopted, 145 adapted/excluded) in the source audit. Not an enumeration of every upstream file or feature.",
   "features": [
     {
       "id": "S01-A01",
@@ -3647,6 +3647,228 @@
       ],
       "mapping_basis": "explicit Lieflat integration decision",
       "evidence_scope": "Pinned source inspection, constructed conflicts and separately recorded public-text applications."
+    },
+    {
+      "id": "S47-A01",
+      "source": "S47",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "3626c63586f57ff91960e6a4f34407222c7e57467db5f64ac7e0b576a0498e7a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-A02",
+      "source": "S47",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "55d33d4c99d531abef8f8da0b61535d0c1142501cf0830c3c2f0d2e2f64551f1",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW08",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-A03",
+      "source": "S47",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "a0e26b68483d9d73cf32425eb12c2f054c7230949844afe1274388ff48f607c5",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW06",
+        "CW37",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-A04",
+      "source": "S47",
+      "audit_field": "adopted",
+      "audit_index": 3,
+      "statement_sha256": "5b45354f9a1c0332625b9cc867348c0c0605acc8c22eb726a20a1e962f924269",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW13",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-D01",
+      "source": "S47",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "e9b2c56fd9160fc402a6b07d05ddb0efe0df59908f9e39a93b398df0089f486a",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-D02",
+      "source": "S47",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "d349c8d22f68627ee4b28d28537694d8e77f4975d7d0316de8aac174cc3b964c",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW08",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-D03",
+      "source": "S47",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "11b47e0eb28cbf4b5d13cecbdfade5f3a13e04feb2a2198026019138b21a44cc",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW36",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-D04",
+      "source": "S47",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "97cd7161d27d1b3c358a2a9b6f596521c8eb9bba716e36681b286905d839a8cc",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S47-D05",
+      "source": "S47",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 4,
+      "statement_sha256": "049081e5bb017c5e1fb65709be51471472879c16df695448176df17b85fc6ad4",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW08",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-A01",
+      "source": "S48",
+      "audit_field": "adopted",
+      "audit_index": 0,
+      "statement_sha256": "a8c84c82ebbe39cf3fb5fba06d65ddb0e91ab888bb186dbb6758df5ad83da45a",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW13",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-A02",
+      "source": "S48",
+      "audit_field": "adopted",
+      "audit_index": 1,
+      "statement_sha256": "eb46793d35f3adafd58a7bdce1b0afd0ee098be03e7e67a5b199e369dd86db7c",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW04",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-A03",
+      "source": "S48",
+      "audit_field": "adopted",
+      "audit_index": 2,
+      "statement_sha256": "41b755d6869cbe8652176c8312befb3e2ab1a175f111410f224249d3cc094713",
+      "disposition": "adopted",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-D01",
+      "source": "S48",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 0,
+      "statement_sha256": "d7a53c2d84ba2dfaff5c90e29eac2a16a9605292edb92f6d5bd48cc7675858fc",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW04",
+        "CW08",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-D02",
+      "source": "S48",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 1,
+      "statement_sha256": "f8d23f33247e724269b3b7756e9d0a7999034a5cbf5831da7b180d33cdfd308e",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW06",
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-D03",
+      "source": "S48",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 2,
+      "statement_sha256": "6dd17f32cdd3b7fea76d2afdb53d8e285dcfbf5d1f6f5d4ca21d5c4434fc74d5",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
+    },
+    {
+      "id": "S48-D04",
+      "source": "S48",
+      "audit_field": "rejected_or_modified",
+      "audit_index": 3,
+      "statement_sha256": "79f7cb2e71c259b17ec0bc0b70af55efc721feb8032beceffc5a55b5e2076e6d",
+      "disposition": "adapted_or_excluded",
+      "capabilities": [
+        "CW55"
+      ],
+      "mapping_basis": "Explicit Academic Humanizer adaptation in the bundled academic composition and cleanup guide.",
+      "evidence_scope": "Pinned source inspection and authored conflict constraints; host-model behavior and writing-quality effects require separate recorded evaluation."
     }
   ]
 }

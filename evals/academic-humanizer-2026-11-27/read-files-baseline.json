@@ -1,0 +1,42 @@
+[
+  {
+    "path": "skills/clearweave/SKILL.md",
+    "sha256": "e42086040f5c9c40ecbe3aa03c46825629470ad2ce552b9e724d75b31b82e65e"
+  },
+  {
+    "path": "skills/clearweave/references/preservation.md",
+    "sha256": "32ecc66d87291a1d236c6c8909a4f839c50f4d653797ae96735e41cbf31361b1"
+  },
+  {
+    "path": "skills/clearweave/references/drafting.md",
+    "sha256": "c88d06a0bb6ce64a1157806a0baeb59765927c0ee0f61d41451bb8823794b5d3"
+  },
+  {
+    "path": "skills/clearweave/references/manuscript-routing.md",
+    "sha256": "6b12f0c6b02deb29d5c4f72c6d877999499d9524923aa1cd9408a19bf8e425a2"
+  },
+  {
+    "path": "skills/clearweave/references/english.md",
+    "sha256": "e771c2d977592a31567eea6293c81e67fc3ecde68b17a69b14575d9da6bbcfaa"
+  },
+  {
+    "path": "skills/clearweave/references/academic.md",
+    "sha256": "f7aca29befa080029ab74b48aef41c2ee5f5cf4432184c4f1cdbb66532c59cf5"
+  },
+  {
+    "path": "skills/clearweave/references/academic-grammar.md",
+    "sha256": "d358f1e5069ae4a0b2a9c321ba9aa0836a2806af673a24f535972a3f3faa122c"
+  },
+  {
+    "path": "skills/clearweave/references/lieflat.md",
+    "sha256": "7e2b4ff4d625d03f22f399685e91706720d572ae8a5dc09d36d5a0565be16e06"
+  },
+  {
+    "path": "skills/clearweave/references/anti-defensive.md",
+    "sha256": "931585585fc531c335a60af35bc78d18b793dcec9b4f2e221d222259ac4c2d3c"
+  },
+  {
+    "path": "skills/clearweave/scripts/read_companion.py",
+    "sha256": "7f9b7b6fe4a07d10867aff7fa60448376b3b6ef6ee50ff10e960e840b821b51e"
+  }
+]

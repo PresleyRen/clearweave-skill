@@ -1,12 +1,12 @@
-# Source synthesis / 46 项来源与取舍
+# Source synthesis / 48 项来源与取舍
 
 [简体中文](sources.zh-CN.md) · [Documentation index](README.md)
 
-Reviewed: 2026-10-21. The original count was 32 implementations in the earlier inventory, not 32 independent methods or a census of the internet. Several projects share ancestry. All were inspected as source material; upstream effectiveness claims were not replicated.
+Latest source inspection: 2026-11-27. The original inventory contained 32 implementations; the current register contains 48 entries. These are not independent methods or a census of the internet. Several projects share ancestry. Sources were inspected within the scope recorded for each entry; upstream effectiveness claims were not replicated.
 
-This table is a compact index. The [machine-readable audit](source-audit.json) records inspection scope, license observations, relationships, adopted ideas, rejected rules, and implementation paths. Main-branch URLs are mutable; this release does not claim commit-pinned upstream reproduction.
+This table is a compact index. The [machine-readable audit](source-audit.json) records inspection scope, license observations, relationships, adopted ideas, rejected rules, and implementation paths. Older main-branch links are mutable. Later entries identify their inspected commits; source inspection is distinct from running an upstream implementation or replicating an effectiveness claim.
 
-All runtime instructions, scripts, and teaching examples were written for ClearWeave. We did not install 32 dependencies or concatenate their prompts.
+Bundled runtime instructions, scripts, and teaching examples were written for ClearWeave. Selected pinned companion instructions can be read when useful, with local adaptations and an offline fallback. The source inventory is not a dependency installation list.
 
 | ID | Source | Adopted / 采用 | Modified or rejected / 调整或排除 |
 | --- | --- | --- | --- |
@@ -87,3 +87,14 @@ See [scholarly integration](scholarly-integration.md) for the module map, source
 
 [Fixed source](https://github.com/larashero3-dotcom/lieflat-less-ai-tone/tree/27d29232f10124db904ca9c0536d0b67cb3b2833) · [Integration map](lieflat-integration.md).
 Full entry, research report, three scripts and license reviewed. Eleven pattern families and five translation subpatterns are integrated in a selected precision-cleanup mode. Source statistics are upstream reports, not reproduced ClearWeave results. File fingerprints: `lieflat-source-snapshot.json`.
+
+## Academic Humanizer integration · S47–S48 (0.5.0)
+
+| ID | Inspected source | Adopted | Adapted or excluded |
+| --- | --- | --- | --- |
+| S47 | [junbolian/Academic-Humanizer](https://github.com/junbolian/Academic-Humanizer/blob/62b0a02627e063015466c70f0a4dd4929a9f7f5b/academic-humanizer/SKILL.md), version 1.1 | Draft, Polish and scoped Cleanup; protected scientific content; direct supported results; review of undefined method labels and editorial narration. | Preserve legitimate punctuation and long sentences; no automatic lemma creation, scientific-property replacement, setting deletion or manuscript placeholders. Equal inventories and a zero exit code do not establish semantic preservation. |
+| S48 | [AIScientists-Dev/academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer/blob/94b88b23703bed7df507acae7d6d5876209a0cdf/SKILL.md), version 0.3.3 | Academic expression with evidence and comparison context; supplied author/venue samples; proposed outcomes distinguished from completed results. | No blanket dash ban, citation quota or mean-to-range conversion. Current funding calls govern proposal requirements. Optional guidance feeds the same writer instead of starting a second rewrite. |
+
+The [bundled academic guide](../skills/clearweave/references/academic-humanizer.md) owns these adaptations. `academic-humanizer` selects S47; `academic-humanizer-evidence` selects S48 when its evidence, style or proposal detail is useful. Both projects use the same upstream skill name, so repository and file digest determine identity. S47 derives partly from S48 and from shiujan's work; their agreement is not independent evidence.
+
+The inspection used fixed Git checkouts. For S47 it covered the entry, worked examples, proposal reference, checker and licenses; for S48 it covered the entry, README and license. Both complete MIT notices are retained in [the installed skill's licenses directory](../skills/clearweave/licenses/). The audit now maps 278 decisions: 133 adopted and 145 adapted or excluded. CF43–CF44 add four authored English/Chinese preservation fixtures; they are not model-generated performance trials.

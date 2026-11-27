@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "reviewed_on": "2026-10-21",
-  "scope": "Original 32-source inventory plus 13 scholarly/style references (S33–S45).",
-  "implementation": "Original instructions, examples, and Python code. Upstream files are not vendored or runtime dependencies.",
+  "reviewed_on": "2026-11-27",
+  "scope": "48 inspected source entries: the original S01–S32 inventory, scholarly/style S33–S45, Lieflat S46 and related Academic Humanizer sources S47–S48. Shared ancestry is not independent evidence.",
+  "implementation": "Independently written ClearWeave instructions, examples and Python code. Selected pinned companion instructions may be read when useful; bundled rules remain usable offline. Full third-party notices are retained; upstream code is not vendored or executed.",
   "sources": [
     {
       "id": "S01",
@@ -12,7 +12,7 @@
       "inspected_on": "2026-10-20",
       "evidence_basis": "Static inspection of the upstream SKILL.md, especially substance-before-style, technical-versus-rhetorical language, epistemic precision, specificity, citations, and voice; README and https://github.com/cbsteh/anti-ai-writing/blob/main/LICENSE also inspected. The main branch was observed, not a pinned release; no upstream behavior or detector claim was experimentally verified.",
       "license_observed": "MIT",
-      "relationship": "Academic anti-AI-prose source in the 32-entry inventory. No upstream ancestry was established from the inspected material. Its diagnostic rules are evidence for the synthesis, not a statistical authorship detector.",
+      "relationship": "Academic anti-AI-prose source in the original 32-entry inventory. No upstream ancestry was established from the inspected material. Its diagnostic rules are evidence for the synthesis, not a statistical authorship detector.",
       "adopted": [
         "Inspect citation support, claim strength, and concrete scope before stylistic polish.",
         "Judge flagged vocabulary by its technical function; preserve useful signposting and procedural passive voice."
@@ -59,7 +59,7 @@
       "inspected_on": "2026-10-20",
       "evidence_basis": "Static inspection of the upstream SKILL.md scope, qualification treatment, narrative/experiment rules, section guidance, and delivery requirements. The README explicitly acknowledges S02 and S04; https://github.com/Simon-Chng/anti-defensive-writing/blob/main/LICENSE was inspected. No upstream runtime test was performed.",
       "license_observed": "MIT",
-      "relationship": "Author-declared synthesis referencing Kiterlin and Adkid-Zephyr. Retained as an audited entry in the user's 32-source inventory, not counted as an independently originated anti-defensive method.",
+      "relationship": "Author-declared synthesis referencing Kiterlin and Adkid-Zephyr. Retained as an audited entry from the user's original 32-source inventory, not counted as an independently originated anti-defensive method.",
       "adopted": [
         "Match intervention to the request; separate local language edits from substantive revisions.",
         "Preserve unfavorable comparisons, claim-local limits, and the difference between completed and proposed experiments.",
@@ -84,7 +84,7 @@
       "inspected_on": "2026-10-20",
       "evidence_basis": "Static inspection of the complete English SKILL.md and the repository README, including narrative rules, treatment of unfavorable findings, experiment duties, and the decision sequence. https://github.com/Adkid-Zephyr/anti-defensive-writing-Skill/blob/main/LICENSE was inspected. The paired Chinese skill was identified in the README but was not separately audited here.",
       "license_observed": "MIT",
-      "relationship": "The repository provides Chinese and English versions of one writing approach. S03 acknowledges it as a source. The language versions do not add entries to the 32-source inventory.",
+      "relationship": "The repository provides Chinese and English versions of one writing approach. S03 acknowledges it as a source. The language versions do not add separate entries to the source inventory.",
       "adopted": [
         "Make the supported contribution explicit and connect each experiment to a research question.",
         "Organize presentation around the scientific argument when chronology is not scientifically relevant."
@@ -978,7 +978,7 @@
       "inspected_on": "2026-10-20",
       "evidence_basis": "Static inspection of the academic-writing SKILL.md task routes, editing funnel, before/after feedback, and distinction between clarity and taste. The repository was inspected; the attempted LICENSE endpoint did not return a license, so its license is not established. No reference book text or source examples were copied.",
       "license_observed": "unknown",
-      "relationship": "Adjacent academic-writing coach. The same author's Scientific-Writing repository overlaps in scope; no fork relationship was established and it is not an extra source in this 32-entry inventory.",
+      "relationship": "Adjacent academic-writing coach. The same author's Scientific-Writing repository overlaps in scope and is recorded separately as S39 in the expanded inventory. No fork relationship was established; a separate source entry does not establish an independent method.",
       "adopted": [
         "Address document and paragraph structure before word-level polish when structural revision is authorized.",
         "Explain consequential edits and distinguish necessary corrections from stylistic preference."
@@ -1335,6 +1335,64 @@
         "skills/clearweave/references/lieflat.md",
         "skills/clearweave/scripts/clearweave_tone.py",
         "skills/clearweave/assets/lieflat-rules.json"
+      ]
+    },
+    {
+      "id": "S47",
+      "repo": "junbolian/Academic-Humanizer",
+      "skill_path": "academic-humanizer/SKILL.md",
+      "url": "https://github.com/junbolian/Academic-Humanizer/blob/main/academic-humanizer/SKILL.md",
+      "inspected_on": "2026-11-27",
+      "revision": "62b0a02627e063015466c70f0a4dd4929a9f7f5b",
+      "pinned_url": "https://github.com/junbolian/Academic-Humanizer/blob/62b0a02627e063015466c70f0a4dd4929a9f7f5b/academic-humanizer/SKILL.md",
+      "evidence_basis": "Fixed Git checkout inspected: SKILL.md, references/examples.md, references/proposals.md, scripts/check_revision.py, LICENSE and academic-humanizer/LICENSE.txt. Script behavior here is based on source inspection, not execution or a measured writing-quality effect.",
+      "license_observed": "MIT; Copyright (c) 2026 Junbo Lian, with notices for AIScientists-Dev and shiujan. Full notice copied byte-for-byte to skills/clearweave/licenses/academic-humanizer-junbolian-MIT.txt.",
+      "relationship": "Extends AIScientists academic-humanizer and derives partly from shiujan; related to S48 and S46, not independent validation. Pinned companion plus an independently worded local adaptation; upstream code is not bundled or executed.",
+      "adopted": [
+        "Select Draft, Polish or Cleanup from the requested operation before composing; apply academic guidance during drafting and preserve unmatched text and structure in scoped cleanup.",
+        "Protect numbers with their roles, citations, cross-references, mathematical expressions and formal statements, and review which claim each preserved item supports.",
+        "State supported results directly while keeping genuine uncertainty, assumptions and adverse findings; use supplied author samples to guide expression.",
+        "Review undefined method labels and drafting or debugging narration as expression candidates; name the supplied scientific operation without inventing a step."
+      ],
+      "rejected_or_modified": [
+        "Replace punctuation bans, sentence-length limits and repeated-skeleton triggers with contextual readability decisions; preserve legitimate technical and author-style usage.",
+        "Do not automatically add lemmas, replace technical properties, remove reproducibility settings or strengthen a claim; scientific corrections need the requested correction scope and inspected evidence.",
+        "Respect grammar-only, diagnosis-only and clean-copy requests; keep missing-evidence questions outside finished prose instead of inserting source-mandated placeholders or reports.",
+        "Treat worked examples as examples, not manuscript evidence; scale new source searches and proposal-specific requirements to the actual task rather than a fixed recent-literature window.",
+        "Do not treat upstream audit exit zero or equal numeric/citation inventories as semantic validation; retain ClearWeave literal checks, risk candidates and claim-binding review."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-humanizer.md",
+        "skills/clearweave/references/preservation.md",
+        "skills/clearweave/references/anti-defensive.md"
+      ]
+    },
+    {
+      "id": "S48",
+      "repo": "AIScientists-Dev/academic-humanizer",
+      "skill_path": "SKILL.md",
+      "url": "https://github.com/AIScientists-Dev/academic-humanizer/blob/main/SKILL.md",
+      "inspected_on": "2026-11-27",
+      "revision": "94b88b23703bed7df507acae7d6d5876209a0cdf",
+      "pinned_url": "https://github.com/AIScientists-Dev/academic-humanizer/blob/94b88b23703bed7df507acae7d6d5876209a0cdf/SKILL.md",
+      "evidence_basis": "Fixed Git checkout inspected: full SKILL.md (version 0.3.3), README.md and LICENSE. The six-layer design is source content; no detector, acceptance or writing-quality claim was replicated.",
+      "license_observed": "MIT; Copyright (c) 2026 AIScientists-Dev; notice states ancestry from blader/humanizer and conceptual influence from ARMS. Full notice copied byte-for-byte to skills/clearweave/licenses/academic-humanizer-aiscientists-MIT.txt.",
+      "relationship": "Academic extension of blader/humanizer (S05) and an ancestor of S47. The academic-humanizer-evidence companion supplies optional evidence, sample-style or proposal detail to the same writer, not an independent rewrite or validation vote.",
+      "adopted": [
+        "Review empty academic framing and unsupported promotional wording while retaining useful passive constructions, technical terms and scholarly register.",
+        "Bind quantitative claims to the supplied metric, comparator, sample, conditions and evidence location, preserving the statistic actually computed.",
+        "Use inspected author or venue samples for expression; distinguish a proposal’s planned outcomes and feasibility from completed paper results."
+      ],
+      "rejected_or_modified": [
+        "Reject universal em-dash removal, citation-count limits and a preference for ranges over means; preserve useful punctuation, supporting references and the actual aggregation.",
+        "Do not silently change scientific content to soften or strengthen a claim during language editing; genuine uncertainty and the scope of an observed result must remain.",
+        "Treat fixed funding-agency structures and scoring descriptions as historical guidance; verify the current call only when an actual proposal task requires it.",
+        "Do not require an unsolicited audit log, fixed paragraph count in an authorized restructure, or a second whole-text rewrite; source agreement does not establish an independent benefit."
+      ],
+      "target_modules": [
+        "skills/clearweave/references/academic-humanizer.md",
+        "skills/clearweave/references/preservation.md",
+        "skills/clearweave/references/academic.md"
       ]
     }
   ]

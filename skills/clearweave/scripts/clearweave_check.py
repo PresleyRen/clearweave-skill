@@ -129,6 +129,15 @@ _CITATION_PATTERNS = (
     re.compile(r"\\(?:cite|citep|citet|autocite|parencite|textcite)\*?(?:\[[^\]\n]*\]){0,2}\{[^{}\n]+\}"),
     re.compile(r"\(" + _AUTHOR_YEAR + r"(?:;\s*" + _AUTHOR_YEAR + r")*\)"),
 )
+# Common single-line LaTeX labels and cross-references. These are literal
+# identifiers, not bibliography citations or a complete TeX parser. The optional
+# label type belongs to cleveref; hyperref's displayed prose remains editable.
+_LATEX_REFERENCE_PATTERNS = (
+    re.compile(r"(?<!\\)\\(?:label[ \t]*(?:\[[^\[\]{}\r\n]+\])?"
+               r"|(?:ref|eqref|autoref|cref|Cref|pageref|nameref)\*?)"
+               r"[ \t]*\{[^{}\r\n]+\}"),
+    re.compile(r"(?<!\\)\\hyperref[ \t]*\[[^\[\]{}\r\n]+\]"),
+)
 # Keep bare @keys distinct from established citation syntax. The left boundary
 # excludes email local-part characters, escaped @ signs and quoted local parts.
 # A bare @mention remains ambiguous without a bibliography or document metadata.
@@ -138,7 +147,7 @@ _BARE_AT_KEY = re.compile(
 )
 _PRIORITY = {kind: rank for rank, kind in enumerate((
     "keep", "frontmatter", "fenced_code", "blockquote", "inline_code", "custom",
-    "math", "markdown_target", "url", "quotation", "citation", "at_key", "number",
+    "math", "markdown_target", "url", "quotation", "citation", "latex_reference", "at_key", "number",
 ))}
 
 
@@ -304,7 +313,7 @@ def collect_protected_spans(text: str, custom_literals: Sequence[str] = ()) -> l
         for pattern in patterns:
             candidates.extend(_span(text, kind, *match.span()) for match in pattern.finditer(opaque_text))
 
-    # URLs, citation tokens and numbers are confined to the remaining gaps.
+    # URLs, citation/reference tokens and numbers are confined to the remaining gaps.
     position = 0
     gaps = []
     for region in structural:
@@ -315,6 +324,7 @@ def collect_protected_spans(text: str, custom_literals: Sequence[str] = ()) -> l
         chunk = text[begin:end]
         local = _markdown_targets(chunk) + _url_spans(chunk)
         for kind, patterns in (("citation", _CITATION_PATTERNS),
+                               ("latex_reference", _LATEX_REFERENCE_PATTERNS),
                                ("at_key", (_BARE_AT_KEY,)), ("number", (_NUMBER,))):
             for pattern in patterns:
                 local.extend(_span(chunk, kind, *match.span()) for match in pattern.finditer(chunk))

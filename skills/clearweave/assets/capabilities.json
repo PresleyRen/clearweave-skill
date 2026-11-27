@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "version": "0.4.0",
-  "scope": "42 inventoried implementations; stable core CW01–CW36 plus scholarly extension CW37–CW48.",
+  "version": "0.5.0",
+  "scope": "55 indexed ClearWeave capabilities: core CW01–CW36, scholarly CW37–CW48, Chinese precision cleanup CW49–CW54 and academic drafting/scoped cleanup CW55; 48 inspected sources, including related projects.",
   "capabilities": [
     {
       "id": "CW01",
@@ -103,11 +103,15 @@
         "S25",
         "S27",
         "S29",
-        "S31"
+        "S31",
+        "S47",
+        "S48"
       ],
       "cases": [
         "CF05-EN",
-        "CF05-ZH"
+        "CF05-ZH",
+        "CF44-EN",
+        "CF44-ZH"
       ],
       "implementation_boundary": "Instruction followed by the host model; not a deterministic writing guarantee.",
       "repair": "Reproduce the smallest failure; inspect this module; add a positive case and a legitimate counterexample; update coverage and evaluation evidence."
@@ -154,7 +158,9 @@
         "S01",
         "S02",
         "S11",
-        "S19"
+        "S19",
+        "S47",
+        "S48"
       ],
       "cases": [
         "CF01-EN",
@@ -203,7 +209,9 @@
         "S12",
         "S19",
         "S20",
-        "S24"
+        "S24",
+        "S47",
+        "S48"
       ],
       "cases": [
         "CF12-EN",
@@ -338,7 +346,9 @@
         "S27",
         "S28",
         "S29",
-        "S30"
+        "S30",
+        "S47",
+        "S48"
       ],
       "cases": [
         "CF03-EN",
@@ -929,7 +939,8 @@
         "S03",
         "S20",
         "S28",
-        "S32"
+        "S32",
+        "S47"
       ],
       "cases": [
         "CF12-EN",
@@ -958,7 +969,8 @@
         "S04",
         "S43",
         "S44",
-        "S45"
+        "S45",
+        "S47"
       ],
       "cases": [
         "CF27-EN",
@@ -1351,6 +1363,27 @@
       ],
       "implementation_boundary": "Selected Chinese cleanup instructions plus documented read-only candidate, measurement and ledger tools. Semantic applicability is reviewed by the host editor.",
       "repair": "Locate the LF rule and CW capability; add a problematic case and a legitimate lookalike; update the smallest module and rerun public-text applications."
+    },
+    {
+      "id": "CW55",
+      "name_en": "Academic drafting and scoped cleanup",
+      "name_zh": "学术起草与成稿最小清理",
+      "module": "references/academic-humanizer.md",
+      "anchor": "cw55",
+      "kind": "host+literal+candidate",
+      "keywords": "academic draft polish cleanup English manuscript no-change Humanizer 学术 起草 英文 成稿 最小清理 原样 模式",
+      "sources": [
+        "S47",
+        "S48"
+      ],
+      "cases": [
+        "CF43-EN",
+        "CF43-ZH",
+        "CF44-EN",
+        "CF44-ZH"
+      ],
+      "implementation_boundary": "Bundled task-scoped instructions and optional pinned companion reading, supported by existing literal and risk-candidate checks. The host reviews expression and scientific relationships; no guarantee of semantic equivalence, native trigger behavior or detector outcome.",
+      "repair": "Reproduce the operation and changed span; check its mode, source adaptation and protected scientific meaning; add a legitimate no-change or preservation case and evaluate the affected route."
     }
   ],
   "conflicts": [
@@ -1930,7 +1963,32 @@
         "CF42-EN",
         "CF42-ZH"
       ]
+    },
+    {
+      "id": "CF43",
+      "name_en": "Final cleanup vs unnecessary rewrite",
+      "name_zh": "成稿清理与无必要重写",
+      "capabilities": [
+        "CW55"
+      ],
+      "cases": [
+        "CF43-EN",
+        "CF43-ZH"
+      ]
+    },
+    {
+      "id": "CF44",
+      "name_en": "Style cleanup vs statistics and reproducibility",
+      "name_zh": "语言清理与统计及复现条件",
+      "capabilities": [
+        "CW04",
+        "CW55"
+      ],
+      "cases": [
+        "CF44-EN",
+        "CF44-ZH"
+      ]
     }
   ],
-  "source_inventory_count": 46
+  "source_inventory_count": 48
 }

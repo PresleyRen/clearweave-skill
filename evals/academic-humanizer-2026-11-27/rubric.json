@@ -1,0 +1,16 @@
+{
+  "scope": "Four synthetic requests, paired existing-source and upgraded-source instruction trials. Criteria recorded before inspecting generated outputs. These are targeted regressions, not an independent efficacy or authorship study.",
+  "criteria": [
+    "Factual and scientific fidelity: retain quantity owners, aggregation type, negation, conditions, uncertainty and experimental status; add no unsupported claim.",
+    "Task compliance: preserve requested output language and scope. Cleanup preserves structure and unmatched wording; grammar-only changes stay grammatical.",
+    "Restraint: clear source sentences may remain unchanged; no unsolicited source search, disclosure, placeholders or second rewrite.",
+    "Readability: make only useful expression changes; preference may be a tie when both outputs meet the request."
+  ],
+  "case_focus": {
+    "AH01": "Correctly attach 11 and 8 errors, 310 and 345 ms median latency to baseline and adapted method, respectively, within the 120-query offline English set; do not invent significance, multilingual or online findings.",
+    "AH02": "Remove empty importance framing only, with necessary sentence-initial capitalization; preserve all remaining wording, LaTeX, statistical roles and reproducibility settings.",
+    "AH03": "The input is already clear. Preserve the scientific distinctions between consistency, optimality and evaluated scope; unchanged prose is acceptable.",
+    "AH04": "Fix subject–verb agreement only, retaining modality, dataset scope and untested online status."
+  },
+  "review_format": "For each case report A and B fidelity/compliance, any concrete issue, preference A/B/tie with reasons. Do not infer hidden condition identity."
+}

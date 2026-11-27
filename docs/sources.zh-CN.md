@@ -2,7 +2,7 @@
 
 [English](sources.md) · [中文文档中心](README.zh-CN.md)
 
-ClearWeave 当前来源注册表覆盖 **46 个项目/实现**。这些来源用于提取方法、冲突案例和可复用规则，不代表安装了 46 个依赖，也不代表每个来源都是独立方法。机器可读的逐条采用/调整记录保存在 [source-audit.json](source-audit.json) 和 [feature-map.json](feature-map.json)。
+ClearWeave 当前来源注册表覆盖 **48 个项目/实现**。这些来源用于提取方法、冲突案例和可复用规则，不代表安装了 48 个依赖，也不代表每个来源都是独立方法。部分固定版本的辅助指南按需读取，内置规则可离线使用。机器可读的逐条采用/调整记录保存在 [source-audit.json](source-audit.json) 和 [feature-map.json](feature-map.json)。
 
 ## 来源总览
 
@@ -54,6 +54,10 @@ ClearWeave 当前来源注册表覆盖 **46 个项目/实现**。这些来源用
 | S44 | Worigin0314/academic-defensive-writing-auditor | 防御性写作分类、必要限定和结果解释约束 |
 | S45 | Mseymur/HCI-Academic-Writing | 语域、贡献定位、研究问题与相关工作组织 |
 | S46 | larashero3-dotcom/lieflat-less-ai-tone | 中文成稿白名单精准清理、11 类规则和语料测量方法 |
+| S47 | junbolian/Academic-Humanizer | 写作时应用学术规则、Draft/Polish/Cleanup 分流、未命中文本和科研内容保护 |
+| S48 | AIScientists-Dev/academic-humanizer | 按需补充论断与证据、作者/期刊样稿和项目可行性指导 |
+
+S47 与 S48 于 2026-11-27 按固定 Git 提交读取。S47 部分衍生自 S48 和 shiujan 的工作，不能将二者的一致意见算作独立验证。当前共有278条采用/调整决定（133条采用、145条调整或排除），具体规则落在[学术起草与成稿清理指南](../skills/clearweave/references/academic-humanizer.md)。保留两份完整MIT通知；不继承强制删破折号、引用数量上限、均值改极差、自动新增引理或删除复现设置等规则。
 
 ## 融合原则
 
@@ -73,6 +77,8 @@ ClearWeave 当前来源注册表覆盖 **46 个项目/实现**。这些来源用
 python3 tools/coverage.py --source S01
 python3 tools/coverage.py --source S44
 python3 tools/coverage.py --source S46
+python3 tools/coverage.py --source S47
+python3 tools/coverage.py --source S48
 ```
 
 需要逐条查看某一来源的“采用 / 调整 / 排除”记录时，使用 [source-audit.json](source-audit.json)；需要看能力落在哪个模块时，使用 [中文能力索引](capabilities.zh-CN.md)。

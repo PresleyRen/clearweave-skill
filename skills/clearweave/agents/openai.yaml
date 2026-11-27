@@ -1,4 +1,4 @@
 interface:
   display_name: "ClearWeave · Scholarly"
-  short_description: "Draft and edit natural English and Chinese prose"
-  default_prompt: "Use $clearweave to write from my notes or edit my passage. Apply the writing rules from the first sentence, keep the evidence and limits intact, and write for my reader."
+  short_description: "Draft, polish and clean up English and Chinese prose"
+  default_prompt: "Use $clearweave to draft, polish or minimally clean up my English or Chinese text, applying the relevant writing rules from the first paragraph and preserving facts and the requested scope."

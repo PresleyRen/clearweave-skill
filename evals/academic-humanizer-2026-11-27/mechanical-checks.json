@@ -1,0 +1,270 @@
+[
+  {
+    "condition": "baseline",
+    "id": "AH02",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 15,
+      "revision_span_count": 15,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 0,
+      "findings": [],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  },
+  {
+    "condition": "baseline",
+    "id": "AH03",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 1,
+      "revision_span_count": 1,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 0,
+      "findings": [],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  },
+  {
+    "condition": "baseline",
+    "id": "AH04",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 0,
+      "revision_span_count": 0,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 1,
+      "findings": [
+        {
+          "risk_id": "R02",
+          "capability": "CW06",
+          "category": "uncertainty",
+          "original": [
+            {
+              "cue": "suggests",
+              "line": 1,
+              "column": 20,
+              "context": "These observations suggests that the adapted method may reduce errors on th"
+            },
+            {
+              "cue": "may",
+              "line": 1,
+              "column": 53,
+              "context": "e observations suggests that the adapted method may reduce errors on this dataset, but the effect h"
+            }
+          ],
+          "revision": [
+            {
+              "cue": "suggest",
+              "line": 1,
+              "column": 20,
+              "context": "These observations suggest that the adapted method may reduce errors on th"
+            },
+            {
+              "cue": "may",
+              "line": 1,
+              "column": 52,
+              "context": "se observations suggest that the adapted method may reduce errors on this dataset, but the effect h"
+            }
+          ],
+          "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+        }
+      ],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  },
+  {
+    "condition": "upgraded",
+    "id": "AH02",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 15,
+      "revision_span_count": 15,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 0,
+      "findings": [],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  },
+  {
+    "condition": "upgraded",
+    "id": "AH03",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 1,
+      "revision_span_count": 1,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 0,
+      "findings": [],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  },
+  {
+    "condition": "upgraded",
+    "id": "AH04",
+    "matches_scoped_expected_text": true,
+    "literal_check": {
+      "mode": "compare",
+      "comparison_scope": "supported_literal_multiset",
+      "supported_literal_changes": false,
+      "change_count": 0,
+      "original_span_count": 0,
+      "revision_span_count": 0,
+      "changes": [],
+      "semantic_review_required": true,
+      "limitations": [
+        "Counts are literal and unordered; moving values between roles may be invisible.",
+        "Negation, attribution, causal strength, and other prose meaning are not checked.",
+        "Only documented syntax and units are recognized; no completeness guarantee."
+      ]
+    },
+    "risk_check": {
+      "mode": "risk",
+      "candidate_count": 1,
+      "findings": [
+        {
+          "risk_id": "R02",
+          "capability": "CW06",
+          "category": "uncertainty",
+          "original": [
+            {
+              "cue": "suggests",
+              "line": 1,
+              "column": 20,
+              "context": "These observations suggests that the adapted method may reduce errors on th"
+            },
+            {
+              "cue": "may",
+              "line": 1,
+              "column": 53,
+              "context": "e observations suggests that the adapted method may reduce errors on this dataset, but the effect h"
+            }
+          ],
+          "revision": [
+            {
+              "cue": "suggest",
+              "line": 1,
+              "column": 20,
+              "context": "These observations suggest that the adapted method may reduce errors on th"
+            },
+            {
+              "cue": "may",
+              "line": 1,
+              "column": 52,
+              "context": "se observations suggest that the adapted method may reduce errors on this dataset, but the effect h"
+            }
+          ],
+          "reason": "Cue inventory changed. Check the claim and its scope; a faithful paraphrase may also trigger this candidate."
+        }
+      ],
+      "semantic_review_required": true,
+      "verdict": "not_provided",
+      "limitations": [
+        "Lexical cues are incomplete and do not resolve scope, roles, or logical equivalence.",
+        "Unchanged cue and numeric inventories can conceal meaning changes.",
+        "Translation and faithful paraphrases can legitimately change cue inventories.",
+        "Run the separate literal comparison for changes inside protected spans."
+      ]
+    }
+  }
+]

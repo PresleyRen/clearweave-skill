@@ -154,6 +154,31 @@ class ProtectionTests(unittest.TestCase):
             with self.subTest(marker=marker):
                 self.assertEqual(literals(marker, "citation"), [marker])
 
+    def test_latex_labels_and_cross_references_keep_exact_identifiers(self):
+        markers = [r"\label{sec:method}", r"\label[theorem]{thm:main}",
+                   r"\ref{fig:overview}", r"\ref*{sec:results}", r"\eqref{eq:loss}",
+                   r"\autoref*{tab:results}", r"\cref{eq:left,eq:right}",
+                   r"\Cref*{thm:main}", r"\pageref{sec:appendix}", r"\nameref*{sec:proof}"]
+        for marker in markers:
+            with self.subTest(marker=marker):
+                self.assertEqual(literals(marker, "latex_reference"), [marker])
+                self.assertEqual(literals(marker, "citation"), [])
+        text = r"See \hyperref[sec:results]{It is worth noting that the result holds}."
+        self.assertEqual(literals(text, "latex_reference"), [r"\hyperref[sec:results]"])
+        self.assertEqual(checker.lint_text(text)["candidate_count"], 1)
+
+    def test_latex_reference_lookalikes_and_outer_regions(self):
+        for text in [r"\labelled{method}", r"\reference{figure}", r"\\ref{literal}",
+                     "The label is revised. 引用标签保持原样。"]:
+            with self.subTest(text=text):
+                self.assertEqual(literals(text, "latex_reference"), [])
+        for text, kind in [(r"`\ref{fig:main}`", "inline_code"),
+                           ("```latex\n\\label{sec:method}\n```\n", "fenced_code"),
+                           (r"$x=1\label{eq:one}$", "math")]:
+            with self.subTest(text=text):
+                self.assertEqual(literals(text, "latex_reference"), [])
+                self.assertEqual(literals(text, kind), [text])
+
     def test_bare_at_keys_are_separate_from_established_citation_syntax(self):
         text = "See @smith2024 and -@doe:2025. Compare [@other]."
         self.assertEqual(literals(text, "at_key"), ["@smith2024", "-@doe:2025"])
@@ -222,6 +247,20 @@ class ProtectionTests(unittest.TestCase):
 
 
 class CompareTests(unittest.TestCase):
+    def test_latex_reference_change_or_loss_is_found_without_numeric_changes(self):
+        for before, after in [(r"See \ref{fig:old}.", r"See \ref{fig:new}."),
+                              (r"\label{sec:old}", r"\label{sec:new}"),
+                              (r"See \eqref{eq:loss}.", "See the equation.")]:
+            with self.subTest(before=before):
+                report = checker.compare_texts(before, after)
+                self.assertTrue(report["supported_literal_changes"])
+                self.assertEqual({item["kind"] for item in report["changes"]}, {"latex_reference"})
+                self.assertTrue(report["semantic_review_required"])
+        source = r"\label{sec:results} See \cref{fig:main,tab:main}."
+        self.assertFalse(checker.compare_texts(source, source)["supported_literal_changes"])
+        report = checker.compare_texts(r"`\ref{old}`", r"`\ref{new}`")
+        self.assertEqual({item["kind"] for item in report["changes"]}, {"inline_code"})
+
     def test_bare_key_change_is_detected_without_claiming_bibliographic_identity(self):
         report = checker.compare_texts("See @smith2024.", "See @doe2025.")
         self.assertTrue(report["supported_literal_changes"])

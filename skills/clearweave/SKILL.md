@@ -1,6 +1,6 @@
 ---
 name: clearweave
-description: "Write English or Chinese first drafts from notes, evidence, or a brief, and edit existing prose. Use for 按材料写、从零起草、写论文摘要、写审稿回复、写项目说明、写邮件 as well as 去AI味、润色、反防御写作、改掉翻译腔、只去味不润色. Apply genre, author voice, evidence boundaries and relevant Humanizer guidance while composing. Use for Results/Discussion structure, target-journal writing, manuscript/supplement consistency and evidence-to-claim checks. Supports mixed-language prose, academic grammar, translation, style diagnosis, lieflat precision cleanup and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
+description: "Write English or Chinese first drafts from notes, evidence, or a brief, and edit existing prose. Use for 按材料写、从零起草、写论文摘要、写审稿回复、写项目说明、写邮件 as well as 去AI味、润色、反防御写作、改掉翻译腔、只去味不润色. Apply academic expression, author voice and evidence boundaries while composing the first draft. Select Draft, Polish or fixed-structure Cleanup for English academic writing. Use for Results/Discussion structure, target-journal writing, manuscript/supplement consistency and evidence-to-claim checks. Supports mixed-language prose, academic grammar, translation, diagnosis, Chinese lieflat cleanup and reviewer-style critique. Does not determine authorship or predict AI-detector scores."
 ---
 
 # ClearWeave
@@ -27,11 +27,11 @@ Infer the following from the request and text. Do not make a routine edit wait f
 
 The language of the request is not automatically the language of the deliverable. A Chinese request to polish an English abstract normally requires an English abstract. Preserve Simplified/Traditional Chinese and US/UK spelling unless a change is requested.
 
-Read [preservation.md](references/preservation.md) before drafting, editing or translating. For a first draft or a new section, use [drafting.md](references/drafting.md) **before writing the first sentence**. It selects a companion by output language and purpose and applies its relevant rules as each paragraph is composed. For selected lieflat precision cleanup, follow [lieflat.md](references/lieflat.md) instead of the broad language-editing rules. For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
+Read [preservation.md](references/preservation.md) before drafting, editing or translating. For a first draft or a new section, use [drafting.md](references/drafting.md) **before writing the first sentence**. It selects guidance by output language and purpose and applies it as each paragraph is composed. For English academic prose, select Draft, Polish or Cleanup in [academic-humanizer.md](references/academic-humanizer.md). This is the academic language route; do not append a generic Humanizer rewrite. For selected Chinese lieflat cleanup, follow [lieflat.md](references/lieflat.md). For other tasks, load only the relevant language reference: [english.md](references/english.md), [chinese.md](references/chinese.md), or both for mixed prose. Also read [academic.md](references/academic.md) for scientific prose, research claims, manuscripts, and reviewer-style critique. Use [conflicts.md](references/conflicts.md) when a proposed edit conflicts with preservation, genre, or voice. For optional local checks, read [tooling.md](references/tooling.md). Read [workflows.md](references/workflows.md) for voice profiles, localization, selected files, batches, long documents, or privacy boundaries. Read [maintenance.md](references/maintenance.md) only when diagnosing a failure, extending the skill, or interpreting evaluation claims.
 
 ## Scholarly extension routing
 
-Before drafting or restructuring a manuscript, checking evidence, learning a target journal's style, preparing a submission package, or polishing formal LaTeX statements, select the task in [manuscript-routing.md](references/manuscript-routing.md). Apply its evidence map before the language route. A short message or ordinary copyedit can go straight to its existing route.
+Before drafting or restructuring a manuscript, checking evidence, learning a target journal's style, preparing a submission package, or polishing formal LaTeX statements, select the task in [manuscript-routing.md](references/manuscript-routing.md). Apply its evidence map before the language route. Reuse an existing evidence map or section plan when another paper skill owns it. A short message or ordinary copyedit can go straight to its existing route; a grammar-only request stays grammar-only.
 
 For defensive framing, contribution narrative, or clean manuscript/README delivery, read [anti-defensive.md](references/anti-defensive.md).
 For academic grammar, tense, agreement, modifiers, and section-function choices, read [academic-grammar.md](references/academic-grammar.md).
@@ -41,7 +41,7 @@ Use only relevant modules. Keep review notes outside the finished text. Preserve
 
 ## Finished-draft precision routing
 
-For `lieflat`, `白名单清理`, `只去味不润色`, or `成稿精准清理`, load [lieflat.md](references/lieflat.md). Use its LF01–LF11 catalog instead of the broad style-editing passes below. Lock paragraph/heading/list/table structure and retain unmatched text exactly. Diagnose-only requests still return findings without rewriting. Read an authorized project style guide before applying punctuation/style candidates; preserve all factual conditions. For mixed Chinese/English drafts, this mode edits only eligible Chinese prose. Broader grammar, translation or restructuring is a separate explicit task, not an automatic second pass.
+For English academic `minimal cleanup`, `只去味不润色` or `成稿清理`, use **Cleanup** in [academic-humanizer.md](references/academic-humanizer.md). Keep structure and unmatched text exact, including LaTeX identifiers and scientific conditions. For Chinese `白名单清理`, `只去味不润色`, `成稿精准清理`, or explicitly selected `lieflat`, load [lieflat.md](references/lieflat.md) and use its LF01–LF11 catalog. Explicit lieflat remains Chinese-only. For mixed-language cleanup without an explicit Chinese-only restriction, apply each requested route to its own spans while retaining the shared structure. Diagnose-only requests return findings without rewriting. Broader grammar, translation or restructuring requires that requested scope.
 
 ## 2. Protect meaning before changing style
 
@@ -97,6 +97,7 @@ Do not target sentence-length distributions, synonym diversity, a count of rheto
 | Mode | Deliverable and boundary |
 | --- | --- |
 | Edit / 去AI味 / 润色 | Revised text in its original language and genre. Preserve meaning; no compulsory rewrite of already-good prose. |
+| Academic Draft / Polish / Cleanup | English academic expression during first composition, scoped revision or finished-draft minimal cleanup. Use one language writer and preserve scientific content. |
 | Precision cleanup / lieflat / 白名单清理 | LF01–LF11 Chinese finished-draft cleanup, fixed structure, rule-linked minimal edits; leave unmatched and foreign-language text intact. |
 | Diagnose / 检查 | Location, quoted short span, the actual readability problem, and an optional fix. Do not rewrite the full passage unless requested. Findings are not evidence of authorship. |
 | Translate / 翻译 | Natural target-language prose carrying the same claims, uncertainty, attribution, and register. Keep code, citation keys, and names unless a valid requested convention changes them. |
@@ -128,6 +129,6 @@ Never claim that wording proves whether AI wrote a passage, that a detector will
 
 ## 7. Traceability and extension
 
-Use stable capability IDs `CW01`–`CW54` and conflict IDs `CF01`–`CF42` from `assets/capabilities.json` when the user asks about coverage or a failure. `scripts/clearweave_trace.py --query "否定"` locates related modules and regression case IDs; it is an index, not a semantic diagnosis. Do not load the full audit for an ordinary edit.
+Use stable capability IDs `CW01`–`CW55` and conflict IDs `CF01`–`CF44` from `assets/capabilities.json` when the user asks about coverage or a failure. `scripts/clearweave_trace.py --query "否定"` locates related modules and regression case IDs; it is an index, not a semantic diagnosis. Do not load the full audit for an ordinary edit.
 
 For maintenance, reproduce the failure, locate the smallest responsible rule, add a legitimate counterexample, and run the relevant tests. Do not turn one disliked phrase into a global blacklist. Keep source decisions classified as adopted or adapted/excluded; combining sources does not require retaining harmful or incompatible behavior. Report actual tests and untested behavior separately.

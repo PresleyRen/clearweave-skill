@@ -18,6 +18,7 @@ class Companion(NamedTuple):
     skill_digest: str
     academic_digest: str | None = None
     skill_root: str = ""
+    installed_name: str = ""
 
 
 COMPANIONS = {
@@ -43,6 +44,10 @@ COMPANIONS = {
     "academic-humanizer": Companion(
         "junbolian/Academic-Humanizer", "62b0a02627e063015466c70f0a4dd4929a9f7f5b",
         "fa41c41363c0fed74ca90082ab5c7928a1f98e4710f461d8f11e06792e7b20c8", skill_root="academic-humanizer"),
+    "academic-humanizer-evidence": Companion(
+        "AIScientists-Dev/academic-humanizer", "94b88b23703bed7df507acae7d6d5876209a0cdf",
+        "1f4501cb7331cffe9018960f8db045c719eea0658ce04e4af5e273ee59785a9c",
+        installed_name="academic-humanizer"),
 }
 
 RESOURCES = {
@@ -52,6 +57,8 @@ RESOURCES = {
         "references/evidence.md", "73e7e8f15e56e5a506dcd630496e6ed851b3057b54cbbff49f0b1edf2a14692d"),
     ("Hongcheng-LI/paperwriter", "consistency"): (
         "references/manuscript-si-consistency.md", "dd072a39692f504788a51796508f7045c38d6a059a729ed71e139207df93173f"),
+    ("junbolian/Academic-Humanizer", "examples"): (
+        "references/examples.md", "c59519e9ced2ebd5878b8547d86fc7b1b87fe7e2aee62fb1b9d0142490086f14"),
 }
 
 MAX_BYTES = 128 * 1024
@@ -72,7 +79,11 @@ def installed_directories(name: str) -> tuple[Path, ...]:
     codex = Path(os.environ.get("CODEX_HOME") or home / ".codex")
     roots = (Path(__file__).absolute().parents[2], Path.cwd() / ".agents" / "skills",
              home / ".agents" / "skills", codex / "skills")
-    return tuple(dict.fromkeys(root / name for root in roots))
+    companion = COMPANIONS.get(name)
+    names = (name, companion.installed_name) if companion and companion.installed_name else (name,)
+    # A shared upstream directory name is only a candidate; read_rules verifies
+    # the selected source's digest before accepting any local file.
+    return tuple(dict.fromkeys(root / local_name for root in roots for local_name in names))
 
 
 def read_rules(companion: Companion, resource: str, local: Path | None, offline: bool,
@@ -111,7 +122,7 @@ def read_rules(companion: Companion, resource: str, local: Path | None, offline:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("companion", choices=COMPANIONS)
-    parser.add_argument("--resource", choices=("skill", "academic", "workflow", "evidence", "consistency"), default="skill")
+    parser.add_argument("--resource", choices=("skill", "academic", "workflow", "evidence", "consistency", "examples"), default="skill")
     parser.add_argument("--local", type=Path, metavar="SKILL_DIRECTORY",
                         help="Check this directory instead of the usual installed locations")
     parser.add_argument("--offline", action="store_true", help="Use matching local rules only")

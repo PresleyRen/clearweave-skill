@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.5.0 — 2026-11-27
+
+- Apply Academic Humanizer guidance while composing the first English academic paragraph. Add Draft, scoped Polish and fixed-structure Cleanup modes, with a bundled offline route and a single language editor.
+- Retain the pinned junbolian source, add its checked examples resource and a separately identified AIScientists evidence/style companion. Preserve scientific conditions, statistical summaries, citations and reproducibility details when adapting upstream examples.
+- Detect changes to common LaTeX labels and cross-reference keys in the protected-literal checker, including keys without numbers.
+- Record both academic sources, their licenses, adoption decisions and bilingual conflict cases. Keep the existing publication acceptance handoff separate from language checks.
 
 - Select the manuscript task before its language companion. Add pinned section, journal and formal-writing guides, an evidence map and risk candidates for exchanged numeric/citation contexts and changed assumptions.
 

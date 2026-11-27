@@ -14,6 +14,7 @@ ClearWeave uses **English as the canonical documentation language**. Every activ
 | Lieflat integration | [lieflat-integration.md](lieflat-integration.md) | [lieflat-integration.zh-CN.md](lieflat-integration.zh-CN.md) |
 | Scholarly evaluation | [evaluation-scholarly.md](evaluation-scholarly.md) | [evaluation-scholarly.zh-CN.md](evaluation-scholarly.zh-CN.md) |
 | Lieflat evaluation | [evaluation-lieflat.md](evaluation-lieflat.md) | [evaluation-lieflat.zh-CN.md](evaluation-lieflat.zh-CN.md) |
+| Academic Humanizer validation | [evaluation-academic-humanizer.md](evaluation-academic-humanizer.md) | [evaluation-academic-humanizer.zh-CN.md](evaluation-academic-humanizer.zh-CN.md) |
 | Real editing examples | [scholarly-examples.md](scholarly-examples.md) | [scholarly-examples.zh-CN.md](scholarly-examples.zh-CN.md) |
 | Source synthesis | [sources.md](sources.md) | [sources.zh-CN.md](sources.zh-CN.md) |
 

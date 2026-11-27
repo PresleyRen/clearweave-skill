@@ -32,3 +32,21 @@ Lieflat integration (S46, 2026-10-21): rule design adapted from
 larashero3-dotcom/lieflat-less-ai-tone, revision 27d29232f10124db904ca9c0536d0b67cb3b2833.
 Copyright (c) 2026 shiujan, MIT. The complete upstream notice is included at
 licenses/lieflat-MIT.txt. ClearWeave's Python candidate/ledger implementation is newly written.
+
+## Academic Humanizer integration (v0.5.0)
+
+Academic composition and scoped-cleanup guidance adapts junbolian/Academic-Humanizer,
+revision 62b0a02627e063015466c70f0a4dd4929a9f7f5b, Copyright (c) 2026 Junbo Lian,
+MIT. The complete notice, including AIScientists-Dev and shiujan attribution,
+is retained at licenses/academic-humanizer-junbolian-MIT.txt.
+
+Selected evidence, style and proposal guidance also adapts
+AIScientists-Dev/academic-humanizer, revision 94b88b23703bed7df507acae7d6d5876209a0cdf,
+Copyright (c) 2026 AIScientists-Dev, MIT. Its complete notice is retained at
+licenses/academic-humanizer-aiscientists-MIT.txt, including its ancestry note
+for blader/humanizer and acknowledgment of ARMS.
+
+ClearWeave's bundled wording and implementation are independently written.
+Pinned source instructions may be read as optional companions; upstream scripts
+and examples are not bundled as executable dependencies or research evidence.
+The two academic sources share ancestry and are not independent validation.

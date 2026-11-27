@@ -1,0 +1,62 @@
+[
+  {
+    "id": "AH01",
+    "A": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "B": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "preference": "tie",
+    "reason": "两者均准确报告同一离线英语检索集的120个查询，将11和8个错误分别归于baseline和adapted method，将310和345 ms分别归于两者的中位延迟，并保留未做显著性检验、未评估多语种和在线运行的限制。两者均仅给出英文Results正文，没有引文、额外主张或不必要解释。首句的介词结构及significance tests/testing的差别不改变科学含义，也没有实质可读性优劣。"
+  },
+  {
+    "id": "AH02",
+    "A": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "B": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "preference": "tie",
+    "reason": "A与B完全一致。两者都仅删除空泛引导语It is important to note that，并将随后句首的the改为The；其余措辞、标题、段落、LaTeX及引用保持不变。错误数及其归属、mean latency的统计角色、不能确立总体差异的限定、seed 17、jitter、tolerance、最多4次重试、脚本名称、假设条件及不等式均准确保留。改动必要且严格符合仅清理套话的范围。"
+  },
+  {
+    "id": "AH03",
+    "A": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "B": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "preference": "tie",
+    "reason": "A与B完全一致，均原样保留已经清楚的三句话，符合明确要求保留清楚句子的润色任务。两者均准确保留Assumption A下的一致性、5次独立运行的平均绝对误差，以及不能据此确立被评估类别之外最优性的限定，没有混淆一致性与最优性，也没有增加无必要的表达改动或说明。"
+  },
+  {
+    "id": "AH04",
+    "A": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "B": {
+      "fidelity": true,
+      "scope": true,
+      "issues": []
+    },
+    "preference": "tie",
+    "reason": "A与B完全一致，均只将suggests改为suggest，使动词与复数主语These observations一致。may所表达的不确定性、this dataset所限定的范围，以及尚未在线测试的实验状态均完整保留；没有其他润色、文献核验内容或附加说明。"
+  }
+]

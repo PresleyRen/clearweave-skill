@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "baseline_commit": "f25ac2e036616689e322d9eb857ccb1b287afe50",
+  "upgraded_version": "0.5.0",
+  "generation": "Two fresh fork_turns=none agents, one four-case batch per condition. Both were asked to use the designated SKILL.md and its relevant local references offline. They received requests.json, not rubric, expected answers or the other outputs. Each output is the actual first delivered result, unedited by the maintainer.",
+  "model": "Parent session identified as GPT-6 Astra Pro; children inherit the parent model. Exact child snapshot, temperature and sampling controls were not exposed or pinned.",
+  "comparison": "Same requests and environment; existing source snapshot versus upgraded bundled instructions. This tests the offline route; no live external companion or native automatic skill trigger was tested.",
+  "read_manifest": "read-files-*.json records the paths each agent reported reading and their actual file hashes.",
+  "review": "Separate fresh-context reviewer receives requests, sources, rubric and alternated A/B candidates, not condition-map.json or either skill.",
+  "python": "3.12.14",
+  "limits": "Small maintainer-authored synthetic set, one batch per condition, model-based review. Not independent human ratings, long-document validation, cross-model evaluation, detector testing or a causal estimate of improvement."
+}

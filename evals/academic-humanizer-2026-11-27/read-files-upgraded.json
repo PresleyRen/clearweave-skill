@@ -1,0 +1,34 @@
+[
+  {
+    "path": "skills/clearweave/SKILL.md",
+    "sha256": "bb2ba31f621c84e7da395d193190e804b4e52fb67af0740c6245ecd21ff5b239"
+  },
+  {
+    "path": "skills/clearweave/references/preservation.md",
+    "sha256": "32ecc66d87291a1d236c6c8909a4f839c50f4d653797ae96735e41cbf31361b1"
+  },
+  {
+    "path": "skills/clearweave/references/drafting.md",
+    "sha256": "962671f822387b927b3f84647d5390ec38cd2b9407f5f2301ad67f2ea9429fd0"
+  },
+  {
+    "path": "skills/clearweave/references/academic-humanizer.md",
+    "sha256": "45635e6552d883a74ea23b51720738c9ffea7be531d37fcd03408673ff4ac106"
+  },
+  {
+    "path": "skills/clearweave/references/academic.md",
+    "sha256": "f7aca29befa080029ab74b48aef41c2ee5f5cf4432184c4f1cdbb66532c59cf5"
+  },
+  {
+    "path": "skills/clearweave/references/manuscript-routing.md",
+    "sha256": "5fa09620591a78199b4fe75825c994cab3554ad868464f5e48761c4e5f1ba34e"
+  },
+  {
+    "path": "skills/clearweave/references/academic-grammar.md",
+    "sha256": "d358f1e5069ae4a0b2a9c321ba9aa0836a2806af673a24f535972a3f3faa122c"
+  },
+  {
+    "path": "skills/clearweave/references/workflows.md",
+    "sha256": "869f3392c7d30bade663bca0dab634041f85d8c43d1705ebb961efd9b6f2b1f9"
+  }
+]

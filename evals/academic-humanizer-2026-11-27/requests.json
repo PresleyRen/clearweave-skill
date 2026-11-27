@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "provenance": "Maintainer-authored synthetic cases; not published study text or independent efficacy evidence.",
+  "cases": [
+    {
+      "id": "AH01",
+      "task": "Draft",
+      "request": "请根据下面的材料写一段英文 Results，只给正文，不补引文。离线使用已有规则。材料：同一离线英语检索集有120个查询；baseline有11个错误，adapted method有8个错误；中位延迟分别为310 ms和345 ms。未做显著性检验，未评估多语种或在线运行。"
+    },
+    {
+      "id": "AH02",
+      "task": "Cleanup",
+      "request": "下面是已定稿的英文论文片段，只去掉空泛套话，不做其他润色。保留标题、段落和LaTeX，直接给修改后的正文。离线处理。",
+      "text": "\\subsection{Offline evaluation}\\label{sec:offline}\nIt is important to note that the baseline made 11 errors and the adapted method made 8 errors on the same 120-query set. The mean latency was 310 ms for the baseline and 345 ms for the adapted method; these values do not establish a population-level difference \\citep{lee:offline}.\n\n\\subsection{Reproducibility}\\label{sec:repro}\nWe used seed 17, jitter \\(10^{-8}\\), a tolerance of \\(10^{-6}\\), and at most 4 retries in \\texttt{solve\\_retry.py}. Under Assumption A, \\(f(x)\\leq B\\) for \\(x\\in S\\); \\eqref{eq:bound} states the bound."
+    },
+    {
+      "id": "AH03",
+      "task": "Polish",
+      "request": "润色这段英文论文，已经清楚的句子保留。只给正文，离线处理。",
+      "text": "The estimator is consistent under Assumption A. We report the mean absolute error over 5 independent runs. The result does not establish optimality outside the evaluated class."
+    },
+    {
+      "id": "AH04",
+      "task": "Grammar only",
+      "request": "只修改下面英文论文句子的主谓一致，不进行其他润色或文献核验。只给正文，离线处理。",
+      "text": "These observations suggests that the adapted method may reduce errors on this dataset, but the effect has not been tested online."
+    }
+  ]
+}

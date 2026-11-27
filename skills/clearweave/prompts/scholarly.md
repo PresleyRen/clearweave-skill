@@ -1,11 +1,22 @@
 # Copy-ready requests
 
+## Draft an English paragraph from evidence
+
+```text
+$clearweave
+Write an English Results paragraph using academic Draft guidance from the first paragraph.
+On the same 100 queries, the baseline ranked the correct answer first 71 times;
+with reranking, it did so 76 times. We have not tested the difference for significance.
+Use only this evidence, preserve the comparison conditions, and return only the paragraph.
+```
+
 ## English manuscript, Chinese discussion
 
 ```text
 $clearweave
-Edit the supplied English manuscript for clear academic prose.
+Use Polish mode to edit the supplied English manuscript for clear academic prose.
 Correct grammar, simplify formulaic or defensive framing, and preserve the technical claims.
+Keep numbers, citations, equations, LaTeX labels and reference keys unchanged.
 Use the attached papers as a field-style reference for argument and sentence structure.
 Return the edited manuscript in English; explain consequential changes in Chinese.
 [manuscript and style samples]

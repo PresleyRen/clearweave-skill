@@ -12,6 +12,7 @@
 - [自定义保护](#自定义保护)
 - [compare 的结果和退出状态](#compare-的结果和退出状态)
 - [必须人工或模型复审的边界](#必须人工或模型复审的边界)
+- [固定来源规则读取](#固定来源规则读取)
 - [本地测试](#本地测试)
 
 `skills/clearweave/scripts/clearweave_check.py` 是一个可选的 Python 3.10+ 标准库工具。它读取 UTF-8 文本，只向标准输出生成报告；没有网络访问、外部依赖或原稿写入操作。
@@ -75,6 +76,7 @@ python skills/clearweave/scripts/clearweave_check.py compare original.md - --for
 | Markdown 目标 | 简单链接／图片的内联目标、尖括号目标和引用式链接定义；支持目标内部的平衡圆括号及相对路径 |
 | 数字 | 阿拉伯数字、正负号、小数、千位逗号、科学计数法、百分号与部分常见单位；数字可紧邻中文字符 |
 | 引用标记 | 数字方括号引用、简单 Pandoc `[@key]` 标记、常见 LaTeX cite 命令，以及有限的英文作者年份括号形式 |
+| LaTeX 标签和交叉引用 | 单行 `\label{key}`（含 cleveref 的 `\label[type]{key}`）、`\ref`、`\eqref`、`\autoref`、`\cref`、`\Cref`、`\pageref`、`\nameref` 的花括号形式及引用命令星号形式；`\hyperref[key]` 只保护目标键，显示文字可编辑；单独标为 `latex_reference` |
 | 裸 `@key` | 保守识别 `@smith2024`、`-@doe:2025` 等字面标记，单独标为 `at_key`；不宣称这些标记一定是引用 |
 | 自定义 | keep 注释块与 `--protect-file` 中指定的字面字符串 |
 
@@ -85,6 +87,8 @@ python skills/clearweave/scripts/clearweave_check.py compare original.md - --for
 裸 `@key` 以 ASCII 字母或下划线开头，后续接受 ASCII 字母、数字、下划线，以及由点、冒号、斜杠或连字符连接的片段。识别时避让常见邮箱地址中的 `@` 和反斜杠转义的 `\@`。然而 `@editor` 既可能是引文键，也可能是社交提及；工具没有文献库来消除歧义，所以统一作为 `at_key` 字面保护。它的变化只表明该字符串有变化，不证明文献引用发生变化。复杂的邮箱、Unicode 引文键及完整 Pandoc 引用语法不保证识别。
 
 完整的外层保护区只计一次，不再把其中的数字、URL 等重复计入报告。如果两个识别区域部分重叠，工具将它们合并为一个 `overlapping_protection` 区域。报告的类别可能因围栏或其他边界变化而改变。
+
+LaTeX 标签与交叉引用按原始命令和键比较，能发现无数字的键替换或丢失。代码或公式内的命令由完整外层区域保护，不重复计数。这里只识别上述直接、单行形式；自定义宏、宏展开、嵌套花括号、跨行参数及特殊转义组合需要另行核对或指定保护。交换两个引用与正文的对应关系而保持字面计数不变，仍需检查实际指向和主张。
 
 ## 自定义保护
 
@@ -139,13 +143,31 @@ python skills/clearweave/scripts/clearweave_check.py compare original.md revised
 
 **字面保护不验证真伪。** 原稿本身可能含错误、过期来源或无依据主张；保持相同字面不等于内容可靠。输入全文在内存中处理，当前实现面向普通文稿，没有为超大语料提供流式处理或资源上限保证。
 
+## 固定来源规则读取
+
+`scripts/read_companion.py` 是独立的规则读取器，可读取本地匹配文件或固定版本的公开上游规则。以下命令在已安装的 ClearWeave 目录运行：
+
+```bash
+python3 scripts/read_companion.py academic-humanizer
+python3 scripts/read_companion.py academic-humanizer --resource examples
+python3 scripts/read_companion.py academic-humanizer-evidence --offline
+```
+
+`academic-humanizer` 保持指向 junbolian/Academic-Humanizer；新增的 `academic-humanizer-evidence` 指向 AIScientists-Dev/academic-humanizer。两者的默认资源都是各自的 `SKILL.md`，`examples` 只读取 junbolian 的 `references/examples.md`，并使用该文件独立的 SHA-256。具体选用规则见 [学术写作规则](academic-humanizer.md)。
+
+读取器依次检查同级、当前项目及常见个人技能目录。evidence 别名同时检查 `academic-humanizer-evidence` 和上游原名 `academic-humanizer` 目录；只有文件的完整 SHA-256 与选定来源匹配才会使用。两个上游的相同目录名或 frontmatter 名称不代表同一来源。`--local /path/to/skill` 只检查指定技能目录，不再搜索其他安装位置。
+
+本地文件缺失或校验不符时，在线模式只请求所选来源固定提交的文件并再次校验；`--offline` 返回状态 `1`，标准输出保持为空。它不会静默改用另一 fork、另一资源或内置规则。调用方如果改用内置流程，应明确说明。成功读取返回 `0`，规则原文写入标准输出，来源写入标准错误。读取器只获取规则，不安装技能、不执行上游脚本，也不接收或上传文稿。
+
 ## 本地测试
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-`tests/test_checker.py` 覆盖接口状态码、保护区跳过、外层结构中的定界符示例、中英文候选、数字与单位、URL 括号、代码变化、裸引文键与常见邮件地址的区分、重复条目减少，以及数值角色互换和否定变化这两个明确盲区。上述命令同时运行仓库中其余确定性测试。这些不是英文或中文写作效果的行为评测，也不是 AI 检测器测试。
+`tests/test_checker.py` 覆盖接口状态码、保护区跳过、外层结构中的定界符示例、中英文候选、数字与单位、URL 括号、代码变化、LaTeX 标签/交叉引用、裸引文键与常见邮件地址的区分、重复条目减少，以及数值角色互换和否定变化这两个明确盲区。上述命令同时运行仓库中其余确定性测试。这些不是英文或中文写作效果的行为评测，也不是 AI 检测器测试。
+
+`tests/test_read_companion.py` 用独立的规则字节验证来源选择、两个同名学术技能的本地查找、固定 URL 与资源校验、离线失败和禁止静默回退；测试本身不访问网络。
 
 ## v0.2 revision-risk candidates / 改写风险线索
 

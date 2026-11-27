@@ -14,6 +14,7 @@ ClearWeave 统一采用**英文作为规范主文档**，同时为当前面向�
 | Lieflat 精准清理整合 | [lieflat-integration.md](lieflat-integration.md) | [lieflat-integration.zh-CN.md](lieflat-integration.zh-CN.md) |
 | 学术真实文本测试 | [evaluation-scholarly.md](evaluation-scholarly.md) | [evaluation-scholarly.zh-CN.md](evaluation-scholarly.zh-CN.md) |
 | Lieflat 精准清理测试 | [evaluation-lieflat.md](evaluation-lieflat.md) | [evaluation-lieflat.zh-CN.md](evaluation-lieflat.zh-CN.md) |
+| Academic Humanizer 整合验证 | [evaluation-academic-humanizer.md](evaluation-academic-humanizer.md) | [evaluation-academic-humanizer.zh-CN.md](evaluation-academic-humanizer.zh-CN.md) |
 | 真实修改示例 | [scholarly-examples.md](scholarly-examples.md) | [scholarly-examples.zh-CN.md](scholarly-examples.zh-CN.md) |
 | 来源与融合取舍 | [sources.md](sources.md) | [sources.zh-CN.md](sources.zh-CN.md) |
 

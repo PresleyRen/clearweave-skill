@@ -1,0 +1,18 @@
+{
+  "AH01": {
+    "A": "baseline",
+    "B": "upgraded"
+  },
+  "AH02": {
+    "A": "upgraded",
+    "B": "baseline"
+  },
+  "AH03": {
+    "A": "baseline",
+    "B": "upgraded"
+  },
+  "AH04": {
+    "A": "upgraded",
+    "B": "baseline"
+  }
+}

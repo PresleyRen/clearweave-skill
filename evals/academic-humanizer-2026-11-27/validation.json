@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "runtime_version": "0.5.0",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests": 411,
+      "summary": "Ran 411 tests in 2.216s; OK."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 0,
+      "output": "Package, decision crosswalk, generated documentation, and historical writing record structure: OK\nThis checks structure and coverage; it does not establish writing quality or semantic fidelity.\n"
+    },
+    {
+      "command": "python3 tools/evaluate_scholarly.py",
+      "exit_code": 0,
+      "output": "{\n  \"schema_version\": 1,\n  \"skill_version\": \"0.3.0\",\n  \"runtime_files_verified\": 21,\n  \"profile_samples\": 3,\n  \"editing_records\": 8,\n  \"actions\": {\n    \"edit\": 6,\n    \"keep\": 2\n  },\n  \"academic_candidates_before\": 5,\n  \"academic_candidates_after\": 0,\n  \"edited_with_literal_differences\": 0,\n  \"edited_with_risk_candidates\": 4,\n  \"evaluation_kind\": \"recorded same-assistant applications / deterministic replay\"\n}\n"
+    },
+    {
+      "command": "python3 tools/evaluate_lieflat.py",
+      "exit_code": 0,
+      "output": "{\n  \"version\": \"0.4.0\",\n  \"summary\": {\n    \"inputs\": 4,\n    \"edited\": 1,\n    \"unchanged\": 3,\n    \"edits\": 1,\n    \"candidates_before\": 4,\n    \"candidates_after\": 3,\n    \"mechanical_checks\": \"passed\"\n  },\n  \"evaluation_type\": \"Recorded same-assistant application; no authorship or quality score\"\n}\n"
+    }
+  ],
+  "scope": "Local execution. Historical replay results retain their historical runtime versions. Published-commit CI is separately reported by GitHub Actions."
+}

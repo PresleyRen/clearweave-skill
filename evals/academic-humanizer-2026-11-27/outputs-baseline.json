@@ -1,0 +1,18 @@
+[
+  {
+    "id": "AH01",
+    "text": "On the same offline English retrieval set of 120 queries, the baseline made 11 errors and the adapted method made 8 errors. Median latency was 310 ms for the baseline and 345 ms for the adapted method. No statistical significance tests were performed, and neither multilingual performance nor online operation was evaluated."
+  },
+  {
+    "id": "AH02",
+    "text": "\\subsection{Offline evaluation}\\label{sec:offline}\nThe baseline made 11 errors and the adapted method made 8 errors on the same 120-query set. The mean latency was 310 ms for the baseline and 345 ms for the adapted method; these values do not establish a population-level difference \\citep{lee:offline}.\n\n\\subsection{Reproducibility}\\label{sec:repro}\nWe used seed 17, jitter \\(10^{-8}\\), a tolerance of \\(10^{-6}\\), and at most 4 retries in \\texttt{solve\\_retry.py}. Under Assumption A, \\(f(x)\\leq B\\) for \\(x\\in S\\); \\eqref{eq:bound} states the bound."
+  },
+  {
+    "id": "AH03",
+    "text": "The estimator is consistent under Assumption A. We report the mean absolute error over 5 independent runs. The result does not establish optimality outside the evaluated class."
+  },
+  {
+    "id": "AH04",
+    "text": "These observations suggest that the adapted method may reduce errors on this dataset, but the effect has not been tested online."
+  }
+]

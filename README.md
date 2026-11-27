@@ -6,12 +6,13 @@
 
 ClearWeave drafts papers and technical documents from your notes and edits existing papers, READMEs, work emails and everyday writing. It removes stock phrasing and repetition, brings the contribution into focus, corrects academic grammar, and builds reusable style profiles from selected samples. Choose the language of the finished text and editorial notes separately.
 
-For evidence mapping, section drafting, target-journal adaptation, submission consistency or formal LaTeX editing, see the [task-to-skill routing table](skills/clearweave/references/manuscript-routing.md). ClearWeave selects the specialist before applying its language guidance.
+For evidence mapping, section drafting, target-journal adaptation, submission consistency or formal LaTeX editing, see the [task-to-skill routing table](skills/clearweave/references/manuscript-routing.md). ClearWeave reuses an existing evidence map and section plan, selects a specialist when needed, and applies the academic language guidance from the first paragraph.
 
 ## Capabilities
 
 | Module | What it does | Typical output |
 | --- | --- | --- |
+| **English academic language** | Applies the same evidence and expression rules in Draft, scoped Polish and fixed-structure Cleanup. | Supported first drafts, polished passages or minimal cleanup |
 | **Lieflat precision cleanup** | Eleven Chinese pattern families, minimal rule-linked edits and fixed document structure. | Finished draft with unmatched text preserved |
 | **Corpus and edit-ledger checks** | Candidate locations, comparable denominators, corpus comparisons and exact edit reconstruction. | Measurements and edit verification |
 | **Natural bilingual prose** | Revises empty openings, mechanical paragraphs, repeated conclusions, over-explanation, translation-shaped Chinese and nominalized English. | Clear revised prose |
@@ -20,45 +21,25 @@ For evidence mapping, section drafting, target-journal adaptation, submission co
 | **Argument and section structure** | Connects questions, methods, evidence and contributions; synthesizes related work and distinguishes planned from completed research. | Reverse outlines and section drafts |
 | **Sample-grounded voice** | Extracts syntax, register, structure and terminology habits from selected papers or personal samples, scoped by language, discipline and section. | Author, house or field profiles |
 | **Revision-based preferences** | Compares an initial draft with an approved final version and records scoped preference proposals. | Evidence-linked edit records |
-| **Meaning and terminology checks** | Reviews quantities, units, negation, conditions, evidence strength, comparison groups and work status; preserves quotes, citations, equations and code. | Differences and review locations |
+| **Meaning and terminology checks** | Reviews quantities, units, negation, conditions, evidence strength, comparison groups and work status; preserves quotes, citations, equations, LaTeX labels and reference keys, and code. | Differences and review locations |
 | **Critique and responses** | Identifies argument gaps and inconsistencies, organizes point-by-point responses, and checks manuscript excerpts. | Reviews, response letters and clean drafts |
 | **Translation, drafting and shortening** | Writes from supplied material, adapts language and locale, and consolidates repetition. | Target-language prose |
 | **Long documents and maintenance** | Maintains terminology and claim ledgers, handles selected files and locates rules, sources, conflicts and tests. | Per-file results and extension routes |
 
-**New in 0.4.0:** LF01–LF11 Chinese precision cleanup, fixed-structure edit ledgers, element-normalized corpus measurement and style-specific exceptions (CW49–CW54).
+**New in 0.5.0:** a built-in Academic Humanizer protocol for English Draft, Polish and Cleanup (CW55), optional source-specific academic guidance, and literal checks for LaTeX labels and cross-references.
 
 ## Function map
 
-```text
-Draft / paper / notes / designated samples + current request
-                           |
-                 Language / genre / section / scope / style guide
-                           |
-                 Facts / quantities / conditions / citations / terms
-                           |
-              +------------+-----------------------+
-              |                                    |
-       Full editing path                   Lieflat precision cleanup
-       Polish / rewrite / translate        Lock structure and unmatched text
-       Natural EN + ZH prose                        |
-       Direct research writing             LF01–LF11 Chinese patterns
-       Academic grammar                    Contrast / enumeration / sentence shape
-       Argument / sampled author voice     Punctuation / heading ordinals
-       Approved-revision preferences       Analogy / existing detail / openers
-              |                            Five translation structures / reference
-              |                                    |
-              |                            Genre + author-style review
-              |                            Rule → original span → minimal edit
-              +------------+-----------------------+
-                           |
-       Literal differences / risk cues / semantic review
-       Scholar: academic style; tone: candidates, corpus counts, edit ledger
-                           |
-              Revised text / diagnosis / response / style profile
-Diagnosis-only requests leave the draft unchanged on either path.
+The request determines the language, genre, section, voice and editing scope. Facts, quantities, conditions, citations and terminology remain protected across the following routes.
 
-Extend: issue → CW capability → LF rule / CF conflict → file → counterexamples → real-text test
-```
+| Material and request | Route | Editing scope |
+| --- | --- | --- |
+| Notes or evidence for new English academic prose | **Draft** | Read the academic guidance before the first paragraph; apply it while composing each paragraph from the existing evidence and plan. |
+| An existing English academic passage | **Polish** | Correct grammar, clarity or voice within the requested scope; grammar-only requests stay grammar-only. |
+| Finished English academic prose needing only specific expression fixes | **Cleanup** | Preserve headings, paragraph breaks, lists, tables, argument order and every unmatched span exactly. |
+| A Chinese draft needing precision cleanup | **Lieflat** | Review LF01–LF11 candidates in context and make only the justified minimal edits. |
+
+General bilingual editing, translation, restructuring, critiques and style profiles keep their task-specific routes. Diagnosis-only requests return located findings without changing the draft. The final review combines literal differences, tool-generated review cues and the editor's meaning check; a script result alone does not establish semantic equivalence.
 
 ## Install and use
 
@@ -75,11 +56,12 @@ The installer copies the skill into `.agents/skills/clearweave` in your project.
 ```text
 $clearweave
 Write a short Results paragraph for my paper in English using these notes.
+Apply the academic Draft guidance from the first paragraph.
 On the same 100 queries, the baseline ranked the correct answer first 71 times.
 With reranking, it did so 76 times. We have not tested the difference for significance.
 ```
 
-ClearWeave uses the language and purpose of the draft to select among four optional writing guides. It reads a matching local guide when the host provides the pinned version, or reads the pinned upstream file when accessible. If neither copy is available, it drafts immediately with its built-in rules, including offline. See [first-draft guidance and guide selection](skills/clearweave/references/drafting.md).
+English manuscripts, abstracts, proposals and reviewer replies use the built-in [academic language protocol](skills/clearweave/references/academic-humanizer.md) before the first paragraph. The optional `academic-humanizer` companion supplies junbolian's academic guidance; `academic-humanizer-evidence` supplies the relevant AIScientists evidence, sample-style or proposal guidance when needed. Both inform the same writer, with one language edit for each passage. ClearWeave reads a matching local or pinned upstream guide when available and continues with its bundled rules offline. General English and Chinese writing retain their language-specific routes. See [first-draft guidance and guide selection](skills/clearweave/references/drafting.md).
 
 ### Edit or profile existing text
 
@@ -88,6 +70,17 @@ $clearweave
 Edit this paper paragraph for natural academic English. Remove empty defensive
 framing and check agreement, tense, articles and modifiers. Keep numbers,
 citations, terminology and evidence strength. Explain consequential edits in Chinese.
+[paste draft]
+```
+
+For a finished English paper that needs only minimal cleanup:
+
+```text
+$clearweave
+Clean up stock phrasing in this finished English paper using Cleanup mode.
+Keep headings, paragraph breaks, lists, tables, argument order, citations,
+equations, LaTeX labels and reference keys, and all unmatched text exactly.
+Return only the revised passage.
 [paste draft]
 ```
 
@@ -127,7 +120,7 @@ Return the revised text only.
 [Draft and style reference]
 ```
 
-The full editor remains available for English, academic grammar, drafting and restructuring. See the [integration map](docs/lieflat-integration.md), [rule reference](skills/clearweave/references/lieflat.md) and [real-text records](docs/evaluation-lieflat.md).
+English academic cleanup uses the Academic Humanizer **Cleanup** route above. Lieflat remains a Chinese route; broader grammar, drafting and restructuring follow the requested task. See the [integration map](docs/lieflat-integration.md), [rule reference](skills/clearweave/references/lieflat.md) and [real-text records](docs/evaluation-lieflat.md).
 
 ```bash
 python3 skills/clearweave/scripts/clearweave_tone.py scan draft.md --genre academic
@@ -155,6 +148,8 @@ Read the [originals and revisions](docs/scholarly-examples.md), [evaluation reco
 
 The host model edits, translates, reviews arguments and applies voice. Python reports locations, literal differences, review cues, corpus measurements and maintenance routes.
 
+The comparison tool also reports changes to common LaTeX labels and cross-reference commands. This is a literal check with documented syntax coverage; the editor must still review what each number, citation and reference supports. See the [tool limits](skills/clearweave/references/tooling.md).
+
 ```bash
 python3 skills/clearweave/scripts/clearweave_check.py lint draft.md --language both --format json
 python3 skills/clearweave/scripts/clearweave_check.py compare original.md revised.md --format json
@@ -171,6 +166,7 @@ python3 skills/clearweave/scripts/clearweave_scholar.py learn original.md final.
 
 | Concern | Entry point | Capability |
 | --- | --- | --- |
+| English academic Draft, Polish and Cleanup | `academic-humanizer.md` | CW55 |
 | LF-only cleanup, Chinese pattern families and semantic exceptions | `lieflat.md`, `lieflat-rules.json` | CW49–51 |
 | Corpus measurement, minimal edits and candidate review | `clearweave_tone.py` | CW52–54 |
 | Stock phrasing, translation syntax, flow | `english.md`, `chinese.md` | CW10–14 |
@@ -194,7 +190,7 @@ python3 tools/render_catalog.py --write
 Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the responsible module, add tests, run the relevant public-text checks and update the capability index. See [integration and extension](docs/scholarly-integration.md).
 
 <details>
-<summary>All 48 capabilities and their rule locations</summary>
+<summary>All 55 capabilities and their rule locations</summary>
 
 <!-- capabilities:start -->
 | Capability | Implementation | Rule location |
@@ -253,13 +249,16 @@ Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the
 | **CW52** Element-normalized corpus measurement | `script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw52) |
 | **CW53** Rule-linked minimal-edit ledger | `script+host` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw53) |
 | **CW54** Candidate review and style exceptions | `host+script` | [references/lieflat.md](skills/clearweave/references/lieflat.md#cw54) |
+| **CW55** Academic drafting and scoped cleanup | `host+literal+candidate` | [references/academic-humanizer.md](skills/clearweave/references/academic-humanizer.md#cw55) |
 <!-- capabilities:end -->
 
 </details>
 
 ## Sources and tests
 
-The integration registry covers **46 sources, 262 adoption/adaptation decisions, 54 capabilities, 42 conflict families and 84 bilingual conflict fixtures**. This release adds lieflat precision cleanup, corpus measurement and edit-ledger verification.
+The 0.5.0 [Academic Humanizer validation record](docs/evaluation-academic-humanizer.md) reports 411 passing local unit tests and a fresh-context four-case paired trial. Both versions met the scoped requests; all four comparisons tied.
+
+The integration registry covers **48 sources, 278 adoption/adaptation decisions, 55 capabilities, 44 conflict families and 88 authored bilingual conflict cases**. This release adds the academic language protocol and LaTeX cross-reference protection. Authored cases document expected behavior; they do not establish writing quality or semantic guarantees.
 
 [Documentation index](docs/README.md) · [Lieflat integration](docs/lieflat-integration.md) · [Precision tests](docs/evaluation-lieflat.md) · [Source decisions](docs/sources.md) · [Capability atlas](docs/capabilities.md) · [Scholarly integration](docs/scholarly-integration.md) · [Public-paper evaluation](docs/evaluation-scholarly.md) · [Raw records](evals/scholarly-2026-10-20/)
 
