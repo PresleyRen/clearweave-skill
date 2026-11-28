@@ -93,7 +93,8 @@ def validate(*, release: bool = False) -> list[str]:
         if module_name == "coverage":
             errors.extend(module.validate(ROOT)["structural_errors"])
         else:
-            errors.extend("Stale generated documentation: " + p for p in module.stale_documents())
+            errors.extend(f"Stale generated documentation: {p}. Run python3 tools/render_catalog.py --write."
+                          for p in module.stale_documents())
     return errors
 
 
