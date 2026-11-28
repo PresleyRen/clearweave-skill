@@ -1,7 +1,8 @@
-name: Publish ClearWeave release
+name: Verify ClearWeave release package
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [verify/clearweave-package-20261128]
 
 permissions:
   contents: read
@@ -12,7 +13,6 @@ concurrency:
 
 jobs:
   verify:
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
@@ -29,12 +29,11 @@ jobs:
       - run: python3 tools/validate_repo.py --release
 
   release:
-    if: github.ref == 'refs/heads/main'
     needs: verify
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -64,21 +63,5 @@ jobs:
           with open(os.environ['GITHUB_ENV'], 'a') as env:
               env.write(f'RELEASE_VERSION={version}\n')
           PY
-      - name: Create release without replacing an existing tag
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          tag="v${RELEASE_VERSION}"
-          if gh release view "$tag" >/dev/null 2>&1; then
-            echo "Release already exists; leaving it unchanged."
-            exit 0
-          fi
-          if gh api "repos/${GH_REPO}/git/ref/tags/${tag}" >/dev/null 2>&1; then
-            echo "Tag already exists; leaving it and any release unchanged."
-            exit 0
-          fi
-          gh release create "$tag" dist/* --target "$GITHUB_SHA" --title "ClearWeave ${tag} · Scholarly writing and author voice" --notes-file "docs/releases/${tag}.md"
-          gh release view "$tag" --json url,tagName,targetCommitish,isDraft
+      - name: Verify both archive checksums
+        run: cd dist && sha256sum --check SHA256SUMS.txt
