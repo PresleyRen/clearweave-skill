@@ -256,7 +256,7 @@ Keep a minimal failure and a legitimate lookalike when adding a rule. Locate the
 
 ## Sources and tests
 
-Routine GitHub CI runs the offline unit suite and package checks on main pushes and pull requests. Superseded runs are cancelled; branch pushes do not duplicate PR checks. Release publishing and network-based source collection/replays are manual workflows. Release notes are required by `python3 tools/validate_repo.py --release` only for explicit publication. When changing generated capability documentation, update its source and run `python3 tools/render_catalog.py --write`, committing the generated files with that change.
+Routine GitHub CI runs the offline unit suite and package checks on main pushes and pull requests. Superseded runs are cancelled; branch pushes do not duplicate PR checks. Release publishing and network-based source collection/replays are manual workflows. Routine CI and release CI both run `python3 tools/validate_repo.py --release`, so commit `docs/releases/v<VERSION>.md` with any version change. When changing generated capability documentation, update its source and run `python3 tools/render_catalog.py --write`, committing the generated files with that change.
 
 The 0.5.0 [Academic Humanizer validation record](docs/evaluation-academic-humanizer.md) reports 411 passing local unit tests and a fresh-context four-case paired trial. Both versions met the scoped requests; all four comparisons tied.
 
