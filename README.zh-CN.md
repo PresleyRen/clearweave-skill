@@ -283,7 +283,7 @@ python3 tools/render_catalog.py --write
 
 ## 来源与测试
 
-日常 GitHub CI 在 main 推送和 PR 上执行离线单元测试与包检查；新提交会取消旧运行，功能分支推送不再与 PR 重复检查。版本发布、联网来源采集及回放均为手动流程。明确发布时才用 `python3 tools/validate_repo.py --release` 核对发布说明。修改自动生成的能力文档时，应更新对应源数据或生成器，运行 `python3 tools/render_catalog.py --write`，并将生成文件一并提交。
+日常 GitHub CI 在 main 推送和 PR 上执行离线单元测试与包检查。新提交会取消旧运行，功能分支推送不再与 PR 重复检查。版本发布、联网来源采集及回放均为手动流程。日常 CI 和发布 CI 均运行 `python3 tools/validate_repo.py --release`，修改版本时一并提交 `docs/releases/v<VERSION>.md`。修改自动生成的能力文档时，应更新对应源数据或生成器，运行 `python3 tools/render_catalog.py --write`，并将生成文件一并提交。
 
 0.5.0 的 [Academic Humanizer 整合验证](docs/evaluation-academic-humanizer.zh-CN.md) 记录了 411 项通过的本地单元测试，以及四组新上下文配对试跑。两版均符合限定请求，四组比较均为平局。
 
