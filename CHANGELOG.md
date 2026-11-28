@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add optional edit-by-edit adjudication for comparing writing guidance. Check terminology, quantity roles, conditions and modifiers, and retain a clear original when no proposed edit improves it.
+- Preserve the [six synthetic cases](evals/academic-adjudication-2026-11-01/cases.json) and [historical outcomes](evals/academic-adjudication-2026-11-01/outcomes.json) from the earlier local evaluation. The recorded hashes describe that evaluation snapshot.
+
 ## 0.5.0 — 2026-11-27
 
 - Keep routine CI to offline unit tests and package validation on main pushes and pull requests, cancelling superseded runs. Make publication and external source collection/replays manual; require release notes only for explicit publication.

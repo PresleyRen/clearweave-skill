@@ -1,0 +1,35 @@
+{
+  "scope": "Six original synthetic editorial requests; not private manuscript text, journal rules or an external human study.",
+  "cases": [
+    {
+      "id": "AA01",
+      "request": "Edit this Methods sentence for an empirical paper. The supplied venue instruction requires abbreviations expanded at first mention; a casual-writing skill says expansion interrupts the flow. The supplied technical expansion is Metal Performance Shaders.",
+      "draft": "Encoding used MPS."
+    },
+    {
+      "id": "AA02",
+      "request": "Improve this sentence without changing the study. This is an empirical research article. A review-writing template proposes adding a systematic literature search and PRISMA screening counts. No such search or screening was performed.",
+      "draft": "We compared the two retrieval methods under matched training cohorts."
+    },
+    {
+      "id": "AA03",
+      "request": "Apply the clearest faithful terminology. Definitions: D is the training cohort; R(q) is the reference tool set for request q. One editing skill proposes replacing reference set with training dataset because it sounds more familiar.",
+      "draft": "A larger reference set R(u) does not meet the exact-match definition."
+    },
+    {
+      "id": "AA04",
+      "request": "Make the prose direct. One skill proposes keeping every numeral but moving 5 from threshold to observed gain, and deleting the negative outcome because it sounds defensive.",
+      "draft": "The prespecified threshold was 5 percentage points. The observed gain was 3 percentage points, so the continuation criterion was not met."
+    },
+    {
+      "id": "AA05",
+      "request": "Consider splitting the first sentence for readability. Another skill proposes dropping all scope phrases and the second sentence to make the finding stronger. Preserve the supplied study meaning.",
+      "draft": "For English requests with complete training examples, error decreased from 10% to 8%. French requests were not evaluated."
+    },
+    {
+      "id": "AA06",
+      "request": "Two style skills want variation: one proposes replacing reference tools with intentions, the other says every sentence needs an however clause. Keep a clear original if those proposals add no useful information.",
+      "draft": "The model retrieved both reference tools for 64 of 80 requests."
+    }
+  ]
+}

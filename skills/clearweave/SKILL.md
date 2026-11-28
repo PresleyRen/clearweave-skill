@@ -36,6 +36,7 @@ Before drafting or restructuring a manuscript, checking evidence, learning a tar
 For defensive framing, contribution narrative, or clean manuscript/README delivery, read [anti-defensive.md](references/anti-defensive.md).
 For academic grammar, tense, agreement, modifiers, and section-function choices, read [academic-grammar.md](references/academic-grammar.md).
 For 真人论文风格、作者文风、样稿模仿 or learning approved revision preferences, read [author-voice.md](references/author-voice.md).
+For comparing multiple candidate revisions, read [academic-adjudication.md](references/academic-adjudication.md) for per-edit evidence and adjudication.
 For academic scanning and profile commands, read [scholarly-tools.md](references/scholarly-tools.md).
 Use only relevant modules. Keep review notes outside the finished text. Preserve the core rules when applying a style profile.
 
